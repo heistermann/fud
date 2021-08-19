@@ -1,4 +1,12 @@
-# Level 6: To the next dimension - working with multi-dimensional data
+# Level 6: Die nächste Dimension
+
+## Python
+
+- [Hier](python/multidim-arrays.html) findet Ihr die Python-Inhalte.
+
+## R
+
+- [Hier](R/README.md) findet Ihr die R-Inhalte.
 
 ## Learning goals
 

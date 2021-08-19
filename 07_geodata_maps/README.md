@@ -1,4 +1,14 @@
-# Level 7: Geodata and mapping
+# Level 7: Geodaten und Kartierung
+
+## Python
+
+- [Hier](python/mastering-geodata-in-python.html) findet Ihr die Python-Inhalte.
+
+## R
+
+- [Hier](R/README.md) findet Ihr die R-Inhalte.
+
+
 
 ## Learning targets
 

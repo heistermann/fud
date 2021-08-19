@@ -1,4 +1,4 @@
-# Level 1: Collaborative development using git
+# Level 1: Zusammen arbeiten mit Git
 
 ## Learning targets
 

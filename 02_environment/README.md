@@ -1,5 +1,15 @@
 
-# Level 2: Working environment
+# Level 2: Die Arbeitsumgebung
+
+## Python
+
+- [Hier](python/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
+- [Hier](python/tour-de-python.html) findet Ihr eine Tour durch Eure neue Python-Umgebung.
+
+## R
+
+- [Hier](R/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
+- [Hier](R/README.md) findet Ihr eine Tour durch Eure neue R-Umgebung.
 
 ## Learning targets
 

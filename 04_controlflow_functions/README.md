@@ -1,7 +1,12 @@
 # Level 4: Kontrolle ist gut
 
-[Hier](python/README.md) geht es zu den Python-Inhalten.
-[Hier](R/lektion.html) geht es zu den Python-Inhalten.
+## Python
+
+- [Hier](python/README.md) findet Ihr die Python-Inhalte.
+
+## R
+
+- [Hier](R/lektion.html) findet Ihr die R-Inhalte.
 
 ## Learning targets
 
