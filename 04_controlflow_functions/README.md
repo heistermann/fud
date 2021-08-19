@@ -1,3 +1,10 @@
+---
+layout: default
+title: Kontrolle ist gut
+nav_order: 4
+has_children: true
+permalink: /04_controlflow_functions
+---
 # Level 4: Control flow and functions
 
 ## Learning targets

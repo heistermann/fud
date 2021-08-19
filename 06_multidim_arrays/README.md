@@ -1,3 +1,11 @@
+---
+layout: default
+title: Die nächste Dimension
+nav_order: 6
+has_children: true
+permalink: /06_multidim_arrays
+---
+
 # Level 6: To the next dimension - working with multi-dimensional data
 
 ## Learning goals

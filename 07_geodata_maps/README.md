@@ -5,6 +5,7 @@ nav_order: 7
 has_children: true
 permalink: /07_geodata_maps
 ---
+
 # Level 7: Geodata and mapping
 
 ## Learning targets
