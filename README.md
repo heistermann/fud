@@ -2,7 +2,6 @@
 layout: default
 title: Home
 nav_order: 0
-description: "Fundamente der Umweltdatenverbeitung"
 permalink: /
 ---
 
