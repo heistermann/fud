@@ -1,1 +1,8 @@
-This directory contains the content for Python.
+---
+layout: default
+title: Python
+parent: Der Dataframe
+nav_order: 1
+---
+
+No content yet.

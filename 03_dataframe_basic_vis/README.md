@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The dataframe
+title: Der Dataframe
 nav_order: 3
 has_children: true
 permalink: /03_dataframe_basic_vis

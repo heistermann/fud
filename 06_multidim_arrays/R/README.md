@@ -1,1 +1,8 @@
-This directory contains the content for R.
+---
+layout: default
+title: R
+parent: Die nächste Dimension
+nav_order: 2
+---
+
+No content yet.

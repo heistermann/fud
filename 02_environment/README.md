@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Working environment
+title: Die Arbeitsumgebung
 nav_order: 2
 has_children: true
 permalink: /02_environment

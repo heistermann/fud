@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Geodata and mapping
+title: Geodaten und Karten
 nav_order: 7
 has_children: true
 permalink: /07_geodata_maps

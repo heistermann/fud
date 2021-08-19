@@ -1,3 +1,10 @@
+---
+layout: default
+title: Python einrichten
+parent: Die Arbeitsumgebung
+nav_order: 1
+---
+
 # How to set up your Python environment
 
 ## Doing all the installation stuff
