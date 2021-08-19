@@ -1,2 +1,4 @@
 remote_theme: pmarsceill/just-the-docs
 title: Fundamente der Umwelt-DV
+
+theme: jekyll-theme-tactile
