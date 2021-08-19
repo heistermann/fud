@@ -1,12 +1,5 @@
----
-layout: default
-title: Die Arbeitsumgebung
-nav_order: 2
-has_children: true
-permalink: /02_environment
----
 
-# Level 2: Setting up and exploring your coding environment
+# Level 2: Working environment
 
 ## Learning targets
 

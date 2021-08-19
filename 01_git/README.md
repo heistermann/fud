@@ -1,10 +1,3 @@
----
-layout: default
-title: Git
-nav_order: 1
-permalink: /01_git
----
-
 # Level 1: Collaborative development using git
 
 ## Learning targets

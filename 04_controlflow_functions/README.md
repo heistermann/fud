@@ -1,4 +1,4 @@
-# Kontrolle ist gut
+# Level 4: Kontrolle ist gut
 
 [Hier](python/README.md) geht es zu den Python-Inhalten.
 [Hier](R/lektion.html) geht es zu den Python-Inhalten.
@@ -36,6 +36,8 @@ Lorem ipsum...
 
 ## Optional: Ideas for tasks in the Coding-Lab
 
+- Zusatzaufgaben aus der Lektion
 - [complicated nested if clauses], einfache Bestimmung einer Pflanzenart ähnlich wie Rothmaler
 - Sieb des Erathostenes
+
 

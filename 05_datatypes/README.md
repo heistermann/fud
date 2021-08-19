@@ -1,11 +1,3 @@
----
-layout: default
-title: Datentypen
-nav_order: 5
-has_children: true
-permalink: /05_datatypes
----
-
 # Level 5: Back to square one - basic and not so basic data types
 
 ## Learning targets
