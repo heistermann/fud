@@ -43,6 +43,7 @@ Lorem ipsum...
 
 - Zusatzaufgaben aus der Lektion
 - [complicated nested if clauses], einfache Bestimmung einer Pflanzenart ähnlich wie Rothmaler
-- Sieb des Erathostenes
+- Rekursive Funktion schreiben (Fakultätsfunktion, Mehrfachersetzungen in einem Text, ...)
+- Beispiel Kontaktverfolgung mit Funktionen umschreiben
 
 
