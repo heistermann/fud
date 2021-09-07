@@ -6,8 +6,7 @@
 
 ## R
 
-- [Hier](R/Dataframes.html) findet Ihr die einführenden R-Inhalte.
-- [Hier](R/Dataframes2.html) findet Ihr die weiterführenden R-Inhalte (Analyse dekadischer Temperaturanomalien).
+- [Hier](R/Dataframes.html) findet Ihr die R-Inhalte.
 
 ## Learning targets
 
