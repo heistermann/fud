@@ -6,7 +6,7 @@
 
 ## R
 
-- [Hier](R/README.md) findet Ihr die R-Inhalte.
+- [Hier](R/Datatypes.html) findet Ihr die R-Inhalte.
 
 
 ## Learning targets

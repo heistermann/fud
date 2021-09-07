@@ -271,11 +271,15 @@ div.tocify {
 <h1 number="3"><span class="header-section-number">3</span> Textdateien</h1>
 <p>Viele Daten werden in Form von Textdateien gespeichert und verteilt. Meist erkennt man die Dateien bereits an ihrer Dateiendung, die oftmals .txt, .csv, .tab, .asc lautet. Der Vorteil dieser Dateien ist, dass man sie problemlos in einem Texteditor wie notepad oder notepad++ (den ich für Windows-Nutzer nur empfehlen kann) betrachten kann. Dass man sich diese Daten vorher mal anschaut, bevor man sie in die Software einliest, wird ab und an sinnvoll sein, um die Datenstruktur einzusehen und zu begreifen.</p>
 <p>Manchmal werde diese Textdateien auch als ASCII-Dateien bezeichnet, wobei ASCII American Standard Code for Information Interchange bedeutet. ASCII bezieht sich dabei auf eine Zeichenkodierung, mit der man mittels Nullen und Einsen 128 verschiedene Zeichen darstellen kann. Da diese Anzahl an Zeichen jedoch nicht ausreicht, um die Vielzahl von Zeichen (z.B. Umlaute) abzubilden, wird Text meist als Unicodezeichensatz bzw. dessen Kodierung durch den Unicode Transformation Format (oft mit der Version UTF-8) dargestellt und interpretiert. Meist wird man sich nicht mit diesem Thema herumschlagen müssen. Aber wenn ihr das Problem habt, dass Umlaute in Euren Rmd-Dateien plötzlich als Fragezeichen dargestellt werden, dann schaut mal in RStudio unter Tools, Code, Saving, welche Art der Textkodierung eingestellt ist.</p>
-<div id="strukturierte-textdateien" class="section level2" number="3.1">
-<h2 number="3.1"><span class="header-section-number">3.1</span> Strukturierte Textdateien</h2>
-<p>Aber nun zurück zum Thema. Strukturierte Textdateien haben wir bereits kennengelernt, als es um Dataframes ging. Strukturiert bedeutet dabei, dass die Daten in Spalten und Zeilen geordnet sind. Die Zeilen sind dabei durch ein Zeichen, das einen Zeilenumbruch anordnet, und Spalten durch ein Symbol für einen Spaltenwechsel voneinander getrennt. Die Dateiendung gibt dabei oft schon an, um welches Spaltentrennzeichen es sich handelt. CSV-Dateien (“Character Separated Values”), z.B. verwenden meist ein Komma oder auch Semikolon als Trennzeichen. Die Funktion <code>read.csv</code> nimmt an, dass das Trennzeichen ein Komma ist (darum der Default-Wert sep=“,”). Wenn ein Tabulator verwendet wird, so muss man den Wert auf sep=&quot; einstellen.</p>
+<div id="textdateien-im-tabellenformat" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> Textdateien im Tabellenformat</h2>
+<p>Aber nun zurück zum Thema. Textdateien im Tabellenformat haben wir bereits kennengelernt, als es um Dataframes ging. Die tabellarische Struktur bedeutet, dass die Daten in Spalten und Zeilen geordnet sind. Die Zeilen sind dabei durch ein Zeichen, das einen Zeilenumbruch anordnet, und Spalten durch ein Symbol für einen Spaltenwechsel voneinander getrennt. Die Dateiendung gibt dabei oft schon an, um welches Spaltentrennzeichen es sich handelt. CSV-Dateien (“Character Separated Values”), z.B. verwenden meist ein Komma oder auch Semikolon als Trennzeichen. Die Funktion <code>read.csv</code> nimmt an, dass das Trennzeichen ein Komma ist (darum der Default-Wert sep=“,”). Wenn ein Tabulator verwendet wird, so muss man den Wert auf sep=“\t” einstellen.</p>
 <blockquote>
-<h1 id="aufgabe-1-brooms-barn">Aufgabe 1: Brooms barn</h1>
+<h1 id="aufgabe-1-webcam-daten-hohenpeißenberg">Aufgabe 1: Webcam-Daten Hohenpeißenberg</h1>
+</blockquote>
+<p>Lese die Daten in der Datei Hohenpeissenberg-S_20210904_1830.txt ein und speichere sie in einem Dataframe. Die Daten sind <a href="https://opendata.dwd.de/weather/webcam/Hohenpeissenberg-S/Hohenpeissenberg-S_20210904_1830.txt">hier</a> im Original erhältlich.</p>
+<blockquote>
+<h1 id="aufgabe-2-brooms-barn">Aufgabe 2: Brooms barn</h1>
 </blockquote>
 <p>Öffne die Datei brooms_barn.txt in einem Texteditor. Lese die Datei in R ein, ohne die Datei zu ändern. Was erschwert das Einlesen der Datei?</p>
 </div>
@@ -322,7 +326,7 @@ obs</code></pre>
 ## [3,] 13.2 12.2  2.1
 ## [4,] 14.1 15.3  1.0</code></pre>
 <p>Super, jetzt kommt das Ganze noch in einen data.frame und wir sind fertig.</p>
-<pre class="r"><code>df &lt;- as.data.frame(obs,cut.names = varnames)
+<pre class="r"><code>df &lt;- as.data.frame(obs)
 colnames(df) &lt;- varnames
 df</code></pre>
 <pre><code>##      X    Y Corg
@@ -330,24 +334,70 @@ df</code></pre>
 ## 2 14.7  9.3  2.2
 ## 3 13.2 12.2  2.1
 ## 4 14.1 15.3  1.0</code></pre>
-<p>Ok, das ganze hat doch etwas länger gedauert. Aber ich denke, ihr versteht das System dahinter. Wichtig ist, die Struktur der Datei zu begreifen. Die HURDAT2-Datei ist in einer extra Datei beschrieben. Diese Beschreibung sollte man sich genau anschauen, bevor man ein Programm schreibt, um die Dateien zu lesen. Anschließend geht man Schritt für Schritt das Einleseprozedere durch. Ihr könnt Euch sicherlich vorstellen, dass das ziemlich kompliziert werden kann, wenn der Datensatz viele Besonderheiten aufweist. Wenn das aber alles klappt, dann könnt ihr ohne weiteres auch so große Datensätze wie den HURDAT-Datensatz einlesen. Das manuell zu machen, das solltet ihr tunlichst vermeiden.</p>
+<p>Ok, das ganze hat doch etwas länger gedauert. Aber ich denke, ihr versteht das System dahinter. Wichtig ist, die Struktur der Datei zu begreifen. Die HURDAT2-Datei ist in einer extra Datei beschrieben. Diese Beschreibung sollte man sich genau anschauen, bevor man ein Programm schreibt, um die Dateien zu lesen. Anschließend geht man Schritt für Schritt das Einleseprozedere durch. Ihr könnt Euch sicherlich vorstellen, dass das ziemlich kompliziert werden kann, wenn der Datensatz viele Besonderheiten aufweist (fehlende Werte, strings und numerische Daten, etc.). Wenn das aber alles klappt, dann könnt ihr ohne weiteres auch so große Datensätze wie den HURDAT-Datensatz einlesen. Das manuell zu machen solltet ihr tunlichst vermeiden, denn mit einem effizienten Code könnt ihr auch Hunderte oder Tausende von Dateien einlesen.</p>
+<blockquote>
+<h1 id="aufgabe-3-grdc-daten-einlesen">Aufgabe 3: GRDC-Daten einlesen</h1>
+</blockquote>
+<p>Die Datei <code>pvm_6457010.txt</code> beinhaltet Abflussdaten der Oder am Pegel Gozdowice. Die Datei stammt vom Global Data Runoff Center (GRDC). Schreibe einen möglichst generischen Code mit dem Du aus der Datei folgende Daten in einen data.frame überführst.</p>
+<ul>
+<li>Stationsname</li>
+<li>Längengrad und Breitengrard</li>
+<li>Einzugsgebietsgröße</li>
+<li>Höhe</li>
+<li>Anzahl der Jahre mit verfügbaren Daten</li>
+<li>Für den Gesamtzeitraum: LQ, MQ_1, MQ_2, MQ_3, HQ</li>
+</ul>
+<p>Dir könnten dabei folgende Funktionen für den Vergleich von Zeichenfolgen helfen: <code>startsWith</code>, <code>endsWith</code>, <code>identical</code>.</p>
+<p>Teste, ob Dein Code auch mit einer anderen Datei (<code>pvm_6457100.txt</code>) funktioniert.</p>
+<p>Natürlich gibt es auch gänzlich unstrukturierte Daten wie z.B. Freitext. Bei dem sogenannten Textmining wird versucht, aus diesen unstrukturierten Daten Informationen zu erhalten. Eines der ersten Schritte ist dabei, diese unstrukturierten Daten zu strukturieren. Das werden wir hier aber nicht machen.</p>
 </div>
-<div id="xml-dateien" class="section level2" number="3.3">
-<h2 number="3.3"><span class="header-section-number">3.3</span> XML-Dateien</h2>
+<div id="xml--und-json-dateien" class="section level2" number="3.3">
+<h2 number="3.3"><span class="header-section-number">3.3</span> XML- und JSON-Dateien</h2>
+<p>Eine weitere Möglichkeit, Daten als Textdateien zu speichern und auszutauschen, bietet die Verwendung erweiterter Auszeichnungssprachen (Extensible Markup Language (XML)). XML ermöglicht Daten entlang einer Baumstruktur zu speichern, die es ermöglicht Daten zu verschachteln. Das kann sehr hilfreich sein, wenn Daten nicht oder nur schlecht in tabellarischer Form organisiert werden können. Abwandlungen dieser Dateiformate werden darum häufig für den Austausch geographischer Daten verwendet (z.B. KML oder geojson).</p>
+<p>XML-Daten werden gewöhnlich über eine spezielle Programmschnittstelle verarbeitet (XML-Parser). Diese Schnittstellen werden in R anhand der Pakete verfügbar gemacht und Funktionen definiert, die die Daten in ein eigenes Datenformat überführen.</p>
+<p>Im folgenden Beispiel schauen wir uns eine JSON-Datei an. Dazu benötigen wir das Paket <code>rjson</code> und der folgende Befehl installiert dieses.</p>
+<pre class="r"><code>install.packages(&quot;rjson&quot;)</code></pre>
+<pre class="r"><code>library(rjson)</code></pre>
+<pre><code>## Warning: package &#39;rjson&#39; was built under R version 4.0.3</code></pre>
+<p>Im nächsten Schritt laden wir eine json-Datei vom opendata-Server des DWD. Die Datei beinhaltet Gefahrenindizes für Wetterfühlige. Diese Informationen werden jeden Tag neu zu Verfügung gestellt und für vreschiedene medizinische Formkreise (Herzkreislauferkrankungen, etc.) für den heutigen und zwei folgende Tage vorhergesagt. Die Daten werden für 11 verschiedene räumliche Zonen angegeben, die <a href="https://www.dwd.de/DE/leistungen/gefahrenindizesbiowetter/gefahrenindizesbiowetter.html">hier</a> gezeigt werden.</p>
+<p>Um die neueste Datei herunterzuladen benötigt ihr eine Internetverbindung. Alternativ findet ihr im data-Ordner eine ältere Datei.</p>
+<pre class="r"><code>result &lt;- fromJSON(file = &quot;https://opendata.dwd.de/climate_environment/health/alerts/biowetter.json&quot;)
+# result &lt;- fromJSON(file = &quot;../data/biowetter.json&quot;)</code></pre>
+<p>Die Variable <code>result</code> hat das Format <code>Large list</code>. Wir werden die Daten nicht im Detail ansehen. In der Environment könnt ihr die Inhalte erkunden. Nach einigen Informationen zu Autor, Datum etc. folgt eine genestete Liste mit den Daten innerhalb der einzelnen Zonen. Schauen wir uns mal unsere Zone (Zone 5) genauer an. Diese umfasst folgende Regionen:</p>
+<pre class="r"><code>result$zone[[5]]$name</code></pre>
+<pre><code>## [1] &quot;Berlin, Brandenburg und im nördlichen Sachsen-Anhalt&quot;</code></pre>
+<p>Nun schauen wir mal, ob eine Wetter-bedingte Entschuldigung für eine heutige, unzureichende Leistungsfähigkeit im Kurs vorliegt.</p>
+<pre class="r"><code>result$zone[[5]]$today_afternoon$effect[[1]]$subeffect[[1]]</code></pre>
+<pre><code>## $name
+## [1] &quot;psychisch-geistige Leistungsfähigkeit&quot;
+## 
+## $value
+## [1] &quot;geringe Gefährdung&quot;</code></pre>
+<p>Was empfiehlt uns der DWD?</p>
+<pre class="r"><code>result$zone[[5]]$today_afternoon$recomms[[1]]</code></pre>
+<pre><code>## $name
+## [1] &quot;Wettereinfluss auf das allgemeine Befinden&quot;
+## 
+## $value
+## [1] &quot;Aufenthalt im Freien in den kühleren Morgen- und Abendstunden bevorzugen, ausreichende Flüssigkeitszufuhr, - Vorsicht im Straßenverkehr&quot;</code></pre>
+<p>Ihr seht, dass die JSON-Daten über eine sehr strukturierte Weise, umfängliche Informationen zur Verfügung stellt. Diese Daten können, wenn man das Format gut kennt, maschinell verarbeitet werden.</p>
 </div>
 </div>
 <div id="binäre-dateiformate" class="section level1" number="4">
 <h1 number="4"><span class="header-section-number">4</span> Binäre Dateiformate</h1>
-<p>Wenn ihr eine Exceldatei mit einem Texteditor öffnet, werdet ihr sehen, dass der angezeigte Text keinen Sinn ergibt. Das liegt daran, dass die Datei eine Binärdatei ist, die nur von spezieller Software gelesen werden kann. Wenn eine Software die Struktur und Enkodierung der Binärdatei nicht kennt, wird sie damit auch nichts anzufangen wissen. Binärdateien sind gewöhnlich Bilddateien, Audiodateien, oder Dateien von Tabellenkalkulationsprogrammen und Datenbanksystemen (z.B. GIS). Für R gibt es extra Packages und Funktionen, die solche Dateien interpretieren und einlesen können.</p>
-<div id="excel-datei-einlesen" class="section level2" number="4.1">
-<h2 number="4.1"><span class="header-section-number">4.1</span> Excel-Datei einlesen</h2>
+<p>Wenn ihr eine Exceldatei mit einem Texteditor öffnet, werdet ihr sehen, dass der angezeigte Text keinen Sinn ergibt. Das liegt daran, dass die Datei eine Binärdatei ist, die nur von spezieller Software gelesen werden kann. Wenn eine Software die Struktur und Kodierung der Binärdatei nicht kennt, wird sie damit auch nichts anzufangen wissen. Binärdateien sind gewöhnlich Bilddateien, Audiodateien, oder Dateien von Tabellenkalkulationsprogrammen und Datenbanksystemen (z.B. GIS). Für R gibt es extra Packages und Funktionen, die solche Dateien interpretieren und einlesen können.</p>
+<div id="excel-dateien" class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> Excel-Dateien</h2>
+<p>Wer liebt es nicht: Microsoft Excel. Wenn jemand mit Daten am Computer das erste mal konfrontiert wird, dann sicherlich anhand dieses Tabellenkalkulationsprogramm oder eines seiner quelloffenen und freien Varianten. Excel ist dabei besser als sein Ruf, und wenn man es beherrscht, kann man damit einiges machen. Es kommt aber niemals an die Vielseitigkeit und Flexibilität höherer Programmiersprachen heran. Auch sollte man möglichst vermeiden, Daten anhand Excel-Dateien (Dateiendungen xls, xlsx, xlsm, …) auszutauschen, da nicht jede(r) über eine Microsoft Office Lizenz verfügt. Nichtsdestotrotz wird man hier und dort nicht an dem Dateiformat vorbeikommen.</p>
+<p>Für das Lesen und Schreiben von Excel-Dateien bietet R zahlreiche Pakete.</p>
 </div>
 <div id="bilddateien" class="section level2" number="4.2">
 <h2 number="4.2"><span class="header-section-number">4.2</span> Bilddateien</h2>
 </div>
+<div id="netcdf" class="section level2" number="4.3">
+<h2 number="4.3"><span class="header-section-number">4.3</span> NetCDF</h2>
+<p>Ein gebräuchliches Datenformat für Umweltdaten ist NetCDF. Insbesondere Daten aus Klimamodellen werden meist über dieses Format gespeichert, da eine Vielzahl von räumlich und zeitlich variierenden Variablen unterschiedlicher Struktur unterstützt werden. Klimamodelle geben beispielsweise Rasterdaten zu verschiedenen Variablen (z.B Temperatur oder Luftfeuchte) in verschiedenen Druckniveaus aus. Diese 3D-Variablen variieren in der Zeit, so dass wir es meist mit 4D-Daten zu tun haben. Wir werden diesem Datenformat eine extra Stunde widmen.</p>
 </div>
-<div id="section" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> </h1>
 </div>
 
 
