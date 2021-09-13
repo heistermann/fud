@@ -6,42 +6,43 @@
 
 ## R
 
-- [Hier](R/Dataframes.html) findet Ihr die R-Inhalte.
+- [Hier](R/Dataframes.html) findet Ihr einführende R-Inhalte zum Arbeiten mit "Dataframes". Arbeitet diese zunächst selbständig durch.
+- [Hier](R/Dataframes2.html) findet Ihr die eigentliche Lektion, die wir uns im Seminar gemeinsam erarbeiten.
 
-## Learning targets
+## Lernziele
 
-- Students will be able to create, read and export dataframes (tabular data)
-- Students will know basic concepts how to handle data in dataframes (indexing, NA values, subsets, apply functions ...)
-- Students will be able to generate and customize basics plots (different types)
+- Erstellen, Einlesen und Exportieren von Dataframes (tabellarischen Daten)
+- Grundlegendde Konzepte im Umgang mnit Dataframes (indexing, NA werte, subsets, apply ...)
+- Erstellen und Modifizieren einfacher Plots (Abbildungen).
 
-## Structure and main contents
+## Struktur
 
-The lecture will be devided in two parts. 
-First, some R basics and some general examples using a very simple dataframe. 
-Second, based on meteorological data, some simple analyses (aggregation, rolling means etc.) will be performed and results will be plotted.
+Die Lektion besteht aus zwei Teilen:
 
-## Exercises during the main course
+1. Wiederholung einiger R-Grundlagen, einfache Beispiele zum Umgang mit einem Dataframe. 
+2. Einfache Analysen mit klimatologischen Stationsdaten (Aggregation, gleitende Mittelwerte etc.) und Plotting.
 
-- Illustrate decadal temperature changes (similar to IPCC plot) for two different stations in Norway (Oslo, Tromso)
-- Illustrate seasonal variations in these temperature changes
+## Aufgaben im Seminar
 
-## Which dataset will be used?
+- Darstellung dekadischer Temperaturänderungen (ähnlich dem IPCC-Plot **ADD LINK**) für zwei Klimastationen in Norwegen
+- Saisonale Effekte der Temperaturänderungen
 
-Meteorological station data (T and P; Oslo, Tromso) to be downloaded [here](https://klimaservicesenter.no)
+## Welche Datensätze liegen dieser Lektion zugrunde?
 
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
+Klimadaten (T and P) für Klimastationen in Oslo und Tromso (Download [hier](https://klimaservicesenter.no)).
 
-Lorem ipsum...
+## Mini-Projekt für die Coding-Werkstatt
 
+Erstelle ein [Klimadiagramm nach Walter-Lieth](https://de.wikipedia.org/wiki/Klimadiagramm) für eine der beiden Stationen.
 
-## Optional: Upon which contents/skills will you explicitely build?
+Was wiederholen wir dabei?
 
-Lorem ipsum...
+- Datenimport, 
+- subsetting, 
+- Aggregation von Variablen (Mittelwerte, Summe), 
+- Umgang mit NA-Werten, 
+- xy-plot
 
-
-## Optional: Ideas for tasks in the Coding-Lab
-
-Generate Walter-Lieth diagram for one station.
-- Recap: Data import, subsetting, data aggregation, NA values, xy-plot
+Was für neue Inhalte erarbeiten wir uns dabei?
 - Extent: Plotting with two y-axes, plot customization
 
