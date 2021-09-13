@@ -1,5 +1,16 @@
 # Level 1: Zusammen arbeiten mit Git
 
+
+
+## Git installieren und einrichten
+
+```
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+```
+
+
+
 ## Learning targets
 
 - Understand the basic idea of version control
