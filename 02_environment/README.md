@@ -5,6 +5,7 @@
 
 - [Hier](python/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
 - [Hier](python/tour-de-python.html) findet Ihr eine Tour durch Eure neue Python-Umgebung.
+- [Hier](python/exercises02.html) findet Ihr die Übungsaufgaben für diese Lektion.
 
 ## R
 
