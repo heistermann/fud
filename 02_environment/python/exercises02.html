@@ -14343,7 +14343,15 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In diesen Übungen (scharfe Zungen mögen es Hausaufgaben nennen) könnt Ihr Punkte für die Modulprüfung sammeln. Exportiert das Notebook mit Euren Lösungen einfach als <code>py</code>-Datei (<code>File --&gt; Download as --&gt; Python</code>) und schickt diese Datei es an die E-Mail-Adresse <code>umweltdv@uni-potsdam.de</code>, und zwar mit dem Betreff <code>Lektion 2 in Python</code>.</p>
+<p>In diesen Übungen (scharfe Zungen mögen es Hausaufgaben nennen) könnt Ihr Punkte für die Modulprüfung sammeln. Ihr könnt die Übungen mit Hilfe eingebauter Tests selbständig kontrollieren. Die Übungen einer Lektion gelten als bestanden, wenn Ihr mindestens 50 Prozent der Übungsaufgaben richtig gelöst habt. Für jede bestandene Lektion erhaltet Ihr 5 Punkte von den maximal 100 Punkten der Modulprüfung gutgeschrieben. Es gibt Übungsaufgaben für sechs Lektionen, also könnt Ihr auf diese Weise 30 Punkte erreichen.</p>
+<p><strong>Wie gebt Ihr Eure Lösungen ab?</strong></p>
+<ol>
+<li><p>Startet das Feebacktool "Lektion 2: Abgabe der Übungsaufgaben" im Moodlekurs und folgt den Anweisungen. Ihr sollt dort bestätigen, dass Ihr die Aufgaben eigenständdig bearbeitet habt und zum Nachweis der Output der Gesamtauswertung (siehe unten) einfügen.</p>
+</li>
+<li><p>Wir werden stichprobenhaft Eure Notebooks mit den Lösungen kontrollieren. Stellt daher sicher, dass Ihr dieses Notebook (oder eine Kopie, in welcher Ihr die Lösungen erarbeitet habt) in Euer Fork-Repository gepusht habt und dieses intern freigegeben ist.</p>
+</li>
+</ol>
+<p><strong>Deadline für die Abgabe: xx. November 2021, 00:00:00 Uhr</strong>. Die Deadline ist fix und nicht verhandelbar. Nachgereichte Lösungen werden nicht akzeptiert, egal wie gut die Ausrede ist.</p>
 
 </div>
 </div>
@@ -14351,7 +14359,7 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Lösung einer Aufgabe besteht immer aus einer Funktion (function). Für jede Lösung stellen wir Euch mindestens einen Test zur Verfügung, mit Hilfe dessen Ihr prüfen könnt, ob Eure Lösung funktioniert. Wir werden zur Überprüfung aber immer noch "versteckte" Tests nutzen, um sicher zu stellen, dass die Lösung auch für alle gefragten Anwendungsszenarien funktioniert.</p>
+<p>Die Lösung einer Aufgabe besteht immer aus einer Funktion (function). Für jede Lösung stellen wir Euch mindestens einen Test zur Verfügung, mit dessen Hilfe Ihr prüfen könnt, ob Eure Lösung funktioniert.</p>
 
 </div>
 </div>
@@ -14408,7 +14416,7 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Damit die offenen (also nicht versteckten) Tests bei Euch laufen, müsst Ihr folgende Zeile ausführen. Und dann geht es los!</p>
+<p>Damit die Tests bei Euch laufen, müsst Ihr folgende Zeile ausführen. Und dann geht es los!</p>
 
 </div>
 </div>
@@ -14469,7 +14477,7 @@ $(document).ready(function () {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TEST</span>
-<span class="n">test_hello</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14514,7 +14522,7 @@ Ergänze die Funktion so, dass sie funktioniert.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TEST</span>
-<span class="n">test_summe</span><span class="p">(</span><span class="n">summe</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">summe</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14558,8 +14566,7 @@ Ergänze die Funktion so, dass sie funktioniert.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TEST</span>
-<span class="n">test1_verketten</span><span class="p">(</span><span class="n">verketten</span><span class="p">,</span> <span class="s2">&quot;Katherine&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;Johnson&quot;</span><span class="p">)</span>
-<span class="n">test2_verketten</span><span class="p">(</span><span class="n">verketten</span><span class="p">,</span> <span class="s2">&quot;Barbara&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;McClintock&quot;</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">verketten</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14602,22 +14609,30 @@ Ergänze die Funktion so, dass sie funktioniert.</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test1_istgleich</span><span class="p">(</span><span class="n">istgleich</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test2_istgleich</span><span class="p">(</span><span class="n">istgleich</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test3_istgleich</span><span class="p">(</span><span class="n">istgleich</span><span class="p">,</span> <span class="s2">&quot;Barbara&quot;</span><span class="p">,</span> <span class="s2">&quot;McClintock&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">istgleich</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Gesamtauswertung">Gesamtauswertung<a class="anchor-link" href="#Gesamtauswertung">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">hello</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">summe</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">verketten</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">testme</span><span class="p">(</span><span class="n">istgleich</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
