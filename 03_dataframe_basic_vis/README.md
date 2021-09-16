@@ -2,7 +2,8 @@
 
 ## Python
 
-- [Hier](python/README.md) findet Ihr die Python-Inhalte.
+- [Hier](python/dataframe-intro.html) findet Ihr einführende Inhalte zum Arbeiten mit "Dataframes". Arbeitet diese zunächst selbständig durch.
+- [Hier](python/dataframe-lesson.html) findet Ihr die eigentliche Lektion, die wir uns im Seminar gemeinsam erarbeiten.
 
 ## R
 
