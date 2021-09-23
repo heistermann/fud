@@ -2,7 +2,7 @@
 
 ## Python
 
-- [Hier](python/README.md) findet Ihr die Python-Inhalte.
+- [Hier](python/Datatypes.html) findet Ihr die Python-Inhalte.
 
 ## R
 

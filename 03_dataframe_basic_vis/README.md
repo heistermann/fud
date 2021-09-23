@@ -4,6 +4,7 @@
 
 - [Hier](python/dataframes-intro.html) findet Ihr einführende Inhalte zum Arbeiten mit "Dataframes". Arbeitet diese zunächst selbständig durch.
 - [Hier](python/dataframes-lesson.html) findet Ihr die eigentliche Lektion, die wir uns im Seminar gemeinsam erarbeiten.
+- [Hier](python/exercises03.html) findet Ihr die Übungsaufgaben für diese Lektion.
 
 ## R
 
