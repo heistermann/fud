@@ -1,6 +1,8 @@
 
 # Level 2: Die Arbeitsumgebung
 
+![img](img/r_python.png)
+
 ## Python
 
 - [Hier](python/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
