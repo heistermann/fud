@@ -26,8 +26,8 @@
 
 
 ## Inhalte der Coding-Werkstatt
-- Habt Ihr offene Fragen zu den Inhalte des Seminars?
-- Bearbeitung der Übungsaufgaben
+- Habt Ihr offene Fragen zu den Inhalten des Seminars?
+- Bearbeitung der Übungsaufgaben ([R](R/exercises04.html), [Python](python/exercises04.html))
 - Mögliche Vertiefungsaufgaben:
      - ...
      - ...

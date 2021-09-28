@@ -1,5 +1,7 @@
 # Level 7: Geodaten und Kartierung
 
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/stevefaeembra/3598407845/" title="edinburgh photo heatmap"><img src="https://live.staticflickr.com/2427/3598407845_e64a999d10_b.jpg" width="1024" height="731" alt="edinburgh photo heatmap"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
 ## Python
 
 - [Hier](python/mastering-geodata-in-python.html) findet Ihr die Python-Inhalte.

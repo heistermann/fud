@@ -1,55 +1,53 @@
 # Level 6: Die nächste Dimension
 
+![img](https://scipy-lectures.org/_images/numpy_indexing.png)
+
+(Quelle: [Scipy lecture notes](https://scipy-lectures.org/intro/numpy/array_object.html), Creative Commons Attribution 4.0 International License)
+
 ## Python
 
-- [Hier](python/multidim-arrays.html) findet Ihr die Python-Inhalte.
+- Seminarinhalte für Python ([Link](python/multidim-arrays.html))
 
 ## R
+- Seminarinhalte für R ([Link](R/Multidimensionales.html))
 
-- [Hier](R/Multidimensionales.html) findet Ihr die R-Inhalte.
+## Lernziele
 
-## Learning goals
+- Was ist ein multi-dimensionaler Array?
+- Elemente entlang unterschiedlicher Dimensionen auswählen
+- Funktionen entlang unterschiedlicher Dimensionen anwenden
+- NetCDF-Dateien für die effiziente Speicherung multi-dimensionaler Daten
+- Visualisierungsoptionen eentlang unterschiedlicher Dimensionen
 
-- To be able to recognise and handle the different formats of multidimensinal data (arrays, bricks, stacks, and cubes)
-- To learn that visualising multidimensional data aids formulating research questions
+## Inhalte der Coding-Werkstatt
 
-## Structure and main contents
-
-- Tales of scalars, vectors, matrices, and tensors
-- What are "short" and "long" formats of tabulated data?
-- Get a handle on multiple dimensions: indexes, subsets, and conditionals
-- Now navigate: running loops or loop surrogates in arrays
-- Useful **R** libraries (ncdf4, stars, ...) 
-- Useful Python libraries
-- Behind the scenes: Google Earth API for data cubes
-
-## Exercises during the main course
-
-- BASIC: Extract time series from a raster brick, stack, or NetCDF
-- BASIC: Conditional plots to understand multivariate data
-
-- MODERATE: Track patterns of deforestation in both space and time
-- MODERATE: Conditional plots as stepping stones to hierarchical or multilevel models
-
-- ADVANCED: Animate a year of global temperature or rainfall dynamics
-
-## Which dataset will be used?
-
-- CRU TS global gridded temperature and precipitation data
-- Global forest change inventory
-
-(see what's on our menu [here](https://docs.google.com/document/d/1_G0cOln6_omAV4TaKkYK8tFK1fvvzaH_YP5BD31ZzUE/edit#)
-
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
-
-Lorem ipsum...
+- Habt Ihr offene Fragen zu den Inhalten des Seminars?
+- Bearbeitung der Übungsaufgaben ([R](R/exercises06.html), [Python](python/exercises06.html))
+- Mögliche Vertiefungsaufgaben:
+     - Analyse der ERA5-Land Daten für Lufttemperatur
+     - Animation der täglichen Schneebedeckung 
+     - ...
 
 
-## Optional: Upon which contents/skills will you explicitely build?
 
-- Solid knowledge of data types
+[comment]: <> ## Structure and main contents
+[comment]: <> - Tales of scalars, vectors, matrices, and tensors
+[comment]: <> - What are "short" and "long" formats of tabulated data?
+[comment]: <> - Get a handle on multiple dimensions: indexes, subsets, and conditionals
+[comment]: <> - Now navigate: running loops or loop surrogates in arrays
+[comment]: <> - Useful **R** libraries (ncdf4, stars, ...) 
+[comment]: <> - Useful Python libraries
+[comment]: <> - Behind the scenes: Google Earth API for data cubes
 
-## Optional: Ideas for tasks in the Coding-Lab
+[comment]: <> ## Exercises during the main course
+[comment]: <> - BASIC: Extract time series from a raster brick, stack, or NetCDF
+[comment]: <> - BASIC: Conditional plots to understand multivariate data
+[comment]: <> 
+[comment]: <> - MODERATE: Track patterns of deforestation in both space and time
+[comment]: <> - MODERATE: Conditional plots as stepping stones to hierarchical or multilevel models
+[comment]: <> 
+[comment]: <> - ADVANCED: Animate a year of global temperature or rainfall dynamics
 
-Lorem ipsum...
+## Welche Datensätze liegen dieser Lektion zugrunde
 
+ERA5-Land Reanalyse ([Link](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview))
