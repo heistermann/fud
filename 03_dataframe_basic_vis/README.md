@@ -2,18 +2,19 @@
 
 ## Python
 
-- [Hier](python/dataframes-intro.html) findet Ihr einführende Inhalte zum Arbeiten mit "Dataframes". Arbeitet diese zunächst selbständig durch.
-- [Hier](python/dataframes-lesson.html) findet Ihr die eigentliche Lektion, die wir uns im Seminar gemeinsam erarbeiten.
-- [Hier](python/exercises03.html) findet Ihr die Übungsaufgaben für diese Lektion.
+- Einführende Inhalte zum Arbeiten mit "Dataframes" ([Link](python/dataframes-intro.html)). Arbeitet diese zunächst selbständig durch.
+- Im Seminar: Analyse der Säkularstation in Potsdam ([Link](python/dataframes-lesson.html)).
+- Python-Übungsaufgaben zum Thema Dataframe ([Link](python/exercises03.html))
 
 ## R
 
-- [Hier](R/Dataframes.html) findet Ihr einführende R-Inhalte zum Arbeiten mit "Dataframes". Arbeitet diese zunächst selbständig durch.
-- [Hier](R/Dataframes2.html) findet Ihr die eigentliche Lektion, die wir uns im Seminar gemeinsam erarbeiten.
+- Einführende Inhalte zum Arbeiten mit "Dataframes" ([Link](R/Dataframes.html)). Arbeitet diese zunächst selbständig durch.
+- Im Seminar: Analyse der Säkularstation in Potsdam ([Link](R/Dataframes2.html)).
+- R-Übungsaufgaben zum Thema Dataframe ([Link](R/exercises03.html))
 
 ## Lernziele
 
-- Erstellen, Einlesen und Exportieren von Dataframes (also Tabellendaten) 
+- Erstellen, Einlesen und Exportieren von Dataframes (Tabellen) 
 - Grundlegende Konzepte im Umgang mit Dataframes (Daten auswählen, ändern, ...)
 - Umgang mit Zeitreihen
 - Erstellen einfacher Abbildungen
@@ -22,7 +23,7 @@
 
 Die Lektion besteht aus zwei Teilen:
 
-1. Einführung zum Umgang mit Dataframes ([R](R/Dataframes.html) [Python](python/dataframes-intro.html))
+1. Einführung zum Umgang mit Dataframes ([R](R/Dataframes.html), [Python](python/dataframes-intro.html))
 2. Analyse einer über 100-jährigen Messreihe an der Säkularstation in Potsdam ([R](R/Dataframes2.html), [Python](python/dataframes-lesson.html))
 
 ## Inhalte der Coding-Werkstatt

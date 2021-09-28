@@ -12,7 +12,8 @@ Eine von Euch vielleicht bereits genutzte Art der Versionskontrolle seht Ihr
 in folgendem Bild.
 
 ![](http://phdcomics.com/comics/archive/phd101212s.gif)
-(Quelle: Jorge Cham on www.phdcomics.com)
+
+(Quelle: Jorge Cham on [www.phdcomics.com](http://phdcomics.com/comics/archive/phd101212s.gif))
 
 Das weltweit erfolgreichste Versionskontrollsystem heißt `git`.
 Heute lernen wir `git` kennen.

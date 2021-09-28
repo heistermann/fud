@@ -1,49 +1,40 @@
 # Level 4: Kontrolle ist gut
 
+![img](https://imgs.xkcd.com/comics/flowchart.png)
+
+(Quelle: [xkcd](https://xkcd.com/1195/), Creative Commons Attribution-NonCommercial 2.5 License.)
+
 ## Python
 
-- [Hier](python/README.md) findet Ihr die Python-Inhalte.
+- Seminarinhalte für Python ([Link](python/README.md))
 
 ## R
 
-- [Hier](R/lektion.html) findet Ihr die R-Inhalte.
+- Seminarinhalte für R ([Link](R/lektion.html))
 
-## Learning targets
+## Lernziele
 
-- implement constructions for controling the flow of computer code ("if .. then"-clauses, loops)
-- using functions and creating custom ones
+- Mit welchen Konstrukten kann ich Abläufe (flow) in Programmen steuern (Bedingungen, Schleifen) 
+- Funktionen als wiederverwendbare Code-Bausteine: nutzen und selbst entwickeln
 
-## Structure and main contents
+## Struktur und Inhalte
 
-- "if"-clauses
-- "for"-loops
-- "while"-loops
-- creating functions
-
-## Exercises during the main course
-
-- various small examples easing your everyday life
-
-## Which dataset will be used?
-
-None
+- `ìf`, `else` & Co
+- Schleifen mit `for`
+- Schleifen mit `while`
+- Funktionen nutzen und entwickeln
 
 
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
+## Inhalte der Coding-Werkstatt
+- Habt Ihr offene Fragen zu den Inhalte des Seminars?
+- Bearbeitung der Übungsaufgaben
+- Mögliche Vertiefungsaufgaben:
+     - ...
+     - ...
+     - ...
 
-Lorem ipsum...
-
-
-## Optional: Upon which contents/skills will you explicitely build?
-
-- use of R-/Python working environment
-
-
-## Optional: Ideas for tasks in the Coding-Lab
-
-- Zusatzaufgaben aus der Lektion
-- [complicated nested if clauses], einfache Bestimmung einer Pflanzenart ähnlich wie Rothmaler
-- Rekursive Funktion schreiben (Fakultätsfunktion, Mehrfachersetzungen in einem Text, ...)
-- Beispiel Kontaktverfolgung mit Funktionen umschreiben
-
+[comment]: <> - Zusatzaufgaben aus der Lektion
+[comment]: <> - [complicated nested if clauses], einfache Bestimmung einer Pflanzenart ähnlich wie Rothmaler
+[comment]: <> - Rekursive Funktion schreiben (Fakultätsfunktion, Mehrfachersetzungen in einem Text, ...)
+[comment]: <> - Beispiel Kontaktverfolgung mit Funktionen umschreiben
 

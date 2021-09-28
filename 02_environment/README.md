@@ -5,14 +5,15 @@
 
 ## Python
 
-- [Hier](python/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
-- [Hier](python/tour-de-python.html) findet Ihr eine Tour durch Eure neue Python-Umgebung.
-- [Hier](python/exercises02.html) findet Ihr die Übungsaufgaben für diese Lektion.
+- Anleitung zum Einrichten Eurer Arbeitsumgebung ([Link](python/README.md))
+- Tour durch Eure neue Python-Umgebung ([Link](python/tour-de-python.html)).
+- Python-Übungsaufgaben für diese Lektion ([Link](python/exercises02.html)).
 
 ## R
 
-- [Hier](R/R_Arbeitsumgebung.html) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
-- [Hier](R/R_kundungstour.html) findet Ihr eine Tour durch Eure neue R-Umgebung.
+- Anleitung zum Einrichten Eurer Arbeitsumgebung ([Link](R/R_Arbeitsumgebung.html))
+- Tour durch Eure neue R-Umgebung ([Link](R/R_kundungstour.html)).
+- R-Übungsaufgaben für diese Lektion ([Link](R/exercises02.html)).
 
 ## Lernziele
 
