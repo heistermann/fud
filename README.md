@@ -9,7 +9,7 @@ permalink: /
 
 ![img](http://www.freeimageslive.co.uk/files/images010/environmental_data_log.jpg)
 
-image by <a href="http://www.freeimageslive.co.uk/free_stock_image/environmental-data-log-jpg" target="_blank"> freeimageslive.co.uk - gratuit</a>
+Image source: <a href="http://www.freeimageslive.co.uk/free_stock_image/environmental-data-log-jpg" target="_blank"> freeimageslive.co.uk gratuit, Creative Commons Attribution 3.0 Unported License. </a>
 
 Auf diesen Seiten findet Ihr die Inhalte des Moduls "Fundamente der Umweltdatenverarbeitung"
 im Studium MSc. Geoökologie der Universität Potsdam. Hier könnt Ihr Euch einen
