@@ -4,53 +4,44 @@
 
 ## Python
 
-- [Hier](python/mastering-geodata-in-python.html) findet Ihr die Python-Inhalte.
+- Seminarinhalte für Python ([Link](python/mastering-geodata-in-python.html)).
 
 ## R
 
-- [Hier](R/README.md) findet Ihr die R-Inhalte.
+- Seminarinhalte für R ([Link](R/README.md))
 
 
+## Lernziele
 
-## Learning targets
+- Was brauchen wir, um in einer Programmierumgebbung effizient Geodaten verarbeiten
+und visualisieren zu können?
+- Welche Werkzeuge stellen uns diese Funktionalität in R und Python zur Verfügung?
 
-- What functionality do we actually expect when we work with geodata and produce maps?
-- Usage of the most important tools for working with geodata in R and Python.
+## Strukur
 
-## Structure and main contents
+- Wir beginnen mit der Darstellung des DWD-Niederschlagsmessnetzes
+- Was brauchen wir, um eine solche Darstellung mit anderen Geodaten verknüpfen zu können
+Start with mapping DWD rain gauges - no dedicated GIS functionality is actually used
+- Werkzeuge für Vektordaten
+- Werkzeuge für Rasterdaten
 
-- Start with mapping DWD rain gauges - no dedicated GIS functionality is actually used
-- Define what we need in addition to make our approach more robust and complete
-- Tools for working with vector data
-- Tools for working with raster data
-- Producing beautiful maps by combining these tools with native plotting functionality
-- ...?
+## Inhalte der Coding-Werkstatt
 
-## Exercises during the main course
-
-- t.b.d.
-
-## Which dataset will be used?
-
-- DWD rain gauge positions
-- DWD rain gauge observations
-- DWD radar observations
-
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
-
-- t.b.d.
+- Erweiterung der Kartendarstellung um zusätzliche Elemente (Städte, Fließgewässer, ...)
+- Hinzufügen gemessener Niederschlagshöhen zur Kartendarstellung
 
 
-## Optional: Upon which contents/skills will you explicitely build?
+## Auf welchen Kenntnissen baut diese Lektion auf?
 
-- dataframes
-- multi-dimensional arrays
-- plotting, multi-panel plots
-- working with datetime formats
+- Dataframes
+- Multi-dimensionale Arrays
+- Plotting
+- Arbeiten mit Datums- und Zeitformaten
 - ...
 
+## Welche Datensätze liegen dieser Lektion zugrunde?
 
-## Optional: Ideas for tasks in the Coding-Lab
-
-t.b.d.
+- Niederschlagsmessnetz des DWD
+- Bundesländergrenzen
+- DGM für Europa (1 km² Auflösung)
 
