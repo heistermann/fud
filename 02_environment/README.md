@@ -9,48 +9,27 @@
 
 ## R
 
-- [Hier](R/README.md) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
-- [Hier](R/README.md) findet Ihr eine Tour durch Eure neue R-Umgebung.
+- [Hier](R/R_Arbeitsumgebung.html) findet Ihr eine Anleitung zum Einrichten Eurer Arbeitsumgebung.
+- [Hier](R/R_kundungstour.html) findet Ihr eine Tour durch Eure neue R-Umgebung.
 
-## Learning targets
+## Lernziele
 
-- Know how to install a Python or R environment
-- ...and how to launch it
-- Know how to navigate in that environment and carry out basic operations
-  in the specific language
+- Wie installiere ich eine Arbeitsumgebung in R oder Python?
+- Wie starte ich diese Arbeitumgebung und navigiere darin?
+- Erster Kontakt mit der Sprache: Kennenlernen elementarer Konzepte und Funktionen
 
-## Structure and main contents
+## Struktur
 
-- R/Python: Install guide ("tutorial") for the students to prepare their environments
-- Python: Open a notebook and follow the white rabbit (Python quick tour)
-- R: something similar
+Die Lektion besteht aus zwei Teilen:
 
-## Exercises during the main course
+1. Installationsanleitung für [R](R/R_Arbeitsumgebung.html) bzw. [Python](python/README.md)
+2. Erkundungstour durch [R/R-Studio](R/R_kundungstour.html) bzw. [Python/jupyter](python/tour-de-python.html)
 
-- Python:
-   - calculator
-   - markdown vs. code cells
-   - access/read files
-   - ...
-- 
+## Inhalte der Coding-Werkstatt
 
-## Which dataset will be used?
-
-Not sure, yet...some simple csv file.
-
-(see what's on our menu [here](https://docs.google.com/document/d/1_G0cOln6_omAV4TaKkYK8tFK1fvvzaH_YP5BD31ZzUE/edit#) )
-
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
-
-The tour might include some fragments that will be systematically addresses later, e.g. data types, file access, plots, ...
-
-
-## Optional: Upon which contents/skills will you explicitely build?
-
-None.
-
-
-## Optional: Ideas for tasks in the Coding-Lab
-
-A collection of very small exercises based on the tour.
-
+- Habt Ihr Fragen zu den Inhalten des ersten Seminars? Etwas noch nicht verstanden?
+Nutzt die Coding-Werkstatt, um diese Dinge zur Sprache zu bringen. Notiert Euch die
+Fragen am Besten vorher!
+- Zum ersten Mal: Übungsaufgaben öffnen, bearbeiten, testen und einreichen 
+in [R]() und in [Python](python/exercises02.html).
+- Vertiefungsaufgabe

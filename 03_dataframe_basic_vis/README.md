@@ -13,38 +13,26 @@
 
 ## Lernziele
 
-- Erstellen, Einlesen und Exportieren von Dataframes (tabellarischen Daten)
-- Grundlegendde Konzepte im Umgang mnit Dataframes (indexing, NA werte, subsets, apply ...)
-- Erstellen und Modifizieren einfacher Plots (Abbildungen).
+- Erstellen, Einlesen und Exportieren von Dataframes (also Tabellendaten) 
+- Grundlegende Konzepte im Umgang mit Dataframes (Daten auswählen, ändern, ...)
+- Umgang mit Zeitreihen
+- Erstellen einfacher Abbildungen
 
 ## Struktur
 
 Die Lektion besteht aus zwei Teilen:
 
-1. Wiederholung einiger R-Grundlagen, einfache Beispiele zum Umgang mit einem Dataframe. 
-2. Einfache Analysen mit klimatologischen Stationsdaten (Aggregation, gleitende Mittelwerte etc.) und Plotting.
+1. Einführung zum Umgang mit Dataframes ([R](R/Dataframes.html) [Python](python/dataframes-intro.html))
+2. Analyse einer über 100-jährigen Messreihe an der Säkularstation in Potsdam ([R](R/Dataframes2.html), [Python](python/dataframes-lesson.html))
 
-## Aufgaben im Seminar
-
-- Darstellung dekadischer Temperaturänderungen (ähnlich dem IPCC-Plot **ADD LINK**) für zwei Klimastationen in Norwegen
-- Saisonale Effekte der Temperaturänderungen
+## Inhalte der Coding-Werkstatt
+- Habt Ihr offene Fragen zu den Inhalte des Seminars?
+- Bearbeitung der Übungsaufgaben
+- Mögliche Vertiefungsaufgaben:
+     - Wiederholung der Analyse anhand der Bergwetterwarte Hoher Peissenberg
+     - Berechnung des Dampfdrucks aus Temperatur und relativer Luftfeuchte
+     - Saisonale Unterschiede in den Tagesgängen von Temperatur und Luftfeuchte
 
 ## Welche Datensätze liegen dieser Lektion zugrunde?
 
-Klimadaten (T and P) für Klimastationen in Oslo und Tromso (Download [hier](https://klimaservicesenter.no)).
-
-## Mini-Projekt für die Coding-Werkstatt
-
-Erstelle ein [Klimadiagramm nach Walter-Lieth](https://de.wikipedia.org/wiki/Klimadiagramm) für eine der beiden Stationen.
-
-Was wiederholen wir dabei?
-
-- Datenimport, 
-- subsetting, 
-- Aggregation von Variablen (Mittelwerte, Summe), 
-- Umgang mit NA-Werten, 
-- xy-plot
-
-Was für neue Inhalte erarbeiten wir uns dabei?
-- Extent: Plotting with two y-axes, plot customization
-
+Messungen von Lufttemperatur und relativer Luftfeuchte an der Säkularstation Potsdam ([Link](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/)).
