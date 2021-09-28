@@ -1,8 +1,26 @@
 # Level 1: Zusammen arbeiten mit Git
 
+In dieser Lektion werden wir das Konzept der "Versionskontrolle" kennenlernen.
+ein Versionskontrollsystem verfolgt Änderungen in Dateien und erlaubt es Euch,
+zu früheren Versionen zurückzuspringen.
 
+Ein verteiltes Versionskontrollsystem erlaubt es Euch, gemeinsam mit anderen
+an Inhalten (z.B. Text, Code) zu arbeiten und Euren Arbeitsfortschritt mit
+anderen zu teilen.
 
-## Git installieren und einrichten
+Eine von Euch vielleicht bereits genutzte Art der Versionskontrolle seht Ihr 
+in folgendem Bild.
+
+![](http://phdcomics.com/comics/archive/phd101212s.gif)
+(Quelle: Jorge Cham on www.phdcomics.com)
+
+Das weltweit erfolgreichste Versionskontrollsystem heißt `git`.
+Heute lernen wir `git` kennen.
+
+## Vorbereitung: Git installieren und einrichten
+
+Auf dieser Seite findet Ihr Anleitungen für die Installation von `git` unter
+Linux, Mac und Windows: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
 
 ```
 $ git config --global user.email "you@example.com"
