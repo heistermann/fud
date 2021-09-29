@@ -1,22 +1,41 @@
 # Level 1: Zusammen arbeiten mit Git
 
-In dieser Lektion werden wir das Konzept der "Versionskontrolle" kennenlernen.
-ein Versionskontrollsystem verfolgt Änderungen in Dateien und erlaubt es Euch,
-zu früheren Versionen zurückzuspringen.
-
-Ein verteiltes Versionskontrollsystem erlaubt es Euch, gemeinsam mit anderen
-an Inhalten (z.B. Text, Code) zu arbeiten und Euren Arbeitsfortschritt mit
-anderen zu teilen.
-
-Eine von Euch vielleicht bereits genutzte Art der Versionskontrolle seht Ihr 
-in folgendem Bild.
+In dieser Lektion werden wir das Konzept der *Versionskontrolle* kennenlernen.
+Ein *Versionskontrollsystem* verfolgt Änderungen in Dateien und erlaubt es Euch,
+zu früheren Versionen zurückzuspringen. Eine von Euch vielleicht bereits praktizierte
+Form der Versionskontrolle seht Ihr im folgenden Bild.
 
 ![](http://phdcomics.com/comics/archive/phd101212s.gif)
 
 (Quelle: Jorge Cham on [www.phdcomics.com](http://phdcomics.com/comics/archive/phd101212s.gif))
 
-Das weltweit erfolgreichste Versionskontrollsystem heißt `git`.
-Heute lernen wir `git` kennen.
+Ein *verteiltes Versionskontrollsystem* erlaubt es Euch, gemeinsam mit anderen an
+Inhalten (z.B. Text, Code) zu arbeiten und Euren Arbeitsfortschritt zu teilen.
+
+Das weltweit erfolgreichste Versionskontrollsystem heißt `git` - und mit `git`
+werden wir in diesem Kurs arbeiten.
+
+**Klingt relevant, aber auch ganz schön trocken und obendrein noch ziemlich techniklastig.
+Ist das wirklich so wichtig? Wir wollen doch eigentlich R oder Python lernen...**
+
+- Wir Dozent*innen in diesem Kurs haben das Marterial gemeinsam mit `git` entwickelt
+und wir stellen Euch dieses Material in Form eine `git`-Repositories zur Verfügung.
+Allein dafür benötigt Ihr minimale Kenntnisse in `git`.
+- Wir möchten Euch ermuntern, von Beginn an Eure Arbeit in diesem Kurs mit `git`
+zu begleiten. Versionskontrolle ist kein Hexenwerk, aber wie so vieles nutzt man
+es nur, wenn man eine gewisse Routine darin entwickelt hat. Und diese Routine 
+erzielt man nur durch regelmäßige Nutzung. Wir wollen diesen Feedbackmechanismus
+im positiven Sinne nutzen und starten darum gleich zu Beginn mit `git`.
+- Die Nutzung von `git`, zusammen mit cloud-basierten Hosting-Plattformen wie GitLab oder
+GitHub, erlaubt Euch nicht nur, Euren Arbeitsfortschritt zu strukturieren und jederzeit
+zu einem früheren Zustand zurückzuschalten. Ihr könnt es auch einfach als eine
+komfortable Methode des Backups verstehen... 
+- [GitHub](https://github.com) ist die erfolgreichste Plattform für kollaborative Softwareentwicklung.
+Dort könnt Ihr nicht nur Eure Projekte veröffentlichen und teilen, sondern auch auf einfache Art und
+Weise statische Webseiten entwickeln und hosten. Die Webseite, auf der Ihr Euch
+gerade befindet, ist ein Beispiel dafür.  
+  
+
 
 ## Vorbereitung: Git installieren und einrichten
 
