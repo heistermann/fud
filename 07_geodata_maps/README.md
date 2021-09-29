@@ -8,7 +8,7 @@
 
 ## R
 
-- Seminarinhalte für R ([Link](R/README.md))
+- Seminarinhalte für R ([Link](R/mastering-geodata-in-r.html))
 
 
 ## Lernziele
