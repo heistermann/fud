@@ -1,3 +1,9 @@
+---
+layout: default
+title: Level 1: Zusammen arbeiten mit Git
+nav_order: 2
+---
+
 # Level 1: Zusammen arbeiten mit Git
 
 In dieser Lektion werden wir das Konzept der *Versionskontrolle* kennenlernen.
@@ -116,7 +122,7 @@ lieber die Technik an einem Beispiel anwenden.
 Ein "Repository" ist so etwas wie ein Projekt - das kann ein einzelnes Dokument
 sein oder aber auch eine Sammlung von Dokumenten oder Codedateien.
 
-Wir "klonen" dazu ein bereits existierendes Re
+Wir "klonen" (`clone`) dazu ein bereits existierendes Repository.
 
 
 ## Learning targets
