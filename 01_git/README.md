@@ -1,9 +1,3 @@
----
-layout: default
-title: Level 1: Zusammen arbeiten mit Git
-nav_order: 2
----
-
 # Level 1: Zusammen arbeiten mit Git
 
 In dieser Lektion werden wir das Konzept der *Versionskontrolle* kennenlernen.
@@ -77,8 +71,6 @@ dort registrieren. Das Tolle: Ihr braucht dafür keinen Extra-Account, sondern k
 Euch direkt mit Eurem UP-Account registrieren und anmelden.
 
 ![img](gitup_register1.png)
-
-
 
 
 ## Grundidee
