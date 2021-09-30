@@ -43,7 +43,13 @@ Dort könnt Ihr nicht nur Eure Projekte veröffentlichen und teilen, sondern auc
 Weise statische Webseiten entwickeln und hosten. Die Webseite, auf der Ihr Euch
 gerade befindet, ist ein Beispiel dafür.
 
+## Nutzen Eure Dozent:innen das denn auch?
 
+- https://github.com/wschwanghart
+- https://github.com/heistermann
+- https://github.com/TillF
+- 
+- 
 ## Vorbereitung 1: Git installieren und einrichten
 
 Auf dieser Seite findet Ihr Anleitungen für die Installation von `git` unter
@@ -109,7 +115,7 @@ man mit anderen am gleichen Projekt zusammenarbeitet. Dafür nutzt man meist
 eine zentrale, für alle erreichbare Plattform, auf der die Änderungen zusammenlaufen.
  
 
-# Die volle Breitseite: fork, clone, edit, add, commit, push
+## Die volle Breitseite: fork, clone, add, commit, push
 
 Bevor wir uns das Konzept der Versionskontrolle weiter erarbeiten, wollen wir
 lieber die Technik an einem Beispiel anwenden.
@@ -155,7 +161,7 @@ Du all die Änderungen einfügen, die Du *lokal* an dem Projekt vornimmst. Aber 
 musst Du das Projekt erstmal auf Deinen lokalen Rechner bekommen. Dafür geht es
 weiter mit `git clone`.
 
-### `git clone`
+### git clone
 
 Bewege Dich auf Deinem eigenen Rechner in ein Verzeichnis, in dem Dein Fork
 landen soll (also z.B. das Verzeichnis, in dem Du den ganzen Kram aus diesem Modul
@@ -179,55 +185,180 @@ Download erfolgt.
 ![img](img/clone2.png)
 
 Wirf nun einen Blick in Dein Verzeichnis - dort sollte nun das Unterverzeichnis
-`umweltdv` aufgetaucht sein. Vergleiche den Inhalt des Unterverzeichnisses mit dem,
+`git-lernen` aufgetaucht sein. Vergleiche den Inhalt des Unterverzeichnisses mit dem,
 was Du im Browser in Deinem GitLab-Fork siehst.
 
-Wechsle mit der Git Bash nun in das Verzeichnis `umweltdv` (`cd` steht für
+Wechsle mit der Git Bash nun in das Verzeichnis `git-lernen` (`cd` steht für
 change directory) und lass Dir den Inhalt anzeigen:
 
-`$ cd umweltdv`
+```
+$ cd git-lernen
+$ ls -a
+.  ..  .git  README.md
+```
+
+Die Datei `README.md` ist der Inhalt des Repositories. In der versteckten Datei
+`.git` steht alles drin, was `git` sich merken muss: welche Dateien werden getrackt,
+welche Änderungen gab es wann und durch wen? 
+
+### Code ändern und git darüber informieren: `add` und `commit`
+
+Apropos Änderungen: Was gab es denn in dem Repository bislang für Änderungen?
+Die Abfolge dieser Änderungen nennt man auch die *history*. Schauen wir uns
+die bisherige *history* an:
+
+```
+$ git log
+```
+
+![img](img/log.png)
+
+Bis zum gegenwärtigen Zeitpunkt gibt es nur einen einzigen "Commit". Was ist ein *commit*?
+Ein *commit* ist ein neuer Eintrag in der *history*: Mit einem *commit* teilst Du
+`git` mit, dass es sich Deine Änderungen gegenüber der vorherigen Version offiziell
+merken soll. Wenn Du Änderungen `commit`est, musst Du immer eine kurze Mitteilung
+hinzufügen, welche die Änderungen beschreibt. Das ist die *commit message*.
+Diese *commit message* lautet für den ersten Commit in diesem Repository originellerweise "Initial commit".
+
+Nimm nun eine Änderung am Repository vor. Was das für eine Änderung ist, bleibt
+Dir überlassen. Du könntest z.B. eine neue Markdown-Datei erstellen. Nutze einen
+Texteditor (z.B. Notepad++) und erstelle eine neue Textdatei (z.B. `meins.md`)
+im Verzeichnis `git-lernen`. Ich habe dafür unter Ubuntu den Editor *gedit* genutzt.
+
+![img](img/firstedit.png)
+
+Speichern nicht vergessen. Jetzt schau Dir an, ob `git` von Deinem Schaffen Notiz
+genommen hat:
+
+```
+$ git status
+```
+
+![img](img/status.png)
+
+`git` hat also gemerkt, dass es eine neuen Datei namens `meins.md` gibt. Diese
+Datei ist aber noch "untracked", ist also noch nicht Teil des `git` Repositories,
+obowhl sie im gleichen Verzeichnis liegt. Das Hinzufügen zum Repository erfolgt
+in zwei Schritten: `add` fügt die Datei der sog. "Staging Area" hinzu, `commit`
+fügt dann alle Dateien, die sich in der Staging Area befinden, der git history hinzu.
+Das Flag `-m` markiert die *commit message*. 
+
+```
+$ git add meins.md
+$ git commit -m "Datei meins.md hinzugefuegt."
+```
+
+Jetzt schauen wir uns nochmal die History an:
+
+`$ git log`
+
+![img](img/add-commit-log.png)
 
 
-## Learning targets
+### Letzter Schritt: `push` Deine Änderungen in Dein Repository auf GitLab
 
-- Understand the basic idea of version control
-- But version control plus remote hosting can deliver many more benefits!
-- Know the basic git commands
-- Understand the fundamental git/GitLab workflow
-- Basic Markdown 
+Du hast jetzt eine laufende lokale Versionskontrolle. Wenn Du es für sinnvoll
+hältst, kannst Du nun Deine Änderungen auf Dein GitLab-Repository schieben (`push`en).
+
+`$ git push origin master`
+
+Du könntest auch nur `git push` verwenden, aber wenn Du mit mehreren Remote-Repositories
+und branches arbeitest, empfiehlt es sich, remote und branch explizit anzugeben.
+
+Schaue nun im Browser auf Deinem GitLab-Repository nach, ob Deine Änderungen angekommen sind.
+
+## Recap
+
+So, das war Dein erster vollständiger Durchlauf durch einen sogenannten git workflow:
+
+- Fork: Ein repository auf einer Hosting-Plattform wie GitLab in Deinen namespace kopieren.
+- `git clone`: ein Repository von einer Plattform in ein lokales Verzeichnis runterladen.
+- `git log`: Die bisherige History inspizieren.
+- `git status`: Bislang aufgelaufene Änderungen anzeigen
+- `git add .`: Alle Änderungen in die Staging Area verschieben
+- `git commit -m "Eine aussagekräftige Beschreibung"`: Alle Änderungen auf der 
+Staging Area in das Repository `commit`en
+- `git push`: Aktuellen Stand des Repositories auf ein remote Repository schieben
+
+**Aufgabe**: Wiederhole diesen Workflow ein paar Mal, um etwas Routine zu bekommen.
+Füge Dateien hinzu oder ändere den Inhalt bereits bestehender Dateien. Schaue Dir
+jeweils den Output von `git status` an.
+
+## Markdown
+
+Was hat es eigentlich mit diesem *Markdown* auf sich? Markdown ist eine Auszeichnungssprache
+(markup language). Auszeichnungssprachen nutzt man, um Text zu strukturieren und
+formatieren. Im Gegensatz zu anderen Auszeichnungssprachen wie `html` (hypertext
+markup langauge) ist Markdown aber sehr einfach zu lesen und zu schreiben. Man kann
+auf diese Weise aus reinem Text sehr hübsche Dokumente rendern. So wie diese Webseite.
+
+Auf [dieser Seite](https://codingnconcepts.com/markdown/markdown-vs-html/) seht Ihr
+Beispiele für die Auszeichnung von Text in Markdown vs. html. Die Einfachheit von
+Markdown hat natürlich ihren Preis: man hat weniger Gestaltungsspielraum und man
+benötigt eine Software, die wiederum Markdown in html umwandelt: Denn html ist
+und bleibt das Fundament für Internetseiten bzw. für Content, der in Browsern angezeigt wird.
+
+Das tolle ist: Hosting-Plattformen wie GitHub und GitLab, aber auch Software wie
+`jupyter` und `R` verfügen über eine eingebaute Markdownunterstützung. Wenn Ihr
+eine Markdown-Date (`.md`) in GitLab anschaut, wird diese direkt gerendert. Auch
+diese Seite hier wurde in Markdown geschrieben und dann von GitHub in html umgewandelt.
+Schaut Euch mal den Quelltext dieser Seite an (in Mozilla Firefox z.B. über `Strg + U`). Brrh.
+
+Wir haben ein Pad vorbereitet, in dem wir alle zusammen Markdown kritzeln
+können: [Markdown-Sandkasten](https://pad.gwdg.de/0WuatSJ5SdSzFLh96sX6ug?both). Wir
+werden die Seite aber nur während des Kurses freigeben. Ihr könnt diesen genialen
+Pad-Service aber auch selbst nutzen, indem Ihr Euch unter [https://pad.gwdg.de](https://pad.gwdg.de)
+mit Eurem Uni Potsdam Single-Sign-On registriert.
+
+Eine weiteres schönes Markdown-Cheatsheet gibt es [hier](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+**Frage**: Was spricht Eurer Meinung nach dagegen, Pads wie das eben genutzte für die
+gemeinschaftliche Softwarenutzung zu verwenden?
 
 
-## Structure and main contents
+## Mit Hilfe von `git` und GitLab zusammen arbeiten
 
-- The basic idea of version control 
-- Examples for additional benefits: clarity, sanity, collaboration, hosting, ...
-- Examples from real life GitHub repositories that are maintained by us (wradlib, ...)
-- Why start with version control before we even started coding? The fundamental 
-setup of how we will use Git and GitLab for this course
-- Git cheat sheet
-- Create a repository in GitLab, clone it to your local machine, edit readme,
-commit, push, voila.
-- Fork, clone, edit, commit, push, pull request, voila.
-- Basic Markdown
+Wir haben es im Rahmen dieser Veranstaltung noch nicht geschafft zu zeigen, wie
+man `git` in Verbindung mit GitLab nutzt, um gemeinsam an Projekten zu arbeiten.
+Das ist eigentlich nicht so schwer: Irgendwie müsste man die Änderungen, die man
+in seinem Fork gemacht hat, wieder zurück in das ursprüngliche Respository bekommen.
+Als Eigentümer des ursprünglichen Respositorys möchte man aber nicht unbedingt,
+das x-beliebige Menschen ihren Code in das Repository pushen (hier war das ursprüngliche
+Respository [https://gitup.uni-potsdam.de/umweltdv/git-lernen.git/umweltdv/git-lernen]).
+
+Dafür gibt es nun zwei Lösungen: Entweder man vertraut bestimmten Menschen, dass
+sie keine Mist bauen und räumt ihnen Schreibrechte in dem Repository ein. Das geht
+in GitLab unter `Settings -> Members` im linken Sidebar.
+
+![img](img/permissions.png)
+
+Oft möchte man aber gern Entwicklungen Dritter motivieren, ihnen aber dennoch keine
+Rechte im eigenen Repository einräumen. Hier hat sich ein wichtiger Mechanismus
+der kollaborativen Softwareentwicklung gebildet: in der GitHub-Welt heißt dieser
+"Pull-Request", in der GitLab-Welt "Merge Request". Vereinfacht gesagt kann man
+einen "Antrag" (Request) an den Eigentümer des Repository stellen, die eigenen
+Änderungen hineinzu**merge**n.
+
+Als Beispiel, wie so etwas abläuft, schauen wir uns mal die Pull Requests
+des Python-Pakets `wradlib` an, einer Bibliothek zur Verarbeitung von Niederschlagsradardaten:
+[https://github.com/wradlib/wradlib/pulls].
+
+Für eine ausführliche Behandlung und vor allem Übung des Themas fehlt uns in dieser
+Veranstaltung leider die Zeit. [Hier](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/github-collaboration/)
+findet Ihr eine Einführung in das Thema.
+
+ 
+
+## Weitere Ressourcen
+
+Es gibt wirklich grandiose Ressourcen, um sich weiter mit dem Thema zu beschäftigen.
+
+- [Git Cheatsheet No 1](https://education.github.com/git-cheat-sheet-education.pdf)
+- [Git Cheatsheet No 2](https://www.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf)
+- [Git-Kurs No 1](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/)
+- [Git-Kurs Software Carpentry](https://swcarpentry.github.io/git-novice/index.html)
+- [Git-Book](https://git-scm.com/doc)
 
 
-## Exercises during the main course
-- Write a poem together: each verse is a different file, teacher merges all verses
-using some Python code
 
-## Which dataset will be used?
-For now: none.
-
-## Optional: Which contents/skills will you address that were not explicitely addressed before?
-None.
-
-## Optional: Upon which contents/skills will you explicitely build?
-None.
-
-## Optional: Ideas for tasks in the Coding-Lab
-- Write a poem/story together: each verse is a different file, submit via pull request 
-(teacher merges all verses using some Python code)
-
-## Optional: External resources upon which this lesson builds
-- [Git and Github](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/)
 
