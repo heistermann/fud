@@ -23,8 +23,8 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 3. Nun lernen wir ein geniales Feature von Miniconda kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
-   die bisherige Umgebung dadurch beschäfigt wird. Dies mag jetzt erstmal abstrakt klingen...aber es ist durchaus nicht ungewöhnlich,
-   dass die Installation eines Pakets die Funktionalität anderer Pakete beschäfigt. Aber genug jetzt, wir erstellen einfach
+   die bisherige Umgebung dadurch beschädigt wird. Dies mag jetzt erstmal abstrakt klingen...aber es ist durchaus nicht ungewöhnlich,
+   dass die Installation eines Pakets die Funktionalität anderer Pakete beeinträchtigt. Aber genug jetzt, wir erstellen einfach
    eine neue Umgebung names `umweltdv`:
    
    `$ conda create --name umweltdv python=3.9`
@@ -57,7 +57,7 @@ Ihr werdet beim Klonen nach Nutzernamen und Kennwort gefragt. Benutzt Euren UP-A
 
 ## Starte `jupyter` und los geht's...
 
-Wir gelangen nun in die heiße Vorbereitungsphase. In Kürze werden wir Eure Arbeitsumgebung starten...aufregend.
+Wir gelangen nun in die heiße Vorbereitungsphase. In Kürze werden wir Eure Arbeitsumgebung starten...
 
 Wenn nicht schon geschehen, öffnet im geklonten Arbeitverzeichnis `umweltdv` ein Terminalfester.
 Nun aktiviert Eure `conda`-Umgebung `umweltdv` und startet `jupyter`. `jupyter`?? Das ist das Werkzeug, in dem wir 
@@ -74,3 +74,35 @@ Der letzte Befehl sollte ein Browserfenster öffnen, in welchem Ihr die Verzeich
 ![1stjupyter](img/1stjupyter.png)
 
  
+Wir wollen noch einige Einstellungen in `jupyter` vornehmen. Auf Deinem Bildschirm 
+siehst Du in der oberen Zeile einen Reiter namens `Nbextensions`. Bitte draufklicken.
+Diese `Nbextensions` bieten jede Menge kleine Helferlein. Wir wollen nun vor allem
+ zwei davon aktivieren (indem wir die Checkboxen anklicken):
+
+- "Collapsible Headings" brauchen wir, um die Lösungen zu kleinen Aufgaben während 
+des Seminar aus- und einklappen zu könnnen.
+- "Table of Contents(2)" brauchen wir, um im Notebook ein navigierbares 
+Inhaltsverzeichnis als Sidebar einblenden zu können.
+
+![nbextensions](img/nbextensions.png)
+
+Wechsle nun zurück auf den Reiter `Files` und öffne das Verzeichnis
+`02_environment`. Lege eine Kopie der Datei `tour-de-python.ipynb` an, indem Du
+die Checkbox vor der Datei aktivierst und dann oben auf den Button `Duplicate`
+drückst.
+
+![duplicate](img/duplicate.png)
+
+**Warum solltest Du in diesem Kurs immer eine Kopie eines Notebooks anlegen, bevor
+Du darin arbeitest?** Der Grund ist, dass die Dozierenden im zentralen Upstream-Repository
+manchmal Inhalte ändern/anpassen/korrigieren. Wenn Du diese Änderungen in Dein
+Repository `merge`st/`pull`st, kommt es evtl. zu Konflikten mit Deinen eigenen Änderungen. Das
+ist zwar nicht weiter schlimm, kann aber etwas mühsam werden. Die Alternative für
+`git`-Profis wäre, einen neuen `git`-Branch (z.B. mit `git checkout -b nur-fuer-mich`
+anzulegen, in dem Du arbeitest. Dann könntest Du parallel dazu Deinen `master`-Branch
+mit dem zentralen Repository synchronisieren und bei Bedarf in Deine eigenen Änderungen
+auf `nur-fuer-mich` reinmergen. Aber...das lassen wir erstmal und arbeiten schlicht
+und einfach auf eine Kopie.
+
+Klicke nun also auf die neue Datei `tour-de-python-Copy1.ipynb` und weiter geht's
+[im Notebook](tour-de-python.html). 
