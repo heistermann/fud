@@ -58,7 +58,7 @@ Installationsprozedur.
 
 ## Vorbereitung 2: Bei Git.UP registrieren
 
-Öffnet in Eurem Browser die Adresse https://gitup.uni-potsdam.de.
+Öffnet in Eurem Browser die Adresse [https://gitup.uni-potsdam.de](https://gitup.uni-potsdam.de).
 
 Git.UP ist eine von der Uni Potsdam betriebene Instanz von GitLab. GitLab wiederum ist
 eine Plattform für Softwareentwicklung, die unter anderen die Speicherung und
@@ -103,18 +103,89 @@ aufgelöst werden muss. Auch dafür bieten Versionskontrollsysteme Mechanismen a
 
 ## Verteilte Versionskontrollsysteme
 
-Das lokale Aufzeichnen von Änderungen ist bereits ein wesentliches 
-
+Das lokale Aufzeichnen von Änderungen ist bereits ein wesentliches Merkmal der
+Versionskontrolle. Das volle Potenzial des Ansatzes wird aber deutlich, wenn
+man mit anderen am gleichen Projekt zusammenarbeitet. Dafür nutzt man meist
+eine zentrale, für alle erreichbare Plattform, auf der die Änderungen zusammenlaufen.
+ 
 
 # Die volle Breitseite: fork, clone, edit, add, commit, push
 
 Bevor wir uns das Konzept der Versionskontrolle weiter erarbeiten, wollen wir
 lieber die Technik an einem Beispiel anwenden.
 
-Ein "Repository" ist so etwas wie ein Projekt - das kann ein einzelnes Dokument
-sein oder aber auch eine Sammlung von Dokumenten oder Codedateien.
+Ein "Repository" ist so etwas wie ein Projektverzeichnis, in dem ein einzelnes Dokument
+oder aber auch eine Sammlung von Dokumenten oder Codedateien liegen kann.
 
-Wir "klonen" (`clone`) dazu ein bereits existierendes Repository.
+Um bestimmte Abläufe kennenzulernen und zu üben, nutzen wir das bereits existierende
+Repository [git-lernen](https://gitup.uni-potsdam.de/umweltdv/git-lernen). Bitte mal
+im Browser öffnen.
+
+![img](img/repo-git-lernen.png)
+
+Schau Dich ruhig mal um - evtl. sieht das Repository mittlerweile ein bisschen
+anders aus als auf dem Bild. Jetzt gerade enthält das Repository nur eine Datei
+namens `READM.md`. Das `md` steht für Markdown. Markdown ist eine sogenannte 
+Auszeichnungssprache, die wir später noch besser kennenlernen werden. Diese
+Webseite habe ich übrigens auch in Markdown geschrieben.
+
+### Fork
+
+Ich möchte Dir aber keine Schreibrechte auf meinem Repository `umweltdv/git-lernen`
+geben. Stattdessen legst Du innerhalb von GitLab eine Kopie des Repositories an. 
+Innerhalb dieser Kopie hast **Du** dann alle Rechte. Eine solche Kopie nennt man auch
+*Fork* (also Gabel), weil sich damit die Entwicklung des Repositories "aufgabelt",
+nämlich in Deinen und meinen Zinken. Erstelle jetzt Deinen Fork, indem Du auf das
+`Fork`-Button klickst.
+
+![img](img/fork.png)
+
+Du musst dann noch Deinen GitLab-Namespace auswählen, in welchem der Fork landen
+soll - wahrscheinlich hast Du nur einen...
+
+![img](img/fork2.png)
+
+Der Browser sollte Dir dann nach kurzer Fortschrittsanzeige Deinen Fork
+in Deinem eigenen Namespace zeigen. Yay.
+
+![img](img/fork3.png)
+
+Das ist nun Dein erstes "eigenes" Repository auf GitLab. In dieses "remote" willst
+Du all die Änderungen einfügen, die Du *lokal* an dem Projekt vornimmst. Aber dafür 
+musst Du das Projekt erstmal auf Deinen lokalen Rechner bekommen. Dafür geht es
+weiter mit `git clone`.
+
+### `git clone`
+
+Bewege Dich auf Deinem eigenen Rechner in ein Verzeichnis, in dem Dein Fork
+landen soll (also z.B. das Verzeichnis, in dem Du den ganzen Kram aus diesem Modul
+ablegst). Öffne in diesem Verzeichnis die *Git Bash*. Unter Windows sollte das
+einfach mit dem Kontextmenü über die rechte Maustaste gehen. Unter Linux öffnest
+Du einfach ein Terminal in dem Verzeichnis.
+
+Im Browser kannst Du die Adresse des Repositories kopieren und dann in die
+Git Bash zusammen mit dem Befehl `git clone` einfügen.
+
+![img](img/clone1.png) 
+
+In der URL in der folgenden Befehlszeile müsste UPNUTZER also durch Deinen
+Benutzernamen ersetzt werden:
+
+`$ git clone https://gitup.uni-potsdam.de/UPNUTZER/git-lernen.git`
+
+Anschließend wirst Du nach den Credentials Deines UP-Accounts gefragt und der
+Download erfolgt.
+
+![img](img/clone2.png)
+
+Wirf nun einen Blick in Dein Verzeichnis - dort sollte nun das Unterverzeichnis
+`umweltdv` aufgetaucht sein. Vergleiche den Inhalt des Unterverzeichnisses mit dem,
+was Du im Browser in Deinem GitLab-Fork siehst.
+
+Wechsle mit der Git Bash nun in das Verzeichnis `umweltdv` (`cd` steht für
+change directory) und lass Dir den Inhalt anzeigen:
+
+`$ cd umweltdv`
 
 
 ## Learning targets

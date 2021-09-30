@@ -38,7 +38,12 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
    `(umweltdv) $ conda install numpy scipy pandas matplotlib notebook h5py netCDF4 geopandas jupyter_contrib_nbextensions rasterio`
    
-   Was das alle für Pakete sind, werden wir Stück für Stück ergründen. Für den Augenblick freuen wir uns, was wir schon alles geleistet haben. 
+   Was das alle für Pakete sind, werden wir Stück für Stück ergründen. Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
+   
+7. Noch eine Kleinigkeit...
+
+   `(umweltdv) jupyter contrib nbextension install --user`
+   
 
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
