@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Ressourcen
+title: Weitere Quellen
 nav_order: 8
 parent: Level 1 - Git together
 ---
 
-## Weitere Ressourcen
+## Weitere Quellen
 
-Es gibt wirklich grandiose Ressourcen, um sich weiter mit dem Thema zu beschäftigen.
+Es gibt wirklich grandiose Ressourcen im Netz, um sich weiter mit dem Thema zu beschäftigen.
+Hier nur eine kleine Auswahl:
 
 - [Git Cheatsheet No 1](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Git Cheatsheet No 2](https://www.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf)
