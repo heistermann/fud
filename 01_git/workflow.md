@@ -5,7 +5,9 @@ nav_order: 4
 parent: Level 1 - Git together
 ---
 
-# Die volle Breitseite: fork, clone, add, commit, push
+# Die volle Breitseite
+
+## Ein kompletter Workflow `fork`, `clone`, `add`, `commit`, `push`
 
 Bevor wir uns das Konzept der Versionskontrolle weiter erarbeiten, wollen wir
 lieber die Technik an einem Beispiel anwenden.
@@ -25,7 +27,7 @@ namens `READM.md`. Das `md` steht für Markdown. Markdown ist eine sogenannte
 Auszeichnungssprache, die wir später noch besser kennenlernen werden. Diese
 Webseite habe ich übrigens auch in Markdown geschrieben.
 
-### Fork
+## Fork
 
 Ich möchte Dir aber keine Schreibrechte auf meinem Repository `umweltdv/git-lernen`
 geben. Stattdessen legst Du innerhalb von GitLab eine Kopie des Repositories an. 
@@ -51,7 +53,7 @@ Du all die Änderungen einfügen, die Du *lokal* an dem Projekt vornimmst. Aber 
 musst Du das Projekt erstmal auf Deinen lokalen Rechner bekommen. Dafür geht es
 weiter mit `git clone`.
 
-### git clone
+## git clone
 
 Bewege Dich auf Deinem eigenen Rechner in ein Verzeichnis, in dem Dein Fork
 landen soll (also z.B. das Verzeichnis, in dem Du den ganzen Kram aus diesem Modul
@@ -91,7 +93,7 @@ Die Datei `README.md` ist der Inhalt des Repositories. In der versteckten Datei
 `.git` steht alles drin, was `git` sich merken muss: welche Dateien werden getrackt,
 welche Änderungen gab es wann und durch wen? 
 
-### Code ändern und git darüber informieren: `add` und `commit`
+## Code ändern und `git` darüber informieren: `add` und `commit`
 
 Apropos Änderungen: Was gab es denn in dem Repository bislang für Änderungen?
 Die Abfolge dieser Änderungen nennt man auch die *history*. Schauen wir uns
@@ -145,7 +147,7 @@ Jetzt schauen wir uns nochmal die History an:
 ![img](img/add-commit-log.png)
 
 
-### Letzter Schritt: `push` Deine Änderungen in Dein Repository auf GitLab
+## Letzter Schritt: `push` Deine Änderungen in Dein Repository auf GitLab
 
 Du hast jetzt eine laufende lokale Versionskontrolle. Wenn Du es für sinnvoll
 hältst, kannst Du nun Deine Änderungen auf Dein GitLab-Repository schieben (`push`en).
