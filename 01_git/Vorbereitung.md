@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vorbereitung
-parent: No 1 - Zusammen arbeiten mit Git
+parent: Level 1 - Git together
 ---
 
 # Vorbereitung

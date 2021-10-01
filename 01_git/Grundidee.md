@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Grundidee
-parent: No 1 - Zusammen arbeiten mit Git
+parent: Level 1 - Git together
 ---
 
 # Grundidee

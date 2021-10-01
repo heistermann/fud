@@ -1,12 +1,12 @@
 ---
 layout: default
-title: No 1 - Zusammen arbeiten mit Git
+title: Level 1 - Git together
 nav_order: 2
 has_children: true
 permalink: /01_git
 ---
 
-# Level 1 Zusammen arbeiten mit Git
+# Level 1 - Git together
 
 In dieser Lektion werden wir das Konzept der *Versionskontrolle* kennenlernen.
 Ein *Versionskontrollsystem* verfolgt Änderungen in Dateien und erlaubt es Euch,
