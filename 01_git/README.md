@@ -53,7 +53,7 @@ gerade befindet, ist ein Beispiel dafür.
 
 ## Nutzen Eure Dozent:innen das denn auch?
 
-- https://github.com/wschwanghart
-- https://github.com/heistermann
-- https://github.com/TillF
+- [https://github.com/wschwanghart](https://github.com/wschwanghart)
+- [https://github.com/heistermann](https://github.com/heistermann)
+- [https://github.com/TillF](https://github.com/TillF)
  

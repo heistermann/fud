@@ -479,7 +479,7 @@ if (wetter == &quot;frostig&quot;)
 <p>Die haben wir also drei Fälle abgedeckt und sogar an eine vierte Variante gedacht, falls keiner der drei Fälle zutrifft, also für alle anderen Werte von <code>wetter</code>. Die geschweiften Klammern sind in diesem Fall optional, da ja immer nur ein Befehl auftaucht.</p>
 <hr />
 <button class="btn btn-info btn-block" data-toggle="collapse" data-target="#zusatz_2">
-Extra: ..noch nicht in’s Switchen gekommen?
+Extra: …noch nicht in’s Switchen gekommen?
 </button>
 <div id="zusatz_2" class="collapse">
 <p>Eine derartige Mehrfachauswahl lässt sich auch mit dem Befehl <code>switch()</code> realisieren:</p>
@@ -490,8 +490,7 @@ gegenstand &lt;- switch(wetter, frostig=&quot;Pudelmütze&quot;, regnerisch=&quo
 print(paste(gegenstand, &quot;eingepackt!&quot;)) #&quot;paste&quot; klebt die Zeichenketten für gegenstand und &quot;eingepackt!&quot; aneinander</code></pre>
 <pre><code>## [1] &quot;Sonnencreme eingepackt!&quot;</code></pre>
 <blockquote>
-<h2 id="aufgabe-sonnencreme-mit-switch">Aufgabe Sonnencreme mit switch()</h2>
-<p>In der obigen Lösung fehlt noch die Alternative für “alle restlichen Fälle”, die wir in der Konstruktion mit <code>if</code> mit <code>&quot;Nichts eingepackt!&quot;</code> abgedeckt hatten. Finde mit Hilfe der Hilfe zu <code>switch()</code> (aufrufen über <code>?switch</code>) heraus, wie dies umgesetzt werden kann!</p>
+<p>Aufgabe Sonnencreme mit <code>switch()</code>: In der obigen Lösung fehlt noch die Alternative für “alle restlichen Fälle”, die wir in der Konstruktion mit <code>if</code> mit <code>&quot;Nichts eingepackt!&quot;</code> abgedeckt hatten. Finde mit Hilfe der Hilfe zu <code>switch()</code> (aufrufen über <code>?switch</code>) heraus, wie dies umgesetzt werden kann!</p>
 <button class="btn btn-block" data-toggle="collapse" data-target="#l_switch">
 Lösung
 </button>
@@ -532,7 +531,7 @@ t_min[1] #Wert des ersten Tages</code></pre>
 Lösung
 </button>
 <div id="l_frost" class="collapse">
-<pre class="r"><code>t_min &lt;- c(2, 1, 0, 1, 3, 2, 4) 
+<pre class="r"><code>t_min &lt;- c(2, 1, 0, -1, 3, 2, 4) 
 
 frost &lt;- 
 t_min[1] &lt; 0 ||
@@ -544,14 +543,14 @@ t_min[6] &lt; 0 ||
 t_min[7] &lt; 0 
 
 frost #Ergebnis ausgeben</code></pre>
-<pre><code>## [1] FALSE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
 </blockquote>
 <p>Diese Lösung ist allerdings sehr unelegant. Einerseits müssen wir dafür ziemlich viele Zeilen tippen, andererseits funktioniert die Lösung auch nur, solange wir genau sieben Werte im Vektor <code>t_min</code> haben. Füge einen achten Wert bei <code>t_min</code> an – dieser wird in der Prüfung nicht berücksichtigt, solange Du nicht auch die Abfrage veränderst.</p>
 <div id="aggregierung-mit-any-und-all" class="section level2" number="4.1">
 <h2 number="4.1"><span class="header-section-number">4.1</span> Aggregierung mit <code>any</code> und <code>all</code></h2>
 <p>Hier werden die logischen Aggregierungsfunktionen <code>any</code> und <code>all</code> nützlich. Diese prüfen, ob in einem Vektor von logischen Variablen mindestens ein Eintrag (<code>any</code>) bzw. alle Einträge (<code>all</code>) <code>TRUE</code> sind:</p>
-<pre class="r"><code>t_min &lt;- c(2, 1, 0, 1, 3, 2, 4, -1) 
+<pre class="r"><code>t_min &lt;- c(2, 1, 0, -1, 3, 2, 4, -2) 
 tage_mit_frost &lt;- t_min &lt; 0
 
 frost          &lt;- any(tage_mit_frost) 
@@ -575,22 +574,24 @@ Hinweis
 Lösung
 </button>
 <div id="l_any_urlaub" class="collapse">
-<pre class="r"><code>t_min &lt;- c(2, 1, 0, 1, 3, 2, 4, -1) 
+<pre class="r"><code>t_min &lt;- c(2, 1, 0, -1, 3, 2, 4, -2) 
 tage_mit_frost &lt;- t_min &lt; 0
 frost          &lt;- !all(!tage_mit_frost) 
 #oder anders:
-tage_ohne_frost &lt;- tage_mit_frost
-frost          &lt;- !all(tage_ohne_frost) </code></pre>
+tage_ohne_frost &lt;- !tage_mit_frost
+frost          &lt;- !all(tage_ohne_frost)
+frost</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
 </blockquote>
 </div>
 <div id="verkettung-von-logischen-vektoren" class="section level2" number="4.2">
 <h2 number="4.2"><span class="header-section-number">4.2</span> Verkettung von logischen Vektoren</h2>
 <p>Wir haben mit der Variablen <code>tage_mit_frost</code> einen Vektor von Wahrheitswerten erzeugt, der für jeden Tag die Information enthält, ob es Frost gab:</p>
-<pre class="r"><code>t_min &lt;- c(2, 1, 0, 1, 3, 2, 4, -1) 
+<pre class="r"><code>t_min &lt;- c(2, 1, 0, -1, 3, 2, 4, -2) 
 tage_mit_frost &lt;- t_min &lt; 0
 tage_mit_frost</code></pre>
-<pre><code>## [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE</code></pre>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
 <p>Man kann nun auch mehrere derartiger Vektoren benutzen, um mehrteilige Bedingungen zu prüfen. Dafür verwenden wir den analog zu den bekannten Operatoren <code>&amp;&amp;</code> und <code>||</code> nun deren vektorisierte Formen <code>&amp;</code> und <code>|</code>. Diese führen die entsprechenden Operationen elementweise aus:</p>
 <pre class="r"><code>A &lt;- c(TRUE, FALSE, TRUE, FALSE) 
 B &lt;- c(TRUE, TRUE, FALSE, FALSE) 
@@ -713,19 +714,14 @@ for (zaehler in 1:length(tage_mit_schnee)) #die Variable zaehler bekommt nachein
     print(paste(&quot;Tag&quot;, zaehler,&quot;: Schneefegen!&quot;)) else 
     print(paste(&quot;Tag&quot;, zaehler,&quot;: Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 : Schneefegen!&quot;
-## [1] &quot;Tag 2 : Ausschlafen!&quot;
+<pre><code>## [1] &quot;Tag 1 : Ausschlafen!&quot;
+## [1] &quot;Tag 2 : Schneefegen!&quot;
 ## [1] &quot;Tag 3 : Schneefegen!&quot;
 ## [1] &quot;Tag 4 : Ausschlafen!&quot;
 ## [1] &quot;Tag 5 : Ausschlafen!&quot;
-## [1] &quot;Tag 6 : Ausschlafen!&quot;
-## [1] &quot;Tag 7 : Ausschlafen!&quot;
-## [1] &quot;Tag 8 : Schneefegen!&quot;
-## [1] &quot;Tag 9 : Ausschlafen!&quot;
-## [1] &quot;Tag 10 : Schneefegen!&quot;
-## [1] &quot;Tag 11 : Ausschlafen!&quot;
-## [1] &quot;Tag 12 : Schneefegen!&quot;
-## [1] &quot;Tag 13 : Ausschlafen!&quot;</code></pre>
+## [1] &quot;Tag 6 : Schneefegen!&quot;
+## [1] &quot;Tag 7 : Schneefegen!&quot;
+## [1] &quot;Tag 8 : Ausschlafen!&quot;</code></pre>
 </div>
 Wir bekommen einen neuen Mitbewohner in unserem Haus und sind nur noch an ungeraden Tagen verantwortlich. Passe die Schleife durch a) Veränderung des Schleifenkopfs oder b) durch Veränderung des Schleifenkörpers an! <button class="btn btn-block" data-toggle="collapse" data-target="#h_schneefegena"> Hinweis a) </button>
 <div id="h_schneefegena" class="collapse">
@@ -746,10 +742,7 @@ for (zaehler in seq(from=1, to=length(tage_mit_schnee), by=2)) #die Variable zae
 ## [1] &quot;Tag 3 : Schneefegen!&quot;
 ## [1] &quot;Tag 5 : Schneefegen!&quot;
 ## [1] &quot;Tag 7 : Schneefegen!&quot;
-## [1] &quot;Tag 9 : Ausschlafen!&quot;
-## [1] &quot;Tag 11 : Schneefegen!&quot;
-## [1] &quot;Tag 13 : Schneefegen!&quot;
-## [1] &quot;Tag 15 : Schneefegen!&quot;</code></pre>
+## [1] &quot;Tag 9 : Schneefegen!&quot;</code></pre>
 </div>
 <a name="h_schneefegen_l"> </a> <button class="btn btn-block" data-toggle="collapse" data-target="#h_schneefegenb"> Hinweis b) </button>
 <div id="h_schneefegenb" class="collapse">
@@ -768,18 +761,12 @@ for (zaehler in 1:length(tage_mit_schnee)) #die Variable zaehler bekommt nachein
      print(paste(&quot;Tag&quot;, zaehler,&quot;: Ausschlafen!&quot;))
 }</code></pre>
 <pre><code>## [1] &quot;Tag 1 : Ausschlafen!&quot;
-## [1] &quot;Tag 3 : Schneefegen!&quot;
-## [1] &quot;Tag 5 : Ausschlafen!&quot;
+## [1] &quot;Tag 3 : Ausschlafen!&quot;
+## [1] &quot;Tag 5 : Schneefegen!&quot;
 ## [1] &quot;Tag 7 : Ausschlafen!&quot;
 ## [1] &quot;Tag 9 : Schneefegen!&quot;
-## [1] &quot;Tag 11 : Schneefegen!&quot;
-## [1] &quot;Tag 13 : Schneefegen!&quot;
-## [1] &quot;Tag 15 : Ausschlafen!&quot;
-## [1] &quot;Tag 17 : Ausschlafen!&quot;
-## [1] &quot;Tag 19 : Ausschlafen!&quot;
-## [1] &quot;Tag 21 : Schneefegen!&quot;
-## [1] &quot;Tag 23 : Ausschlafen!&quot;
-## [1] &quot;Tag 25 : Ausschlafen!&quot;</code></pre>
+## [1] &quot;Tag 11 : Ausschlafen!&quot;
+## [1] &quot;Tag 13 : Ausschlafen!&quot;</code></pre>
 </div>
 <hr />
 <button class="btn btn-info btn-block" data-toggle="collapse" data-target="#zusatz_wochentag">
@@ -806,7 +793,17 @@ for (zaehler in seq(from=1, to=length(tage_mit_schnee), by=2)) #die Variable zae
    print(paste(&quot;Tag&quot;, zaehler,&quot;(&quot;, wochentage[index_wochentag],&quot;): Schneefegen!&quot;)) else 
    print(paste(&quot;Tag&quot;, zaehler,&quot;(&quot;, wochentage[index_wochentag],&quot;): Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 ( Mo ): Ausschlafen!&quot;</code></pre>
+<pre><code>## [1] &quot;Tag 1 ( Mo ): Schneefegen!&quot;
+## [1] &quot;Tag 3 ( Mi ): Schneefegen!&quot;
+## [1] &quot;Tag 5 ( Fr ): Schneefegen!&quot;
+## [1] &quot;Tag 7 ( So ): Ausschlafen!&quot;
+## [1] &quot;Tag 9 ( Di ): Schneefegen!&quot;
+## [1] &quot;Tag 11 ( Do ): Ausschlafen!&quot;
+## [1] &quot;Tag 13 ( Sa ): Ausschlafen!&quot;
+## [1] &quot;Tag 15 ( Mo ): Schneefegen!&quot;
+## [1] &quot;Tag 17 ( Mi ): Schneefegen!&quot;
+## [1] &quot;Tag 19 ( Fr ): Ausschlafen!&quot;
+## [1] &quot;Tag 21 ( So ): Schneefegen!&quot;</code></pre>
 </div>
 </div>
 </blockquote>
@@ -938,14 +935,20 @@ while (v_wind &lt; 20)
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
 <pre><code>## [1] &quot;Wind: 5 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 4.62302726786584 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 6.99443315639287 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 5.46922178408679 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 14.376360766759 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 16.9281242509382 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 17.4253966236505 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 16.9064385762573 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 20.207935544413 ; Anlage gestoppt.&quot;</code></pre>
+## [1] &quot;Wind: 13.6378199176397 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.4547655166099 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 17.928809603181 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 19.7483489367706 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 17.8328227476193 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.9004679109292 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 12.7551046711586 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 9.64208822482363 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 10.2170032482632 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 16.1681440447589 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 17.3308636709385 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 16.6426917641373 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 19.1275384120438 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 20.7742363274948 ; Anlage gestoppt.&quot;</code></pre>
 <p>Wie auch bei der <code>for()</code>-Schleife wird der zu wiederholende Code-Block mit <code>{...}</code> eingeklammert. Der Unterschied besteht darin, dass <code>while()</code> den logischen Ausdruck in der Klammer als Laufbedingung auswertet (hier <code>v_wind &lt; 20</code>) und dies nicht an eine Zählervariable knüpft. Die Anzahl der Schleifendurchläufe steht also nicht von vornherein fest und ändert sich je nach der zufälligen Ausprägung des Windes.</p>
 <p><button type="button" class="btn btn-warning">Wichtig!</button> Die Schleifenbedingung wird immer am Anfang, d.h. vor dem auszuführenden Block, geprüft. Wenn sie schon von Anfang an FALSCH ist (z.B. wenn `<code>v_wind</code> mit 21 initialisiert wird), wird die Schleife gar nicht ausgeführt.</p>
 <blockquote>
@@ -964,16 +967,16 @@ while (v_wind &lt; 20 &amp;&amp; zaehler &lt; 10)
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
 <pre><code>## [1] &quot;Wind: 5 ; Zähler: 0 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.1154007602017 ; Zähler: 1 : Anlage läuft.&quot;
-## [1] &quot;Wind: 14.1091321803204 ; Zähler: 2 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.5265860350559 ; Zähler: 3 : Anlage läuft.&quot;
-## [1] &quot;Wind: 11.4516549018359 ; Zähler: 4 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.3236408614704 ; Zähler: 5 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.053411278642 ; Zähler: 6 : Anlage läuft.&quot;
-## [1] &quot;Wind: 19.208739049696 ; Zähler: 7 : Anlage läuft.&quot;
-## [1] &quot;Wind: 15.1737513909831 ; Zähler: 8 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.4674144134042 ; Zähler: 9 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.0830851676027 ; Anlage gestoppt.&quot;</code></pre>
+## [1] &quot;Wind: 3.8159946098458 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 12.9562734641911 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 10.161852973172 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 12.3962680069973 ; Zähler: 4 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.9833650004838 ; Zähler: 5 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.785590777839 ; Zähler: 6 : Anlage läuft.&quot;
+## [1] &quot;Wind: 19.156438186811 ; Zähler: 7 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.4629766122445 ; Zähler: 8 : Anlage läuft.&quot;
+## [1] &quot;Wind: 11.8063783354769 ; Zähler: 9 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.9625996090626 ; Anlage gestoppt.&quot;</code></pre>
 </div>
 </blockquote>
 </div>
@@ -1050,17 +1053,17 @@ for (zaehler in 0:9)
  print(paste(&quot;Wind:&quot;, v_wind,&quot;; Zähler:&quot;, zaehler, &quot;: Anlage läuft.&quot;))
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
-<pre><code>## [1] &quot;Wind: 13.5725802663947 ; Zähler: 0 : Anlage läuft.&quot;
-## [1] &quot;Wind: 12.1410848153304 ; Zähler: 1 : Anlage läuft.&quot;
-## [1] &quot;Wind: 15.0443278374876 ; Zähler: 2 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.3214023015459 ; Zähler: 3 : Anlage läuft.&quot;
-## [1] &quot;Wind: 16.7295544784745 ; Zähler: 4 : Anlage läuft.&quot;
-## [1] &quot;Wind: 19.5304848612785 ; Zähler: 5 : Anlage läuft.&quot;
-## [1] &quot;Wind: 19.1368922126586 ; Zähler: 6 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.7208509124491 ; Zähler: 7 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.0815684278432 ; Zähler: 8 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.4548157289558 ; Zähler: 9 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.4548157289558 ; Anlage gestoppt.&quot;</code></pre>
+<pre><code>## [1] &quot;Wind: 13.5473785003414 ; Zähler: 0 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.103841821468 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 12.2515403850361 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 13.9692054070584 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.9530640724393 ; Zähler: 4 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.0593202417837 ; Zähler: 5 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.9817354442249 ; Zähler: 6 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.6857721190633 ; Zähler: 7 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.5607619150318 ; Zähler: 8 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.8354498453333 ; Zähler: 9 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.8354498453333 ; Anlage gestoppt.&quot;</code></pre>
 </div>
 Bei Geschwindigkeiten von 12 bis 20 soll die Anlage nun außerdem gedrosselt werden. Setze dies unter der Verwendung von <code>next()</code> um! <button class="btn btn-block" data-toggle="collapse" data-target="#l_windkraft3"> Lösung </button>
 <div id="l_windkraft3" class="collapse">
@@ -1083,17 +1086,17 @@ for (zaehler in 0:9)
   print(paste(&quot;Wind:&quot;, v_wind,&quot;; Zähler:&quot;, zaehler, &quot;: Anlage läuft.&quot;))
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
-<pre><code>## [1] &quot;Wind: 14.4264666243107 ; Zähler: 0 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 11.8069430781643 ; Zähler: 1 : Anlage läuft.&quot;
-## [1] &quot;Wind: 11.7284078431793 ; Zähler: 2 : Anlage läuft.&quot;
-## [1] &quot;Wind: 14.6699184216976 ; Zähler: 3 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 12.0106257502776 ; Zähler: 4 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 9.35431634243828 ; Zähler: 5 : Anlage läuft.&quot;
-## [1] &quot;Wind: 11.0545550701277 ; Zähler: 6 : Anlage läuft.&quot;
-## [1] &quot;Wind: 8.74494913239691 ; Zähler: 7 : Anlage läuft.&quot;
-## [1] &quot;Wind: 7.24669751752001 ; Zähler: 8 : Anlage läuft.&quot;
-## [1] &quot;Wind: 5.82283587914461 ; Zähler: 9 : Anlage läuft.&quot;
-## [1] &quot;Wind: 5.82283587914461 ; Anlage gestoppt.&quot;</code></pre>
+<pre><code>## [1] &quot;Wind: 12.7244615639211 ; Zähler: 0 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 10.7320012844025 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 8.90616974255781 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 11.4264074328081 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.221784162618 ; Zähler: 4 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 18.4780223814831 ; Zähler: 5 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 14.167376445587 ; Zähler: 6 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 13.4419134865117 ; Zähler: 7 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 17.3050020369471 ; Zähler: 8 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 19.6126226118785 ; Zähler: 9 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 19.6126226118785 ; Anlage gestoppt.&quot;</code></pre>
 </blockquote>
 <hr />
 <blockquote>

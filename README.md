@@ -7,7 +7,7 @@ permalink: /
 
 # Fundamente der Umweltdatenverarbeitung
 
-![img](http://www.freeimageslive.co.uk/files/images010/environmental_data_log.jpg)
+![img](http://www.freeimageslive.co.uk/files/images010/environmental_data_log.preview.jpg)
 
 Quelle: <a href="http://www.freeimageslive.co.uk/free_stock_image/environmental-data-log-jpg" target="_blank"> freeimageslive.co.uk gratuit </a> , Creative Commons Attribution 3.0 Unported License. 
 

@@ -14,14 +14,20 @@ und Euch bei Git.UP registrieren.
 ## Git installieren und einrichten
 
 Auf dieser Seite findet Ihr Anleitungen für die Installation von `git` unter
-Linux, Mac und Windows: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
+Linux, Mac und Windows: 
+[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+Unter [diesem Link](https://phoenixnap.com/kb/how-to-install-git-windows) gibt es noch einen Windows-spezifischen Walk-through durch die 
+Installationsprozedur.
+
+Öffnet nach der Installation bitte die Git Bash und definiert Nutzernamen
+und E-Mail-Adresse.
 
 ```
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
 ```
-Unter [diesem Link](https://phoenixnap.com/kb/how-to-install-git-windows) gibt es noch einen Windows-spezifischen Walk-through durch die 
-Installationsprozedur.
+
 
 ## Vorbereitung 2: Bei Git.UP registrieren
 
