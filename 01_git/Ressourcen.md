@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zusammen
+title: Ressourcen
 nav_order: 7
 parent: Level 1 - Git together
 ---
