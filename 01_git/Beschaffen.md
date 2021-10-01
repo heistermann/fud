@@ -29,7 +29,7 @@ zu runterzuladen. Es gibt dazu ein Download-Button:
 
 Wenn alle Stricke reißen, könnt Ihr das jederzeit machen. Aber was macht Ihr,
 wenn die Dozierenden etwas an den Ressourcen ändern? In ein neues Verzeichnis
-runterladen (`umweltdv.v2/...`) - klingt nach unserem [Einstiegsbild](http://phdcomics.com/comics/archive/phd101212s.gif) 
+runterladen (`umweltdv.v2/...`) - klingt nach unserem [Einstiegsbild](http://phdcomics.com/comics/archive/phd101212s.gif). 
 
 Schöner wäre es doch, ein Verzeichnis zu haben, das Ihr nach Bedarf aktualisieren
 könnt. Natürlich mit `git`.
@@ -93,7 +93,8 @@ $ git remote add upstream https://gitup.uni-potsdam.de/umweltdv/git-lernen.git
 ```
 
 Ich werde nun eine neue Datei namens `deins.md` in mein Repository
-https://gitup.uni-potsdam.de/umweltdv/git-lernen.git pushen.
+[https://gitup.uni-potsdam.de/umweltdv/git-lernen.git](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)
+ pushen.
 
 *Achtung: Wir sitzen live zusammen...bitte wartet, bis ich `deins.md` gepush habe!*
 
@@ -112,16 +113,16 @@ by GitLab schieben:
 $ git push origin master
 ```
 
-Voila - alles synchron!
+Voila - alles synchron?!
 
 
 ## Jetzt wirklich... workflow für den Kurs aufsetzen!
 
-**Fork**
+### Fork
 
 Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/heisterm/umweltdv)
 
-**Clone**
+### Clone
 Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeihnis Deiner Wahl.
 Dann
 
@@ -132,7 +133,7 @@ Navigigiere mit der Bash nun in das Repository:
 
 `$ cd umweltdv`.
 
-**Remote einstellen**
+### Remote einstellen
 
 Füge das zentrale Repository als remote namens `upstream` hinzu:
 
@@ -144,14 +145,14 @@ $ git remote - v
 Der letzte Befehl sollte Dir als remote `origin` Deinen eigenen Fork und als
 remote `upstream` das zentrale Kursrepository ausgeben.
 
-**Konflikte vermeiden: Nur auf Kopien arbeiten!**
+### Konflikte vermeiden: Nur auf Kopien arbeiten!
 
 Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.
 Wenn Du z.B. den Python-Kurs belegst und beim nächsten Mal mit der Datei
 `umweltdv/02_environment/python/tour-de-python.ipynb` arbeiten möchtest: Lege eine
 Kopie an (z.B. `tour-de-python_Copy.ipynb`) und arbeite mit dieser.
 
-**Dein Repository pflegen!**
+### Dein Repository pflegen!
 
 Praktiziere den erlernten `git` Workflow, um Deine eigenen Änderungen in die
 lokale History einzupflegen und Deinen Fork auf GitLab aktuelle zu halten:
@@ -170,6 +171,6 @@ $ git pull --rebase upstream master
 $ git push origin master
 ```
 
-**Gibt nicht auf!**
+### Gibt nicht auf!
 
 Auch wenn Dir das alles furchtbar vorkommt: Gib nicht auf! Mach weiter! Auch wenn es weh tut!
