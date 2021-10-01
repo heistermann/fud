@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Grundidee
+nav_order: 2
 parent: Level 1 - Git together
 ---
 

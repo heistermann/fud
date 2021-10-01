@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Vorbereitung
+nav_order: 3
 parent: Level 1 - Git together
 ---
 
