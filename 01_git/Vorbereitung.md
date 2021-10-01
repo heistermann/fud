@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Vorbereitung
+title: Git vorbereiten
 nav_order: 3
 parent: Level 1 - Git together
 ---
 
-# Vorbereitung
+# Vorbereitung Eurer Git-Umgebung
 
 Bevor wir loslegen, müssen wir die `git`-Umgebung auf Euren Rechnern vorbereiten
 und Euch bei Git.UP registrieren.

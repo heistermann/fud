@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Volle Breitseite
+title: Die volle Breitseite
 nav_order: 4
 parent: Level 1 - Git together
 ---

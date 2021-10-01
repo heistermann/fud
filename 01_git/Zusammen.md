@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zusammen
+title: Zusammen arbeiten
 nav_order: 6
 parent: Level 1 - Git together
 ---
