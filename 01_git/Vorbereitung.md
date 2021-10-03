@@ -43,4 +43,4 @@ Damit Ihr in diesem Kurs GitLab bzw. Git.UP nutzen können, müsst Ihr Euch einm
 dort registrieren. Das Tolle: Ihr braucht dafür keinen Extra-Account, sondern könnt
 Euch direkt mit Eurem UP-Account registrieren und anmelden.
 
-![img](gitup_register1.png)
+![img](img/gitup_register1.png)

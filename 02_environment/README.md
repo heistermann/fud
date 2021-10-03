@@ -7,7 +7,7 @@
 
 - Anleitung zum Einrichten Eurer Arbeitsumgebung ([Link](python/README.md))
 - Tour durch Eure neue Python-Umgebung ([Link](python/tour-de-python.html)).
-- Python-Übungsaufgaben für diese Lektion ([Link](python/exercises02.html)).
+- Python-Übungsaufgaben für diese Lektion ([Link](python/uebung/uebung.html)).
 
 ## R
 
@@ -23,7 +23,7 @@
 
 ## Struktur
 
-Die Lektion besteht aus zwei Teilen:
+Das Seminar besteht aus zwei Teilen:
 
 1. Installationsanleitung für [R](R/R_Arbeitsumgebung.html) bzw. [Python](python/README.md)
 2. Erkundungstour durch [R/R-Studio](R/R_kundungstour.html) bzw. [Python/jupyter](python/tour-de-python.html)
@@ -33,6 +33,5 @@ Die Lektion besteht aus zwei Teilen:
 - Habt Ihr Fragen zu den Inhalten des ersten Seminars? Etwas noch nicht verstanden?
 Nutzt die Coding-Werkstatt, um diese Dinge zur Sprache zu bringen. Notiert Euch die
 Fragen am Besten vorher!
-- Zum ersten Mal: Übungsaufgaben öffnen, bearbeiten, testen und einreichen 
-in [R]() und in [Python](python/exercises02.html).
+- Zum ersten Mal: Übungsaufgaben öffnen, bearbeiten, testen und einreichen.
 - Vertiefungsaufgabe

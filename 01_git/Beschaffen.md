@@ -171,6 +171,6 @@ $ git pull --rebase upstream master
 $ git push origin master
 ```
 
-### Gibt nicht auf!
+### Gib nicht auf!
 
 Auch wenn Dir das alles furchtbar vorkommt: Gib nicht auf! Mach weiter! Auch wenn es weh tut!
