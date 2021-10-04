@@ -13,7 +13,7 @@ wie `git` bereits zu Beginn des Kurses überhelfen.
 Die Ressourcen, mit denen Du in diesem Kurs arbeiten wirst, sind v.a. Daten,
 R-Dateien (für R) und jupyter Notebooks (für Python). Wir halten und entwickeln
 all diese Ressourcen in einem zentralen Repository: 
-[https://gitup.uni-potsdam.de/heisterm/umweltdv](https://gitup.uni-potsdam.de/heisterm/umweltdv).
+[https://gitup.uni-potsdam.de/umweltdv/umweltdv](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
 
 Schaut Euch in diesem Repository mal die History an (`Repository --> Commits`).
 Ihr seht: Da ist ganz schön was in Bewegung.
@@ -120,7 +120,7 @@ Voila - alles synchron?!
 
 ### Fork
 
-Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/heisterm/umweltdv)
+Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/umweltdv)
 
 ### Clone
 Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeihnis Deiner Wahl.
@@ -138,7 +138,7 @@ Navigigiere mit der Bash nun in das Repository:
 Füge das zentrale Repository als remote namens `upstream` hinzu:
 
 ```
-$ git remote add upstream https://gitup.uni-potsdam.de/heisterm/umweltdv.git
+$ git remote add upstream https://gitup.uni-potsdam.de/umweltdv/umweltdv.git
 $ git remote - v
 ```
 

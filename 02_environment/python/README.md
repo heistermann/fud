@@ -48,14 +48,16 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
 Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt. Dies könntet Ihr jetzt auch runterladen, 
-aber wir wissen seid unserem letzten Termin etwas besseres: Wir klonen das Repository.
+aber wir wissen seid unserem letzten Termin etwas besseres. Ihr legt einen Fork des Repositories and und klont diese mit `git`.
+
+Falls Ihr das noch nicht im Rahmen der `git`-Lektion gemacht habt: [Hier](../../01_git/Beschaffen.md) findet Ihr eine ausführliche Anleitung.
 
 Ihr könnt das Repository schonmal anschauen, wenn Ihr Euch bei https://gitup.uni-potsdam.de einloggt und dann auf 
-https://gitup.uni-potsdam.de/heisterm/umweltdv geht.
+https://gitup.uni-potsdam.de/umweltdv/umweltdv geht.
 
 Überlegt Euch nun, wo Ihr das Repository lokal auf Eurem Rechner speichern möchtet. Öffnet dann in diesem Verzeichnis ein Terminalfenster und dann:
 
-`$ git clone https://gitup.uni-potsdam.de/heisterm/umweltdv.git`
+`$ git clone https://gitup.uni-potsdam.de/umweltdv/umweltdv.git`
 
 Ihr werdet beim Klonen nach Nutzernamen und Kennwort gefragt. Benutzt Euren UP-Account (Nutzername ohne `@uni-potsdam.de`) 
 
