@@ -1,4 +1,3 @@
-
 # Level 2: Die Arbeitsumgebung
 
 ![img](img/r_python.png)

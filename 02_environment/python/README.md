@@ -33,12 +33,19 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    Vielleicht wird dies der häufigste Befehl, den Ihr in diesem Kurs ausführen werdet...
    
    `$ conda activate umweltdv`
+   
+   (Falls Ihr unter Windows in der Git Bash unterwegs seid, gibt es evtl. einen Fehler,
+   dass `conda activate` nicht zur Verfügung steht. Führe in diesem Fall den Befehl
+   `conda init bash` aus, schließe das Terminal und versuche es nochmal.
 
 6. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch:
 
    `(umweltdv) $ conda install numpy scipy pandas matplotlib notebook h5py netCDF4 geopandas jupyter_contrib_nbextensions rasterio`
    
-   Was das alle für Pakete sind, werden wir Stück für Stück ergründen. Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
+   Das kann je nach Internetverbindung eine Weile dauern... 
+   
+   Was das alle für Pakete sind, werden wir Stück für Stück ergründen. 
+   Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
    
 7. Noch eine Kleinigkeit...
 
@@ -48,18 +55,14 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
 Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt. Dies könntet Ihr jetzt auch runterladen, 
-aber wir wissen seid unserem letzten Termin etwas besseres. Ihr legt einen Fork des Repositories and und klont diese mit `git`.
+aber wir wissen seid unserem letzten Termin etwas besseres. 
 
-Falls Ihr das noch nicht im Rahmen der `git`-Lektion gemacht habt: [Hier](../../01_git/Beschaffen.md) findet Ihr eine ausführliche Anleitung.
+Ihr könnt in GitLab einen Fork des Repositories [https://gitup.uni-potsdam.de/umweltdv/umweltdv.git](https://gitup.uni-potsdam.de/umweltdv/umweltdv.git)
+anlegen und dann mittels `git clone https://gitup.uni-potsdam.de/MeinUPNutzer/umweltdv.git`
+in ein lokales Verzeichnis klonen. Ihr werdet beim Klonen nach Nutzernamen und Kennwort gefragt. Benutzt Euren UP-Account (Nutzername ohne `@uni-potsdam.de`) 
 
-Ihr könnt das Repository schonmal anschauen, wenn Ihr Euch bei https://gitup.uni-potsdam.de einloggt und dann auf 
-https://gitup.uni-potsdam.de/umweltdv/umweltdv geht.
-
-Überlegt Euch nun, wo Ihr das Repository lokal auf Eurem Rechner speichern möchtet. Öffnet dann in diesem Verzeichnis ein Terminalfenster und dann:
-
-`$ git clone https://gitup.uni-potsdam.de/umweltdv/umweltdv.git`
-
-Ihr werdet beim Klonen nach Nutzernamen und Kennwort gefragt. Benutzt Euren UP-Account (Nutzername ohne `@uni-potsdam.de`) 
+Falls Ihr das noch nicht im Rahmen der `git`-Lektion gemacht habt: [Hier](../../01_git/Beschaffen.md)
+findet Ihr eine ausführliche Anleitung.
 
 
 ## Starte `jupyter` und los geht's...
@@ -75,7 +78,6 @@ kennenlernen werdet. Nun also:
 $ conda activate umweltdv
 (umweltdv)$ jupyter notebook
 ```
-
 Der letzte Befehl sollte ein Browserfenster öffnen, in welchem Ihr die Verzeichnisstruktur im Verzeichnis `umweltdv` abgebildet seht.
 
 ![1stjupyter](img/1stjupyter.png)
@@ -101,15 +103,17 @@ drückst.
 ![duplicate](img/duplicate.png)
 
 **Warum solltest Du in diesem Kurs immer eine Kopie eines Notebooks anlegen, bevor
-Du darin arbeitest?** Der Grund ist, dass die Dozierenden im zentralen Upstream-Repository
+Du darin arbeitest?**
+
+Der Grund ist, dass die Dozierenden im zentralen Upstream-Repository
 manchmal Inhalte ändern/anpassen/korrigieren. Wenn Du diese Änderungen in Dein
 Repository `merge`st/`pull`st, kommt es evtl. zu Konflikten mit Deinen eigenen Änderungen. Das
 ist zwar nicht weiter schlimm, kann aber etwas mühsam werden. Die Alternative für
 `git`-Profis wäre, einen neuen `git`-Branch (z.B. mit `git checkout -b nur-fuer-mich`
 anzulegen, in dem Du arbeitest. Dann könntest Du parallel dazu Deinen `master`-Branch
 mit dem zentralen Repository synchronisieren und bei Bedarf in Deine eigenen Änderungen
-auf `nur-fuer-mich` reinmergen. Aber...das lassen wir erstmal und arbeiten schlicht
-und einfach auf eine Kopie.
+auf `nur-fuer-mich` reinmergen. Aber...das lassen wir erstmal. Lege stattdessen 
+immer eine Kopie der Notebooks an, bevor Du sie öffnest und damit arbeitest.
 
 Klicke nun also auf die neue Datei `tour-de-python-Copy1.ipynb` und weiter geht's
 [im Notebook](tour-de-python.html). 

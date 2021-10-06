@@ -4,7 +4,7 @@
 
 - Einführende Inhalte zum Arbeiten mit "Dataframes" ([Link](python/dataframes-intro.html)). Arbeitet diese zunächst selbständig durch.
 - Im Seminar: Analyse der Säkularstation in Potsdam ([Link](python/dataframes-lesson.html)).
-- Python-Übungsaufgaben zum Thema Dataframe ([Link](python/exercises03.html))
+- Python-Übungsaufgaben zum Thema Dataframe ([Link](python/uebung/uebung.html))
 
 ## R
 
