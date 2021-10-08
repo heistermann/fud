@@ -14973,7 +14973,7 @@ Name: Dichter, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -15014,7 +15014,7 @@ Name: Dichter, dtype: object</pre>
 The above exception was the direct cause of the following exception:
 
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_9012/3006201197.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/ipykernel_8817/3006201197.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span>
 
 <span class="ansi-green-fg">~/miniconda3/envs/umweltdv/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
@@ -15050,13 +15050,76 @@ The above exception was the direct cause of the following exception:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dichter</th>
+      <th>Sterbealter</th>
+      <th>Brillentraeger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Goethe</td>
+      <td>83</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Schiller</td>
+      <td>46</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Brecht</td>
+      <td>57</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -15080,7 +15143,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Erste Zeile</span>
@@ -15091,10 +15154,33 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Dichter           Goethe
+Sterbealter           83
+Brillentraeger     False
+Name: 0, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zweite Zeile, Spalten Dichter und Sterbealter</span>
@@ -15105,10 +15191,32 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Dichter        Schiller
+Sterbealter          46
+Name: 1, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zweite und dritte Zeile, Spalten Dichter und Sterbealter</span>
@@ -15119,10 +15227,64 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dichter</th>
+      <th>Sterbealter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Schiller</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Brecht</td>
+      <td>57</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Bedingungen f√ºr eine Auswahl nutzen: Nur Brillentr√§ger</span>
@@ -15133,10 +15295,61 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dichter</th>
+      <th>Sterbealter</th>
+      <th>Brillentraeger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Brecht</td>
+      <td>57</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Bedingungen f√ºr eine Auswahl nutzen: Nur Dichter, die &quot;jung&quot; gestorben sind</span>
@@ -15153,7 +15366,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15215,7 +15428,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2. Zeile, 1. Spalte</span>
@@ -15232,7 +15445,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -15285,7 +15498,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Voher</span>
@@ -15302,7 +15515,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -15362,7 +15575,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Spalte &quot;Sterbealter&quot; dort √§ndern wo der Dichter &quot;Brecht&quot; hei√üt</span>
@@ -15376,7 +15589,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kontrolle</span>
@@ -15393,7 +15606,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -15484,7 +15697,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;von Droste-H√ºlshoff&quot;</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
@@ -15497,7 +15710,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kontrolle</span>
@@ -15514,7 +15727,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15588,7 +15801,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Dichter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Bachmann&quot;</span><span class="p">,</span> <span class="s2">&quot;Seghers&quot;</span><span class="p">],</span> <span class="s2">&quot;Sterbealter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span> <span class="s2">&quot;Brillentraeger&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]})</span>
@@ -15601,7 +15814,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mit dem ignore_index Argument sorgen wir daf√ºr, dass der index f√ºr die neuen EIntr√§ge auch neu erzeugt wird.</span>
@@ -15615,7 +15828,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kontrolle</span>
@@ -15632,7 +15845,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15718,7 +15931,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Geschlecht&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">]</span>
@@ -15736,7 +15949,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -15829,7 +16042,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Dichter&quot;</span><span class="p">:</span> <span class="s2">&quot;Dichter*in&quot;</span><span class="p">})</span>
@@ -15846,7 +16059,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -15939,7 +16152,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Sterbealter&quot;</span><span class="p">)</span>
@@ -15955,7 +16168,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16055,7 +16268,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Brillentraeger&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -16073,7 +16286,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16166,7 +16379,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Sterbealter</span> <span class="o">&lt;</span> <span class="mi">60</span>
@@ -16182,7 +16395,7 @@ Wir k√∂nnen sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte hei√
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -16205,7 +16418,7 @@ Name: Sterbealter, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Sterbealter</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Geschlecht</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
@@ -16221,7 +16434,7 @@ Name: Sterbealter, dtype: bool</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -16252,7 +16465,7 @@ dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">Sterbealter</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Geschlecht</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">)]</span>
@@ -16268,7 +16481,7 @@ dtype: bool</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 

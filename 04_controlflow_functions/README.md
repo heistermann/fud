@@ -6,11 +6,14 @@
 
 ## Python
 
-- Seminarinhalte für Python ([Link](python/README.md))
+- Seminarinhalte für Python: Control Flow ([Link](python/controlflow.html))
+- Seminarinhalte für Python: Funktionen ([Link](python/funktionen.html))
+- Übungsaufgaben für Python ([Link](python/uebung/uebung.html))
 
 ## R
 
-- Seminarinhalte für R ([Link](R/lektion.html))
+- Seminarinhalte für R: Control Flow ([Link](R/lektion.html))
+- Seminarinhalte für R: Funktionen ([Link](R/funktionen.html))
 
 ## Lernziele
 
@@ -27,11 +30,10 @@
 
 ## Inhalte der Coding-Werkstatt
 - Habt Ihr offene Fragen zu den Inhalten des Seminars?
-- Bearbeitung der Übungsaufgaben ([R](R/exercises04.html), [Python](python/exercises04.html))
-- Mögliche Vertiefungsaufgaben:
-     - ...
-     - ...
-     - ...
+- Bearbeitung von Aufgaben, die Ihr im Seminar nicht geschafft habt
+- Bearbeitung der Übungsaufgaben
+- Vertiefungsaufgabe zur Windkraftanlage
+
 
 [comment]: <> - Zusatzaufgaben aus der Lektion
 [comment]: <> - [complicated nested if clauses], einfache Bestimmung einer Pflanzenart ähnlich wie Rothmaler
