@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cheatsheets
-nav_order: 2
+nav_order: 9
 parent: Ressourcen
 ---
 
