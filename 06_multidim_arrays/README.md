@@ -7,6 +7,7 @@
 ## Python
 
 - Seminarinhalte für Python ([Link](python/multidim-arrays.html))
+- Übungsaufgaben in Python ([Link](python/uebung/uebung.html))
 
 ## R
 - Seminarinhalte für R ([Link](R/Multidimensionales.html))

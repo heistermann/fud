@@ -8,6 +8,7 @@
 ## Python
 
 - Seminarinhalte in Python ([Link](python/Datatypes.html))
+- Übungsaufgaben in Python ([Link](python/uebung/uebung.html))
 
 ## R
 

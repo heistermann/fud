@@ -14802,7 +14802,7 @@ Der Fantasie sind hier keine Grenzen gesetzt und letztendlich kannst du mit dies
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir schreiben ein leichtes Verschlüsselungsprogramm: Das einfachste Prinzip einer Verschlüsselung ist es, die Buchstaben durch andere Zeichen zu ersetzen. Genau das werden wir nur nun machen. Beachte, die Leerzeichen sollen übersprungen werden. D.h. die verschlüsselte Nachricht enthält keine Leerzeichen mehr. Der Output soll als ein String (eine Zeichenkette) ausgegeben werden. Achte darauf, dass du die Leerzeichen nicht übersetzt.</p>
+<p>Wir schreiben ein leichtes Verschlüsselungsprogramm (<code>codierung</code>): Das einfachste Prinzip einer Verschlüsselung ist es, die Buchstaben durch andere Zeichen zu ersetzen. Genau das werden wir nur nun machen. Beachte, die Leerzeichen sollen übersprungen werden. D.h. die verschlüsselte Nachricht enthält keine Leerzeichen mehr. Der Output soll als ein String (eine Zeichenkette) ausgegeben werden. Achte darauf, dass du die Leerzeichen nicht übersetzt.</p>
 
 </div>
 </div>
@@ -14810,9 +14810,10 @@ Der Fantasie sind hier keine Grenzen gesetzt und letztendlich kannst du mit dies
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3><p>Für jeden Buchstaben in der Nachricht musst du die Position in der Liste <code>Letters</code> finden. Dies geht mit index():
-<code>alist = ["a","b","c"]</code>
-<code>position = alist.index("b")</code>.</p>
+<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3><p>Für jeden Buchstaben in der Nachricht musst du die Position in der Liste <code>Letters</code> finden. Dies geht mit <code>index</code>:</p>
+
+<pre><code>alist = ["a","b","c"]
+position = alist.index("b")</code></pre>
 <p>Diesen Buchstaben übersetzt du dann in das Element der Liste <code>schlüssel</code> an der gleichen Position und speicherst den übersetzten Buchstaben im Ergebnis. Wie immer hilft es, den Code an einem einfachen Beispiel auf seine Funktionalität zu testen.</p>
 <p>Strings, also Buchstaben/Zeichen, können mit dem <code>+</code>-Zeichen verbunden werden:
 "Käse" + "Brot" = "KäseBrot"</p>
@@ -14829,12 +14830,11 @@ schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')'
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nachricht</span> <span class="o">=</span> <span class="s2">&quot;nachricht jyqx, streng geheim: der adler ist gelandet und trifft sich um neunzehn uhr dreiundfünzig an der alten eiche. bringen sie die ware unauffällig verpackt mit und vermeiden sie ein schlecht sitzendes outfit. over&quot;</span>
-<span class="n">schluessel</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;§&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;bumms&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;Ö&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;zack&#39;</span><span class="p">,</span> <span class="s1">&#39;UNVEU&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;katze&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">codierung</span><span class="p">(</span><span class="n">nachricht</span><span class="p">,</span> <span class="n">schluessel</span><span class="p">):</span>
-    <span class="n">Letters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;ä&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;ü&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span> <span class="c1"># Die Liste aller vorkommenden Zeichen in der Nachricht</span>
-    <span class="n">codierte_nachricht</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>  <span class="c1"># In diesen, noch leeren, String werden die einzelnen, übersetzten Buchstaben gespeichert</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">codierung</span><span class="p">(</span><span class="n">nachricht</span><span class="p">,</span> <span class="n">schluessel</span><span class="p">):</span>
+    <span class="c1"># Die Liste aller vorkommenden Zeichen in der Nachricht</span>
+    <span class="n">Letters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;ä&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;ü&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
+    <span class="c1"># In diesen, noch leeren, String werden die einzelnen, übersetzten Buchstaben gespeichert</span>
+    <span class="n">codierte_nachricht</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
     <span class="c1">###</span>
     <span class="c1">###</span>
     <span class="c1">###</span>
@@ -14871,7 +14871,8 @@ schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')'
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">wenn</span><span class="p">,</span> <span class="n">alles_wahr</span><span class="p">,</span> <span class="n">zahlencheck</span><span class="p">,</span> <span class="n">wie_alt</span><span class="p">,</span> <span class="n">mittagessen</span><span class="p">,</span> <span class="n">feldarbeit</span><span class="p">,</span> <span class="n">ausflugsplanung</span><span class="p">,</span> <span class="n">wuerfel</span><span class="p">,</span> <span class="n">codierung</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">wenn</span><span class="p">,</span> <span class="n">alles_wahr</span><span class="p">,</span> <span class="n">zahlencheck</span><span class="p">,</span> <span class="n">wie_alt</span><span class="p">,</span> <span class="n">mittagessen</span><span class="p">,</span> <span class="n">feldarbeit</span><span class="p">,</span> 
+                                 <span class="n">ausflugsplanung</span><span class="p">,</span> <span class="n">wuerfel</span><span class="p">,</span> <span class="n">codierung</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
     </div>

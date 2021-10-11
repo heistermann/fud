@@ -14493,20 +14493,6 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">eintraege</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">eintraege</span><span class="p">)</span>
 </pre></div>
 
@@ -14525,7 +14511,7 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Erweitert die Funktion <code>erster</code> so, dass sie den ersten Eintrag eines Dataframes <code>df</code> ausgibt - also den Eintrag, der in der ersten Spalte in der ersten Zeile steht.</p>
+<p>Erweitert die Funktion <code>erster</code> so, dass sie den ersten Eintrag eines Dataframes <code>df</code> ausgibt - also den Eintrag, der in der ersten Spalte in der ersten Zeile steht. Nutzt dafür <code>iloc</code>.</p>
 
 </div>
 </div>
@@ -14684,20 +14670,6 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fehlend</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">spalte</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">spalte</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">fehlend</span><span class="p">)</span>
 </pre></div>
 
@@ -14726,22 +14698,8 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">teilmenge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">spalte</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">teilmenge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">spalte</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="n">spalte</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">spalte</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">xmax</span><span class="p">)]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="k">pass</span>
 </pre></div>
 
     </div>
@@ -14784,23 +14742,8 @@ Nun interessieren uns aus einem großen Datensatz nur die Werte, die im Wald gem
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mitteltemp</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mitteltemp</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">lanu</span><span class="p">):</span>
-    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;standort&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">lanu</span><span class="p">,</span> <span class="s2">&quot;temp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="k">return</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="k">pass</span>
 </pre></div>
 
     </div>
@@ -14842,8 +14785,7 @@ Nun interessieren uns aus einem großen Datensatz nur die Werte, die im Wald gem
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">aufjahrundtag</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ondate</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">datum</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y&quot;</span><span class="p">))</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ondate</span><span class="p">,</span><span class="s2">&quot;messung&quot;</span><span class="p">])</span>
+    <span class="k">pass</span>
 </pre></div>
 
     </div>
@@ -14876,7 +14818,8 @@ Nun interessieren uns aus einem großen Datensatz nur die Werte, die im Wald gem
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">eintraege</span><span class="p">,</span> <span class="n">erster</span><span class="p">,</span> <span class="n">letzter</span><span class="p">,</span> <span class="n">mittelmass</span><span class="p">,</span> <span class="n">fehlend</span><span class="p">,</span> <span class="n">teilmenge</span><span class="p">,</span> <span class="n">mitteltemp</span><span class="p">,</span> <span class="n">aufjahrundtag</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">eintraege</span><span class="p">,</span> <span class="n">erster</span><span class="p">,</span> <span class="n">letzter</span><span class="p">,</span> <span class="n">mittelmass</span><span class="p">,</span> <span class="n">fehlend</span><span class="p">,</span> <span class="n">teilmenge</span><span class="p">,</span> <span class="n">mitteltemp</span><span class="p">,</span> <span class="n">aufjahrundtag</span><span class="p">],</span>
+                <span class="n">lesson</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>

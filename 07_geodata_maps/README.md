@@ -5,6 +5,7 @@
 ## Python
 
 - Seminarinhalte für Python ([Link](python/mastering-geodata-in-python.html)).
+- Übungsaufgaben in Python ([Link](python/uebung/uebung.html))
 
 ## R
 
