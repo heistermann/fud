@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Level 2: Die Arbeitsumgebung
-nav_order: 2
+nav_order: 3
 has_children: true
 permalink: /02_environment
 ---
