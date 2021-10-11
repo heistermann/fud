@@ -1,3 +1,11 @@
+---
+layout: default
+title: Level 5: Datentypen - ein Blick hinter die Kulissen
+nav_order: 6
+permalink: /05_datatypes
+---
+
+
 # Level 5: Datentypen - ein Blick hinter die Kulissen
 
 ![img](https://imgs.xkcd.com/comics/file_extensions.png)

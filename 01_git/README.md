@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Level 1 - Git together
-nav_order: 2
+nav_order: 1
 has_children: true
 permalink: /01_git
 ---

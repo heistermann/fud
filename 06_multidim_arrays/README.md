@@ -1,3 +1,10 @@
+---
+layout: default
+title: Level 6: Die nächste Dimension
+nav_order: 7
+permalink: /05_multidim_arrays
+---
+
 # Level 6: Die nächste Dimension
 
 ![img](https://scipy-lectures.org/_images/numpy_indexing.png)

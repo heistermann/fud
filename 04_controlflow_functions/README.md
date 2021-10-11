@@ -1,3 +1,11 @@
+---
+layout: default
+title: Level 4: Kontrolle ist gut
+nav_order: 5
+permalink: /04_controlflow_functions
+---
+
+
 # Level 4: Kontrolle ist gut
 
 ![img](https://imgs.xkcd.com/comics/flowchart.png)

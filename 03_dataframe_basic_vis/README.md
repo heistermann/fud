@@ -1,3 +1,11 @@
+---
+layout: default
+title:  Level 3: Der Dataframe
+nav_order: 4
+permalink: /03_dataframe_basic_vis
+---
+
+
 # Level 3: Der Dataframe - ein Werkzeug für Tabellen
 
 ## Python
