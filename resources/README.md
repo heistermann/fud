@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ressourcen
+title: Weitere Ressourcen
 nav_order: dvk
 ---
 
