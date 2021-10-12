@@ -7,14 +7,18 @@ nav_order: dvk
 # Weitere Ressourcen
 
 Diese Seite gibt Euch eine kleine Auswahl an Spickzetteln und weiteren Kursen in
-git, Bash, Python und R. 
+git, Bash, Markdown, Python und R. 
 
 ## Cheatsheets
 
-## git and Bash
+Cheatsheets sind kurze Übersichtsblätter mit den wichtigsten Befehlen, oft
+zum Ausdrucken entwickelt...Spickzettel eben.
+
+## git, Bash, Markdown
 
 - [git](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Bash](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+- [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 ## Python
 
