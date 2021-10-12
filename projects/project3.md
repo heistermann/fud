@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Projekt No 2
-nav_order: 2
+title: Projekt No 3
+nav_order: 3
 parent: Projekte
 ---
 
-# Analyse historischer Hurricane-Tracks
+# Kurztitel Projekt 3
 
 ## Übersicht
 
