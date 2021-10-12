@@ -2,7 +2,7 @@
 layout: default
 title: Level 6: Die nächste Dimension
 nav_order: 7
-permalink: /05_multidim_arrays
+permalink: /06_multidim_arrays
 ---
 
 # Level 6: Die nächste Dimension

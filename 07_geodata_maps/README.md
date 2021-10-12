@@ -1,3 +1,11 @@
+---
+layout: default
+title: Level 7: Geodaten und Kartierung
+nav_order: 8
+permalink: /07_geodata_maps
+---
+
+
 # Level 7: Geodaten und Kartierung
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/stevefaeembra/3598407845/" title="edinburgh photo heatmap"><img src="https://live.staticflickr.com/2427/3598407845_e64a999d10_b.jpg" width="1024" height="731" alt="edinburgh photo heatmap"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
