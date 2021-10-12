@@ -2,7 +2,7 @@
 layout: default
 title: Ressourcen
 nav_order: 9
-permalink: /resources
+permalink: /08_resources
 ---
 
 # Ressourcen
