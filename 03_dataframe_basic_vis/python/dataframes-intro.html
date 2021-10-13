@@ -14344,7 +14344,7 @@ $(document).ready(function () {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Am besten vergleichbar ist ein DataFrame mit der Tabellenstruktur, die ihr aus Programmen wie z.B. Excel oder OpenOffice Calc kennt. Dataframes sind zweidimensionale Tabellen, deren Spalten Überschriften haben (können) und immer gleich lang sind (also dieselbe Anzahl an Dateneinträgen haben). Dabei darf eine Spalte immer nur den gleichen Datentyp (z.B. numerische oder logische Werte) beinhalten; ein Dataframe kann aber spaltenweise unterschiedliche Datentypen darstellen (was ein Datentyp genau ist, wirst Du im Kurs noch erfahren).</p>
-<p>In dieser Lektion wirst Du lernen <strong>(a)</strong> wie man Dataframes in R erstellt oder einliest, <strong>(b)</strong> wie Du Elemente/Werte in Dataframes ansprichst, <strong>(c)</strong> wie Du diese Elemente oder ganze Dataframes modifizierst und <strong>(d)</strong> wie Du Dataframes als .txt-Dateien exportieren bzw. speichern kannst.</p>
+<p>In dieser Lektion wirst Du lernen <strong>(a)</strong> wie man Dataframes in erstellt oder einliest, <strong>(b)</strong> wie Du Elemente/Werte in Dataframes ansprichst, <strong>(c)</strong> wie Du diese Elemente oder ganze Dataframes modifizierst und <strong>(d)</strong> wie Du Dataframes als .txt-Dateien exportieren bzw. speichern kannst.</p>
 
 </div>
 </div>
@@ -14415,7 +14415,7 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Anhand des folgenden Skriptbeispiels lernen wir kurz wie Objektzuweisungen funktionieren, was Listen (<code>list</code>) sind, und dass sie unterschiedliche Datentypen beinhalten können.</p>
+<p>Anhand des folgenden Skriptbeispiels lernen wir kurz wie Objektzuweisungen funktionieren, treffen Listen wieder (<code>list</code>), und erfahren nochmal, dass eine <code>list</code> auch unterschiedliche Datentypen beinhalten kann.</p>
 
 </div>
 </div>
@@ -14425,18 +14425,18 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir erstellen eine List, die Zeichenketten (&#39;strings&#39;) enthält</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Liste, die Zeichenketten (&#39;strings&#39;) enthält</span>
 <span class="n">Dichter</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Goethe&quot;</span><span class="p">,</span> <span class="s2">&quot;Schiller&quot;</span><span class="p">,</span> <span class="s2">&quot;Brecht&quot;</span><span class="p">]</span>
 
-<span class="c1"># Wir erstellen eine Liste, die numerische Werte enthält</span>
+<span class="c1"># Liste, die numerische Werte enthält</span>
 <span class="n">Sterbealter</span> <span class="o">=</span> <span class="p">[</span><span class="mi">83</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">57</span><span class="p">]</span>
 
-<span class="c1"># Wir erstellen eine Liste, die logische Werte (wahr oder falsch) beinhaltet</span>
+<span class="c1"># Liste, die logische Werte (wahr oder falsch) beinhaltet</span>
 <span class="n">Brillentraeger</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
 
 <span class="c1"># In den vorigen Beispiele enthielt eine Liste immer nur einen Datentyp.</span>
 <span class="c1">#    Dies ist generell empehlenswert, da das Mischen von Datentypen</span>
-<span class="c1">#    zu Problemen führen kann (sehen wir später).</span>
+<span class="c1">#    zu Problemen führen kann, wenn wir daraus DataFrames erzeugen wollen.</span>
 <span class="n">NotrufNr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">110</span><span class="p">,</span> <span class="mi">112</span><span class="p">]</span>         <span class="c1"># gut!         </span>
 <span class="n">NotrufNr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">110</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="s2">&quot;Mama&quot;</span><span class="p">]</span> <span class="c1"># nicht gut!</span>
 </pre></div>
@@ -14457,7 +14457,7 @@ $(document).ready(function () {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Aus den drei Listen <code>Dichter</code>, <code>Sterbealter</code> und <code>Brillentraeger</code> erstellen wir nun mit der Function <code>pd.DataFrame</code> unseren ersten <code>DataFrame</code>.</p>
-<p>Beachtet im folgenden Feld die geschwungenen Klammern (<code>{...}</code>). Sie erzeugen in Python einen <code>dictionary</code>...schauen wir uns bei Gelegenheit nochmal genauer an.</p>
+<p>Beachtet im folgenden Feld die geschwungenen Klammern (<code>{...}</code>). Sie erzeugen in Python einen <code>dictionary</code>. Diesen habt Ihr in der letzten Vertiefungsaufgabe kennengelernt.</p>
 
 </div>
 </div>
@@ -15014,7 +15014,7 @@ Name: Dichter, dtype: object</pre>
 The above exception was the direct cause of the following exception:
 
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_8817/3006201197.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/ipykernel_28464/3006201197.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span>
 
 <span class="ansi-green-fg">~/miniconda3/envs/umweltdv/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
@@ -15128,7 +15128,7 @@ The above exception was the direct cause of the following exception:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Links sehen wir eine Spalte, die eigentlich gar nicht zur Tabelle gehört - Zahlen von 0 bis 2.
-Wir können sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte heißt <code>index</code>. Über diesen Index können wir Zeilen auswählen. Das mag hier unnötig kompliziert wirken, wird aber ein richtig cooles Feature, wenn wir statt Zahlen von 0 bis n z.B. einen Index haben, der aus Datumangaben besteht. Dann können wir nämlich ruck zuck Zeilen mit einem bestimmten Datum auswählen. Anstatt der Spaltenbezeichner in Excel (von <code>A</code>, <code>B</code> usw.) nutzen wir in <code>pandas</code> übrigens die Spaltennamen - haben wir ja schon gemacht.</p>
+Wir können sie uns vorstellen wie die Zeilennummern in Excel. Diese Spalte heißt <code>index</code>. Über diesen Index können wir Zeilen auswählen. Das mag hier unnötig kompliziert wirken, wird aber ein richtig cooles Feature, wenn wir statt Zahlen von <code>0</code> bis <code>n</code> z.B. einen Index haben, der aus Datumangaben besteht. Dann können wir nämlich ruck zuck Zeilen mit einem bestimmten Datum auswählen. Anstatt der Spaltenbezeichner in Excel (von <code>A</code>, <code>B</code> usw.) nutzen wir in <code>pandas</code> übrigens die Spaltennamen - haben wir ja schon gemacht.</p>
 
 </div>
 </div>
@@ -15421,7 +15421,7 @@ Name: 1, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wenn man wirklich strikt nach Position auswählen möchte, nutzt man das <code>.iloc</code> Feature. Man wählt auf diese Weise streng nach Positon aus, sowohl für die Zeile als auch für die Spalten - also genauso wie bei einer Matrix.</p>
+<p>Wenn man wirklich strikt nach Position auswählen möchte, nutzt man das <code>.iloc</code> Feature. Man wählt auf diese Weise streng nach Position aus, sowohl für die Zeile als auch für die Spalten - also genauso wie bei einer Matrix. <strong>Aber Achtung: Die erste Position ist in Python immer <code>0</code>!</strong></p>
 
 </div>
 </div>
@@ -15501,7 +15501,7 @@ Name: 1, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Voher</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vorher</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -15682,7 +15682,7 @@ Name: 1, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Das Land der digitalen Dichter:innen und Denker:innen hat ja wohl noch mehr vorzuweisen als nur Goethe, Schiller und Brecht. Wir wollen unseren Dataframe also mit weiteren Einträgen (Zeilen) ergänzen. Außerdem wollen wir für alle Dichter:innen noch weitere Informationen (Spalten), z.B. Anzahl der verfassten Dramen hinzufügen.</p>
+<p>Das Land der digitalen Dichter:innen und Denker:innen hat ja wohl noch mehr vorzuweisen als nur Goethe, Schiller und Brecht. Wir wollen unseren Dataframe also mit weiteren Einträgen (Zeilen) ergänzen. Außerdem wollen wir für alle Dichter:innen noch weitere Informationen (Spalten) hinzufügen. z.B. das Geschlecht.</p>
 
 </div>
 </div>
@@ -15817,7 +15817,7 @@ Name: 1, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mit dem ignore_index Argument sorgen wir dafür, dass der index für die neuen EInträge auch neu erzeugt wird.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mit dem ignore_index Argument sorgen wir dafür, dass der index für die neuen Einträge auch neu erzeugt wird.</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 

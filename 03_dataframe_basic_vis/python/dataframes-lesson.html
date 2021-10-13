@@ -14398,7 +14398,7 @@ $(document).ready(function () {
 
 </div>
 </div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14429,11 +14429,11 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nutze die Funktionen, die du im ersten Teil kennengelernt hast zum Erkunden des Dataframes.</p>
+<p>Nutze die Funktionen, die du im ersten Teil kennengelernt hast, zum Erkunden des Dataframes.</p>
 <ul>
 <li>Wieviele Zeilen und Spalten hat der Dataframe?</li>
 <li>Welche Struktur hat der Dataframe? Was gibt es für Spalten, was bedeuten sie?</li>
-<li>Lasse dir die ersten und letzten Zeilen des Dataframes sowie eine Zusammenfassung der Spalten anzeigen.</li>
+<li>Lass Dir die ersten und letzten Zeilen des Dataframes sowie eine Zusammenfassung der Spalten anzeigen.</li>
 </ul>
 
 </div>
@@ -14869,7 +14869,7 @@ memory usage: 51.4+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir wollen unseren DataFrame zunächst ein wenig aufräumen: weniger sperrige Spaltennamen verwenden und SPalten rausschmeißen, die in unserem Kontext nicht brauchen.</p>
+<p>Wir wollen unseren DataFrame zunächst ein wenig aufräumen: weniger sperrige Spaltennamen verwenden und Spalten rausschmeißen, die in unserem Kontext nicht brauchen.</p>
 
 </div>
 </div>
@@ -14949,12 +14949,11 @@ memory usage: 51.4+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nun kommt ein entscheidender Schritt: Bislang versteht der DataFrame die Spalte <code>datetime</code> noch als Strings (Zeichenketten). Wir müssen diese Strings in <code>datetime</code>-Objekte umwandeln und diese dann als <code>index</code> verwenden, also als primäre</p>
 <p>Ein ganz schönes Gezappel, aber gut: Es sind ja auch über 100 Jahre stündlicher Daten! Was wir aber vermissen: die Zeitinformation auf der x-Achse. Dazu fehlen zwei Schritte:</p>
 <ol>
-<li><p>Zunächst müsen wir <code>pandas</code> mitteilen, dass es die Spalte <code>datetime</code> auch als Datum interpretieren soll. Bishier sind das einfach Strings, also Zeichenketten. Dazu nutzen wir die Funktion <code>pd.to_datetime</code>.</p>
+<li><p>Zunächst müsen wir <code>pandas</code> mitteilen, dass es die Spalte <code>datetime</code> auch als Datum interpretieren soll. Bisher sind das einfach Strings, also Zeichenketten. Dazu nutzen wir die Funktion <code>pd.to_datetime</code>.</p>
 </li>
-<li><p>Nun wollen wir, dass die Spalte <code>date</code> nicht nur <em>irgendeine</em> Spalte sei, sondern das primäre "Label" einer Zeile ...nämlich der <code>index</code>. Dazu nutzen wir <code>set_index</code>.</p>
+<li><p>Nun wollen wir, dass die Spalte <code>datetime</code> nicht nur <em>irgendeine</em> Spalte sei, sondern das primäre "Label" einer Zeile ...nämlich der <code>index</code>. Dazu nutzen wir <code>set_index</code>.</p>
 </li>
 </ol>
 
@@ -15248,7 +15247,7 @@ memory usage: 51.4+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Kern der <code>resample</code>-Funktion ist das Zeitinterval, auf welchem die Mittelung stattfinden soll. Anschließend teilt man <code>pandas</code> mit, welche Funktion denn auf diesem Zeitintervall angewendet werden soll. Hier wäre das die Funktion <code>mean</code>.</p>
+<p>Kern der <code>resample</code>-Funktion ist das Zeitinterval, auf welchem die Mittelung stattfinden soll. Anschließend teilt man <code>pandas</code> mit, welche Funktion denn auf diesem Zeitintervall angewendet werden soll. Hier wäre das die Funktion <code>mean</code>. Das Ergebnis ist ein neuer DataFrame, den wir hier dfa nennen.</p>
 
 </div>
 </div>
@@ -15258,7 +15257,8 @@ memory usage: 51.4+ MB
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfa</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Jahresmittelwerte (&quot;1a&quot;)</span>
+<span class="n">dfa</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -15380,7 +15380,7 @@ memory usage: 3.0 KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Grundsätzlich ist das Arbeitspferd für Abbildungen also <code>matplotlib</code>. Auch die <code>plot</code>-Funktion, die an den DataFrames dranhängt, baut auf <code>matplotlib</code> auf. Wir können <code>matplotlib</code> mit <code>pandas</code> auf beliebige Weise kombinieren. Daz importieren wir zunächst das <code>pyplot</code>-Modul aus <code>matplotlib</code>.</p>
+<p>Grundsätzlich ist das Arbeitspferd für Abbildungen in Python <code>matplotlib</code>. Auch die <code>plot</code>-Funktion, die an den DataFrames dranhängt, baut auf <code>matplotlib</code> auf. Wir können <code>matplotlib</code> mit <code>pandas</code> auf beliebige Weise kombinieren. Dazu importieren wir zunächst das <code>pyplot</code>-Modul aus <code>matplotlib</code>.</p>
 
 </div>
 </div>
@@ -15401,7 +15401,7 @@ memory usage: 3.0 KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir versuchen gar nicht erst, uns die unterschiedlichen Plot-Eigentschaften und Manipulationsmöglichkeiten systematisch zu erarbeiten. Also lieber ein Beispiel mit Erläuterungen im Code.</p>
+<p>Wir versuchen gar nicht erst, uns die unterschiedlichen Plot-Eigenschaften und Manipulationsmöglichkeiten systematisch zu erarbeiten. Also lieber ein Beispiel mit Erläuterungen im Code.</p>
 
 </div>
 </div>
@@ -15864,7 +15864,7 @@ memory usage: 3.0 KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Kleines Extra für Eure Lösung: string formatting. Lernt, wie Ihr Zahlen und Zeichenketten effizeint zu Stringszusammensetzen könnt. Wie haben ja schon gelernt, dass man strings mit dem <code>+</code>-Zeichen verketten kann. ABer es geht noch besser. Am Besten am Beispiel:</p>
+<p>Kleines Extra für Eure Lösung: string formatting. Lernt, wie Ihr Zahlen und Zeichenketten effizient zu Strings zusammensetzen könnt. Wie haben ja schon gelernt, dass man strings mit dem <code>+</code>-Zeichen verketten kann. Aber es geht noch besser. Am Besten am Beispiel:</p>
 
 </div>
 </div>
@@ -16148,7 +16148,7 @@ What do we want: climate justice! When do we want it: now!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ein weiteres der vielen beeeindruckenden Features von <code>pandas</code> ist die <code>groupby</code>-Funktion. Sie erlaubt es uns, die Einträge des DataFrames nach bestimmmten Merkmalen zu gruppieren und für diese Gruppen dann Funktionen anzuwenden. Wir nutzen diese Funktionalität, um mit einer einzigen Zeile den mittleren Tagesgang von Temperatur und relativer Luftfeuchte in Potsdam zu ermitteln. Jetzt wissen wir auch, warum wir die ganze Zeit die Spalte <code>rh</code> mitgeschleppt haben.</p>
+<p>Ein weiteres der vielen beeindruckenden Features von <code>pandas</code> ist die <code>groupby</code>-Funktion. Sie erlaubt es uns, die Einträge des DataFrames nach bestimmten Merkmalen zu gruppieren und für diese Gruppen dann Funktionen anzuwenden. Wir nutzen diese Funktionalität, um mit einer einzigen Zeile den mittleren Tagesgang von Temperatur und relativer Luftfeuchte in Potsdam zu ermitteln. Jetzt wissen wir auch, warum wir die ganze Zeit die Spalte <code>rh</code> mitgeschleppt haben.</p>
 
 </div>
 </div>
@@ -16426,7 +16426,9 @@ What do we want: climate justice! When do we want it: now!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Die Temperatur der Erdoberfläche steigt, wenn die Nettostrahlung positiv ist und sinkt, wenn sie negativ ist. Die Nettostrahlung wiederum ergibt sich aus der Differenz aus kurzwelliger Strahlungseinnahme (Globalstrahlung abzüglich Albedo) und effektiver langwelliger Ausstrahlung (Ausstrahlung abzüglich atmosphärischer Gegenstrahlung). Die Nettostrahlung ist positiv auch über den Sonnenhöchststand hinaus, wird im Laufe des Nachmittags negativ und erst eine Weile nach Sonnenaufgang wieder positiv. Desweiteren braucht es eine Weile, bis sich die Temperaturdynamik von der Oberfläche bis in 2 m Messhöhe fortsetzt.</p>
-<p>Die Dynamik der relativen Luftfeuchte ($RH = \frac{e}{E(T)}$) ist maßgeblich von der Temperatur getrieben, da der Sättigungdampfdruck $E(T)$ gemäß Magnus-Formel exponentiell von der Lufttemperatur $T$ abhängt. Die Dynamik der tatsächlichen Luftfuechte (z.B. ausgedrückt als Dampfdruck $e$) geht darin fast unter.</p>
+<p>Die Dynamik der relativen Luftfeuchte</p>
+<p>$RH = \frac{e}{E(T)}$</p>
+<p>ist maßgeblich von der Temperatur getrieben, da der Sättigungdampfdruck $E(T)$ gemäß Magnus-Formel exponentiell von der Lufttemperatur $T$ abhängt. Die Dynamik der tatsächlichen Luftfuechte (z.B. ausgedrückt als Dampfdruck $e$) geht darin fast unter.</p>
 
 </div>
 </div>
@@ -16442,18 +16444,36 @@ What do we want: climate justice! When do we want it: now!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li><p>Ermittle die Differenz der Mitteltemperatur zwischen den Normalperioden 1961-1990 und 1991-2020 für die Bergwetterwarte Hoher Peissenberg. Wo ist die Differenz größer: in Potsdam oder am Peissenberg?</p>
+<li><p>Ermittle die Differenz der Mitteltemperatur zwischen den Normalperioden 1961-1990 und 1991-2020 für die Bergwetterwarte Hohenpeißenberg. Wo ist die Differenz größer: in Potsdam oder am Hohenpeißenberg?</p>
+<p>Die Daten findet Ihr auf dem opendata-Server des DWD (<a href="https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/hourly/air_temperature/historical/">Link</a>). Ihr müsst in dem opendata-Verzeichnis 
+allerdings erstmal rausfinden, in welcher Datei die Daten der Station Hohenpeißenberg liegen...</p>
 </li>
+</ol>
+<ol>
 <li><p>Berechne als zusätzliche Spalte des DataFrame <code>df</code> den Dampfdruck (in hPa). Mache Dir dazu die Definition der relativen Luftfeuchte zunutze. Verwende in erster Näherung die Magnusformel über ebenen Wasserflächen:</p>
 <p>$e = 6.112 * exp(\frac{17.61 * T}{243.12 + T})$</p>
 <p>Stelle nun den mittleren Tagesgang der Temperatur und des Dampfdrucks dar!</p>
 </li>
-<li><p>Stelle den mittleren Tagesgang der Temperatur in den Monaten Dez-Feb im Vergleich zu den Monaten Jun-Aug dar. Was fällt auf?</p>
-</li>
+</ol>
+<ol>
+<li>Etwas schwerer...stelle den mittleren Tagesgang der Temperatur in den Monaten Dez-Feb im Vergleich zu den Monaten Jun-Aug dar. Was fällt auf?</li>
 </ol>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
