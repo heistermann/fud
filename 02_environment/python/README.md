@@ -14,7 +14,8 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html). 
 
-   Windows-Nutzer/innen: Bitte wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
+   *Achtung Windows-Nutzer/innen*: Bitte wählt die Option "Add Anaconda to my PATH environment variable" aus,
+   auch wenn diese nicht empfohlen wird. So wie im folgenden Bild angedeutet:
    
    ![miniconda_path](img/miniconda_path.png)
 
@@ -33,12 +34,12 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    
    `$ conda create --name umweltdv python=3.9`
 
-5. Immer, wenn Ihr mit dieser neuen Umgebung etwas anstellen wollt, müsst Ihr sie über das Terminal aktivieren. 
-   Vielleicht wird dies der häufigste Befehl, den Ihr in diesem Kurs ausführen werdet...
+5. Immer, wenn Du mit dieser neuen Umgebung etwas anstellen willst, musst Du sie über das Terminal aktivieren. 
+   Vielleicht wird dies der häufigste Befehl, den Du in diesem Kurs ausführen wirst...
    
    `$ conda activate umweltdv`
    
-   (Falls Ihr unter Windows in der Git Bash unterwegs seid, gibt es evtl. einen Fehler,
+   (Falls Du unter Windows in der Git Bash unterwegs bist, gibt es evtl. den Fehler,
    dass `conda activate` nicht zur Verfügung steht. Führe in diesem Fall den Befehl
    `conda init bash` aus, schließe das Terminal und versuche es nochmal.
 
