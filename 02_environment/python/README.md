@@ -12,14 +12,18 @@ nav_order: 1
 Die Installation führt uns gleich an die Kommandozeile heran. Zunächst installieren wir Miniconda.
 Dies ist, einfach gesagt, ein Paketmanager für Python. 
 
-1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html).
+1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html). 
+
+   Windows-Nutzer/innen: Bitte wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
+   
+   ![miniconda_path](img/miniconda_path.png)
 
 2. Öffne nun ein Terminalfenster (siehe [hier](https://www.digitalcitizen.life/open-windows-terminal/), wie das für Windows-Nutzer*innen geht).
    Nun sind zwei Befehle auszuführen, die `miniconda` sagen, woher es bevorzugt Pakete beziehen soll.
    
    `$ conda config --add channels conda-forge`
    
-   `conda config --set channel_priority strict`
+   `$ conda config --set channel_priority strict`
 
 3. Nun lernen wir ein geniales Feature von Miniconda kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
