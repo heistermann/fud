@@ -34,4 +34,4 @@ des Python-Pakets `wradlib` an, einer Bibliothek zur Verarbeitung von Niederschl
 
 Für eine ausführliche Behandlung und vor allem Übung des Themas fehlt uns in dieser
 Veranstaltung leider die Zeit. [Hier](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/github-collaboration/)
-findet Ihr eine Einführung in das Thema. Außerdem gibt es dazu eine [Fingerübung](Fingeruebungen/)
+findet Ihr eine Einführung in das Thema. Außerdem gibt es dazu eine [Fingerübung](Fingeruebungen)
