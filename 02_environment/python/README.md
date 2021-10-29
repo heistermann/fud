@@ -12,14 +12,18 @@ nav_order: 1
 Die Installation führt uns gleich an die Kommandozeile heran. Zunächst installieren wir Miniconda.
 Dies ist, einfach gesagt, ein Paketmanager für Python. 
 
-1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html).
+1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html). 
+
+   Windows-Nutzer/innen: Bitte wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
+   
+   ![miniconda_path](img/miniconda_path.png)
 
 2. Öffne nun ein Terminalfenster (siehe [hier](https://www.digitalcitizen.life/open-windows-terminal/), wie das für Windows-Nutzer*innen geht).
    Nun sind zwei Befehle auszuführen, die `miniconda` sagen, woher es bevorzugt Pakete beziehen soll.
    
    `$ conda config --add channels conda-forge`
    
-   `conda config --set channel_priority strict`
+   `$ conda config --set channel_priority strict`
 
 3. Nun lernen wir ein geniales Feature von Miniconda kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
@@ -116,4 +120,18 @@ auf `nur-fuer-mich` reinmergen. Aber...das lassen wir erstmal. Lege stattdessen
 immer eine Kopie der Notebooks an, bevor Du sie öffnest und damit arbeitest.
 
 Klicke nun also auf die neue Datei `tour-de-python-Copy1.ipynb` und weiter geht's
-[im Notebook](tour-de-python.html). 
+[im Notebook](tour-de-python.html).
+
+## Schluss machen!
+
+Wenn Ihr jupyter schließen möchtet, speichert zunächst Euer Notebook ab und
+schließt das Browserfenster. In der jupyter-Übersicht seht Ihr allerdings das
+eben noch geöffnete Notebook noch "grün" - also aktiv. Ihr könntet jetzt also
+das Notebook wieder öffnen und weiter dran arbeiten. Um das Notebook ausdrücklich
+zu deaktivieren, könnt Ihr es markieren und dann den "Shutdown"-Button drücken.
+
+Es bleibt jedoch noch das Terminalfenster, über welches Ihr die jupyter-Session
+mit dem Befehl `jupter notebook` gestartet habt. Ihr könnt das Fenster einfach
+schließen, um die Session zu beenden. Der saubere Weg (auch wenn Ihr im Terminal
+weiterarbeiten möchtet) ist jedoch, die Session im Terminal mit der Tastenkombination
+`Strg + C` zu beenden.

@@ -13,7 +13,7 @@ Das ist eigentlich nicht so schwer: Irgendwie müsste man die Änderungen, die m
 in seinem Fork gemacht hat, wieder zurück in das ursprüngliche Respository bekommen.
 Als Eigentümer des ursprünglichen Respositorys möchte man aber nicht unbedingt,
 das x-beliebige Menschen ihren Code in das Repository pushen (hier war das ursprüngliche
-Respository [https://gitup.uni-potsdam.de/umweltdv/git-lernen.git/umweltdv/git-lernen](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git/umweltdv/git-lernen)).
+Respository [https://gitup.uni-potsdam.de/umweltdv/git-lernen.git](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)).
 
 Dafür gibt es nun zwei Lösungen: Entweder man vertraut bestimmten Menschen, dass
 sie keine Mist bauen und räumt ihnen Schreibrechte in dem Repository ein. Das geht
