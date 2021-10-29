@@ -45,8 +45,8 @@ wird Euch Gelegenheit geben, Routine darin zu sammeln.
 
 Das Setup lässt sich wir folgt zusammenfassen:
 
-- Erstelle Deinen persönlichen *Fork* vom Kursrepository
-- Klone den Fork
+- Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)
+- Klone den Fork (`git clone ...`)
 - Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.
 - Synchronisiere Dein lokales Repository mit Deinem Fork auf GitLab (`add`, `commit`, `push`)
 - Synchronisiere die Originaldateien in Deinem lokalen Repository vor jedem Kurstermin mit dem 
