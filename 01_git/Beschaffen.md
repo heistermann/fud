@@ -155,7 +155,7 @@ Kopie an (z.B. `tour-de-python_Copy.ipynb`) und arbeite mit dieser.
 ### Dein Repository pflegen!
 
 Praktiziere den erlernten `git` Workflow, um Deine eigenen Änderungen in die
-lokale History einzupflegen und Deinen Fork auf GitLab aktuelle zu halten:
+lokale History einzupflegen und Deinen Fork auf GitLab aktuell zu halten:
 
 ```
 $ git status
