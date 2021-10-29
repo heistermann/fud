@@ -23,8 +23,9 @@ Deine Dateien im Editor an.
 
 Probiert mal aus, gemeinsam an einem Repository zu arbeiten.
 
-- `person1` legt auf https://gitup.uni-potsdam.de/ ein neues Repository an - nennen
-wir es `git-uebung2`. Dieses liegt dann also unter `.../person1/git-uebung2`.
+- `person1` legt auf [https://gitup.uni-potsdam.de](https://gitup.uni-potsdam.de/)
+ein neues Repository an - nennen wir es `git-uebung2`. Dieses liegt dann also 
+unter `.../person1/git-uebung2`.
 - `person1` klont das Repository, fügt eine neue Datei `meins.md` mit einer neuen
 Zeile hinzu. Dann `add`, `commit`, `push`.
 - `person2` kommt ins Spiel: Sie erstellt einen Fork von `person1/git-uebung2` und
@@ -52,7 +53,7 @@ Bitte den Erfolg mit `git remote -v` verifizieren. Nun kann `person2` mittels
 - Bitte probiert das gleich mal aus, indem `person1` ihr lokales Repo mittels
 `git pull origin master` mit ihrem remote synchronisiert und nun gleich noch eine
 dritte Zeile einfügt oder etwas in einer anderen Zeile ändert. Dann wieder `add`,
-`commit` und push. Nun soll `person2` diese Änderung mittels `git pull upstream master`
+`commit` und `push`. Nun soll `person2` diese Änderung mittels `git pull upstream master`
 in ihr lokales Repo holen.
 - Wow...
 
