@@ -30,7 +30,7 @@ einen "Antrag" (Request) an den Eigentümer des Repository stellen, die eigenen
 
 Als Beispiel, wie so etwas abläuft, schauen wir uns mal die Pull Requests
 des Python-Pakets `wradlib` an, einer Bibliothek zur Verarbeitung von Niederschlagsradardaten:
-[https://github.com/wradlib/wradlib/pulls].
+[https://github.com/wradlib/wradlib/pulls](https://github.com/wradlib/wradlib/pulls).
 
 Für eine ausführliche Behandlung und vor allem Übung des Themas fehlt uns in dieser
 Veranstaltung leider die Zeit. [Hier](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/github-collaboration/)
