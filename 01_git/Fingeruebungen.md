@@ -9,6 +9,10 @@ parent: Level 1 - Git together
 
 ## Übung 1 - Allein
 
+Hab keine Sorge, dass Du etwas falsch machst. Diese Übung findet nur auf Deinem
+lokalen Rechner statt. Am Ende kannst Du den Ordner mit dem Repository einfach
+wieder löschen und alles ist gut.
+
 - Erstelle mit `git init` ein lokales Repository auf Deinem Rechner.
 - Füge nun wiederholt Dateien hinzu oder editiere ihren Inhalt und übe auf diesem
 Weg den `git add`  & `git commit` Workflow.
@@ -21,7 +25,11 @@ Deine Dateien im Editor an.
 
 ## Übung 2 - Zu zweit
 
-Probiert mal aus, gemeinsam an einem Repository zu arbeiten.
+Probiert mal aus, gemeinsam an einem Projekt zu arbeiten. Die folgende Anleitung
+sieht zwar umfangreich aus, das Prinzip ist aber eigentlich einfach: `person1` 
+legt ein Repository in GitLab an, `person2` erstellt davon einen Fork und fügt
+eine Änderung hinzu. Sie möchte nun, dass diese Änderung zurück in das ursprüngliche
+Repository von `person1` fließt...und die Geschichte nimmt ihren Lauf.
 
 - `person1` legt auf [https://gitup.uni-potsdam.de](https://gitup.uni-potsdam.de/)
 ein neues Repository an - nennen wir es `git-uebung2`. Dieses liegt dann also 
