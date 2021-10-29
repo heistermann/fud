@@ -47,7 +47,7 @@ Das Setup lässt sich wir folgt zusammenfassen:
 
 - Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)
 - Klone den Fork (`git clone ...`)
-- Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.
+- **Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.**
 - Synchronisiere Dein lokales Repository mit Deinem Fork auf GitLab (`add`, `commit`, `push`)
 - Synchronisiere die Originaldateien in Deinem lokalen Repository vor jedem Kurstermin mit dem 
 zentralen Kursrepository via `pull`.
@@ -120,10 +120,10 @@ Voila - alles synchron?!
 
 ### Fork
 
-Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/umweltdv)
+Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
 
 ### Clone
-Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeihnis Deiner Wahl.
+Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeichnis Deiner Wahl.
 Dann
 
 `$ git clone https://gitup.uni-potsdam.de/DEIN-UP-NUTZER/umweltdv`.
