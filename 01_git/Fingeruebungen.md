@@ -21,9 +21,37 @@ hinzufügst.
 - Lass Dir Deine History mit `git log` oder `git log --oneline` anzeigen.
 - Springe nun mit `git checkout <SHA>` zu einer früheren Version zurück. Schaue Dir
 Deine Dateien im Editor an.
- Springe nun `git checkout master` wieder zur aktuellsten Version.
+- Springe nun `git checkout master` wieder zur aktuellsten Version.
 
-## Übung 2 - Zu zweit
+## Übung 2 - Allein
+
+In Übung 1 hast Du ein lokales Repository erstellt und damit gearbeitet. Wenn Du
+aber mit einem remote repository - also nicht nur lokal - arbeiten möchtest, ist
+es einfacher, diesen "remote" zunächst online zu erstellen, ihn dann auf Deinen Rechner
+zu klonen und dort dann lokal weiterzuarbeiten. Auf diese Weise hast Du durch das
+klonen gleich den Link zum remote.
+
+Diesen Vorgang sollst Du nun einmal selbst üben.
+
+- Gehe auf [https://gitup.uni-potsdam.de](https://gitup.uni-potsdam.de/)
+und erstelle mit dem "New Project"-Button ein neues Repository.
+- Gib einen informativen Namen für Dein Projekt an.
+- Optional kannst Du noch eine Beschreibung hinzufügen. Diese taucht dann auch
+im README auf (s.u.).
+- Für die Sichtbarkeit kannst Du "private" (nur für Dich sichtbar) oder "Internal"
+(auch für andere Git.UP-Nutzer der Uni sichtbar) wählen.
+- Wähle außerdem immer die Option "Initialize repository with a README".
+So kannst Du das Repository direkt klonen, weil es bereits einen
+Inhalt gibt.
+- So, fertig. Nun kannst Du die https-Adresse Deines Repository nutzen, um
+Dein Repository mit `git clone ...` auf Deinen Rechner zu bringen.
+- Lass Dir mittels `git remote -v` anzeigen, dass sich Dein lokales Repository
+auch seiner "Herkunft" bewusst ist.
+- Willst Du alles wieder löschen? Ein lokales Repository kannst Du einfach als
+Verzeichnis löschen. Dein Repository in GitLab löscht Du unter 
+"Settings --> Advanced --> Remove project".
+
+## Übung 3 - Zu zweit
 
 Probiert mal aus, gemeinsam an einem Projekt zu arbeiten. Die folgende Anleitung
 sieht zwar umfangreich aus, das Prinzip ist aber eigentlich einfach: `person1` 
