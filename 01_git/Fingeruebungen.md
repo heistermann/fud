@@ -21,7 +21,7 @@ hinzufügst.
 - Lass Dir Deine History mit `git log` oder `git log --oneline` anzeigen.
 - Springe nun mit `git checkout <SHA>` zu einer früheren Version zurück. Schaue Dir
 Deine Dateien im Editor an.
-- Springe nun `git checkout master` wieder zur aktuellsten Version.
+- Springe nun mit `git checkout master` wieder zur aktuellsten Version.
 
 ## Übung 2 - Allein
 
