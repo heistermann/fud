@@ -101,8 +101,12 @@ Ich werde nun eine neue Datei namens `deins.md` in mein Repository
 Die Datei `deins.md` möchtest Du nun gern in Deinem lokalen Repository haben. Das geht so:
 
 ```
-$ git pull --rebase upstream master
+$ git pull upstream master
 ```
+
+Je nach Art der Änderungen, die Ihr Euch über den `pull` reinholt, fragt `git` Euch nach einer
+ausdrücklichen Beschreibung dieses "merge" (im Sinne einer `commit`-Nachricht) oder fügt selbst
+eine entsprechende Nachricht ein ("Merge commit"). 
 
 Nun schau mal in Dein lokales Repository: Ist `deins.md` da?
 
@@ -167,9 +171,11 @@ $ git push origin master
 Synchronisiere die Originaldateien regelmäßig mit dem `upstream`:
 
 ```
-$ git pull --rebase upstream master
+$ git pull upstream master
 $ git push origin master
 ```
+
+Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben.
 
 ### Gib nicht auf!
 
