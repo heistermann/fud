@@ -1671,7 +1671,7 @@ library(sessioninfo)</code></pre>
 ##  collate  German_Germany.1252         
 ##  ctype    German_Germany.1252         
 ##  tz       Europe/Berlin               
-##  date     2021-09-28</code></pre>
+##  date     2021-10-21</code></pre>
 <p>Die Angaben unter <em>value</em> sehen bei euch möglicherweise etwas anders aus. Falls ihr mit einigen Angaben unter <em>setting</em> nichts anfangen könnt (Wofür steht zum Beispiel <em>ui</em>?), kann man in der Dokumentation des Paketes nachschauen, welche Werte einem die Funktion eigentlich ausspuckt. Darauf werden wir später in der Lektion noch eingehen, wenn wir uns mit dem Suchen und Finden von Hilfe beschäftigen. Wichtig für euch ist jetzt vor allem: Die Funktionen eines importierten Paketes kann man mit <code>paketname::funktionsname</code> ansprechen. Mehr zu Funktionen dann später!</p>
 </div>
 <div id="auf-dateien-zugreifen" class="section level1">
@@ -1845,6 +1845,119 @@ Lösung
 <p><a href="https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-r-and-rstudio/">Mehr zu RStudio</a></p>
 <p><a href="https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-the-rmarkdown-format-and-knitr/">Mehr zu R Markdown</a></p>
 <p><a href="https://www.earthdatascience.org/courses/earth-analytics/time-series-data/basic-r-syntax-scientific-programming/">Basic R Syntax</a></p>
+</div>
+<div id="vertiefung-in-der-coding-werkstatt" class="section level1">
+<h1><span class="header-section-number">11</span> Vertiefung in der Coding-Werkstatt</h1>
+<p>Bearbeitet zunächst die Übungsaufgaben zu dieser Lektion, denn in den Übungsaufgaben werdet ihr einen weiteren wichtigen Datentyp in R kennenlernen: den Vektor (vector). Beispiele für Vektoren:</p>
+<pre class="r"><code>nottodolist = c(&quot;Frühzeitig an die eigene Rente denken.&quot;,
+               &quot;Glastüren übersehen.&quot;,
+               &quot;Etwas kaufen, weil es »Aloe Vera« enthält.&quot;)
+ichzaehlbis3 = c(1, 2, 3)</code></pre>
+<pre class="r"><code># Länge eines Vektors
+length(nottodolist)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code># Zugriff auf Elemente eines Vektors
+nottodolist[1]</code></pre>
+<pre><code>## [1] &quot;Frühzeitig an die eigene Rente denken.&quot;</code></pre>
+<pre class="r"><code># Schleife über Elemente eines Vektors
+for (i in 1:length(nottodolist)){
+  print(nottodolist[i])
+}</code></pre>
+<pre><code>## [1] &quot;Frühzeitig an die eigene Rente denken.&quot;
+## [1] &quot;Glastüren übersehen.&quot;
+## [1] &quot;Etwas kaufen, weil es »Aloe Vera« enthält.&quot;</code></pre>
+<div id="benannte-vektoren" class="section level2">
+<h2><span class="header-section-number">11.1</span> Benannte Vektoren</h2>
+<p>In dieser Vertiefung lernen wir benannte Vektoren (<code>named vectors</code>) kennen. Wie der Begriff vermuten lässt, enthalten diese neben den eigentlichen Werten im Vektor auch noch für jeden Wert einen Namen.</p>
+<pre class="r"><code>article = c(title = &quot;River flow forecasting through conceptual models part I — A discussion of principles&quot;,
+            authors = &quot;Nash, J. E., Sutcliffe, J. V.&quot;,
+            journal = &quot;Journal of Hydrology&quot;,
+            year = 1970)</code></pre>
+<pre class="r"><code># Die Elemente kann man wie beim Vektor über Indizes aufrufen
+article[3]</code></pre>
+<pre><code>##                journal 
+## &quot;Journal of Hydrology&quot;</code></pre>
+<pre class="r"><code># Die Elemente können aber auch über den entsprechenden Namen aufgerufen werden
+article[&quot;title&quot;]</code></pre>
+<pre><code>##                                                                                  title 
+## &quot;River flow forecasting through conceptual models part I — A discussion of principles&quot;</code></pre>
+<pre class="r"><code># Übersicht über alle Namen
+names(article)</code></pre>
+<pre><code>## [1] &quot;title&quot;   &quot;authors&quot; &quot;journal&quot; &quot;year&quot;</code></pre>
+<pre class="r"><code># Hinzufügen neuer Elemente
+article[&quot;volume&quot;] = 10
+article[&quot;issue&quot;] = 3
+article[&quot;firstpage&quot;] = 282
+article[&quot;lastpage&quot;] = 290
+
+article</code></pre>
+<pre><code>##                                                                                  title 
+## &quot;River flow forecasting through conceptual models part I — A discussion of principles&quot; 
+##                                                                                authors 
+##                                                        &quot;Nash, J. E., Sutcliffe, J. V.&quot; 
+##                                                                                journal 
+##                                                                 &quot;Journal of Hydrology&quot; 
+##                                                                                   year 
+##                                                                                 &quot;1970&quot; 
+##                                                                                 volume 
+##                                                                                   &quot;10&quot; 
+##                                                                                  issue 
+##                                                                                    &quot;3&quot; 
+##                                                                              firstpage 
+##                                                                                  &quot;282&quot; 
+##                                                                               lastpage 
+##                                                                                  &quot;290&quot;</code></pre>
+</div>
+<div id="jetzt-bist-du-dran-erfassung-und-abfrage-von-radiosonden-metadaten" class="section level2">
+<h2><span class="header-section-number">11.2</span> Jetzt bist du dran: Erfassung und Abfrage von Radiosonden-Metadaten</h2>
+<p>Radiosondenaufstiege dienen der vertikalen Vermessung des Zustands der Atmopshäre. Der Deutsche Wetterdienst (DWD) betreibt 14 aktive Stationen, an denen regelmäßig Radiosondenaufstiege erfolgen (die Ballone, an denen die Sonden hängen, <a href="https://de.wikipedia.org/wiki/Radiosonde#Ballone_und_Fallschirme">platzen dann in einer bestimmten Höhe</a> und die Sonden kommen dann <em>irgendwo</em> wieder runter).</p>
+<p>Die Metadaten der einzelnen Stationen hält der DWD <a href="https://opendata.dwd.de/climate_environment/CDC/observations_germany/radiosondes/low_resolution/meta_data/">hier</a> vor. Wir haben für unser Beispiel mal die Metadaten der Station Bergen (Rügen) runtergeladen - Ihr findet Sie im Verzeichnis <code>../data/Meta_Daten_pkt_aero_00368/</code> in mehreren Dateien.</p>
+<p>Eure Aufgabe besteht nun aus folgenden Schritten:</p>
+<ul>
+<li><strong>Vektor der Attribute erstellen</strong>: Schaut Euch zunächst die Dateien an. Erstellt nun einen Vektor (<code>vector</code>) namens <code>attributes</code>, welcher die Bezeichner der Metadatenattribute enthält (z.B. “Stations_ID”)</li>
+<li><strong>Werte für die einzelnen Attribute eintragen</strong>: Der untenstehende Codeblock fragt Dich nun nach den Werten der Attribute für die Station Bergen. Dazu wird die Funktion <code>readline</code> verwendet. Diese Funktion erfordert eine Nutzereingabe und überträgt diese Nutzereingabe auf eine Variable (hier: <code>value</code>). Wenn Ihr also nach dem Wert gefragt werdet, müsst Ihr ihn aus den Dateien ablesen und eintragen. <em>Hinweis</em>: Gebt immer nur den aktuellsten Wert ein, nicht die Historie der Metadaten der Station. <strong>Ihr müsst in dem Codeblock nun noch eine Zeile ergänzen, so dass <code>value</code> auch wirklich in den benannten Vektor <code>metadata</code> übertragen wird.</strong> Natürlich ist dieses Skript nur dazu da, um Möglichkeiten für Nutzereingaben zu demonstrieren. Ihr könntet alternativ auch direkt die Definition des <code>metadata</code>-Vektors aufschreiben.</li>
+<li><strong>Benannten Vektor anschauen</strong>: Schaut Euch den Zustand Eures Vektors <code>metadata</code> an.</li>
+<li><strong>Werte ausgewählter Attribute ausgeben</strong>: Dieser Codeblock zeigt Dir die verfügbaren Attribute in <code>metadata</code> an und erlaubt es Dir, ein Attribut Deiner Wahl anzugeben. Für dieses wird dann der Wert ausgegeben.</li>
+</ul>
+<div id="vektor-der-attribute-erstellen" class="section level3">
+<h3><span class="header-section-number">11.2.1</span> Vektor der Attribute erstellen</h3>
+<pre class="r"><code># Definiere hier den Vektor mit Attributen
+attributes = </code></pre>
+</div>
+<div id="werte-für-die-einzelnen-attribute-eintragen" class="section level3">
+<h3><span class="header-section-number">11.2.2</span> Werte für die einzelnen Attribute eintragen</h3>
+<pre class="r"><code># Dies ist der benannte Vektor, in dem die Werte der Attribute gesammelt werden - noch ist er leer...
+metadata = vector()
+
+# Nun gehen wir alle Attribute aus attributes durch...
+for (attribute in attributes){
+  value = readline(paste(&quot;Geben Sie einen Wert für&quot;, attribute, &quot;ein: &quot;))
+  
+  # HIER MUSST DU EINE ZEILE ERGÄNZEN!
+  
+}</code></pre>
+</div>
+<div id="benannten-vektor-anschauen" class="section level3">
+<h3><span class="header-section-number">11.2.3</span> Benannten Vektor anschauen</h3>
+<pre class="r"><code># Was musst Du hier eintragen, um Dir den benannten Vektor anzuschauen?</code></pre>
+</div>
+<div id="werte-ausgewählter-attribute-ausgeben" class="section level3">
+<h3><span class="header-section-number">11.2.4</span> Werte ausgewählter Attribute ausgeben</h3>
+<pre class="r"><code>print(&quot;Folgende Attribute stehen zur Verfügung:&quot;)
+for (attribute in names(metadata)){
+  print(paste0(&quot; - &quot;, attribute))
+}
+
+attribute = readline(&quot;Über welches Attribut möchtest Du Dich informieren? &quot;)
+
+print(&quot;&quot;)
+print(&quot;---&quot;)
+print(paste0(&quot;Ergebnis der Abfrage für Attribut &quot;, attribute, &quot;:&quot;))
+
+# Hier musst DU nun ein weiteres print-statement einfügen, 
+# mit dem der Wert dieses Attributs ausgedruckt wird:</code></pre>
+</div>
+</div>
 </div>
 
 
