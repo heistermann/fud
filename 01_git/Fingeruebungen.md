@@ -18,9 +18,11 @@ wieder löschen und alles ist gut.
 Weg den `git add`  & `git commit` Workflow.
 - Lass Dir mit `git diff` die Änderungen anzeigen, bevor Du sie in die Staging Area
 hinzufügst.
-- Lass Dir Deine History mit `git log` oder `git log --oneline` anzeigen.
-- Springe nun mit `git checkout <SHA>` zu einer früheren Version zurück. Schaue Dir
-Deine Dateien im Editor an.
+- Lass Dir Deine History mit `git log` oder `git log --oneline` anzeigen. Kopiere die ID des Commits,
+zu dem Du zurückspringen möchtest. Die IDs sind die wilden Buchstaben-/Zahlenkombinationen, die jeweils am
+Anfang der Zeile stehen. Man nennt Sie auch SHA ("Secure Hash Algorithm").
+- Springe nun mit `git checkout <SHA>` zu einer früheren Version zurück. Für `<SHA>` musst Du eben
+die Commit ID einfügen. Schaue Dir nun Deine Dateien im Editor an. Was hat sich geändert?
 - Springe nun mit `git checkout master` wieder zur aktuellsten Version.
 
 ## Übung 2 - Allein

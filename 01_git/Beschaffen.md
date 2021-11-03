@@ -45,9 +45,9 @@ wird Euch Gelegenheit geben, Routine darin zu sammeln.
 
 Das Setup lässt sich wir folgt zusammenfassen:
 
-- Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)
-- Klone den Fork (`git clone ...`)
-- **Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.**
+- Erstelle Deinen persönlichen *Fork* vom Kursrepository
+- Klone den Fork
+- Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.
 - Synchronisiere Dein lokales Repository mit Deinem Fork auf GitLab (`add`, `commit`, `push`)
 - Synchronisiere die Originaldateien in Deinem lokalen Repository vor jedem Kurstermin mit dem 
 zentralen Kursrepository via `pull`.
@@ -124,10 +124,10 @@ Voila - alles synchron?!
 
 ### Fork
 
-Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
+Erstelle Deinen persönlichen *Fork* vom [Kursrepository](https://gitup.uni-potsdam.de/umweltdv/umweltdv)
 
 ### Clone
-Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeichnis Deiner Wahl.
+Klone den Fork auf Deinen Rechner. Öffne dafür die Bash in einem Zielverzeihnis Deiner Wahl.
 Dann
 
 `$ git clone https://gitup.uni-potsdam.de/DEIN-UP-NUTZER/umweltdv`.
@@ -159,7 +159,7 @@ Kopie an (z.B. `tour-de-python_Copy.ipynb`) und arbeite mit dieser.
 ### Dein Repository pflegen!
 
 Praktiziere den erlernten `git` Workflow, um Deine eigenen Änderungen in die
-lokale History einzupflegen und Deinen Fork auf GitLab aktuell zu halten:
+lokale History einzupflegen und Deinen Fork auf GitLab aktuelle zu halten:
 
 ```
 $ git status
