@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projekt No 2
+title: Hurricane-Zugbahnen
 nav_order: 2
 parent: Projekte
 ---
