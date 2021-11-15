@@ -18,7 +18,6 @@ permalink: /03_dataframe_basic_vis
 
 - Einführende Inhalte zum Arbeiten mit "Dataframes" ([Link](R/Dataframes.html)). Arbeitet diese zunächst selbständig durch.
 - Im Seminar: Analyse der Säkularstation in Potsdam ([Link](R/Dataframes2.html)).
-- R-Übungsaufgaben zum Thema Dataframe ([Link](R/exercises03.html))
 
 ## Lernziele
 

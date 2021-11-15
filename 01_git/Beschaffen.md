@@ -177,6 +177,29 @@ $ git push origin master
 
 Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben.
 
+
 ### Gib nicht auf!
 
 Auch wenn Dir das alles furchtbar vorkommt: Gib nicht auf! Mach weiter! Auch wenn es weh tut!
+
+
+## Ein häufiges Problem: Merge-Nachrichten mit dem Default-Editor abspeichern
+
+Ein typisches Szenario: Ihr führt `git pull upstream master` aus und `git` fordert Euch auf,
+eine Merge-Nachricht einzugeben bzw. die von git vorgeschlagene Merge-Nachricht (so was wie
+`Merge branch 'master' of https://gitup.uni-potsdam.de/umweltdv/umweltdv`) abzuspeichern.
+
+Ihr seht aber nur ein Terminalfenster, so in der Art wie im folgende Bild:
+
+![](img/merge-message.png)
+
+Was tun? Ihr wollt einfach nur die vorgeschlagene Nachricht bestätigen. Was Ihr seht, ist der Default-Editor,
+der mit dem git-client unter Windows geliefert wird. Er heißt `vim`. Um die Merge-Nachricht zu bestätigen,
+drückt Ihr erst die Escape-Taste, anschließend: `:wq`. Das `w` steht für "write" (also quasi abspeichern) und
+`q` steht für "quit".
+
+Also nochmal: `ESC --> :wq`
+
+
+
+
