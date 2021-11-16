@@ -178,7 +178,7 @@ $ git push origin master
 
 Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben (merge commit). 
 Wenn Ihr dabei in einem komischen Terminalfenster landet, schaut bitte Euch bitte
-nochmal [diesen Abschnitt](bestaetigen-der-merge-nachricht-nach-einem-pull).
+nochmal [diesen Abschnitt](#bestaetigen-der-merge-nachricht-nach-einem-pull).
 
 ### Nochmal auf einen Blick
 
