@@ -23,13 +23,14 @@ Ihr seht: Da ist ganz schön was in Bewegung.
 ### Option 1: Runterladen, fertig.
 
 Es gibt die Möglichkeit, ein Repository schlicht und einfach auf Euren Rechner
-zu runterzuladen. Es gibt dazu ein Download-Button:
+zu runterzuladen. Es gibt dazu einen Download-Button:
 
 ![img](img/download.png)
 
 Wenn alle Stricke reißen, könnt Ihr das jederzeit machen. Aber was macht Ihr,
 wenn die Dozierenden etwas an den Ressourcen ändern? In ein neues Verzeichnis
-runterladen (`umweltdv.v2/...`) - klingt nach unserem [Einstiegsbild](http://phdcomics.com/comics/archive/phd101212s.gif). 
+runterladen (`umweltdv.v2/...`) - klingt nach unserem
+[Einstiegsbild](http://phdcomics.com/comics/archive/phd101212s.gif). 
 
 Schöner wäre es doch, ein Verzeichnis zu haben, das Ihr nach Bedarf aktualisieren
 könnt. Natürlich mit `git`.
@@ -175,7 +176,15 @@ $ git pull upstream master
 $ git push origin master
 ```
 
-Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben.
+Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben (merge commit). 
+Wenn Ihr dabei in einem komischen Terminalfenster landet, schaut bitte Euch bitte
+nochmal [diesen Abschnitt](bestaetigen-der-merge-nachricht-nach-einem-pull).
+
+### Nochmal auf einen Blick
+
+Hier nochmal der Ablauf des ganzen auf einen Blick:
+
+![workflow](img/course-git-workflow.png)
 
 
 ### Gib nicht auf!
@@ -183,23 +192,39 @@ Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben.
 Auch wenn Dir das alles furchtbar vorkommt: Gib nicht auf! Mach weiter! Auch wenn es weh tut!
 
 
-## Ein häufiges Problem: Merge-Nachrichten mit dem Default-Editor abspeichern
+## Bestaetigen der Merge-Nachricht nach einem Pull
 
-Ein typisches Szenario: Ihr führt `git pull upstream master` aus und `git` fordert Euch auf,
+Ein typisches Szenario: Du führst `git pull upstream master` aus und `git` fordert Dich auf,
 eine Merge-Nachricht einzugeben bzw. die von git vorgeschlagene Merge-Nachricht (so was wie
-`Merge branch 'master' of https://gitup.uni-potsdam.de/umweltdv/umweltdv`) abzuspeichern.
+`Merge branch 'master' of https://gitup.uni-potsdam.de/umweltdv/umweltdv`) zu bestätigen
+und abzuspeichern.
 
-Ihr seht aber nur ein Terminalfenster, so in der Art wie im folgende Bild:
+Du siehst aber nur ein Terminalfenster, so in der Art wie im folgenden Bild:
 
 ![](img/merge-message.png)
 
-Was tun? Ihr wollt einfach nur die vorgeschlagene Nachricht bestätigen. Was Ihr seht, ist der Default-Editor,
-der mit dem git-client unter Windows geliefert wird. Er heißt `vim`. Um die Merge-Nachricht zu bestätigen,
-drückt Ihr erst die Escape-Taste, anschließend: `:wq`. Das `w` steht für "write" (also quasi abspeichern) und
-`q` steht für "quit".
+Was nun? Du wollt einfach nur die vorgeschlagene Nachricht bestätigen. Was Du siehst,
+ist der Default-Editor, der mit dem git-client unter Windows geliefert wird.
+Er heißt `vim` und ist extrem spröde.
+
+**Um die Merge-Nachricht zu bestätigen, drückst Du erst die Escape-Taste und anschließend: `:wq`.**
+
+Das `w` steht für "write" (also quasi abspeichern) und `q` steht für "quit".
 
 Also nochmal: `ESC --> :wq`
 
+Anschließend solltet Ihr wieder das bekannte Prompt der Git-Bash sehen.
 
+Wenn Dich das auf die Dauer stört, kannst Du zumindest unter Windows Notepad++
+als Default-Editor auswählen. Dafür musst zunächst Notepad++ installieren. 
+Suche anschließend den Pfad, unter dem die ausführbare Datei `notepad++.exe` liegt.
+
+Führe dann in der git-Bash folgenden Befehl aus:
+
+```
+$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+Achte darauf, den richtigen Systempfad zur `notepad++.exe` anzusetzen. Nutze Forward-Slashes!
 
 
