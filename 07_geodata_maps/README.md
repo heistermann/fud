@@ -29,15 +29,15 @@ und visualisieren zu können?
 ## Strukur
 
 - Wir beginnen mit der Darstellung des DWD-Niederschlagsmessnetzes
-- Was brauchen wir, um eine solche Darstellung mit anderen Geodaten verknüpfen zu können
-Start with mapping DWD rain gauges - no dedicated GIS functionality is actually used
+- Was brauchen wir, um eine solche Darstellung mit anderen Geodaten verknüpfen zu können?
 - Werkzeuge für Vektordaten
 - Werkzeuge für Rasterdaten
 
 ## Inhalte der Coding-Werkstatt
 
-- Erweiterung der Kartendarstellung um zusätzliche Elemente (Städte, Fließgewässer, ...)
-- Hinzufügen gemessener Niederschlagshöhen zur Kartendarstellung
+- Habt Ihr offene Fragen zu den Inhalten des Seminars?
+- Bearbeitung der Übungsaufgaben
+- Vertiefungsaufgabe: Erweiterung der Kartendarstellung um zusätzliche Elemente (Städte, Fließgewässer, ...)
 
 
 ## Auf welchen Kenntnissen baut diese Lektion auf?

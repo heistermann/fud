@@ -30,7 +30,7 @@ permalink: /06_multidim_arrays
 ## Inhalte der Coding-Werkstatt
 
 - Habt Ihr offene Fragen zu den Inhalten des Seminars?
-- Bearbeitung der Übungsaufgaben ([R](R/exercises06.html), [Python](python/exercises06.html))
+- Bearbeitung der Übungsaufgaben
 - Mögliche Vertiefungsaufgaben:
      - Analyse der ERA5-Land Daten für Lufttemperatur
      - Animation der täglichen Schneebedeckung 

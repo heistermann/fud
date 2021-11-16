@@ -35,7 +35,7 @@ Die Lektion besteht aus zwei Teilen:
 
 ## Inhalte der Coding-Werkstatt
 - Habt Ihr offene Fragen zu den Inhalte des Seminars?
-- Bearbeitung der Übungsaufgaben ([R](R/exercises03.html), [Python](python/exercises03.html))
+- Bearbeitung der Übungsaufgaben
 - Mögliche Vertiefungsaufgaben:
      - Wiederholung der Analyse anhand der Bergwetterwarte Hoher Peissenberg
      - Berechnung des Dampfdrucks aus Temperatur und relativer Luftfeuchte

@@ -34,7 +34,7 @@ permalink: /05_datatypes
 
 ## Inhalte der Coding-Werkstatt
 - Habt Ihr offene Fragen zu den Inhalten des Seminars?
-- Bearbeitung der Übungsaufgaben ([R](R/exercises05.html), [Python](python/exercises05.html))
+- Bearbeitung der Übungsaufgaben
 - Mögliche Vertiefungsaufgaben:
      - Pegeldaten des Global Data Runoff Center (GRDC) einlesen
      - Webcam-Daten des DWD verarbeiten
