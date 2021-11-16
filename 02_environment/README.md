@@ -19,7 +19,6 @@ permalink: /02_environment
 
 - Anleitung zum Einrichten Eurer Arbeitsumgebung ([Link](R/R_Arbeitsumgebung.html))
 - Tour durch Eure neue R-Umgebung ([Link](R/R_kundungstour.html)).
-- R-Übungsaufgaben für diese Lektion ([Link](R/exercises02.html)).
 
 ## Lernziele
 

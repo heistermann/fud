@@ -47,6 +47,7 @@ zum Ausdrucken entwickelt...Spickzettel eben.
 - [Software Carpentry Python Plotting](http://swcarpentry.github.io/python-novice-gapminder/)
 - [Earth Data Science I](https://www.earthdatascience.org/courses/intro-to-earth-data-science/)
 - [Earth Data Science II](https://www.earthdatascience.org/courses/use-data-open-source-python/)
+- [Python tutorials at various levels](https://www.pythontutorial.net/)
 
 ## R
 

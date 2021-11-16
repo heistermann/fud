@@ -14336,43 +14336,16 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Pr&#228;ambel">Pr&#228;ambel<a class="anchor-link" href="#Pr&#228;ambel">&#182;</a></h2>
+<h2 id="Vorab">Vorab<a class="anchor-link" href="#Vorab">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Diese Übungen sollen Euch Routine und Sicherheit im Umgang mit Python geben. Um Euch einen zusätzlichen Anreiz zu geben, könnt Ihr mit diesen Übungen bereits Punkte für die Modulprüfung sammeln. Für jede richtig gelöste Übungsaufgabe gibt es einen Punkt. Am Ende des Seminars errechnen wir aus dem Anteil richtiger Lösungen eine Note, die zu 25 % in die Modulnote eingeht.</p>
-<p><strong>Wie funktioniert das?</strong></p>
-<ol>
-<li><p><strong>Deadline einhalten</strong>: Informiert Euch in Moodle über die Deadline für die Abgabe der Übungsergebnisse für die jeweilige Lektion. Die Deadline ist nicht verhandelbar, Entschuldigungen/Begründungen für nicht abgegebene Übungen gibt es keine.</p>
-</li>
-<li><p><strong>Coding-Werkstatt nutzen:</strong> Bearbeitet die folgenden Aufgaben, soweit es Euch gelingt. Ihr könnt in der Coding-Werkstatt Fragen stellen, aber Ihr müsst Euch die Lösungen eigenständig erarbeiten. Wir werden Euch in der Coding-Werkstatt einen 30-minütigen Zeitslot für die Übungen zur Verfügung stellen, aber Ihr könnt sie auch an enem andern Ort zu einer andern Zeit bearbeiten.</p>
-</li>
-<li><p><strong>Zertifikat erstellen:</strong> Wenn Ihr denkt, dass Ihr soweit seid, geht auf den Abschnitt <a href="#Gesamtauswertung">Gesamtauswertung</a>. Dort könnt Ihr Euch ein Zertifikat ausstellen lassen, indem Ihr die Funktion <code>get_certificate</code> ausführt. Die Gültigkeit des Zertifikats ist durch die checksum für uns verifizierbar.</p>
-</li>
-<li><p><strong>Zertifikat einreichen:</strong> Startet für die betreffende Lektion in Moodle das Feedbacktool "Zertifikat für Übungsaufgaben einreichen" und folgt den Anweisungen. Ihr sollt dort bestätigen, dass Ihr die Aufgaben eigenständig bearbeitet habt und zum Nachweis das Zertifikat einfügen.</p>
-</li>
-<li><p><strong>Kontrolle:</strong> Wir werden stichprobenhaft Eure Notebooks mit den Lösungen kontrollieren. Stellt daher sicher, dass Ihr dieses Notebook (oder eine Kopie, in welcher Ihr die Lösungen erarbeitet habt) in Euer Fork-Repository gepusht habt und dieses intern freigegeben ist.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Die Lösung einer Aufgabe besteht immer aus einer Funktion (function).</strong> Für jede Lösung stellen wir Euch mindestens einen Test zur Verfügung, mit dessen Hilfe Ihr prüfen könnt, ob Eure Lösung funktioniert.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Eine Funktion besteht mindestens aus einer Definitionszeile (Funktionsname und ggf. Argumente) und einer Zeile, in etwas "passsiert". Typischerweise gibt eine Funktion ein "Ergebnis" zurück. Dies kann ein numerischer Wert, eine Zeichenkette (<code>string</code>) oder auch ein komplexeres Objekt (z.B. <code>list</code>) sein. In unseren Übungen <em>muss</em> eine Funktion immer ein Ergebnis zurückgeben, denn dieses Ergebnis wird geprüft.</p>
+<p>Eine Anleitung für die Bearbeitung und Abgabe der Übunsgaufgaben in Python findet Ihr im Abgabebereich des Moodlekurses ( <a href="https://moodle2.uni-potsdam.de/mod/page/view.php?id=1483638">Link</a> ).</p>
+<p>Kurzform: Eine Aufgabe besteht immer aus einer "Funktion", die für einen definierten Input (Argumente) einen definierten Output zurückgeben soll (engl.: <code>return</code>). Überprüft die Korrektheit dieses Outputs und damit Eurer Lösung mit <code>testme(funktionsname)</code>. Wenn Ihr fertig seid, erzeugt unter im Abschnitt <a href="#Gesamtauswertung">Gesamtauswertung</a> Euer Zertifikat und gebt es dann in Moodle zusammen mit diesem Notebook ab.</p>
+<p>Hier ein Beispiel für eine Funktion: Die Funktion heißt <code>beispiel</code>, hat die Argumente (den Input) <code>x</code> und <code>y</code> und gibt die Variable <code>ergebnis</code> zurück. Das Ergebnis ist in diesem Fall die Summe der Argumente <code>x</code> und <code>y</code>.</p>
 
 </div>
 </div>
@@ -14470,6 +14443,7 @@ $(document).ready(function () {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Die Funktion <code>eintraege</code> soll ausgeben, wie viele Einträge ein Dataframe <code>df</code> insgesamt hat. Erweitert sie entsprechend.</p>
+<p><em>Hinweis:</em> Mit "Einträge" sind hier die Äquivalente zu "Zellen" einer Tabelle gemeint.</p>
 
 </div>
 </div>
@@ -14553,7 +14527,18 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Funktion <code>letzter</code> soll letzten Eintrag der Spalte <code>spalte</code> des Dataframes <code>df</code> zurückgeben. Achtung: Das scheint eigentlich trivial, ist aber tatsächlich ein bisschen tricky. Das liegt daran, das <code>pandas</code> eigentlich eher annimmt, dass man einzelne Zeilen eines DataFrame mit dem eingebauten Zeilenindex anspricht, der über <code>pandas.DataFrame.index</code> verfügbar ist. Wenn man also mit <code>.loc</code> arbeitet, sollte man zunächst den richtigen Zeilenindex auswählen. Die dritte Zeile eines Dataframe <code>df</code> hat z.B. den index <code>df.index[2]</code>. Puuh...Warum einfach, wenn's auch kompliziert geht. Kriegst Du das hin?</p>
+<p>Die Funktion <code>letzter</code> soll den letzten Eintrag der Spalte <code>spalte</code> des Dataframes <code>df</code> zurückgeben. Achtung: Das scheint eigentlich trivial, ist aber ein bisschen tricky. In <code>pandas</code> spricht man einzelne Zeilen eines DataFrame mit dem eingebauten Zeilenindex (<code>DataFrame.index</code>) und <code>.loc[...]</code> an.</p>
+<p>Den dritten Eintrag der Spalte <code>temp</code> des DataFrame <code>df</code> wählt man also wie folgt aus:</p>
+
+<pre><code># Python-Indizierung beachten: erster Index ist die 0!
+df.loc[df.index[2],"temp"]</code></pre>
+<p>Den letzten Eintrag einer Liste oder eines Arrays wählt kann man übrigens mit dem Index <code>-1</code> auswählen. Praktisch!</p>
+
+<pre><code># Beispiel anhand einer Liste
+&gt;&gt;&gt; a = [2,5,9,6]
+&gt;&gt;&gt; a[-1]
+6</code></pre>
+<p>Tja, warum einfach, wenn's auch kompliziert geht. Also nochmal: Gibt den letzten Eintrag der Spalte <code>spalte</code> zurück. Kriegst Du das hin?</p>
 
 </div>
 </div>
@@ -14595,7 +14580,8 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Funktion <code>mittelmass</code> soll den Median der Spalte <code>spalte</code> des Dataframes <code>df</code> zurückgeben.</p>
+<p>Die Funktion <code>mittelmass</code> soll den Median (<code>median</code>) der Spalte <code>spalte</code> des Dataframes <code>df</code> zurückgeben.</p>
+<p><strong>Achtung</strong>: Wenn der Spaltenname als Funktionsargument (also als Variable) übergeben wird, erfolgt der Zugriff mit <code>df[spalte]</code>. Der Ausdruck <code>df.spalte</code> hingegen funktioniert dann nicht.</p>
 
 </div>
 </div>
@@ -14637,16 +14623,8 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Bevor man Berechnungen anstellt, kann es sinnvoll sein zu überprüfen, ob denn überhaupt in jeder Zelle ein gültiger Wert vorhanden ist. Die Funktion <code>fehlendeDaten</code> soll daher die Anzahl an <code>NaN</code>-Einträgen in einer bestimmten Spalte <code>spalte</code> eines Dataframes <code>df</code> zurückgeben. Macht Euch dafür die Funktion <code>pandas.DataFrame.isna</code> zunutze.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-warning">Hinweis!</button>
-Überlegt euch, was passiert, wenn man <code>True</code> und <code>False</code> Werte addiert...</p>
+<p>Bevor man Berechnungen anstellt, kann es sinnvoll sein zu überprüfen, ob denn überhaupt in jeder Zelle ein gültiger Wert vorhanden ist. Die Funktion <code>fehlend</code> soll daher die Anzahl an <code>NaN</code>-Einträgen in einer bestimmten Spalte <code>spalte</code> eines Dataframes <code>df</code> zurückgeben. Macht Euch dafür die Funktion <code>pandas.DataFrame.isna</code> zunutze.</p>
+<p><strong>Hinweis:</strong> Überlegt euch, was passiert, wenn man <code>True</code> und <code>False</code> Werte addiert...</p>
 
 </div>
 </div>
@@ -14688,7 +14666,13 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Aus einem DataFrame wollen wir Zeilen auswählen, in denen die Spalte <code>spalte</code> bestimmte Bedingungen erfüllt: Die Werte der Spalte <code>spalte</code> sollen größer als <code>xmin</code> und kleiner als <code>xmax</code> sein. Wir wählen nun zunächst alle Zeilen des DataFrame <code>df</code> aus,  die diese Bedinung erfüllen. Die Funktion <code>teilmenge</code> soll dann die Menge der Elemente in dieser Auswahl zurückgeben (also die Zahl der verbleibende Zeilen mal der Zahl der Spalten).</p>
+<p>Aus einem DataFrame wollen wir Zeilen auswählen, in denen die Spalte <code>spalte</code> bestimmte Bedingungen erfüllt: Die Werte der Spalte <code>spalte</code> sollen größer als <code>xmin</code> und kleiner als <code>xmax</code> sein. Wir wählen nun zunächst alle Zeilen des DataFrame <code>df</code> aus,  die diese Bedingung erfüllen. Die Funktion <code>teilmenge</code> soll dann die Menge der Elemente in dieser Auswahl zurückgeben (also die Zahl der verbleibende Zeilen mal der Zahl der Spalten).</p>
+<p><strong>Hinweis</strong>: Für die Auswahl der Zeilen verwendet Ihr die Syntax <code>df.loc[condition]</code>. Mal ein <strong>Beispiel</strong>:</p>
+
+<pre><code>condition = (df[spalte] &gt; 5) &amp; (df[spalte] &lt; 99)
+df_auswahl = df.loc[condition]
+...</code></pre>
+<p>Schaut genau hin: Die Einzelbedingungen müssen in Klammern gefasst werden, bevor sie über das logische <code>&amp;</code> verknüpft werden.</p>
 
 </div>
 </div>
@@ -14730,9 +14714,8 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir nutzen nun einen DataFrame <code>df</code> mit zwei Spalten: Die erste Spalte <code>standort</code> spezifiziert die Landnutzung am Standort (also z.B. "Wald", "Wiese"), die zweite Spalte <code>temp</code> enthält die gemessene Lufttemperatur. Die 
-Nun interessieren uns aus einem großen Datensatz nur die Werte, die im Wald gemessen wurden. Die Funktion <code>mitteltemp</code> soll nun die mittlere Lufttemperatur an den Standorten mit der Landnutzung <code>lanu</code> zurückgeben.</p>
-<p><strong>Achtung</strong>: Runde das Ergebnis auf zwei Nachkommastellen!</p>
+<p>Wir nutzen nun einen DataFrame <code>df</code> mit zwei Spalten: Die erste Spalte <code>standort</code> spezifiziert die Landnutzung am Standort (also z.B. "Wald", "Wiese"), die zweite Spalte <code>temp</code> enthält die gemessene Lufttemperatur.</p>
+<p>Nun interessiert uns aus einem großen Datensatz der Mittelwert der Temperatur (Spalte <code>temp</code>), die an Standorten (Spalte <code>standort</code>) mit einer bestimmten Landnutzung <code>lanu</code> gemessen wurden. Wir müssen also zunächst diejenigen Zeilen von <code>df</code> auswählen, in denen die Spalte <code>standort</code> den Wert <code>lanu</code> annimmt. Für die verbleibenden Zeilen ermitteln wir den Mittelwert der Spalte <code>temp</code> und runden diesen auf zwei Dezimalstellen. <strong>Hinweis</strong>: Der Befehl zur Rundung eines Wertes <code>x</code> auf zwei Nachkommastellen lautet <code>round(x, 2)</code>. Den gerundeten Mittelwert gibst Du schließlich mit <code>return</code> zurück.</p>
 
 </div>
 </div>
@@ -14774,7 +14757,12 @@ Nun interessieren uns aus einem großen Datensatz nur die Werte, die im Wald gem
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Der DataFrame <code>df</code> enthalte zwei Spalten: Die Spalte <code>datum</code> enthält das Datum der Messwerte in der Spalte <code>messung</code>. Das Datumsformat ist <code>%d.%m.%Y</code>, also z.B. "09.11.1989". Nutze in der Funktion <code>aufjahrundtag</code> zunächst die Spalte <code>datum</code>, um einen datetime-Index für den DataFrame zu erzeugen. Die Funktion soll dann den Messwert zurückgeben, der für ein Datum <code>ondate</code> in der Spalte <code>messung</code> steht.</p>
+<p>Der DataFrame <code>df</code> enthält zwei Spalten: Die Spalte <code>datum</code> enthält das Datum der Messwerte in der Spalte <code>messung</code>. Das Datumsformat ist <code>%d.%m.%Y</code>, also z.B. "09.11.1989" für den Tag des Mauerfalls. Nutze in der Funktion <code>aufjahrundtag</code> zunächst die Spalte <code>datum</code>, um einen datetime-Index für den DataFrame zu erzeugen. Die Funktion soll dann den Messwert zurückgeben, der für ein Datum <code>ondate</code> in der Spalte <code>messung</code> steht.</p>
+<p><strong>Hinweis</strong>: Die Erzeugung eines datetime-Index findet Ihr im Notebook zur Säkularstation. Hier nochmal der prinzipielle Ablauf:</p>
+
+<pre><code>df["datum"] = pd.to_datetime(df["datum"], format=...)
+df = df.set_index("datum")</code></pre>
+<p>Die Auswahl erfolgt dann wieder mittels <code>df.loc[...]</code></p>
 
 </div>
 </div>
