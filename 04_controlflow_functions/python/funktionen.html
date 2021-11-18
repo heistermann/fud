@@ -14336,23 +14336,15 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Till-Francke,-f&#252;r-Python-bearbeitet-von-Paul-Voit">Till Francke, f&#252;r Python bearbeitet von Paul Voit<a class="anchor-link" href="#Till-Francke,-f&#252;r-Python-bearbeitet-von-Paul-Voit">&#182;</a></h3>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Dem Funktionör ist nichts zu schwör.</em></p>
-<p>Funktionen (in anderen Programmiersprachen auch Subroutinen oder Prozeduren genannt) sind eine Sammlung von Einzelbefehlen.
-Sie erlauben</p>
+<p>Ihr kennt das Konzept der Funktion bereits aus den Übungsaufgaben.</p>
+<p>Funktionen (in anderen Programmiersprachen auch Subroutinen oder Prozeduren genannt) sind eine Sammlung von Einzelbefehlen. Sie erlauben</p>
 <ul>
 <li>vereinfachte Mehrfachverwendung durch Aufruf des Funktionsnamens</li>
 <li>verbesserte Code-Lesbarkeit</li>
 <li>Kennzeichnung der zugehörigen Eingabe- und Ausgabegrößen </li>
 <li>Zugriff auf große Befehlssammlungen in externen Paketen und Bibliotheken</li>
 </ul>
-<p>Damit entsprechen Funktionen direkt der o.g. DRY-Philosophie.</p>
+<p>Damit entsprechen Funktionen direkt der <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY-Philosophie</a>.</p>
 <p>Eine Reihe von Funktionen gehören zum Grundinventar von Python, andere können wir uns durch das Einbinden von Paketen dazuholen, oder wir machen uns unsere eigenen Funktionen!</p>
 
 </div>
@@ -14361,26 +14353,68 @@ Sie erlauben</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Beispiele-f&#252;r-interne-Funktionen">Beispiele f&#252;r interne Funktionen<a class="anchor-link" href="#Beispiele-f&#252;r-interne-Funktionen">&#182;</a></h2>
+<h2 id="Beispiele-f&#252;r-Funktionen-aus-Python-Paketen">Beispiele f&#252;r Funktionen aus Python-Paketen<a class="anchor-link" href="#Beispiele-f&#252;r-Funktionen-aus-Python-Paketen">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Eine einfache Funktion ist</p>
-
-<pre><code>import os    
-os.getcwd()</code></pre>
-<p>, die einfach das aktuelle Arbeitsverzeichnis ausgibt.</p>
-<p>Die aktuelle Zeit lässt sich mit <code>datetime.now()</code> aus dem datetime-Package ermitteln .</p>
+<p>Üblicherweise geben Funktionen etwas zurück (in der Funktion gibt es ein <code>return</code>) statement.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Funktion os.getcwd() gibt das aktuelle Arbeitsverzeichnis zurück</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;/media/x/teach/MSc_UmweltDV/umweltdv/04_controlflow_functions/python&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -14393,12 +14427,11 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="c1">#direkte Ausgabe des Rückgabewerts</span>
-<span class="n">zeit</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="c1">#Speichern des Rückgabe Wert</span>
-<span class="n">zeit</span> <span class="c1">#Ausgabe des gespeicherten Rückgabewerts</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Funktion datetime.now() gibt die aktuelle Systemzeit zurück</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14411,13 +14444,13 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>datetime.datetime(2021, 10, 8, 14, 38, 0, 896094)</pre>
+<pre>datetime.datetime(2021, 11, 18, 16, 42, 36, 624902)</pre>
 </div>
 
 </div>
@@ -14425,26 +14458,10 @@ os.getcwd()</code></pre>
 </div>
 </div>
 
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Diese Funktion liefert einen Rückgabewert (d.h. Output), den wir speichern und weiterverarbeiten können.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Außerdem gibt es Funktionen wie z.B. <code>sin()</code> (math-Package), die sowohl Argumente (Input) benötigen, als auch einen Rückgabewert (Output) liefern:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -14457,11 +14474,11 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Funktion math.sin gibt den Sinus eines Inputs (Radian/Bogenmaß) zurück</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14474,13 +14491,13 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>range(0, 10)</pre>
+<pre>0.8414709848078965</pre>
 </div>
 
 </div>
@@ -14492,8 +14509,11 @@ os.getcwd()</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>range()</code> hat in diesem Fall sogar zwei Argumente bekommen und würde auch mit einem dritten Argument (Interval), funktionieren.<br>
- <button type="button" class="btn btn-warning">Wichtig!</button> Funktionen können also Argumente akzeptieren, Rückgabewerte liefern, und diese beiden Eigenschaften beliebig kombinieren.</p>
+<p>Am letzten Beispiel sehen wir:</p>
+<ul>
+<li>Funktion können etwas zurückgeben (<strong>Output</strong>),</li>
+<li>und sie können etwas entgegennehmen (synonym: <strong>Input, Argumente, Parameter</strong>)</li>
+</ul>
 
 </div>
 </div>
@@ -14515,7 +14535,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -14528,7 +14548,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -14545,7 +14565,7 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14570,7 +14590,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -14587,7 +14607,7 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14612,7 +14632,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -14629,7 +14649,7 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14647,7 +14667,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-warning">Merke!</button> Bei unbenannten Argumenten "errät" Python deren Rolle. Dies funktioniert ggf. auch mit unvollständig bennanten Argumenten, oder letztlich über die Reihgenfolge der Argument. Bei Funktionen mit vielen Argumenten erleichtert es die Lesbarkeit des Codes, die Argumente zu benennen.</p>
+<p>Bei unbenannten Argumenten ermittelt Python die Bedeutung der Argumente aus ihrer Reihenfolge. Manchmal erleichtert es die Lesbarkeit des Codes, die Argumente zu benennen.</p>
 
 </div>
 </div>
@@ -14669,10 +14689,10 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#einfache Funktion ohne Argumente und Rückgabewert</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Einfache Funktion ohne Argumente und Rückgabewert</span>
 <span class="k">def</span> <span class="nf">abwasch</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gläser spülen&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teller spülen&quot;</span><span class="p">)</span>
@@ -14686,7 +14706,7 @@ os.getcwd()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">abwasch</span><span class="p">)</span>
@@ -14702,7 +14722,7 @@ os.getcwd()</code></pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14729,7 +14749,7 @@ Wir können uns auch über den Aufruf (mit Klammern) ihres Namens von ihrer Exis
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">abwasch</span><span class="p">()</span>
@@ -14763,7 +14783,7 @@ Besteck spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Abwasch-Marathon">Aufgabe: Abwasch-Marathon<a class="anchor-link" href="#Aufgabe:-Abwasch-Marathon">&#182;</a></h2>
+<h3 id="Aufgabe:-Abwasch-Marathon">Aufgabe: Abwasch-Marathon<a class="anchor-link" href="#Aufgabe:-Abwasch-Marathon">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -14778,7 +14798,7 @@ Besteck spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14847,10 +14867,10 @@ Besteck spülen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Funktion mit Argument</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Funktion mit Argument</span>
 <span class="k">def</span> <span class="nf">abwasch2</span><span class="p">(</span><span class="n">was_noch</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gläser spülen&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teller spülen&quot;</span><span class="p">)</span>
@@ -14866,7 +14886,7 @@ Besteck spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Abwaschen-der-T&#246;pfe-I">Aufgabe: Abwaschen der T&#246;pfe I<a class="anchor-link" href="#Aufgabe:-Abwaschen-der-T&#246;pfe-I">&#182;</a></h2>
+<h3 id="Aufgabe:-Abwaschen-der-T&#246;pfe-I">Aufgabe: Abwaschen der T&#246;pfe I<a class="anchor-link" href="#Aufgabe:-Abwaschen-der-T&#246;pfe-I">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -14881,7 +14901,7 @@ Besteck spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14922,7 +14942,7 @@ Töpfe spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Abwaschen-der-T&#246;pfe-II">Aufgabe: Abwaschen der T&#246;pfe II<a class="anchor-link" href="#Aufgabe:-Abwaschen-der-T&#246;pfe-II">&#182;</a></h2>
+<h3 id="Aufgabe:-Abwaschen-der-T&#246;pfe-II">Aufgabe: Abwaschen der T&#246;pfe II<a class="anchor-link" href="#Aufgabe:-Abwaschen-der-T&#246;pfe-II">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -14937,13 +14957,13 @@ Töpfe spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">abwasch2_viele</span><span class="p">(</span><span class="n">was_noch</span><span class="p">):</span>
@@ -14987,153 +15007,14 @@ Hund spülen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Optionale-Funktionsargumente">Optionale Funktionsargumente<a class="anchor-link" href="#Optionale-Funktionsargumente">&#182;</a></h2><p>Funktionsargumente können auch optional sein:</p>
+<h2 id="R&#252;ckgabewerte-von-Funktionen">R&#252;ckgabewerte von Funktionen<a class="anchor-link" href="#R&#252;ckgabewerte-von-Funktionen">&#182;</a></h2><p>Unsere Funktion soll nun ein Ergebnis zurückgeben. In unserem Fall soll dies der Wert <code>sauberkeit</code> sein, die als Zufallszahl gezogen wird. Die Rückgabe des Wertes erfolgt mit dem Befehl <code>return()</code>. Mit diesem wird die Funktion auch verlassen; nachfolgende Befehle werden dann nicht mehr ausgeführt.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span> <span class="c1"># das dritte Argument gibt die Intervalgröße an.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[0, 3, 6, 9, 12, 15, 18]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">?</span>range
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In der Hilfe zu den Funktionen (<code>?range</code>) werden optionale Argumente mit ihrem voreingestellten Wert aufgeführt. In der selben Art können wir auch für unsere eigene Funktion optionale Argumenten erlauben.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Abwasch-mit-optionalem-Mehr">Aufgabe: Abwasch mit optionalem Mehr<a class="anchor-link" href="#Aufgabe:-Abwasch-mit-optionalem-Mehr">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Verändere die Funktion <code>abwasch2()</code> so, dass ihr Argument optional wird. Die entsprechende Ausgabe soll nur erfolgen, wenn das Argument gesetzt ist. Wird ein optionales Argument nicht übergeben, nimmt es den Wert an, der in der Funktionsdeklaration angegeben wurde. In diesem Fall geben wir eine leere Liste als default mit...</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">abwasch2_viele</span><span class="p">(</span><span class="n">was_noch</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gläser spülen&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teller spülen&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Besteck spülen&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">teil</span> <span class="ow">in</span> <span class="n">was_noch</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">teil</span> <span class="o">+</span>  <span class="s2">&quot; spülen&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">abwasch2_viele</span><span class="p">()</span> <span class="c1">#Basisspülprogramm</span>
-<span class="n">abwasch2_viele</span><span class="p">([</span><span class="s2">&quot;Toilette&quot;</span><span class="p">])</span> <span class="c1">#mit Extraspülung</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Gläser spülen
-Teller spülen
-Besteck spülen
-Gläser spülen
-Teller spülen
-Besteck spülen
-Toilette spülen
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="R&#252;ckgabewerte-von-Funktionen">R&#252;ckgabewerte von Funktionen<a class="anchor-link" href="#R&#252;ckgabewerte-von-Funktionen">&#182;</a></h2><p>Unsere Funktion soll nun ein weiterverarbeitbares Ergebnis liefern. In unserem Fall soll dies der Wert <code>sauberkeit</code> sein, die als Zufallszahl gezogen wird. Die Rückgabe des Wertes erfolgt mit dem Befehl <code>return()</code>. Mit diesem wird die Funktion auch verlassen; nachfolgende Befehle werden nicht mehr ausgeführt:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Funktion mit Argument und Rückgabewert</span>
@@ -15143,9 +15024,11 @@ Toilette spülen
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Besteck spülen&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">teil</span> <span class="ow">in</span> <span class="n">was_noch</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">teil</span> <span class="o">+</span>  <span class="s2">&quot; spülen&quot;</span><span class="p">)</span>
-    <span class="n">sauberkeit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#eine Zufallszahl zwischen 1 und 10</span>
+    <span class="c1"># eine Zufallszahl zwischen 1 und 10</span>
+    <span class="n">sauberkeit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="n">sauberkeit</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Spülbecken putzen&quot;</span><span class="p">)</span> <span class="c1">#Dieser Befehl wird nicht mehr erreicht</span>
+    <span class="c1"># Dieser Befehl wird nicht mehr erreicht</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Spülbecken putzen&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15155,10 +15038,11 @@ Toilette spülen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sauberkeit</span> <span class="o">=</span> <span class="n">abwasch3</span><span class="p">([</span><span class="s2">&quot;Töpfe&quot;</span><span class="p">])</span> <span class="c1">#Funktion mit Argument benutzen, Rückgabewert in Variable speichern</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Funktion mit Argument benutzen, Rückgabewert in Variable speichern</span>
+<span class="n">sauberkeit</span> <span class="o">=</span> <span class="n">abwasch3</span><span class="p">([</span><span class="s2">&quot;Töpfe&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sauberkeit: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sauberkeit</span><span class="p">))</span> 
 </pre></div>
 
@@ -15180,7 +15064,7 @@ Toilette spülen
 Teller spülen
 Besteck spülen
 Töpfe spülen
-Sauberkeit: 1.2250967970040025
+Sauberkeit: 3.4752638653220735
 </pre>
 </div>
 </div>
@@ -15192,7 +15076,7 @@ Sauberkeit: 1.2250967970040025
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe-Abwaschwasser-wechseln">Aufgabe Abwaschwasser wechseln<a class="anchor-link" href="#Aufgabe-Abwaschwasser-wechseln">&#182;</a></h2><p>Wasche ab, auch die Pfanne. Wenn die Sauberkeit unter 5 ist, gib die Meldung "Abwaschwasser wechseln!" aus, andernfalls melde "Fertig!"</p>
+<h3 id="Aufgabe:-Abwaschwasser-wechseln">Aufgabe: Abwaschwasser wechseln<a class="anchor-link" href="#Aufgabe:-Abwaschwasser-wechseln">&#182;</a></h3><p>Wasche ab, auch die Pfanne. Wenn die Sauberkeit unter 5 ist, gib die Meldung "Abwaschwasser wechseln!" aus, andernfalls melde "Fertig!"</p>
 
 </div>
 </div>
@@ -15200,13 +15084,13 @@ Sauberkeit: 1.2250967970040025
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sauberkeit</span> <span class="o">=</span> <span class="n">abwasch3</span><span class="p">([</span><span class="s2">&quot;Pfanne&quot;</span><span class="p">])</span>
@@ -15243,11 +15127,166 @@ Abwaschwasser wechseln!
 </div>
 </div>
 
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Optional:-Optionale-Funktionsargumente">Optional: Optionale Funktionsargumente<a class="anchor-link" href="#Optional:-Optionale-Funktionsargumente">&#182;</a></h2>
+</div>
+</div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Funktionen-verketten">Funktionen verketten<a class="anchor-link" href="#Funktionen-verketten">&#182;</a></h2><p>Funktionen lassen sich im Hauptprogramm aufrufen, können aber auch innerhalb andere Funktionen ausgerufen werden. Es ist sogar möglich, dass sich Funktionen selbst aufrufen (rekursive Funktionen).</p>
+<p>Funktionsargumente können auch optional sein:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span> <span class="c1"># das dritte Argument gibt die Intervalgröße an.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 3, 6, 9, 12, 15, 18]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">?</span>range
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In der Hilfe zu den Funktionen (<code>?range</code>) werden optionale Argumente mit ihrem voreingestellten Wert aufgeführt. In der selben Art können wir auch für unsere eigene Funktion optionale Argumenten erlauben.</p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Optionale-Aufgabe:-Abwasch-mit-optionalem-Mehr">Optionale Aufgabe: Abwasch mit optionalem Mehr<a class="anchor-link" href="#Optionale-Aufgabe:-Abwasch-mit-optionalem-Mehr">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Verändere die Funktion <code>abwasch2()</code> so, dass ihr Argument optional wird. Die entsprechende Ausgabe soll nur erfolgen, wenn das Argument gesetzt ist. Wird ein optionales Argument nicht übergeben, nimmt es den Wert an, der in der Funktionsdeklaration angegeben wurde. In diesem Fall geben wir eine leere Liste als default mit...</p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">abwasch2_viele</span><span class="p">(</span><span class="n">was_noch</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gläser spülen&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teller spülen&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Besteck spülen&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">teil</span> <span class="ow">in</span> <span class="n">was_noch</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">teil</span> <span class="o">+</span>  <span class="s2">&quot; spülen&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Basisspülprogramm</span>
+<span class="n">abwasch2_viele</span><span class="p">()</span> 
+<span class="c1"># mit Extraspülung</span>
+<span class="n">abwasch2_viele</span><span class="p">([</span><span class="s2">&quot;Toilette&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Gläser spülen
+Teller spülen
+Besteck spülen
+Gläser spülen
+Teller spülen
+Besteck spülen
+Toilette spülen
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Optional:-Funktionen-verketten">Optional: Funktionen verketten<a class="anchor-link" href="#Optional:-Funktionen-verketten">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Funktionen lassen sich im Hauptprogramm aufrufen, können aber auch innerhalb anderer Funktionen ausgerufen werden. Es ist sogar möglich, dass sich Funktionen selbst aufrufen (rekursive Funktionen).</p>
 
 </div>
 </div>
@@ -15270,26 +15309,13 @@ Abwaschwasser wechseln!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fahr_zu_kelvin</span><span class="p">(</span><span class="n">temp_f</span><span class="p">):</span>
@@ -15304,10 +15330,10 @@ Abwaschwasser wechseln!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gefriehrpunkt von Wasser</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gefrierpunkt von Wasser</span>
 <span class="n">fahr_zu_kelvin</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
 </pre></div>
 
@@ -15321,7 +15347,7 @@ Abwaschwasser wechseln!
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -15388,7 +15414,7 @@ Abwaschwasser wechseln!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15459,7 +15485,7 @@ Abwaschwasser wechseln!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15501,26 +15527,26 @@ Abwaschwasser wechseln!
 </div>
 </div>
 
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Optional:-G&#252;ltigkeit-und-Sichtbarkeitsbereich">Optional: G&#252;ltigkeit und Sichtbarkeitsbereich<a class="anchor-link" href="#Optional:-G&#252;ltigkeit-und-Sichtbarkeitsbereich">&#182;</a></h2>
+</div>
+</div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="G&#252;ltigkeit-und-Sichtbarkeitsbereich">G&#252;ltigkeit und Sichtbarkeitsbereich<a class="anchor-link" href="#G&#252;ltigkeit-und-Sichtbarkeitsbereich">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Mein Tanzbereich, Dein Tanzbereich </em></p>
-<p>Beim <em>LESEN</em> von Variablen (und auch Funktionen) wird i.d.R. "von innen nach außen" ausgewertet. <em>Zuweisungen</em> bleiben lokal:</p>
+<p>Beim <em>LESEN</em> von Variablen (und auch Funktionen) wird i.d.R. "von innen nach außen" ausgewertet. <em>Zuweisungen</em> bleiben lokal (also in der Funktion). Hä?</p>
+<p>Ein Beispiel:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="s2">&quot;externer Wert von X&quot;</span>   <span class="c1">#eine Zuweisung zur EXTERNEN /globalen Variablen X</span>
@@ -15558,7 +15584,7 @@ Y: externer Wert von Y
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">meine_funktion</span><span class="p">():</span>
@@ -15577,7 +15603,7 @@ Y: externer Wert von Y
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meine_funktion</span><span class="p">()</span>
@@ -15615,7 +15641,7 @@ Z: interner Wert von Z
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_7926/3520972276.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/ipykernel_18256/3520972276.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> meine_funktion<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>Z<span class="ansi-blue-fg">)</span>
 

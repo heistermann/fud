@@ -14,11 +14,15 @@ Am Versuchsstandort Marquardt (10 km nördlich von Potsdam) wurde im Winter 2020
 Aufgabe ist es, Anhand der Länge der aus dem Schnee ragenden Stäbe auf den Fotos sowie deren Zeitstempel eine Zeitreihe der Schneehöhe zu ermitteln und diese mit den Aufzeichnungen eines Ultraschall-Schneepegels zu vergleichen.
 
 ## Daten
-Gegeben sind die Fotodaten der Wildtierkameras an drei Standorten. An jedem Standort wurden 9-10 Stäbe beobachtet. Die Auswertung soll nur exemplarisch nur für *einen* Stab an *einem* der Standorte erfolgen.
+Gegeben sind die Fotodaten der Wildtierkamera an Standort 02. An diesem Standort wurden 9 Stäbe beobachtet. Die Auswertung soll nur exemplarisch nur für *einen* Stab an diesem Standort erfolgen.
 
-Fotodaten liegen hier:
+Die Daten liegen hier:
+https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS
+Passwort: Umweltdatenverarbeitung
 
-Aufzeichnungen des Ultraschall-Schneepegels:
+	fotos.zip: Archiv der Fotos
+	temp_precip_height.json: Beschreibung der Aufzeichnungen des Ultraschall-Schneepegels
+	temp_precip_height.txt : Aufzeichnungen des Ultraschall-Schneepegels
 
 ## Ergebnisse
 - grafischer Vergleich der Schneehöhe an einem Messstab mit der Zeitreihe aus der Ultraschallmessung

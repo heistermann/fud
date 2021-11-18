@@ -14329,35 +14329,40 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmflusskontrolle-und-Funktionen">Programmflusskontrolle und Funktionen<a class="anchor-link" href="#Programmflusskontrolle-und-Funktionen">&#182;</a></h1>
+<h1 id="Programmflusskontrolle">Programmflusskontrolle<a class="anchor-link" href="#Programmflusskontrolle">&#182;</a></h1>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Till-Francke,-f&#252;r-Python-bearbeitet-von-Paul-Voit">Till Francke, f&#252;r Python bearbeitet von Paul Voit<a class="anchor-link" href="#Till-Francke,-f&#252;r-Python-bearbeitet-von-Paul-Voit">&#182;</a></h3>
+<h2 id="Logische-Variablen">Logische Variablen<a class="anchor-link" href="#Logische-Variablen">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Logische-Variablen">Logische Variablen<a class="anchor-link" href="#Logische-Variablen">&#182;</a></h1>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Die Wahrheit über WAHR und FALSCH" oder "Es gibt keine Zwischentöne</em></p>
-<p>Manche Fragen kann man nur mit WAHR oder FALSCH beantworten:</p>
+<p>Manche Aussagen sind wirklich <em>wahr</em>...</p>
 <ul>
-<li>Bin ich angeschnallt?</li>
-<li>Ist es später als 10 Uhr?</li>
-<li>Schmeckt Lakritze?</li>
+<li>1 ist gleich 1.</li>
+<li>Impfen hilft.</li>
+<li>Maik ist ein alter Sack.</li>
 </ul>
-<p>Dafür gibt es in R und anderen Prgrammiersprachen einen eigenen Datentyp, die boole'sche (nach <a href="https://de.wikipedia.org/wiki/George_Boole">G. Boole</a> oder logische Variablen genannt werden. Diese können nur die beiden Werte <code>TRUE</code> (wahr) und <code>FALSE</code> (falsch) annehmen:</p>
+<p>... und andere schlicht <em>falsch</em>:</p>
+<ul>
+<li>1 ist gleich 2.</li>
+<li>Die Erde ist eine Scheibe.</li>
+</ul>
+<p>Dafür gibt es in Python und anderen Programmiersprachen einen eigenen Datentyp, die Boole'sche (nach <a href="https://de.wikipedia.org/wiki/George_Boole">G. Boole</a>) oder logische Variablen genannt werden. Dieser Datentyp kennt nur zwei Werte: <code>True</code> und <code>False</code>.</p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bool'sche Variable werden z.B. aus Vergleichsoperationen erzeugt:</p>
 
 </div>
 </div>
@@ -14367,29 +14372,8 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mir_gehts_gut</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">ich_hab_hunger</span> <span class="o">=</span> <span class="kc">False</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>True und False sind festeingebaute Konstanten für Python. Diese können nicht verändert werden:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">True</span> <span class="o">=</span> <span class="s2">&quot;nicht ganz wahr&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zahlenwerten</span>
+<span class="mi">7</span> <span class="o">&gt;</span> <span class="mi">2</span> 
 </pre></div>
 
     </div>
@@ -14402,17 +14386,15 @@ $(document).ready(function () {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[1]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/tmp/ipykernel_8164/900942845.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    True = &#34;nicht ganz wahr&#34;</span>
-                            ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> can&#39;t assign to keyword
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
+
 </div>
 
 </div>
@@ -14421,42 +14403,7 @@ $(document).ready(function () {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">False</span> <span class="o">=</span> <span class="s2">&quot;Kartoffelbrei&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Bool'sche Variable werden z.B. aus Vergleichsoperationen erzeugt :</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zahlenwerten</span>
-<span class="mi">7</span> <span class="o">&gt;</span> <span class="mi">2</span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">7</span> <span class="o">&lt;</span> <span class="mi">2</span> 
@@ -14466,207 +14413,34 @@ $(document).ready(function () {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zeichenketten</span>
-<span class="s2">&quot;Golm&quot;</span> <span class="o">==</span> <span class="s2">&quot;Potsdam&quot;</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
 
-    </div>
-</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
 </div>
 
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-warning">Wichtig!</button>
-Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <code>==</code>. Das einfache Gleichheitszeichen <code>=</code> entspricht einer Zuweisung und hat damit eine andere Funktion!</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zahlen auf Ungleichheit</span>
-<span class="mi">5</span> <span class="o">!=</span> <span class="mi">1</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Ergebnisse derartiger Vergleiche kann man wiederum in logischen Variablen speichern, um später darauf zurückzugreifen:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">niederschlag</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">regenwetter</span> <span class="o">=</span> <span class="p">(</span><span class="n">niederschlag</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">regenwetter</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logische-Operationen">Logische Operationen<a class="anchor-link" href="#Logische-Operationen">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Mit logischen Variablen lässt sich eine ganze Menge an 'logischer Arithmetik' betreiben:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kalt</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">erkaeltung</span> <span class="o">=</span> <span class="n">regenwetter</span> <span class="ow">and</span> <span class="n">kalt</span> <span class="c1">#logische UND-Verknüpfung, nur wahr, wenn beide Seiten wahr sind</span>
-<span class="n">erkaeltung</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Das Resultat ist nur WAHR, wenn beide Seiten auch WAHR sind, sonst FALSCH.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rasensprenkler</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">rasen_feucht</span> <span class="o">=</span> <span class="n">regenwetter</span> <span class="ow">or</span> <span class="n">rasensprenkler</span>  <span class="c1">#logische ODER-Verknüpfung, auch wahr, wenn beide Seiten wahr sind</span>
-<span class="n">rasen_feucht</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Das Resultat ist WAHR, sobald mindestens eine Seite WAHR ist.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">effiziente_bewaesserung</span> <span class="o">=</span> <span class="n">regenwetter</span> <span class="o">^</span> <span class="n">rasensprenkler</span> <span class="c1">#exklusives ODER (&quot;entweder-oder&quot;), nur wahr, wenn nur eine Seite wahr ist</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Nur wenn entweder die eine oder die andere Seite der Bedingung WAHR ist, wird das Ergebnis auch WAHR.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Wahrheitswerte">Aufgabe: Wahrheitswerte<a class="anchor-link" href="#Aufgabe:-Wahrheitswerte">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Welche Wahrheitswerte haben folgende Ausdrücke? Versuche erst, sie im Kopf auszuwerten, dann die Ausdrücke in Python zu formulieren und das Ergebnis zu überprüfen.</p>
-<p>Es sei A = WAHR, B = FALSCH.</p>
-<ol>
-<li>A und (nicht(B))</li>
-<li>nicht (nicht (A))</li>
-<li>entweder A oder nicht (B)</li>
-</ol>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung---im-Kopf-gel&#246;st">L&#246;sung - im Kopf gel&#246;st<a class="anchor-link" href="#L&#246;sung---im-Kopf-gel&#246;st">&#182;</a></h3>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><ol>
-<li>WAHR</li>
-<li>WAHR</li>
-<li>FALSCH</li>
-</ol>
-</blockquote>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung---Python-Code">L&#246;sung - Python Code<a class="anchor-link" href="#L&#246;sung---Python-Code">&#182;</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">B</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="c1">#1.</span>
-<span class="n">A</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">B</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zeichenketten</span>
+<span class="s2">&quot;Golm&quot;</span> <span class="o">==</span> <span class="s2">&quot;Potsdam&quot;</span>
 </pre></div>
 
     </div>
@@ -14685,7 +14459,7 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -14693,14 +14467,22 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 </div>
 </div>
 
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Zur Erinnnung:</strong> Der Test auf Gleichheit erfordert das doppelte Gleichheitszeichen <code>==</code>.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2.</span>
-<span class="ow">not</span><span class="p">(</span><span class="ow">not</span> <span class="n">A</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vergleich von Zahlen auf Ungleichheit</span>
+<span class="mi">5</span> <span class="o">!=</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -14727,64 +14509,24 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 </div>
 </div>
 
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Ergebnisse derartiger Vergleiche kann man wiederum in logischen Variablen speichern, um später darauf zurückzugreifen:</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#3.</span>
-<span class="n">A</span> <span class="o">^</span> <span class="p">(</span><span class="ow">not</span> <span class="n">B</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmflusskontrolle-A:-Bedingungen-mit-if">Programmflusskontrolle A: Bedingungen mit <code>if</code><a class="anchor-link" href="#Programmflusskontrolle-A:-Bedingungen-mit-if">&#182;</a></h1><p><em>Wenn das Wörtchen wenn nicht wär'...</em></p>
-<p>Logische Ausdrücke bzw. Variablen sind unverzichtbar für Fallunterscheidungen, wie in wenn-dann-Beziehungen:</p>
-<ul>
-<li>Wenn es regnet, dann nimm den Regenschirm mit.</li>
-<li>Wenn der Dataframe eine Spalte namens "temp" hat, dann erzeuge einen Plot davon.</li>
-<li>Wenn Dich die bösen Buben locken, dann bleib zu Haus und stopfe Socken.</li>
-</ul>
-<p>In Python sieht das folgendermaßen aus:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regenwetter</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">if</span> <span class="n">regenwetter</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm eingepackt!&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temperatur</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.</span>
+<span class="n">esfriert</span> <span class="o">=</span> <span class="p">(</span><span class="n">temperatur</span> <span class="o">&lt;=</span> <span class="mf">0.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es friert:&quot;</span><span class="p">,</span> <span class="n">esfriert</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">esfriert</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14801,7 +14543,320 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Regenschirm eingepackt!
+<pre>Es friert: True
+&lt;class &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logische-Operationen">Logische Operationen<a class="anchor-link" href="#Logische-Operationen">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mit logischen Variablen lässt sich eine ganze Menge an 'logischer Arithmetik' betreiben:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">istnass</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1"># logisches UND: nur wahr, wenn beide Seiten wahr sind</span>
+<span class="n">istglatt</span> <span class="o">=</span> <span class="n">istnass</span> <span class="ow">and</span> <span class="n">esfriert</span>
+<span class="n">istglatt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Das Resultat ist nur True, wenn beide Seiten auch True sind, sonst False.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zuschnell</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1">#logisches ODER, auch wahr, wenn beide Seiten wahr sind</span>
+<span class="n">unfall</span> <span class="o">=</span> <span class="n">istglatt</span> <span class="ow">or</span> <span class="n">zuschnell</span>  
+<span class="n">unfall</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe:-Wahrheitswerte">Aufgabe: Wahrheitswerte<a class="anchor-link" href="#Aufgabe:-Wahrheitswerte">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Welche Wahrheitswerte haben folgende Ausdrücke? Versuche erst, sie im Kopf auszuwerten, dann die Ausdrücke in Python zu formulieren und das Ergebnis zu überprüfen.</p>
+<p>Es sei A = WAHR, B = FALSCH.</p>
+
+<pre><code>1. A und (nicht(B))
+2. nicht (nicht(A))
+3. nicht(A) oder nicht(B)</code></pre>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="L&#246;sung---im-Kopf-gel&#246;st">L&#246;sung - im Kopf gel&#246;st<a class="anchor-link" href="#L&#246;sung---im-Kopf-gel&#246;st">&#182;</a></h4>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ol>
+<li>WAHR</li>
+<li>WAHR</li>
+<li>FALSCH</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="L&#246;sung---Python-Code">L&#246;sung - Python Code<a class="anchor-link" href="#L&#246;sung---Python-Code">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">B</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#1.</span>
+<span class="n">A</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">B</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2.</span>
+<span class="ow">not</span><span class="p">(</span><span class="ow">not</span> <span class="n">A</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#3.</span>
+<span class="p">(</span><span class="ow">not</span> <span class="n">A</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">B</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Programmflusskontrolle-A:-Bedingungen-mit-if">Programmflusskontrolle A: Bedingungen mit <code>if</code><a class="anchor-link" href="#Programmflusskontrolle-A:-Bedingungen-mit-if">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Logische Ausdrücke bzw. Variablen sind unverzichtbar für Fallunterscheidungen, wie in wenn-dann-Beziehungen:</p>
+<ul>
+<li><strong>Wenn</strong> es regnet, <strong>dann</strong> nimm den Regenschirm mit.</li>
+<li><strong>Wenn</strong> der Dataframe eine Spalte namens "temp" hat, <strong>dann</strong> erzeuge einen Plot davon.</li>
+<li><strong>Wenn</strong> Dich die bösen Buben locken, <strong>dann</strong> bleib zu Haus und stopfe Socken.</li>
+</ul>
+<p>In Python sieht das folgendermaßen aus:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regenwetter</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">regenwetter</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm einpacken!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Regenschirm einpacken!
 </pre>
 </div>
 </div>
@@ -14820,14 +14875,14 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regenwetter</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">warmer_sommerregen</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">unterwegs_zur_regenschirmtauschboerse</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">if</span> <span class="p">((</span><span class="n">regenwetter</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">warmer_sommerregen</span><span class="p">)</span> <span class="ow">or</span> <span class="n">unterwegs_zur_regenschirmtauschboerse</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm eingepackt!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm einpacken!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14844,7 +14899,7 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Regenschirm eingepackt!
+<pre>Regenschirm einpacken!
 </pre>
 </div>
 </div>
@@ -14863,12 +14918,12 @@ Der Test auf Gleichheit erfordert unbedingt das doppelte Gleichheitszeichen <cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regenwetter</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">if</span> <span class="n">regenwetter</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm eingepackt!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm einpacken!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schirm bleibt zu Hause!&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14910,15 +14965,14 @@ Derartige Konstruktionen kann man mit Aktivitätsdiagrammen darstellen, die etwa
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Sonnencreme">Aufgabe: Sonnencreme<a class="anchor-link" href="#Aufgabe:-Sonnencreme">&#182;</a></h2>
+<h3 id="Aufgabe:-Sonnencreme">Aufgabe: Sonnencreme<a class="anchor-link" href="#Aufgabe:-Sonnencreme">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Jetzt wollen wir bei gutem Wetter nicht nur den Regenschirm zu Hause lassen, sondern auch noch die Sonnencreme einpacken. Wie muss der Code oben erweitert werden?
-Die offensichtliche Lösung:</p>
+<p>Jetzt wollen wir bei gutem Wetter nicht nur den Regenschirm zu Hause lassen, sondern auch noch die Sonnencreme einpacken. Wie muss der Code oben erweitert werden?</p>
 
 </div>
 </div>
@@ -14926,21 +14980,21 @@ Die offensichtliche Lösung:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regenwetter</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">if</span> <span class="n">regenwetter</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm eingepackt!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Regenschirm einpacken!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schirm bleibt zu Hause!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sonnencreme eingepackt!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sonnencreme einpacken!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14957,7 +15011,7 @@ Die offensichtliche Lösung:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Regenschirm eingepackt!
+<pre>Regenschirm einpacken!
 </pre>
 </div>
 </div>
@@ -14987,7 +15041,7 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wetter</span> <span class="o">=</span> <span class="s2">&quot;sonnig&quot;</span> <span class="c1">#hier &quot;frostig&quot;, &quot;regnerisch&quot; oder &quot;sonnig&quot; wählen</span>
@@ -15038,8 +15092,14 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Logische-Aggregatoren">Logische Aggregatoren<a class="anchor-link" href="#Logische-Aggregatoren">&#182;</a></h1><p><em>Wer will sich schon um jedes einzelne Detail kümmern!?</em></p>
-<p>Manchmal möchte man nun eine Bedingung prüfen, die vom Vergleich mehrere Werte abhängt.</p>
+<h2 id="Logische-Aggregatoren">Logische Aggregatoren<a class="anchor-link" href="#Logische-Aggregatoren">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Manchmal möchte man eine Bedingung prüfen, die vom Vergleich mehrerer Werte abhängt.</p>
 
 </div>
 </div>
@@ -15047,7 +15107,14 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Frost">Aufgabe: Frost<a class="anchor-link" href="#Aufgabe:-Frost">&#182;</a></h2><p>So könnten wir uns z.B. fragen, ob es während einer einer Woche Frost gegeben hat, also die Zeitreihe der Minimaltemperaturdaten <code>t_min = [2, 1, 0, -1, 3, 2, 4]</code> mindestens einmal unter 0 °C gefallen ist.</p>
+<h3 id="Aufgabe:-Frost">Aufgabe: Frost<a class="anchor-link" href="#Aufgabe:-Frost">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So könnten wir uns z.B. fragen, ob es während einer einer Woche Frost gegeben hat, also die Zeitreihe der Minimaltemperaturdaten <code>tmin = [2, 1, 0, -1, 3, 2, 4]</code> mindestens einmal unter 0 °C gefallen ist.</p>
 <p>Wie könnte man diese Frage mit den bisher bekannten Mitteln beantworten?</p>
 
 </div>
@@ -15056,18 +15123,18 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_min</span> <span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">frost</span> <span class="o">=</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">t_min</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span>
-<span class="n">frost</span> <span class="c1"># Ergebnis ausgeben</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">frost</span> <span class="o">=</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">tmin</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span>
+<span class="n">frost</span>
 </pre></div>
 
     </div>
@@ -15080,7 +15147,7 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15098,7 +15165,7 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Diese Lösung ist allerdings sehr unelegant. Einerseits müssen wir dafür ziemlich viele Zeilen tippen, andererseits funktioniert die Lösung auch nur, solange wir genau sieben Werte im Vektor <code>t_min</code> haben. Füge einen achten Wert bei <code>t_min</code> an -- dieser wird in der Prüfung nicht berücksichtigt, solange Du nicht auch die Abfrage veränderst.</p>
+<p>Diese Lösung ist allerdings sehr unelegant. Wir müssen viel tippen, und die Lösung nur, solange wir genau sieben Werte im Vektor <code>tmin</code> haben. Ein achter Wert würde bei der Prüfung nicht berücksichtigt.</p>
 
 </div>
 </div>
@@ -15106,14 +15173,80 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aggregierung-mit-any-und-all">Aggregierung mit <code>any</code> und <code>all</code><a class="anchor-link" href="#Aggregierung-mit-any-und-all">&#182;</a></h2><p>Hier werden die logischen Aggregierungsfunktionen <code>any</code> und <code>all</code> nützlich. Diese prüfen, ob in einem Array/Vektor von logischen Variablen mindestens ein Eintrag (<code>any</code>) bzw. alle Einträge (<code>all</code>) <code>True</code> sind: Um alle Einträge einer Liste auf einmal zu berücksichtigen, müssen die Listen vorher in Numpy-Arrays umgewandelt werden. Dies spart letztendlich sehr viel Arbeit.</p>
+<h3 id="Aggregierung-mit-any-und-all">Aggregierung mit <code>any</code> und <code>all</code><a class="anchor-link" href="#Aggregierung-mit-any-und-all">&#182;</a></h3><p>Hier werden die logischen Aggregierungsfunktionen <code>any</code> und <code>all</code> nützlich. Diese prüfen, ob in einem Array/Vektor von logischen Variablen mindestens ein Eintrag (<code>any</code>) bzw. alle Einträge (<code>all</code>) <code>True</code> sind: Um alle Einträge einer Liste auf einmal zu berücksichtigen, müssen die Listen vorher in Numpy-Arrays umgewandelt werden. Dies spart letztendlich sehr viel Arbeit.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">any</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
@@ -15126,17 +15259,53 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_min</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># um den folgenden Vergleich simultan für die ganze Liste durchzuführen</span>
-<span class="n">tage_mit_frost</span> <span class="o">=</span> <span class="n">t_min</span> <span class="o">&lt;</span> <span class="mi">0</span>                     <span class="c1"># müssen wir die Liste in ein Numpy-Array umwandeln.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Liste mit Minimumtemperaturen</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># numpy array</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tmin</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">tmin</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">frost</span>          <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">tage_mit_frost</span><span class="p">)</span> 
-<span class="n">eisige_periode</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="n">tage_mit_frost</span><span class="p">)</span> 
+    </div>
+</div>
+</div>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">frost</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eisige_periode</span><span class="p">)</span>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.ndarray</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">frosttage</span> <span class="o">=</span> <span class="n">tmin</span> <span class="o">&lt;</span> <span class="mi">0</span>
+
+<span class="n">frost</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">frosttage</span><span class="p">)</span> 
+<span class="n">nurfrost</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="n">frosttage</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wenigstens EIN Frosttag:&quot;</span><span class="p">,</span> <span class="n">frost</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NUR Frosttage:&quot;</span><span class="p">,</span> <span class="n">nurfrost</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15153,8 +15322,8 @@ Eine sorgfältige Formatierung des Quelltextes durch entsprechende Einrückungen
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-False
+<pre>Wenigstens EIN Frosttag: True
+NUR Frosttage: False
 </pre>
 </div>
 </div>
@@ -15166,7 +15335,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mit dieser Umsetzung funktioniert der Code nun auch mit beliebig langen Zeitreihen gleichermaßen.</p>
+<p>Mit dieser Umsetzung funktioniert der Code nun auch mit beliebig langen Datenreihen.</p>
 
 </div>
 </div>
@@ -15174,35 +15343,27 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Urlaub-f&#252;r-any()">Aufgabe: Urlaub f&#252;r <code>any()</code><a class="anchor-link" href="#Aufgabe:-Urlaub-f&#252;r-any()">&#182;</a></h2>
+<h3 id="Verkettung-logischer-Vektoren">Verkettung logischer Vektoren<a class="anchor-link" href="#Verkettung-logischer-Vektoren">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Unglücklicherweise hat die Funktion <code>any()</code> heute Urlaub. Wie kann man deren Funktionalität im o.g. Beispiel auch mittels <code>all()</code> ersetzen? Hinweis: Die Woche hatte Frost, wenn nicht an alle Tage ohne Frost waren. Das vektorielle equivalent zu <code>not</code> ist der <code>~</code>-Operator.</p>
+<p>Wir haben mit der Variablen <code>frosttage</code> einen Numpy-Array von Wahrheitswerten erzeugt, der für jeden Tag die Information enthält, ob es Frost gab:</p>
 
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">frost</span>          <span class="o">=</span> <span class="o">~</span><span class="nb">all</span><span class="p">(</span><span class="o">~</span><span class="n">tage_mit_frost</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">frost</span><span class="p">)</span>
-<span class="c1">#oder anders:</span>
-<span class="n">tage_ohne_frost</span> <span class="o">=</span> <span class="n">tage_mit_frost</span>
-<span class="n">frost</span>          <span class="o">=</span> <span class="o">~</span><span class="nb">all</span><span class="p">(</span><span class="n">tage_ohne_frost</span><span class="p">)</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tmin</span><span class="p">)</span>
+<span class="n">frosttage</span> <span class="o">=</span> <span class="n">tmin</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="n">frosttage</span>
 </pre></div>
 
     </div>
@@ -15215,48 +15376,7 @@ False
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>-1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Verkettung-von-logischen-Vektoren">Verkettung von logischen Vektoren<a class="anchor-link" href="#Verkettung-von-logischen-Vektoren">&#182;</a></h2><p>Wir haben mit der Variablen <code>tage_mit_frost</code> ein Numpy-Array von Wahrheitswerten erzeugt, der für jeden Tag die Information enthält, ob es Frost gab:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_min</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">tage_mit_frost</span> <span class="o">=</span> <span class="n">t_min</span> <span class="o">&lt;</span> <span class="mi">0</span>
-<span class="n">tage_mit_frost</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15281,15 +15401,25 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> 
-<span class="n">B</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">])</span> 
+<span class="n">B</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> 
+</pre></div>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="c1"># elementweises UND</span>
-<span class="c1">#Oder</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">))</span> <span class="c1">#auch so kann man es machen</span>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Elementweises UND</span>
+<span class="n">A</span> <span class="o">&amp;</span> <span class="n">B</span>
 </pre></div>
 
     </div>
@@ -15302,14 +15432,15 @@ False
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[ True False False False]
-[ True False False False]
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ True, False, False, False])</pre>
 </div>
+
 </div>
 
 </div>
@@ -15318,11 +15449,11 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">|</span> <span class="n">B</span> <span class="c1">#elementweises ODER</span>
-<span class="n">numpy</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Elementweises ODER</span>
+<span class="n">A</span> <span class="o">|</span> <span class="n">B</span> 
 </pre></div>
 
     </div>
@@ -15335,7 +15466,7 @@ False
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -15349,20 +15480,119 @@ False
 </div>
 </div>
 
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-warning">Obacht!</button>
- <code>&amp;</code> und <code>and</code>, <code>not</code> und <code>~</code>, sowie  <code>|</code> und <code>or</code> sind nicht identisch und nicht immer austauschbar. Das vorherige Beispiel funktioniert zum Beispiel nicht mit dem <code>and</code>-Operator, da wir hier mit Numpy-Arrays arbeiten.</p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Elementweises Negieren</span>
+<span class="o">~</span><span class="n">A</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([False,  True, False,  True])</pre>
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe-Schnee-I">Aufgabe Schnee I<a class="anchor-link" href="#Aufgabe-Schnee-I">&#182;</a></h2>
+<p>Achtung: <code>&amp;</code>, <code>|</code> und <code>~</code> funktionieren nur bei <code>numpy-Arrays</code>. Sonst heißt es <code>and</code>, <code>or</code> und <code>not</code>!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ow">not</span> <span class="kc">True</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([False])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe-Schnee-I">Aufgabe Schnee I<a class="anchor-link" href="#Aufgabe-Schnee-I">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15373,22 +15603,34 @@ False
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">niederschlag</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_min</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">niederschlag</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">])</span>
-<span class="n">tage_mit_frost</span> <span class="o">=</span> <span class="n">t_min</span>        <span class="o">&lt;</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_frost</span> <span class="o">=</span> <span class="n">tmin</span> <span class="o">&lt;</span> <span class="mi">0</span>
 <span class="n">tage_mit_niederschlag</span> <span class="o">=</span> <span class="n">niederschlag</span> <span class="o">&gt;</span> <span class="mi">0</span>
  
 <span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">tage_mit_frost</span> <span class="o">&amp;</span> <span class="n">tage_mit_niederschlag</span>
@@ -15405,7 +15647,7 @@ False
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -15423,7 +15665,7 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe-Schnee-II">Aufgabe Schnee II<a class="anchor-link" href="#Aufgabe-Schnee-II">&#182;</a></h2>
+<h3 id="Aufgabe-Schnee-II">Aufgabe Schnee II<a class="anchor-link" href="#Aufgabe-Schnee-II">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15438,15 +15680,15 @@ False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3>
+<h4 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h4>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Da <code>TRUE</code> und <code>FALSE</code> in Python wie 1 und 0 behandelt werden, ist die Funktion <code>sum()</code> hier hilfreich.
-Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>TRUE</code> sind, verwende die Funktion <code>which()</code>.</p>
+<p>Da <code>True</code> und <code>False</code> in Python wie 1 und 0 behandelt werden, ist die Funktion <code>sum()</code> hier hilfreich.
+Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>True</code> sind, verwende die Funktion <code>numpy.where()</code>.</p>
 
 </div>
 </div>
@@ -15454,20 +15696,17 @@ Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>TRUE</c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span> <span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)</span> <span class="c1">#Wieviele Schneetage gab es?</span>
-<span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)</span> <span class="c1">#An welchen Tagen hat es geschneit?</span>
-<span class="nb">sum</span><span class="p">(</span><span class="n">niederschlag</span><span class="p">[</span><span class="n">tage_mit_schnee</span><span class="p">])</span> <span class="c1">#Niederschlagssumme der Schneetage</span>
-<span class="c1">#oder gleichbedeutend</span>
-<span class="nb">sum</span><span class="p">(</span><span class="n">niederschlag</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)])</span> <span class="c1">#Niederschlagssumme der Schneetage</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wieviele Schneetage gab es?</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15480,7 +15719,7 @@ Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>TRUE</c
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -15494,13 +15733,87 @@ Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>TRUE</c
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># An welchen Tagen hat es geschneit?</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([7]),)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Niederschlagssumme der Schneetage</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">niederschlag</span><span class="p">[</span><span class="n">tage_mit_schnee</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmflusskontrolle-B:-Schleifen-mit-for">Programmflusskontrolle B: Schleifen mit <code>for</code><a class="anchor-link" href="#Programmflusskontrolle-B:-Schleifen-mit-for">&#182;</a></h1><p><em>Stay DRY, don't get WET!</em></p>
-<p>Die naive Lösung der <a href="#l_frost_l">Frost-Aufgabe</a> ist ein Beispiel für die Wiederholung von (nahezu) identischem Kommandos. Neben zusätzlichem Schreibaufwand birgt derartiges Vorgehen immer die Gefahr von zusätzlichen Fehlern. Außerdem sind Anpassungen im Code mit viel Aufwand verbunden.</p>
-<button type="button" class="btn btn-warning">Wichtig!</button><p>Dies spiegelt sich in der Programmiermaxime "Don't repeat yourself!" (DRY) wider. Vermeide Wiederholungen von Code! Use 'Style &amp; Taste', not 'Copy &amp; Paste'! Gegenteilige Lösungen werden auch als WET ("write everything twice" / "write every time" / "we enjoy typing" / "waste everyone's time") bezeichnet. Mögen diese anfangs schneller geschrieben und in Einzelfällen auch besser lesbar sein, überwiegen i.d.R. doch die Vorteile von DRY.</p>
+<h2 id="Programmflusskontrolle-B:-Schleifen-mit-for">Programmflusskontrolle B: Schleifen mit <code>for</code><a class="anchor-link" href="#Programmflusskontrolle-B:-Schleifen-mit-for">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die naive Lösung der Frost-Aufgabe ist ein Beispiel für die Wiederholung von (nahezu) identischen Kommandos. Neben zusätzlichem Schreibaufwand birgt derartiges Vorgehen immer die Gefahr zusätzlicher Fehler. Außerdem sind Anpassungen im Code mit viel Aufwand verbunden.</p>
+<p>Dies spiegelt sich in der Programmiermaxime <strong>"Don't repeat yourself!" (DRY)</strong> wider. Vermeide Wiederholungen von Code! Use <strong>'Style &amp; Taste', not 'Copy &amp; Paste'!</strong> Gegenteilige Lösungen werden auch als <strong>WET ("write everything twice" / "write every time" / "we enjoy typing" / "waste everyone's time")</strong> bezeichnet. Mögen diese anfangs schneller geschrieben und in Einzelfällen auch besser lesbar sein, überwiegen i.d.R. doch die Vorteile von DRY.</p>
 
 </div>
 </div>
@@ -15508,18 +15821,30 @@ Um zu bestimmen, welche Elemente eines Vektors von Wahrheitswerten <code>TRUE</c
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Beispiel-Schneefegen">Beispiel Schneefegen<a class="anchor-link" href="#Beispiel-Schneefegen">&#182;</a></h2><p>Gegeben sei ein Vektor von Tagen, an denen Schnee fällt <code>tage_mit_schnee</code>. Es soll nun für jeden Tag ausgegeben werden, ob wir aufstehen müsse, um Schnee zu fegen oder ausschlafen können. Ein WET-Lösung könnte so aussehen:</p>
+<h3 id="Beispiel-Schneefegen">Beispiel Schneefegen<a class="anchor-link" href="#Beispiel-Schneefegen">&#182;</a></h3><p>Gegeben sei ein Vektor von Tagen, an denen Schnee fällt <code>tage_mit_schnee</code>. Es soll nun für jeden Tag ausgegeben werden, ob wir aufstehen müssen, um Schnee zu fegen... oder ausschlafen können. Ein <strong>WET-Lösung</strong> könnte so aussehen:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
-<span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag 1: Schneefegen!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag 1: Ausschlafen!&quot;</span><span class="p">)</span>
@@ -15581,20 +15906,21 @@ Tag 7: Schneefegen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Deutlich zu sehen: Ziemlich viel redundanter Code. Beim x-fachen Kopieren der Zeile habe ich glatt vergessen, für Tag 4 im zweiten Teil der Ausgabe die Zahl anzupassen. q.e.d.</p>
-<p>Dies ist ein klassischer Fall für eine <code>for</code>-Schleife:</p>
+<p>Ziemlich viel redundanter Code - ein klassischer Fall für eine <code>for</code>-Schleife:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span> <span class="c1">#die Variable zaehler bekommt nacheinander die Werte 0 bis 6...</span>
-    <span class="c1">#...und mit diesen wird jeweils der folgende Block ausgeführt</span>
+
+<span class="c1"># range erzeugt hier eine Sequenz von 0 bis AUSSCHLIEßLICH 7</span>
+<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="c1"># aus dieser Sequenz wählt &quot;for&quot; nacheinander aus und weist den Wert &quot;zahler&quot; zu </span>
     <span class="k">if</span> <span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: Schneefegen!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -15621,6 +15947,7 @@ Tag 3: Schneefegen!
 Tag 4: Ausschlafen!
 Tag 5: Schneefegen!
 Tag 6: Schneefegen!
+Tag 7: Schneefegen!
 </pre>
 </div>
 </div>
@@ -15633,7 +15960,7 @@ Tag 6: Schneefegen!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="img/for-schleife.svg" alt="Aktivitätsdiagramm for-Schleife" title="Aktivitätsdiagramm for-Schleife"></p>
-<p>Feine Sache. Sollten wir uns nun entscheiden, statt Schnee zu fegen, liegenzubleiben, müssen wir das lediglich an einer einzigen Stelle im Code ändern. Faulheit siegt!</p>
+<p>Fein! Sollten wir uns nun entscheiden, statt Schnee zu fegen, liegenzubleiben, müssen wir das lediglich an einer einzigen Stelle im Code ändern.</p>
 
 </div>
 </div>
@@ -15641,7 +15968,7 @@ Tag 6: Schneefegen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Schneefegen-I">Aufgabe: Schneefegen I<a class="anchor-link" href="#Aufgabe:-Schneefegen-I">&#182;</a></h2>
+<h3 id="Aufgabe:-Schneefegen-I">Aufgabe: Schneefegen I<a class="anchor-link" href="#Aufgabe:-Schneefegen-I">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15649,14 +15976,14 @@ Tag 6: Schneefegen!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Die Zeitreihe der Schneetage sei nun von unbekannter, d.h. variabler Länge.
-Passe die Schleife so an, dass sie für beliebige zufällige Zeitreihen  funktioniert!</p>
+Passe die Schleife so an, dass sie für beliebig lange Zeitreihen funktioniert!</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mit diesem Modul lassen sich Zufallszahlen generieren</span>
@@ -15670,10 +15997,11 @@ Passe die Schleife so an, dass sie für beliebige zufällige Zeitreihen  funktio
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span> <span class="c1"># hier wird k-mal aus den Optionen True oder False gewählt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hier wird k-mal aus den Optionen True oder False gewählt</span>
+<span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -15684,14 +16012,14 @@ Passe die Schleife so an, dass sie für beliebige zufällige Zeitreihen  funktio
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3>
+<h4 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h4>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In der <code>for</code>-Schleife folgt nach dem Schlüsselwort <code>in</code> ein Vektor, dessen Elemente iteriert werden, hier also <code>0:6</code>, also von 0 bis 6. Sollte unser Vektor <code>tage_mit_schnee</code> also eine andere Länge aufweisen, könnte man diese mit <code>len()</code> bestimmen (length).</p>
+<p>In der <code>for</code>-Schleife folgt nach dem Schlüsselwort <code>in</code> eine Sequenz (ähnlich einem Vektor), dessen Elemente "iteriert" (abgearbeitet) werden, hier also <code>range(0,7)</code>, also von 0 bis <strong>6</strong>. Sollte unser Vektor <code>tage_mit_schnee</code> nun eine andere Länge aufweisen, kann man diese ja mit <code>len()</code> bestimmen (length)...</p>
 
 </div>
 </div>
@@ -15699,20 +16027,18 @@ Passe die Schleife so an, dass sie für beliebige zufällige Zeitreihen  funktio
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)):</span> <span class="c1">#die Variable zaehler bekommt nacheinander die Werte &gt; 1 bis zur Länge von tage_mit_schnee...</span>
-                                              <span class="c1">#...und mit diesen wird jeweils der folgende Block ausgeführt</span>
+<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)):</span>
     <span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: Schneefegen!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -15734,12 +16060,13 @@ Passe die Schleife so an, dass sie für beliebige zufällige Zeitreihen  funktio
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tag 1: Ausschlafen!
-Tag 2: Ausschlafen!
+Tag 2: Schneefegen!
 Tag 3: Ausschlafen!
 Tag 4: Schneefegen!
 Tag 5: Schneefegen!
 Tag 6: Ausschlafen!
 Tag 7: Ausschlafen!
+Tag 8: Ausschlafen!
 </pre>
 </div>
 </div>
@@ -15747,11 +16074,11 @@ Tag 7: Ausschlafen!
 </div>
 </div>
 
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Schneefegen-II">Aufgabe: Schneefegen II<a class="anchor-link" href="#Aufgabe:-Schneefegen-II">&#182;</a></h2>
+<h3 id="Optionale-Aufgabe-(Vertiefung):-Schneefegen-II">Optionale Aufgabe (Vertiefung): Schneefegen II<a class="anchor-link" href="#Optionale-Aufgabe-(Vertiefung):-Schneefegen-II">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15768,7 +16095,7 @@ b) durch Veränderung des Schleifenkörpers an!</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3>
+<h4 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h4>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15783,19 +16110,18 @@ b) durch Veränderung des Schleifenkörpers an!</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung-a)">L&#246;sung a)<a class="anchor-link" href="#L&#246;sung-a)">&#182;</a></h3>
+<h4 id="L&#246;sung-a)">L&#246;sung a)<a class="anchor-link" href="#L&#246;sung-a)">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">),</span><span class="mi">2</span><span class="p">):</span> <span class="c1">#die Variable zaehler bekommt nacheinander die Werte &gt; 1 bis zur Länge von tage_mit_schnee...</span>
-                                              <span class="c1">#...und mit diesen wird jeweils der folgende Block ausgeführt</span>
+<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">),</span><span class="mi">2</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: Schneefegen!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -15817,15 +16143,20 @@ b) durch Veränderung des Schleifenkörpers an!</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tag 1: Ausschlafen!
-Tag 3: Schneefegen!
-Tag 5: Schneefegen!
-Tag 7: Schneefegen!
-Tag 9: Schneefegen!
-Tag 11: Schneefegen!
-Tag 13: Schneefegen!
+Tag 3: Ausschlafen!
+Tag 5: Ausschlafen!
+Tag 7: Ausschlafen!
+Tag 9: Ausschlafen!
+Tag 11: Ausschlafen!
+Tag 13: Ausschlafen!
 Tag 15: Schneefegen!
-Tag 17: Schneefegen!
+Tag 17: Ausschlafen!
 Tag 19: Ausschlafen!
+Tag 21: Schneefegen!
+Tag 23: Ausschlafen!
+Tag 25: Schneefegen!
+Tag 27: Schneefegen!
+Tag 29: Ausschlafen!
 </pre>
 </div>
 </div>
@@ -15837,7 +16168,7 @@ Tag 19: Ausschlafen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3>
+<h4 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h4>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15852,17 +16183,17 @@ Tag 19: Ausschlafen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung-b)">L&#246;sung b)<a class="anchor-link" href="#L&#246;sung-b)">&#182;</a></h3>
+<h4 id="L&#246;sung-b)">L&#246;sung b)<a class="anchor-link" href="#L&#246;sung-b)">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)):</span> <span class="c1">#die Variable zaehler bekommt nacheinander die Werte &gt; 1 bis zur Länge von tage_mit_schnee...</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">zaehler</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>                                          <span class="c1">#...und mit diesen wird jeweils der folgende Block ausgeführt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">zaehler</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: Schneefegen!&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -15884,15 +16215,20 @@ Tag 19: Ausschlafen!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tag 1: Ausschlafen!
-Tag 3: Schneefegen!
-Tag 5: Schneefegen!
-Tag 7: Schneefegen!
-Tag 9: Schneefegen!
-Tag 11: Schneefegen!
-Tag 13: Schneefegen!
+Tag 3: Ausschlafen!
+Tag 5: Ausschlafen!
+Tag 7: Ausschlafen!
+Tag 9: Ausschlafen!
+Tag 11: Ausschlafen!
+Tag 13: Ausschlafen!
 Tag 15: Schneefegen!
-Tag 17: Schneefegen!
+Tag 17: Ausschlafen!
 Tag 19: Ausschlafen!
+Tag 21: Schneefegen!
+Tag 23: Ausschlafen!
+Tag 25: Schneefegen!
+Tag 27: Schneefegen!
+Tag 29: Ausschlafen!
 </pre>
 </div>
 </div>
@@ -15900,11 +16236,11 @@ Tag 19: Ausschlafen!
 </div>
 </div>
 
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zusatzaufgabe:-Mit-Ausgabe-des-Wochentages">Zusatzaufgabe: Mit Ausgabe des Wochentages<a class="anchor-link" href="#Zusatzaufgabe:-Mit-Ausgabe-des-Wochentages">&#182;</a></h2>
+<h3 id="Optionale-Aufgabe-(Vertiefung):-Mit-Ausgabe-des-Wochentages!">Optionale Aufgabe (Vertiefung): Mit Ausgabe des Wochentages!<a class="anchor-link" href="#Optionale-Aufgabe-(Vertiefung):-Mit-Ausgabe-des-Wochentages!">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15919,7 +16255,7 @@ Tag 19: Ausschlafen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3>
+<h4 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h4>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -15930,24 +16266,23 @@ Tag 19: Ausschlafen!
 
 </div>
 </div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tage_mit_schnee</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 <span class="n">wochentage</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mo&quot;</span><span class="p">,</span> <span class="s2">&quot;Di&quot;</span><span class="p">,</span> <span class="s2">&quot;Mi&quot;</span><span class="p">,</span> <span class="s2">&quot;Do&quot;</span><span class="p">,</span> <span class="s2">&quot;Fr&quot;</span><span class="p">,</span> <span class="s2">&quot;Sa&quot;</span><span class="p">,</span> <span class="s2">&quot;So&quot;</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">),</span><span class="mi">2</span><span class="p">):</span> <span class="c1">#die Variable zaehler bekommt nacheinander die Werte &gt; 1 bis zur Länge von tage_mit_schnee...</span>
-                                              <span class="c1">#...und mit diesen wird jeweils der folgende Block ausgeführt</span>
+<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tage_mit_schnee</span><span class="p">),</span><span class="mi">2</span><span class="p">):</span>
     <span class="n">index_wochentag</span> <span class="o">=</span> <span class="n">zaehler</span> <span class="o">%</span> <span class="mi">7</span>
     <span class="k">if</span> <span class="n">tage_mit_schnee</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">wochentage</span><span class="p">[</span><span class="n">index_wochentag</span><span class="p">]</span>  <span class="o">+</span> <span class="s2">&quot;: Schneefegen!&quot;</span><span class="p">)</span>
@@ -15969,10 +16304,20 @@ Tag 19: Ausschlafen!
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tag 1, Mo: Ausschlafen!
+<pre>Tag 1, Mo: Schneefegen!
 Tag 3, Mi: Ausschlafen!
 Tag 5, Fr: Schneefegen!
-Tag 7, So: Schneefegen!
+Tag 7, So: Ausschlafen!
+Tag 9, Di: Ausschlafen!
+Tag 11, Do: Schneefegen!
+Tag 13, Sa: Schneefegen!
+Tag 15, Mo: Schneefegen!
+Tag 17, Mi: Schneefegen!
+Tag 19, Fr: Schneefegen!
+Tag 21, So: Ausschlafen!
+Tag 23, Di: Schneefegen!
+Tag 25, Do: Schneefegen!
+Tag 27, Sa: Ausschlafen!
 </pre>
 </div>
 </div>
@@ -15984,583 +16329,46 @@ Tag 7, So: Schneefegen!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Fehlwerte-in-logischen-Vergleichen">Fehlwerte in logischen Vergleichen<a class="anchor-link" href="#Fehlwerte-in-logischen-Vergleichen">&#182;</a></h1>
+<h2 id="Programmflusskontrolle-C:-Schleifen-mit-while">Programmflusskontrolle C: Schleifen mit <code>while</code><a class="anchor-link" href="#Programmflusskontrolle-C:-Schleifen-mit-while">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Computer machen keine Fehler, aber sie können Fehlwerte produzieren</em></p>
-<h2 id="Beispiel-Niederschlagsintensit&#228;t">Beispiel Niederschlagsintensit&#228;t<a class="anchor-link" href="#Beispiel-Niederschlagsintensit&#228;t">&#182;</a></h2><p>Gegeben sind die Zeitreihen der Niederschlagshöhe <code>n_hoehe</code> [mm] und der zugehörigen Niederschlagsdauer <code>n_dauer</code> [h]. Wenn die Niederschlagsintensität [mm/h] höher als 20 mm/h ausfällt, soll eine Warnung ausgegeben werden. Ein naiver Ansatz könnte so aussehen<a name="intensitaet"> </a>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_hoehe</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1">#Niederschlagshöhe  [mm]</span>
-<span class="n">n_dauer</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1">#Niederschlagsdauer [h]</span>
-
-<span class="n">intensitaet</span> <span class="o">=</span> <span class="n">n_hoehe</span> <span class="o">/</span> <span class="n">n_dauer</span>
-
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">intensitaet</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">intensitaet</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intensivniederschlag am Tag&quot;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Intensivniederschlag am Tag2
-Intensivniederschlag am Tag7
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/maik/miniconda3/envs/umweltdv/lib/python3.7/site-packages/ipykernel_launcher.py:4: RuntimeWarning: invalid value encountered in true_divide
-  after removing the cwd from sys.path.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Bis zum Tag 2 funktioniert die Schleife noch, dann erzeugt sie die Meldung <code>RuntimeWarning: invalid value encountered in true_divide</code>. Das Problem ist in der Tat die Intensität, die für die Tage 3 und 7 aufgrund der Division durch 0 nicht berechnet werden kann: Für derartige Operationen ohne Ergebnis liefert Python den 'Sonderwert' <code>nan</code> ("not a number"), welcher dann im weiteren Verlauf zu einem Fehler führen kann.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="o">/</span><span class="mi">0</span> <span class="c1">#liefert nan/Fehler</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_8164/2855082716.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">0</span> <span class="ansi-red-fg">#liefert nan/Fehler</span>
-
-<span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-warning">Wichtig!</button> Ist also ein Ergebnis potenziell von solchen Sonderwerten (<code>NA, nan, None</code>)  betroffen, sollte seine (un-)Gültigkeit überprüft werden. Dafür eignen sich die folgenden Funktionen:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Erkennen von None</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">b</span> <span class="o">==</span> <span class="kc">None</span> <span class="c1">#liefert TRUE für NULL und logical(0)</span>
-<span class="c1">#oder</span>
-<span class="n">b</span> <span class="ow">is</span> <span class="kc">None</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[30]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">intensitaet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># liefert TRUE für alle regulären Zahlen</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[31]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Starkniederschlag">Aufgabe: Starkniederschlag<a class="anchor-link" href="#Aufgabe:-Starkniederschlag">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Behebe mit diesem Wissen den <a href="#intensitaet">naiven Ansatz von oben</a>.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_hoehe</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1">#Niederschlagshöhe  [mm]</span>
-<span class="n">n_dauer</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1">#Niederschlagsdauer [h]</span>
-
-<span class="n">intensitaet</span> <span class="o">=</span> <span class="n">n_hoehe</span> <span class="o">/</span> <span class="n">n_dauer</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/maik/miniconda3/envs/umweltdv/lib/python3.7/site-packages/ipykernel_launcher.py:4: RuntimeWarning: invalid value encountered in true_divide
-  after removing the cwd from sys.path.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">intensitaet</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">intensitaet</span><span class="p">[</span><span class="n">zaehler</span><span class="p">])</span> <span class="ow">and</span> <span class="n">intensitaet</span><span class="p">[</span><span class="n">zaehler</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intensivniederschlag am Tag&quot;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Intensivniederschlag am Tag2
-Intensivniederschlag am Tag7
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Alternativ könnte man auch die Variable <code>intensitaet</code> von allen Sonderwerten bereinigen und die Schleife unverändert lassen:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">intensitaet</span> <span class="o">=</span>  <span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">intensitaet</span><span class="p">)</span> <span class="c1"># wie vorher schon bildet &quot;~&quot; die Negation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">intensitaet</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[ True  True False  True  True  True  True False]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-NA-Verkn&#252;pfung">Aufgabe: NA-Verkn&#252;pfung<a class="anchor-link" href="#Aufgabe:-NA-Verkn&#252;pfung">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In welcher anderen logischen Operation kann ein <code>nan</code>-Wert verknüpft und dennoch ein gültiger Wahrheitswert erhalten werden?</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nan</span> <span class="c1">#liefert True</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">nan</span> <span class="ow">or</span> <span class="kc">True</span> <span class="c1">#liefert nan</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[36]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>nan</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Aufgrund dieser Möglichkeit funktionieren auch</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="c1">#ein Zahlenvektor mit nan-Element</span>
-<span class="nb">any</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[37]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Die komplementären Varianten (Relationszeichen umgedreht) liefern jedoch keine logisch gültigen Ergebnisse.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">any</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[39]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[40]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmflusskontrolle-C:-Schleifen-mit-while">Programmflusskontrolle C: Schleifen mit <code>while</code><a class="anchor-link" href="#Programmflusskontrolle-C:-Schleifen-mit-while">&#182;</a></h1><p><em>Kein Ende in Sicht.</em></p>
 <p>In den vorherigen Beispielen war die notwendige Anzahl von Iterationen durch die Schleifen vorbestimmt, z.B. durch die Länge des betreffenden Vektors. Denkbar sind jedoch auch Situationen, wo dies nicht der Fall ist.</p>
-<h2 id="Beispiel-Windkraftanlage">Beispiel Windkraftanlage<a class="anchor-link" href="#Beispiel-Windkraftanlage">&#182;</a></h2><p>An einer Windkraftanlage befindet sich ein Windmesser, der die Windgeschwindigkeit <code>v_wind</code> misst (wir simulieren diese Messung hier der Einfachheit halber mit dem Zufallsgenerator). Die Anlage soll laufen, solange die Windgeschwindigkeit unter 20 m/s liegt und sich bei einer höheren Geschwindigkeit abschalten.</p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Beispiel-Windkraftanlage">Beispiel Windkraftanlage<a class="anchor-link" href="#Beispiel-Windkraftanlage">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An einer Windkraftanlage befindet sich ein Windmesser, der die Windgeschwindigkeit <code>v_wind</code> misst (wir simulieren diese Messung hier der Einfachheit halber mit dem Zufallsgenerator). Die Anlage soll laufen, solange die Windgeschwindigkeit unter 20 m/s liegt und sich bei einer höheren Geschwindigkeit abschalten.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_wind</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1">#Anfangswert der Windgeschwindigkeit</span>
-<span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1">#Abschaltgeschwindigkeit</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Anfangswert der Windgeschwindigkeit</span>
+<span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Abschaltgeschwindigkeit</span>
 
-<span class="k">while</span> <span class="n">v_wind</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind: &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v_wind</span><span class="p">),</span><span class="s2">&quot;; Anlage läuft.&quot;</span><span class="p">)</span>
-    <span class="n">v_wind</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_wind</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v_wind</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.2</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v_wind</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#Windmesser: hier zufällige Änderung der Windgeschwindigkeit</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v_wind</span><span class="p">),</span><span class="s2">&quot;; Anlage gestoppt.&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">v_max</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; Anlage läuft.&quot;</span> <span class="o">%</span> <span class="n">v</span><span class="p">)</span>
+    <span class="c1"># Windmessung: hier zufällige Änderung der Windgeschwindigkeit</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.2</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; ANLAGE GESTOPPT.&quot;</span> <span class="o">%</span> <span class="n">v</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16577,290 +16385,15 @@ Intensivniederschlag am Tag7
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Wind:  5 ; Anlage läuft.
-Wind:  4.557968963577137 ; Anlage läuft.
-Wind:  7.877985901378778 ; Anlage läuft.
-Wind:  9.159059971288915 ; Anlage läuft.
-Wind:  11.2520313109338 ; Anlage läuft.
-Wind:  8.625780879593677 ; Anlage läuft.
-Wind:  12.018599300945214 ; Anlage läuft.
-Wind:  7.396258890949634 ; Anlage läuft.
-Wind:  8.133146371955718 ; Anlage läuft.
-Wind:  5.012545410861164 ; Anlage läuft.
-Wind:  7.845374998520734 ; Anlage läuft.
-Wind:  13.741955741925366 ; Anlage läuft.
-Wind:  9.499069852797074 ; Anlage läuft.
-Wind:  15.427887590419425 ; Anlage läuft.
-Wind:  19.635173531152766 ; Anlage läuft.
-Wind:  18.39729848285988 ; Anlage läuft.
-Wind:  10.567186906376918 ; Anlage läuft.
-Wind:  12.255372162996899 ; Anlage läuft.
-Wind:  7.90928317418749 ; Anlage läuft.
-Wind:  4.907372463264508 ; Anlage läuft.
-Wind:  8.342487200849057 ; Anlage läuft.
-Wind:  7.913613795756907 ; Anlage läuft.
-Wind:  5.545963432845929 ; Anlage läuft.
-Wind:  4.234002718152187 ; Anlage läuft.
-Wind:  5.819172520743224 ; Anlage läuft.
-Wind:  6.082684594544283 ; Anlage läuft.
-Wind:  4.331734521801533 ; Anlage läuft.
-Wind:  5.161707808515104 ; Anlage läuft.
-Wind:  13.901319787796234 ; Anlage läuft.
-Wind:  12.994063369283147 ; Anlage läuft.
-Wind:  15.758323902826575 ; Anlage läuft.
-Wind:  18.603055547915865 ; Anlage läuft.
-Wind:  11.394462620981985 ; Anlage läuft.
-Wind:  16.5161318804085 ; Anlage läuft.
-Wind:  19.554646016114294 ; Anlage läuft.
-Wind:  12.448329870906914 ; Anlage läuft.
-Wind:  16.339639112473023 ; Anlage läuft.
-Wind:  9.287322891102095 ; Anlage läuft.
-Wind:  10.734229063172183 ; Anlage läuft.
-Wind:  10.718652963730955 ; Anlage läuft.
-Wind:  8.77814040603621 ; Anlage läuft.
-Wind:  8.73326874255564 ; Anlage läuft.
-Wind:  10.367624816188338 ; Anlage läuft.
-Wind:  14.046603293002619 ; Anlage läuft.
-Wind:  14.17235981361105 ; Anlage läuft.
-Wind:  13.975492361317684 ; Anlage läuft.
-Wind:  12.700484610116025 ; Anlage läuft.
-Wind:  11.746535146910793 ; Anlage läuft.
-Wind:  14.928098866723374 ; Anlage läuft.
-Wind:  13.757134918613461 ; Anlage läuft.
-Wind:  14.439612126275406 ; Anlage läuft.
-Wind:  8.777730718556668 ; Anlage läuft.
-Wind:  4.839983178584448 ; Anlage läuft.
-Wind:  12.435362597608663 ; Anlage läuft.
-Wind:  8.82493325946686 ; Anlage läuft.
-Wind:  14.597663150917612 ; Anlage läuft.
-Wind:  8.516699321608677 ; Anlage läuft.
-Wind:  9.28838932740049 ; Anlage läuft.
-Wind:  14.208581218714855 ; Anlage läuft.
-Wind:  13.56389522826888 ; Anlage läuft.
-Wind:  12.886564501545653 ; Anlage läuft.
-Wind:  11.764645288639285 ; Anlage läuft.
-Wind:  7.403417480924576 ; Anlage läuft.
-Wind:  11.212524578554241 ; Anlage läuft.
-Wind:  12.168334409251225 ; Anlage läuft.
-Wind:  8.692426318546643 ; Anlage läuft.
-Wind:  10.42222617286373 ; Anlage läuft.
-Wind:  14.791627450817177 ; Anlage läuft.
-Wind:  14.951788312139422 ; Anlage läuft.
-Wind:  17.253875846313964 ; Anlage läuft.
-Wind:  9.656502135457204 ; Anlage läuft.
-Wind:  5.631150341412084 ; Anlage läuft.
-Wind:  5.490261282470156 ; Anlage läuft.
-Wind:  14.247232801837823 ; Anlage läuft.
-Wind:  10.081011195403143 ; Anlage läuft.
-Wind:  10.590061584687064 ; Anlage läuft.
-Wind:  7.2394024000474335 ; Anlage läuft.
-Wind:  10.327045405121012 ; Anlage läuft.
-Wind:  9.51080659498338 ; Anlage läuft.
-Wind:  11.34109384600385 ; Anlage läuft.
-Wind:  13.473841767118572 ; Anlage läuft.
-Wind:  12.520804627274575 ; Anlage läuft.
-Wind:  18.098669311243697 ; Anlage läuft.
-Wind:  11.93557101127206 ; Anlage läuft.
-Wind:  7.0733993991409285 ; Anlage läuft.
-Wind:  10.473484632367393 ; Anlage läuft.
-Wind:  5.688976786852618 ; Anlage läuft.
-Wind:  3.431168728400079 ; Anlage läuft.
-Wind:  10.209869928586484 ; Anlage läuft.
-Wind:  12.755955252741128 ; Anlage läuft.
-Wind:  12.598699285484315 ; Anlage läuft.
-Wind:  18.0481643347443 ; Anlage läuft.
-Wind:  13.837437225606926 ; Anlage läuft.
-Wind:  17.260901675613578 ; Anlage läuft.
-Wind:  10.75490167269098 ; Anlage läuft.
-Wind:  17.278034549652524 ; Anlage läuft.
-Wind:  8.761016849008058 ; Anlage läuft.
-Wind:  15.66945249229241 ; Anlage läuft.
-Wind:  9.310938842966754 ; Anlage läuft.
-Wind:  5.634926762302898 ; Anlage läuft.
-Wind:  5.828842202513204 ; Anlage läuft.
-Wind:  4.77538955867077 ; Anlage läuft.
-Wind:  11.341344757752047 ; Anlage läuft.
-Wind:  13.652483429312797 ; Anlage läuft.
-Wind:  10.233040733091588 ; Anlage läuft.
-Wind:  13.432178942465343 ; Anlage läuft.
-Wind:  11.361253235316836 ; Anlage läuft.
-Wind:  14.416208540792514 ; Anlage läuft.
-Wind:  13.468882406943276 ; Anlage läuft.
-Wind:  12.928393797767923 ; Anlage läuft.
-Wind:  9.556739799970119 ; Anlage läuft.
-Wind:  9.707924457294904 ; Anlage läuft.
-Wind:  11.429138708117735 ; Anlage läuft.
-Wind:  17.56029682106747 ; Anlage läuft.
-Wind:  13.774577966190988 ; Anlage läuft.
-Wind:  17.293674985555405 ; Anlage läuft.
-Wind:  14.925624073855142 ; Anlage läuft.
-Wind:  9.620195771308895 ; Anlage läuft.
-Wind:  14.604521793756064 ; Anlage läuft.
-Wind:  9.526861952828177 ; Anlage läuft.
-Wind:  12.90054055476741 ; Anlage läuft.
-Wind:  12.477681811915922 ; Anlage läuft.
-Wind:  11.044126629958818 ; Anlage läuft.
-Wind:  7.791598911623693 ; Anlage läuft.
-Wind:  8.406684026864054 ; Anlage läuft.
-Wind:  8.7722438696738 ; Anlage läuft.
-Wind:  15.893156076795876 ; Anlage läuft.
-Wind:  11.542712736009117 ; Anlage läuft.
-Wind:  14.246420090502347 ; Anlage läuft.
-Wind:  18.342002696346466 ; Anlage läuft.
-Wind:  11.973376837870484 ; Anlage läuft.
-Wind:  15.846700456957173 ; Anlage läuft.
-Wind:  19.586830826775927 ; Anlage läuft.
-Wind:  12.456013378718382 ; Anlage läuft.
-Wind:  18.066667381886894 ; Anlage läuft.
-Wind:  11.982444408610545 ; Anlage läuft.
-Wind:  13.06032413465824 ; Anlage läuft.
-Wind:  18.1933481738936 ; Anlage läuft.
-Wind:  17.737619970622447 ; Anlage läuft.
-Wind:  13.10258847719064 ; Anlage läuft.
-Wind:  13.319099177574568 ; Anlage läuft.
-Wind:  16.70124618680657 ; Anlage läuft.
-Wind:  16.903296681168015 ; Anlage läuft.
-Wind:  17.44291364027962 ; Anlage läuft.
-Wind:  15.977530590212876 ; Anlage läuft.
-Wind:  11.440588950407518 ; Anlage läuft.
-Wind:  6.011018999457911 ; Anlage läuft.
-Wind:  4.428293206286558 ; Anlage läuft.
-Wind:  12.865311830481984 ; Anlage läuft.
-Wind:  10.143568576359668 ; Anlage läuft.
-Wind:  16.97407272985086 ; Anlage läuft.
-Wind:  16.564723768762 ; Anlage läuft.
-Wind:  13.355158845266116 ; Anlage läuft.
-Wind:  14.113601172454484 ; Anlage läuft.
-Wind:  7.517281613416821 ; Anlage läuft.
-Wind:  9.562883349902204 ; Anlage läuft.
-Wind:  16.743184235406957 ; Anlage läuft.
-Wind:  17.33596903408158 ; Anlage läuft.
-Wind:  9.317517407124718 ; Anlage läuft.
-Wind:  12.457913128518417 ; Anlage läuft.
-Wind:  13.947369262825003 ; Anlage läuft.
-Wind:  7.735484736555202 ; Anlage läuft.
-Wind:  5.468345229545021 ; Anlage läuft.
-Wind:  11.6412825808093 ; Anlage läuft.
-Wind:  13.843755902842943 ; Anlage läuft.
-Wind:  13.11433182993176 ; Anlage läuft.
-Wind:  7.911588723811892 ; Anlage läuft.
-Wind:  15.852092172168902 ; Anlage läuft.
-Wind:  10.180463197083483 ; Anlage läuft.
-Wind:  8.993042830621846 ; Anlage läuft.
-Wind:  6.975936969420038 ; Anlage läuft.
-Wind:  4.642747615146069 ; Anlage läuft.
-Wind:  3.874845089733367 ; Anlage läuft.
-Wind:  3.878117360151958 ; Anlage läuft.
-Wind:  7.162000047073329 ; Anlage läuft.
-Wind:  7.884092615937645 ; Anlage läuft.
-Wind:  5.612530905924913 ; Anlage läuft.
-Wind:  4.876849382064873 ; Anlage läuft.
-Wind:  6.481138327601297 ; Anlage läuft.
-Wind:  7.057215091017779 ; Anlage läuft.
-Wind:  13.314368131542729 ; Anlage läuft.
-Wind:  10.65047088657012 ; Anlage läuft.
-Wind:  15.629755115305784 ; Anlage läuft.
-Wind:  9.404299585478977 ; Anlage läuft.
-Wind:  12.30111976640311 ; Anlage läuft.
-Wind:  16.776604446752692 ; Anlage läuft.
-Wind:  14.091668445826496 ; Anlage läuft.
-Wind:  16.902206616875034 ; Anlage läuft.
-Wind:  16.370306543909173 ; Anlage läuft.
-Wind:  9.93814956903165 ; Anlage läuft.
-Wind:  5.198102961434309 ; Anlage läuft.
-Wind:  13.134302081989292 ; Anlage läuft.
-Wind:  14.630060988675595 ; Anlage läuft.
-Wind:  9.599523946436367 ; Anlage läuft.
-Wind:  10.049306057061468 ; Anlage läuft.
-Wind:  6.631581144869925 ; Anlage läuft.
-Wind:  15.011688175604002 ; Anlage läuft.
-Wind:  13.818211574199895 ; Anlage läuft.
-Wind:  13.651714350274116 ; Anlage läuft.
-Wind:  8.854033248781949 ; Anlage läuft.
-Wind:  7.596146531589969 ; Anlage läuft.
-Wind:  15.725296062560995 ; Anlage läuft.
-Wind:  10.488285088936763 ; Anlage läuft.
-Wind:  14.80441579300863 ; Anlage läuft.
-Wind:  14.80376113872402 ; Anlage läuft.
-Wind:  15.600280319569157 ; Anlage läuft.
-Wind:  15.775857500476285 ; Anlage läuft.
-Wind:  11.62853997664303 ; Anlage läuft.
-Wind:  11.551914173757677 ; Anlage läuft.
-Wind:  9.435614357545653 ; Anlage läuft.
-Wind:  14.639363600189379 ; Anlage läuft.
-Wind:  10.184317117523493 ; Anlage läuft.
-Wind:  10.916475429130468 ; Anlage läuft.
-Wind:  13.279665141255023 ; Anlage läuft.
-Wind:  12.439842140573411 ; Anlage läuft.
-Wind:  9.838809050640961 ; Anlage läuft.
-Wind:  10.696942937729872 ; Anlage läuft.
-Wind:  8.725921698460878 ; Anlage läuft.
-Wind:  7.76388580257599 ; Anlage läuft.
-Wind:  15.462654517320605 ; Anlage läuft.
-Wind:  15.958723134795791 ; Anlage läuft.
-Wind:  11.991994410307985 ; Anlage läuft.
-Wind:  16.841777071496537 ; Anlage läuft.
-Wind:  9.378955393386756 ; Anlage läuft.
-Wind:  5.960597883077196 ; Anlage läuft.
-Wind:  13.068158135909048 ; Anlage läuft.
-Wind:  11.584995860278973 ; Anlage läuft.
-Wind:  15.921444074313897 ; Anlage läuft.
-Wind:  19.84815892083232 ; Anlage läuft.
-Wind:  14.696858545941547 ; Anlage läuft.
-Wind:  14.170426832800928 ; Anlage läuft.
-Wind:  8.851053212322983 ; Anlage läuft.
-Wind:  10.92676240405827 ; Anlage läuft.
-Wind:  13.030934536860762 ; Anlage läuft.
-Wind:  12.369134313131212 ; Anlage läuft.
-Wind:  9.831243159209611 ; Anlage läuft.
-Wind:  12.479021087484913 ; Anlage läuft.
-Wind:  18.20522989784463 ; Anlage läuft.
-Wind:  12.666775477428887 ; Anlage läuft.
-Wind:  14.425757762103967 ; Anlage läuft.
-Wind:  15.840565084726409 ; Anlage läuft.
-Wind:  11.538300912183733 ; Anlage läuft.
-Wind:  13.969031963641282 ; Anlage läuft.
-Wind:  17.130932209152334 ; Anlage läuft.
-Wind:  10.346124873023893 ; Anlage läuft.
-Wind:  5.306500341010272 ; Anlage läuft.
-Wind:  6.2997250930594015 ; Anlage läuft.
-Wind:  5.238928456427386 ; Anlage läuft.
-Wind:  8.030191610746538 ; Anlage läuft.
-Wind:  14.083419979284859 ; Anlage läuft.
-Wind:  18.25197767603184 ; Anlage läuft.
-Wind:  17.387474563633326 ; Anlage läuft.
-Wind:  17.035548873603176 ; Anlage läuft.
-Wind:  18.737195164871647 ; Anlage läuft.
-Wind:  9.508383525329148 ; Anlage läuft.
-Wind:  13.986275062412181 ; Anlage läuft.
-Wind:  7.675278285388173 ; Anlage läuft.
-Wind:  5.649124102375113 ; Anlage läuft.
-Wind:  14.775946014264209 ; Anlage läuft.
-Wind:  11.168931260065804 ; Anlage läuft.
-Wind:  13.254912870043427 ; Anlage läuft.
-Wind:  11.516134253084024 ; Anlage läuft.
-Wind:  15.977377575669369 ; Anlage läuft.
-Wind:  12.86517015110769 ; Anlage läuft.
-Wind:  12.325230230942138 ; Anlage läuft.
-Wind:  8.582225217554083 ; Anlage läuft.
-Wind:  15.410684068563274 ; Anlage läuft.
-Wind:  16.615979924271002 ; Anlage läuft.
-Wind:  14.78599205602595 ; Anlage läuft.
-Wind:  12.753293246222407 ; Anlage läuft.
-Wind:  16.6287018299017 ; Anlage läuft.
-Wind:  17.821684906196957 ; Anlage läuft.
-Wind:  12.944327301840303 ; Anlage läuft.
-Wind:  11.653925095564631 ; Anlage läuft.
-Wind:  12.840342131065594 ; Anlage läuft.
-Wind:  8.47255684356389 ; Anlage läuft.
-Wind:  7.297630154373593 ; Anlage läuft.
-Wind:  4.654643747711601 ; Anlage läuft.
-Wind:  6.918129571602743 ; Anlage läuft.
-Wind:  12.377910329230684 ; Anlage läuft.
-Wind:  14.091461719075125 ; Anlage läuft.
-Wind:  17.125765087024707 ; Anlage läuft.
-Wind:  18.764739720603686 ; Anlage läuft.
-Wind: 20.459060365508172 ; Anlage gestoppt.
+<pre>Wind = 5.0 m/s --&gt; Anlage läuft.
+Wind = 6.0 m/s --&gt; Anlage läuft.
+Wind = 11.2 m/s --&gt; Anlage läuft.
+Wind = 13.0 m/s --&gt; Anlage läuft.
+Wind = 13.2 m/s --&gt; Anlage läuft.
+Wind = 10.5 m/s --&gt; Anlage läuft.
+Wind = 15.2 m/s --&gt; Anlage läuft.
+Wind = 19.2 m/s --&gt; Anlage läuft.
+Wind = 21.1 m/s --&gt; ANLAGE GESTOPPT.
 </pre>
 </div>
 </div>
@@ -16872,8 +16405,8 @@ Wind: 20.459060365508172 ; Anlage gestoppt.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wie auch bei der <code>for()</code>-Schleife wird der zu wiederholende Code-Block mit <code>{...}</code> eingeklammert. Der Unterschied besteht darin, dass <code>while()</code> den logischen Ausdruck in der Klammer als Laufbedingung auswertet (hier <code>v_wind &lt; 20</code>) und dies nicht an eine Zählervariable knüpft. Die Anzahl der Schleifendurchläufe steht also nicht von vornherein fest und ändert sich je nach der zufälligen Ausprägung des Windes.</p>
-<p><button type="button" class="btn btn-warning">Wichtig!</button> Die Schleifenbedingung wird immer am Anfang, d.h. vor dem auszuführenden Block, geprüft. Wenn sie schon von Anfang an FALSCH ist (z.B. wenn <code>v_wind</code> mit 21 initialisiert wird), wird die Schleife gar nicht ausgeführt.</p>
+<p><code>while</code> macht also so lange weiter, bis das Kriterium (hier <code>v &lt; v_max</code>) nicht mehr erfüllt ist. Die Prüfung erfolgt immer am Anfang, also bevor der Block ausgeführt wird.</p>
+<p><strong>Achtung</strong>: Fehlerhafte <code>while</code>-Schleifen können schnell zur "Endlosschleife" werden, wenn das Kriterium einfach immer erfüllt wird. Entsprechende Bugs (Fehler) können Programmabläufe erheblich stören.</p>
 
 </div>
 </div>
@@ -16881,7 +16414,7 @@ Wind: 20.459060365508172 ; Anlage gestoppt.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe-Windkraftanlage">Aufgabe Windkraftanlage<a class="anchor-link" href="#Aufgabe-Windkraftanlage">&#182;</a></h2>
+<h3 id="Aufgabe-Windkraftanlage">Aufgabe Windkraftanlage<a class="anchor-link" href="#Aufgabe-Windkraftanlage">&#182;</a></h3>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -16896,24 +16429,25 @@ Wind: 20.459060365508172 ; Anlage gestoppt.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+<h4 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_wind</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1">#Anfangswert der Windgeschwindigkeit</span>
-<span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1">#Abschaltgeschwindigkeit</span>
-<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#zählt die Schleifendurchläufe</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Anfangswert der Windgeschwindigkeit</span>
+<span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Abschaltgeschwindigkeit</span>
+<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># zählt die Schleifendurchläufe</span>
+<span class="n">zaehler_max</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Maximale Anzahl an Zyklen</span>
 
-<span class="k">while</span> <span class="n">v_wind</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">zaehler</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind: &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v_wind</span><span class="p">),</span> <span class="s2">&quot;; Zähler: &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;Anlage läuft.&quot;</span><span class="p">)</span>
-    <span class="n">v_wind</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_wind</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v_wind</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.2</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v_wind</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#Windmesser: hier zufällige Änderung der Windgeschwindigkeit</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">v</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">zaehler</span> <span class="o">&lt;</span> <span class="n">zaehler_max</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; Anlage läuft.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">zaehler</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
     <span class="n">zaehler</span> <span class="o">=</span> <span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wind:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v_wind</span><span class="p">),</span><span class="s2">&quot;; Anlage gestoppt.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; ANLAGE GESTOPPT.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">zaehler</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -16930,17 +16464,17 @@ Wind: 20.459060365508172 ; Anlage gestoppt.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Wind:  5 ; Zähler:  1 Anlage läuft.
-Wind:  8.97692493225942 ; Zähler:  2 Anlage läuft.
-Wind:  11.643542834782238 ; Zähler:  3 Anlage läuft.
-Wind:  6.360299139128587 ; Zähler:  4 Anlage läuft.
-Wind:  13.915633138089593 ; Zähler:  5 Anlage läuft.
-Wind:  8.083174407461957 ; Zähler:  6 Anlage läuft.
-Wind:  11.296510946204885 ; Zähler:  7 Anlage läuft.
-Wind:  13.083071898692683 ; Zähler:  8 Anlage läuft.
-Wind:  11.627293029078988 ; Zähler:  9 Anlage läuft.
-Wind:  12.976494121219762 ; Zähler:  10 Anlage läuft.
-Wind: 14.109146795597546 ; Anlage gestoppt.
+<pre>Zyklus 0: Wind = 5.0 m/s --&gt; Anlage läuft.
+Zyklus 1: Wind = 12.4 m/s --&gt; Anlage läuft.
+Zyklus 2: Wind = 12.0 m/s --&gt; Anlage läuft.
+Zyklus 3: Wind = 6.6 m/s --&gt; Anlage läuft.
+Zyklus 4: Wind = 13.0 m/s --&gt; Anlage läuft.
+Zyklus 5: Wind = 7.3 m/s --&gt; Anlage läuft.
+Zyklus 6: Wind = 13.2 m/s --&gt; Anlage läuft.
+Zyklus 7: Wind = 15.9 m/s --&gt; Anlage läuft.
+Zyklus 8: Wind = 18.8 m/s --&gt; Anlage läuft.
+Zyklus 9: Wind = 14.5 m/s --&gt; Anlage läuft.
+Zyklus 10: Wind = 19.0 m/s --&gt; ANLAGE GESTOPPT.
 </pre>
 </div>
 </div>
@@ -16952,16 +16486,214 @@ Wind: 14.109146795597546 ; Anlage gestoppt.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmflusskontrolle-D:-Schleifen-Steuerung-mit-next-und--break">Programmflusskontrolle D: Schleifen-Steuerung mit <code>next</code> und  <code>break</code><a class="anchor-link" href="#Programmflusskontrolle-D:-Schleifen-Steuerung-mit-next-und--break">&#182;</a></h1><p><em>Abkürzen und aus der Routine ausbrechen</em></p>
-<p>Innerhalb von <code>for</code> und <code>while</code>-Schleifen lässt sich mit den Befehlen <code>next</code> und <code>break</code> der Programmablauf noch flexibler gestalten: <code>next</code> springt dabei wieder an den Schleifenanfang, während <code>break</code> die Schleife verlässt. Beide Befehle beziehen sich immer nur auf die <em>innerste</em> Schleife. Bei geschachtelten Schleifen werden also die äußeren Schleifen weiter ausgeführt.</p>
-<h2 id="Beispiel-Unvollst&#228;ndiges-Alphabet">Beispiel Unvollst&#228;ndiges Alphabet<a class="anchor-link" href="#Beispiel-Unvollst&#228;ndiges-Alphabet">&#182;</a></h2><p>Fritzchen soll fünf mal das Alphabet aufsagen. Er kennt es aber nur bis zum "G", und das "D" vergisst er auch jedes Mal:</p>
+<h2 id="Programmflusskontrolle-D:-Schleifen-Steuerung-mit-next-und--break">Programmflusskontrolle D: Schleifen-Steuerung mit <code>next</code> und  <code>break</code><a class="anchor-link" href="#Programmflusskontrolle-D:-Schleifen-Steuerung-mit-next-und--break">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Innerhalb von <code>for</code> und <code>while</code>-Schleifen lässt sich mit den Befehlen <code>continue</code> und <code>break</code> der Programmablauf noch flexibler gestalten: <code>next</code> springt dabei wieder an den Schleifenanfang, während <code>break</code> die Schleife verlässt. Beide Befehle beziehen sich immer nur auf die <em>innerste</em> Schleife. Bei geschachtelten Schleifen werden also die äußeren Schleifen weiter ausgeführt.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Beispiel: 3 überspringen und bei 5 abbrechen:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nö.&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schluss jetzt!&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+Nö.
+4
+Schluss jetzt!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Windkraftanlage können wir auch mit <code>for</code> und unter Nutzung von <code>break</code> steuern:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Abschaltgeschwindigkeit</span>
+<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># zählt die Schleifendurchläufe</span>
+<span class="n">zaehler_max</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Maximale Anzahl an Zyklen</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">zaehler_max</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.4</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; Anlage läuft.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; ANLAGE GESTOPPT.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+        <span class="k">break</span>        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Zyklus 1: Wind = 10.9 m/s --&gt; Anlage läuft.
+Zyklus 2: Wind = 7.9 m/s --&gt; Anlage läuft.
+Zyklus 3: Wind = 10.3 m/s --&gt; Anlage läuft.
+Zyklus 4: Wind = 12.8 m/s --&gt; Anlage läuft.
+Zyklus 5: Wind = 14.2 m/s --&gt; Anlage läuft.
+Zyklus 6: Wind = 14.1 m/s --&gt; Anlage läuft.
+Zyklus 7: Wind = 19.1 m/s --&gt; Anlage läuft.
+Zyklus 8: Wind = 18.2 m/s --&gt; Anlage läuft.
+Zyklus 9: Wind = 19.4 m/s --&gt; Anlage läuft.
+Zyklus 10: Wind = 11.2 m/s --&gt; Anlage läuft.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vertiefungen-f&#252;r-die-Codingwerkstatt">Vertiefungen f&#252;r die Codingwerkstatt<a class="anchor-link" href="#Vertiefungen-f&#252;r-die-Codingwerkstatt">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Gedrosselte-Windkraft">Gedrosselte Windkraft<a class="anchor-link" href="#Gedrosselte-Windkraft">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bei Geschwindigkeiten von 12 bis 20 soll die Anlage nun außerdem gedrosselt werden. Dies soll durch die Ausgabe <code>... --&gt; Anlage gedrosselt</code> vermerkt werden.</p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_max</span>  <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Abschaltgeschwindigkeit</span>
+<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># zählt die Schleifendurchläufe</span>
+<span class="n">zaehler_max</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Maximale Anzahl an Zyklen</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">zaehler_max</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">v</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.4</span><span class="o">*</span><span class="n">v_max</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; ANLAGE GESTOPPT.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">12</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; ANLAGE GEDROSSELT.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zyklus </span><span class="si">%d</span><span class="s2">: Wind = </span><span class="si">%.1f</span><span class="s2"> m/s --&gt; Anlage läuft.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Zyklus 1: Wind = 13.7 m/s --&gt; ANLAGE GEDROSSELT.
+Zyklus 2: Wind = 15.4 m/s --&gt; ANLAGE GEDROSSELT.
+Zyklus 3: Wind = 18.2 m/s --&gt; ANLAGE GEDROSSELT.
+Zyklus 4: Wind = 13.8 m/s --&gt; ANLAGE GEDROSSELT.
+Zyklus 5: Wind = 20.2 m/s --&gt; ANLAGE GESTOPPT.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unvollst&#228;ndiges-Alphabet">Unvollst&#228;ndiges Alphabet<a class="anchor-link" href="#Unvollst&#228;ndiges-Alphabet">&#182;</a></h3>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fritzchen soll fünf mal das Alphabet aufsagen. Er kennt es aber nur bis zum "G", und das "D" vergisst er auch jedes Mal. Das Alphabet holen wir uns wie folgt rein:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
@@ -16974,14 +16706,50 @@ Wind: 14.109146795597546 ; Anlage gestoppt.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Letters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>  <span class="c1">#voreingstelltes Alphabet</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">))</span> 
+</pre></div>
 
-<span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">zaehler</span><span class="p">))</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="L&#246;sung">L&#246;sung<a class="anchor-link" href="#L&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zaehler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">. Mal:&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">zaehler</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="n">Letters</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">buchstabe</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>  <span class="c1">#das &quot;d&quot; wird vergessen</span>
             <span class="k">continue</span>          <span class="c1">#die Schleife geht zum nächsten Zähler</span>
@@ -17004,29 +16772,28 @@ Wind: 14.109146795597546 ; Anlage gestoppt.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
-0
+<pre>1. Mal:
 a
 b
 c
 e
 f
 g
-1
+2. Mal:
 a
 b
 c
 e
 f
 g
-2
+3. Mal:
 a
 b
 c
 e
 f
 g
-3
+4. Mal:
 a
 b
 c
@@ -17044,36 +16811,6 @@ g
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><button type="button" class="btn btn-success">Tipp</button>
-Die Funktionalität von<code>break</code> und <code>continue</code> lässt sich oft auch vollständig mit <code>if()</code>-Konstruktionen lösen. Insbesondere bei komplexen Schleifen erleichtern sie aber erheblich die Lesbarkeit.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Vertiefung-f&#252;r-die-Codingwerkstatt">Vertiefung f&#252;r die Codingwerkstatt<a class="anchor-link" href="#Vertiefung-f&#252;r-die-Codingwerkstatt">&#182;</a></h1>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In der Coding-Werkstatt sollst als Vertiefung das Beispiel zur Windkraftanlage fortsetzen.</p>
-<ol>
-<li><p>Baue zunächst die Lösung der <a href="#l_windkraft_a">obigen Windkraft-Aufgabe</a> in eine <code>for()</code>-Schleife um und nutze <code>break</code>, um bei zu hohen Geschwindigkeiten abzubrechen.</p>
-</li>
-<li><p>Bei Geschwindigkeiten von 12 bis 20 soll die Anlage nun außerdem gedrosselt werden. Setze dies unter der Verwendung von <code>continue</code> um!</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="F&#252;r-noch-nicht-Ausgelastete-nun-der-Klassiker:-Primzahlen-suchen">F&#252;r noch nicht Ausgelastete nun der Klassiker: Primzahlen suchen<a class="anchor-link" href="#F&#252;r-noch-nicht-Ausgelastete-nun-der-Klassiker:-Primzahlen-suchen">&#182;</a></h3>
 </div>
 </div>
@@ -17081,7 +16818,7 @@ Die Funktionalität von<code>break</code> und <code>continue</code> lässt sich 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Finde alle Primzahlen von 1 bis 100! Nutze dazu die Modulo-Funktion (siehe <a href="#h_schneefegen_l">Hinweis Schneefegen</a>). Liefer am Ende einen Vektor von Wahrscheitswerten <code>ist_primzahl[1:100]</code>, in dem die Einträge für Primzahlen <code>TRUE</code> sind.</p>
+<p>Finde alle Primzahlen von 1 bis 100! Nutze dazu die Modulo-Funktion. Liefere am Ende einen Vektor von Wahrheitswerten <code>ist_primzahl[1:100]</code>, in dem die Einträge für Primzahlen <code>TRUE</code> sind.</p>
 
 </div>
 </div>
