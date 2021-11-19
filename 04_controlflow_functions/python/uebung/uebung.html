@@ -14477,7 +14477,14 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alles-wahr?">Alles wahr?<a class="anchor-link" href="#Alles-wahr?">&#182;</a></h2><p>Schreibe eine Funktion, welche <code>False</code>zurückgibt, wenn nicht alle Elemente in einer Liste, gefüllt mit Bool-Werten (<code>True</code> und <code>False</code>), gleich <code>True</code> sind.</p>
+<h2 id="Alles-wahr?">Alles wahr?<a class="anchor-link" href="#Alles-wahr?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Eine Liste (<code>input_liste</code>) enthalte ausschließlich Bool'sche Werte. Die Funktion <code>alles_wahr</code> soll <code>True</code> zurückgeben, wenn alle Elemente der Liste <code>True</code> sind. Sonst soll <code>False</code> zurückgegeben werden.</p>
 
 </div>
 </div>
@@ -14512,10 +14519,51 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zahlencheck">Zahlencheck<a class="anchor-link" href="#Zahlencheck">&#182;</a></h2><p>Schreibe eine Funktion, welche <code>True</code>zurückgibt, wenn bei zwei gegebenen Zahlen die erste größer als 10 und nicht durch 2 teilbar ist, oder die zweite durch 7 teilbar ist.</p>
+<h2 id="Zahlencheck">Zahlencheck<a class="anchor-link" href="#Zahlencheck">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Funktion <code>zahlencheck</code> soll <code>True</code> zurückgeben,</p>
+<ul>
+<li>wenn Argument <code>x</code> größer als 10 <strong>und</strong> nicht durch zwei teilbar ist</li>
+<li><strong>oder</strong> wenn Argument <code>y</code> durch 7 teilbar ist.</li>
+</ul>
+<p>Ansonsten soll <code>False</code> zurückgegeben werden.</p>
+<p><strong>Hinweis:</strong> Um zu überprüfen, ob eine Zahl durch eine andere Zeil teilbar ist, benutzt man den <code>%</code>-Operator. Dieser gibt den "Rest" einer Division zurück.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 5 ist nicht durch 2 teilbar, der Rest ist 1</span>
+<span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 6 ist durch 3 teilbar, der Rest ist 0</span>
+<span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14547,12 +14595,17 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alterseinteilung">Alterseinteilung<a class="anchor-link" href="#Alterseinteilung">&#182;</a></h2><p>Erstelle eine Funktion <code>wie_alt</code>, welche ein gegebenes Alter in eine Altersklasse einteilt und diese dann zurückgibt:</p>
+<h2 id="Alterseinteilung">Alterseinteilung<a class="anchor-link" href="#Alterseinteilung">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Erstelle eine Funktion <code>wie_alt</code>, welche ein gegebenes Alter (<code>alter</code>) in eine Altersklasse einteilt und diese dann zurückgibt. Wir machen es uns einfach und nehmen nur zwei Altersklassen:</p>
 <ul>
-<li>0 bis einschließlich 1 = "Baby"</li>
-<li>2 bis einschließlich 17 = "Kind"</li>
-<li>18 bis einschließliche 67 = "Erwachsene"</li>
-<li>jedes Alter über 67 Jahre wird als "Rentner" eingestuft</li>
+<li>0 bis einschließlich 17 sei die Klasse "minderjaehrig"</li>
+<li>18 und älter sei die Klasse "volljaehrig"</li>
 </ul>
 
 </div>
@@ -14588,7 +14641,14 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Mittagessen">Mittagessen<a class="anchor-link" href="#Mittagessen">&#182;</a></h2><p>Die Funktion <code>mittagessen</code> soll den Satz <code>"Auf in die Mensa!"</code> zurueckgeben, falls ihr Hunger habt (<code>hunger=True</code>) und der Kuehlschrank leer ist (<code>kuehlschrank_voll=False</code>).</p>
+<h2 id="Mittagessen">Mittagessen<a class="anchor-link" href="#Mittagessen">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Funktion <code>mittagessen</code> soll den Satz <code>"Auf in die Mensa!"</code> zurueckgeben, falls ihr Hunger habt (<code>hunger=True</code>) und der Kuehlschrank leer ist (<code>kuehlschrank_voll=False</code>). Andernfalls soll die Funktion <code>"Weiter studieren!"</code> zurückgeben.</p>
 
 </div>
 </div>
@@ -14623,42 +14683,14 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feldarbeit">Feldarbeit<a class="anchor-link" href="#Feldarbeit">&#182;</a></h2><p>Die Funktion <code>feldarbeit</code> soll ausgeben, ob ihr morgen zur Feldarbeit fahren koennt (<code>True</code>) oder nicht (<code>False</code>). Damit ihr zur Feldarbeit fahren könnt, muss das Messgeraet frei sein (<code>messgeraet_frei=True</code>) und ihr braucht mindestens eine Person, die Zeit hat um euch zu helfen (<code>paul_hat_Zeit=True</code> oder <code>elena_hat_zeit=True</code>).</p>
-
+<h2 id="Ausflugsplanung">Ausflugsplanung<a class="anchor-link" href="#Ausflugsplanung">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">feldarbeit</span><span class="p">(</span><span class="n">messgeraet_frei</span><span class="p">,</span> <span class="n">paul_hat_zeit</span><span class="p">,</span> <span class="n">elena_hat_zeit</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">feldarbeit</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ausflugsplanung">Ausflugsplanung<a class="anchor-link" href="#Ausflugsplanung">&#182;</a></h2><p>Die Funktion <code>ausflugsplanung</code> soll ueberpruefen, ob in der gegebenen Liste gegebenen <code>wetterbericht</code> der nächsten 5 Tage mindestens ein sonniger Tag dabei ist also ein Element der Liste <code>sonnig</code> ist. Ist das der Fall, soll die Funktion <code>"Die Ausflugsplanung kann beginnen."</code> zurückgeben.</p>
+<p>Die Funktion <code>ausflugsplanung</code> soll ueberpruefen, ob in der gegebenen Liste gegebenen <code>wetterbericht</code> der nächsten 5 Tage mindestens ein sonniger Tag dabei ist - also ein Element der Liste <code>sonnig</code> ist. Ist das der Fall, soll die Funktion <code>"Die Ausflugsplanung kann beginnen."</code> zurückgeben. Andernfalls soll die Funktion <code>"Weiter studieren!"</code> zurückgeben.</p>
 <p>Beispiel: <code>wetterbericht = ["bewoelkt", "bewoelkt", "regnerisch", "sonnig", "sonnig"]</code></p>
 
 </div>
@@ -14694,28 +14726,21 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="W&#252;rfel">W&#252;rfel<a class="anchor-link" href="#W&#252;rfel">&#182;</a></h2>
+<h2 id="Deutliches-Statement">Deutliches Statement<a class="anchor-link" href="#Deutliches-Statement">&#182;</a></h2><p>Schreibe eine Funktion, welche eine Zeichenkette (<code>string</code>) als erstes Argument und eine Zahl <code>x</code> als zweites Argument bekommt. Die Funktion soll dann eine neue Zeichenkette zurückgeben, in der jeder Buchstabe von <code>string</code> x-mal wiederholt wird.</p>
+<p>Häh??</p>
+<p>Zum Beispiel:</p>
+<p><code>string</code> = "Feierabend"<br>
+<code>x</code> = 5</p>
+<p>Output:<br>
+<code>"FFFFFeeeeeiiiiieeeeerrrrraaaaabbbbbeeeeennnnnddddd"</code></p>
+
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir simulieren (ein zugegebenerweise recht langweiliges) Würfelspiel. Der Würfel wird x-mal geworfen (<code>anzahl_der_wuerfe</code>). Wer eine "6" würfelt, gewinnt.</p>
-<p>Gib die Ergebnisse als Liste zurück. Jedes Element der List enthält eine Meldung über das Ergebnis, nämlich wie folgt:</p>
-
-<pre><code>["1. Wurf: x.",
- "2. Wurf: y.",
-]</code></pre>
-<p>Wird eine "6" gewürfelt, gib als Textausgabe zusätzlich noch die Nachricht: <code>Du gewinnst!</code> aus, also:</p>
-
-<pre><code>["1. Wurf: x.",
- "2. Wurf: y.",
- ...
- "x. Wurf: 6. Du gewinnst!"
-]</code></pre>
-<p>Als Hilfe ist die Textausgabe schon vorgegeben. Ändert daran nichts, sonst wird das Ergebnis als falsch bewertet.
-Zufällige Zahlen haben wir schon im Seminar über Kontrollfluss genutzt. Du kannst hier den gleichen Ansatz nutzen. Damit die Ergebnisse für unsere automatische Kontrolle reproduzierbar sind, musst du für die Erstellung der zufälligen Zahlen einen "Seed" setzen. So wird der Zufall weniger zufällig und es werden immer die gleichen "zufälligen" Zahlen ausgegeben.</p>
+<p><strong>Hinweis:</strong> Man kann mit <code>for</code> über eine Zeichenkette iterieren wie über eine Liste:</p>
 
 </div>
 </div>
@@ -14725,18 +14750,8 @@ Zufällige Zahlen haben wir schon im Seminar über Kontrollfluss genutzt. Du kan
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">wuerfel</span><span class="p">(</span><span class="n">anzahl_der_wuerfe</span><span class="p">):</span>
-    <span class="n">ergebnisse</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span> <span class="c1"># diese leere liste muss angelegt werden, um die Ergebnisse darin zu speichern</span>
-    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># diese Zeile wird benötigt, um die Ergebnisse reproduzierbar zu machen</span>
-
-    <span class="c1"># Ab hier must Du den Code so ergänzen, dass der korrekte Output erzielt wird</span>
-        
-    <span class="n">ergebnisse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">wurf</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. Wurf: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. Du gewinnst!&quot;</span><span class="p">)</span> <span class="c1"># diese Zeile ist die Textausgabe für geworfene Sechsen</span>
-        
-    <span class="n">ergebnisse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">wurf</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. Wurf: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">))</span> <span class="c1"># diese Zeile ist die Textausgabe für alle anderen gewürfelten Zahlen</span>
-        
-    <span class="c1"># hier werden die Ergebnisse am Ende ausgegeben</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">ergebnisse</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;uebung&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14749,83 +14764,13 @@ Zufällige Zahlen haben wir schon im Seminar über Kontrollfluss genutzt. Du kan
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">wuerfel</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div><div class="cell border-box-sizing text_cell rendered collapsible_headings_collapsed"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Zusatz">Zusatz<a class="anchor-link" href="#Zusatz">&#182;</a></h3>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Dies ist nicht Bestandteil der Aufgabe, aber falls ihr Lust habt, könnt ihr dieses "Spiel" beliebig erweitern. Ideen dafür sind zum Beispiel:</p>
-<ul>
-<li>Unterschiedliche Gewinnsumme, je nach gewürfelter Zahl, welche am Schluss ausgegeben wird</li>
-<li>Zwei Spieler</li>
-<li>Würfeln auf Knopfdruck</li>
-<li>Sonderregeln, z.B. bei einer 3 darf man noch mal würfeln.
-Der Fantasie sind hier keine Grenzen gesetzt und letztendlich kannst du mit diesen Mitteln schon ein komplexes Textadventure programmieren.</li>
-</ul>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Verschl&#252;sselung">Verschl&#252;sselung<a class="anchor-link" href="#Verschl&#252;sselung">&#182;</a></h2>
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Wir schreiben ein leichtes Verschlüsselungsprogramm (<code>codierung</code>): Das einfachste Prinzip einer Verschlüsselung ist es, die Buchstaben durch andere Zeichen zu ersetzen. Genau das werden wir nur nun machen. Beachte, die Leerzeichen sollen übersprungen werden. D.h. die verschlüsselte Nachricht enthält keine Leerzeichen mehr. Der Output soll als ein String (eine Zeichenkette) ausgegeben werden. Achte darauf, dass du die Leerzeichen nicht übersetzt.</p>
-
-</div>
-</div>
-</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hinweis">Hinweis<a class="anchor-link" href="#Hinweis">&#182;</a></h3><p>Für jeden Buchstaben in der Nachricht musst du die Position in der Liste <code>Letters</code> finden. Dies geht mit <code>index</code>:</p>
-
-<pre><code>alist = ["a","b","c"]
-position = alist.index("b")</code></pre>
-<p>Diesen Buchstaben übersetzt du dann in das Element der Liste <code>schlüssel</code> an der gleichen Position und speicherst den übersetzten Buchstaben im Ergebnis. Wie immer hilft es, den Code an einem einfachen Beispiel auf seine Funktionalität zu testen.</p>
-<p>Strings, also Buchstaben/Zeichen, können mit dem <code>+</code>-Zeichen verbunden werden:
-"Käse" + "Brot" = "KäseBrot"</p>
-<h4 id="Beispiel-Argumente:">Beispiel-Argumente:<a class="anchor-link" href="#Beispiel-Argumente:">&#182;</a></h4>
-<pre><code>nachricht = "nachricht jyqx, streng geheim: der adler ist gelandet und trifft sich um neunzehn uhr dreiundfünzig an der alten eiche. bringen sie die ware unauffällig verpackt mit und vermeiden sie ein schlecht sitzendes outfit. over"
-
-schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')', '%', 'w', 'k', 'L', '{', '&gt;', '6', 'katze', 'B', '_', ':', 'Q', 'X', 'y', 'Z', '=', 'g', 'F', '@', 'u', '|']</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">codierung</span><span class="p">(</span><span class="n">nachricht</span><span class="p">,</span> <span class="n">schluessel</span><span class="p">):</span>
-    <span class="c1"># Die Liste aller vorkommenden Zeichen in der Nachricht</span>
-    <span class="n">Letters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;ä&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;ü&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
-    <span class="c1"># In diesen, noch leeren, String werden die einzelnen, übersetzten Buchstaben gespeichert</span>
-    <span class="n">codierte_nachricht</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
-    <span class="c1">###</span>
-    <span class="c1">###</span>
-    <span class="c1">###</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">codierte_nachricht</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">deutliches_statement</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Diese Zeichenkette ist noch leer...</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    
+    <span class="c1">### hier kommt euer Code hin</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -14838,7 +14783,7 @@ schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')'
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">codierung</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">deutliches_statement</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14849,7 +14794,7 @@ schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')'
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Gesamtauswertung">Gesamtauswertung<a class="anchor-link" href="#Gesamtauswertung">&#182;</a></h1>
+<h2 id="Gesamtauswertung">Gesamtauswertung<a class="anchor-link" href="#Gesamtauswertung">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14858,21 +14803,8 @@ schluessel = ['§', 'b', '#', ';', 'bumms', 'm', 'Ö', '^', 'zack', 'UNVEU', ')'
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">wenn</span><span class="p">,</span> <span class="n">alles_wahr</span><span class="p">,</span> <span class="n">zahlencheck</span><span class="p">,</span> <span class="n">wie_alt</span><span class="p">,</span> <span class="n">mittagessen</span><span class="p">,</span> <span class="n">feldarbeit</span><span class="p">,</span> 
-                                 <span class="n">ausflugsplanung</span><span class="p">,</span> <span class="n">wuerfel</span><span class="p">,</span> <span class="n">codierung</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">wenn</span><span class="p">,</span> <span class="n">alles_wahr</span><span class="p">,</span> <span class="n">zahlencheck</span><span class="p">,</span> <span class="n">wie_alt</span><span class="p">,</span> <span class="n">mittagessen</span><span class="p">,</span> 
+                                 <span class="n">ausflugsplanung</span><span class="p">,</span> <span class="n">deutliches_statement</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
     </div>
