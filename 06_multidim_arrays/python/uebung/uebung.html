@@ -14423,7 +14423,7 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
@@ -14434,14 +14434,14 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Nur-ein-Beispiel-f&#252;r-Entwickler">Nur ein Beispiel f&#252;r Entwickler<a class="anchor-link" href="#Nur-ein-Beispiel-f&#252;r-Entwickler">&#182;</a></h2>
+<h2 id="Die-n-te-Dimension">Die n-te Dimension<a class="anchor-link" href="#Die-n-te-Dimension">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is just an example for developers of exercises. Function <code>just_an_example</code> takes arguments <code>x</code> and <code>y</code> and returns whether they are equal (<code>True</code>) or not (<code>False</code>). The students need to modify the function so it produces the expected results.</p>
+<p>Kurze Aufwärmübung: Die Funktion <code>dimensionen</code> soll für den NumPy-Array <code>x</code> die Zahl der Dimensionen zurückgeben.</p>
 
 </div>
 </div>
@@ -14451,8 +14451,8 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">just_an_example</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dimensionen</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14465,7 +14465,409 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">just_an_example</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">dimensionen</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hochwasser-I">Hochwasser I<a class="anchor-link" href="#Hochwasser-I">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Das Array <code>hq</code> stelle für <code>n</code> Abflusspegel (Zeilen) und <code>m</code> Jahre (Spalten) den jährlichen Maximalabfluss ($HQ$) dar. Die Funktion <code>wie_oft</code> gebe die Gesamtzahl der Überschreitungen (<code>&gt;</code>) eines Abflusses von <code>x</code> für alle Pegel und Jahre zurück.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># 2 Pegel, 3 Jahre
+&gt;&gt;&gt; hq = np.array([[11,  1, 19],
+                   [ 2, 13, 23]])
+&gt;&gt;&gt; x = 10
+# Ergebnis: 4</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">wie_oft</span><span class="p">(</span><span class="n">hq</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">hq</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">wie_oft</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hochwasser-II">Hochwasser II<a class="anchor-link" href="#Hochwasser-II">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Ausgangslage sei die gleiche wie für die Aufgabe "Hochwasser I": Das Array <code>hq</code> stelle für <code>n</code> Abflusspegel (Zeilen) und <code>m</code> Jahre (Spalten) den jährlichen Maximalabfluss (HQ) dar.</p>
+<p>Die Funktion <code>mhq</code> soll nun für jeden Pegel den mittleren HQ-Wert zurückgeben (MHQ) - <strong>und zwar als Liste</strong>, in der die MHQ-Werte <strong>auf eine Dezimalstelle gerundet</strong> sind.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># 2 Pegel, 3 Jahre
+&gt;&gt;&gt; hq = np.array([[11,  1, 19],
+                   [ 2, 13, 23]])
+# ergebnis = [10.3, 12.7]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mhq</span><span class="p">(</span><span class="n">hq</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">hq</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">mhq</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hochwasser-III">Hochwasser III<a class="anchor-link" href="#Hochwasser-III">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Ausgangslage sei die gleiche wie für die Aufgabe "Hochwasser I": Der Array <code>hq</code> stelle für <code>n</code> Abflusspegel (Zeilen) und <code>m</code> Jahre (Spalten) den jährlichen Maximalabfluss (HQ) dar.</p>
+<p>Die Funktion <code>n_pegel</code> gebe die Zahl der Pegel zurück, an denen <em>mehr als</em> zweimal ein Abfluss von <code>x</code> überschritten wurde.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># Generierung von Beispielargumenten
+&gt;&gt;&gt; x = 12
+&gt;&gt;&gt; hq = np.array([[11,   1, 19], # 1 x (hq &gt; x)
+                   [ 2,  13, 23], # 2 x (hq &gt; x)
+                  [ 20, 13, 23]]) # 3 x (hq &gt; x)
+# --&gt; An nur EINEM Pegel wird der Abfluss von x=12 MEHR als 2 x überschritten
+# Ergebnis: 1</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">n_pegel</span><span class="p">(</span><span class="n">hq</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">hq</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pegel</span> <span class="o">=</span> <span class="p">(</span><span class="n">tmp</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">n_pegel</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Datenaufnahme">Datenaufnahme<a class="anchor-link" href="#Datenaufnahme">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Auf einer Versuchsfläche für Gemüseanbau wurde ein Grid mit <code>m</code> Zeilen und <code>n</code> Spalten angelegt. Beginnend bei der ersten Gitterzelle wurde in allen Gitterzellen zeilenweise der $N_{min}$-Gehalt beprobt. Leider wurden die Daten einfach nur hintereinandergeschrieben - als 1-D Array namens <code>nmin</code>. Stelle mit der Funktion <code>nminventur</code> zunächst die Daten als 2-D Array dar und gib dann den Mittelwert der Spalte mit dem Index <code>j</code> zurück. <strong>Runde dabei auf eine Nachkommastelle.</strong></p>
+<p><strong>Beispiel:</strong></p>
+
+<pre><code># Beispielargumente
+&gt;&gt;&gt; nmin = np.array([1,2,3,4,5,6])
+&gt;&gt;&gt; m = 2
+&gt;&gt;&gt; n = 3
+&gt;&gt;&gt; j = 1
+# Zwischenergebnis: Array in 2-D
+array([[1, 2],
+       [3, 4],
+       [5, 6]])
+# Ergebnis ist der Mittelwert aus 2 und 5
+# (Spalte mit Index j=1, also 2. Spalte)
+# Ergebnis: 3.5</code></pre>
+<p><strong>Hinweis</strong>: Ihr benötigt die numpy-Funktionen <code>reshape</code> und <code>mean</code> sowie die Funktion <code>round</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">nminventur</span><span class="p">(</span><span class="n">nmin</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">nmin</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">))[:,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">nminventur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Niederschlagsmaximum">Niederschlagsmaximum<a class="anchor-link" href="#Niederschlagsmaximum">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Das Argument <code>precip</code> sei ein 2-D Array ("Gitter") der Niederschlagshöhe. Die Funktion <code>maxort</code> soll die Indizes für Zeile und Spalte von <code>precip</code> zurückgeben, in denen die Niederschlagshöhe maximal ist. <em>Die Rückgabe der beiden Indizes soll als Liste erfolgen!</em></p>
+<p>Das ist nicht ganz trivial. Schaut Euch genau die Hilfe zur Funktion <code>np.argmax</code> an, um das Problem zu lösen.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># Beispielargument
+&gt;&gt;&gt; precip = np.array([[11,  1, 0],
+                       [ 2, 10, 1],
+                       [ 1, 31, 1],
+                       [ 0, 0,  0]])
+# Der Maximalwert ist 31.
+#    Er liegt in der 3. Zeile (Zeilenindex 2)
+#    und der 2. Spalte (Spaltenindex 1)
+# Ergebnis: [2,1]</code></pre>
+<p><strong>Hinweis</strong>: Ihr benötigt die numpy-Funktionen <code>unravel_index</code> und <code>argmax</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">maxort</span><span class="p">(</span><span class="n">precip</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">precip</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="n">precip</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">maxort</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Direktabflussvolumen">Direktabflussvolumen<a class="anchor-link" href="#Direktabflussvolumen">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Das 3-D Array <code>precip</code> stelle die Niederschlagshöhe (in $mm$) für <code>p</code> aufeinanderfolgende Zeitschritte auf einem Gitter mit <code>m</code> Zeilen und <code>n</code> Spalten dar. Das 2-D Array <code>psi</code> stelle für alle Zeilen und Spalten (<code>m</code> x <code>n</code>) den mittleren Abflussbeiwert des Ereignisses dar (in Prozent). Die Fläche einer jeden Gitterzelle sei <code>A</code> (in $km^2$).</p>
+<p>Die Funktion <code>direktabflussvolumen</code> soll nun das gesamte Direktabflussvolumen des Ereignisses in der Einheit $m^3$ zurückgeben.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># Beispielargumente
+&gt;&gt;&gt; precip = np.repeat([10,20,30],4).reshape((3,2,2))
+&gt;&gt;&gt; precip
+array([[[10, 10],
+        [10, 10]],
+
+       [[20, 20],
+        [20, 20]],
+
+       [[30, 30],
+        [30, 30]]])
+&gt;&gt;&gt; psi = np.array([[0, 10],[50, 100]]) # in Prozent!
+&gt;&gt;&gt; psi
+array([[  0,  10],
+       [ 50, 100]])
+# Zwischenergebnis: Direktabfluss für jede Zelle und jeden Zeitschritt (Einheit mm)
+array([[[ 0.,  1.],
+        [ 5., 10.]],
+
+       [[ 0.,  2.],
+        [10., 20.]],
+
+       [[ 0.,  3.],
+        [15., 30.]]])
+# Zwischenergebnis: gesamtes Direktabflussvolumen (in mm) --&gt; 96 mm
+# Ergebnis: das gesamte Direktabflussvolumen (in Kubikmeter)
+# 96000 m³</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">direktabflussvolumen</span><span class="p">(</span><span class="n">precip</span><span class="p">,</span> <span class="n">psi</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">precip</span><span class="o">*</span><span class="n">psi</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="mf">1e-3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">direktabflussvolumen</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Gebietsniederschlag">Gebietsniederschlag<a class="anchor-link" href="#Gebietsniederschlag">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wiederum stelle das 3-D Array <code>precip</code> die Niederschlagshöhe (in $mm$) für <code>p</code> aufeinanderfolgende Zeitschritte auf einem Gitter mit <code>m</code> Zeilen und <code>n</code> Spalten dar. Das 2-D Array <code>ist_gebiet</code> zeige für alle Elemente des Gebiets (<code>m</code>x<code>n</code>) an, ob sie zum Einzugsgebiet gehören.</p>
+<p>Die Funktion <code>gebietsniederschlag</code> soll nun die mittlere Niederschlaghöhe im Einzugsgebiet für das gesamte Ereignis zurückgeben (Gebietsniederschlag in $mm$, gerundet auf eine Nachkommastelle).</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code># Beispielargumente
+&gt;&gt;&gt; precip = np.repeat([10,20,30],4).reshape((3,2,2))
+&gt;&gt;&gt; precip[:,1,:] = 2
+&gt;&gt;&gt; precip[:,:,0] = 4
+&gt;&gt;&gt; precip
+array([[[ 4, 10],
+        [ 4,  2]],
+
+       [[ 4, 20],
+        [ 4,  2]],
+
+       [[ 4, 30],
+        [ 4,  2]]])
+&gt;&gt;&gt; ist_gebiet = np.array([[False, True ],[False, True]])
+&gt;&gt;&gt; ist_gebiet
+array([[False,  True],
+       [False,  True]])
+# Zwischenergebnis: Gesamtereignishöhe pro Gitterzelle (in mm)
+array([[12, 60],
+       [12,  6]])
+# Ergebnis: mittlere Gebietsniederschlagshöhe
+# 33 mm</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gebietsniederschlag</span><span class="p">(</span><span class="n">precip</span><span class="p">,</span> <span class="n">ist_gebiet</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">precip</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">ist_gebiet</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">gebietsniederschlag</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14485,7 +14887,8 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">just_an_example</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">dimensionen</span><span class="p">,</span> <span class="n">wie_oft</span><span class="p">,</span> <span class="n">mhq</span><span class="p">,</span> <span class="n">n_pegel</span><span class="p">,</span> <span class="n">nminventur</span><span class="p">,</span>
+                                 <span class="n">maxort</span><span class="p">,</span> <span class="n">direktabflussvolumen</span><span class="p">,</span> <span class="n">gebietsniederschlag</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
     </div>
