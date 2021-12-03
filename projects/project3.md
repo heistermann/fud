@@ -25,10 +25,18 @@ Passwort: Umweltdatenverarbeitung
 	temp_precip_height.txt : Aufzeichnungen des Ultraschall-Schneepegels
 
 ## Ergebnisse
-- grafischer Vergleich der Schneehöhe an einem Messstab mit der Zeitreihe aus der Ultraschallmessung
+- grafischer Vergleich<sup>1</sup> der Schneehöhe an einem Messstab mit der Zeitreihe aus der Ultraschallmessung<sup>2</sup>
 
 ## Hinweise
-- Die Auswertung soll halbautomatisch erfolgen. Dafür sollen die Fotos automatisch eingeladen werden und die Lage der Spitze (einmalig, konstant) und des Fußpunkts des Stabs (variabel mit der Schneehöhe) durch Klicken des Nutzers bestimmt werden.
-- Die Zeitpunkte der Fotoaufnahmen lassen sich aus dem Dateidatum oder (sicherer) deren EXIF-Informationen bestimmen.
-- Die installierten Stäbe ragten 50 cm aus dem Boden. 10 cm vor der Spitze befindet sich eine weitere Referenzmarkierung, die ebenso genutz werden kann.
-- Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann interpoliert werden.
+- Die Auswertung soll halbautomatisch erfolgen. Dafür sollen alle Fotos automatisch eingeladen werden <sup>3</sup> und die Lage der Spitze (einmalig, konstant) und des Fußpunkts des Stabs (variabel mit der Schneehöhe) durch Klicken<sup>4</sup> des Nutzers bestimmt werden. 
+- Die Zeitpunkte der Fotoaufnahmen lassen sich aus dem Dateidatum oder (sicherer) deren EXIF-Informationen<sup>5</sup> bestimmen.
+- Die installierten Stäbe ragten 50 cm aus dem Boden. 10 cm vor der Spitze befindet sich eine weitere Referenzmarkierung, die ebenso genutzt werden kann.
+- Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden.
+
+## Detailtipps für die Umsetzung
+- <sup>1</sup> Lektion 2, Darstellung mit ´plot()´
+- <sup>2</sup> Lektion 2, ´read.table()´
+- <sup>3</sup> Lektion 3, ´file.list()´, Lektion 4, ´for()´
+- <sup>4</sup> Funktion ´locator()´
+- <sup>5</sup> Package ´exif´
+- <sup>6</sup> Funktion ´approx()´
