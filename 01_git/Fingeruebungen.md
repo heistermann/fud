@@ -23,15 +23,15 @@ zu dem Du zurückspringen möchtest. Die IDs sind die wilden Buchstaben-/Zahlenk
 Anfang der Zeile stehen. Man nennt Sie auch SHA ("Secure Hash Algorithm").
 - Springe nun mit `git checkout <SHA>` zu einer früheren Version zurück. Für `<SHA>` musst Du eben
 die Commit ID einfügen. Schaue Dir nun Deine Dateien im Editor an. Was hat sich geändert?
-- Springe nun mit `git checkout master` wieder zur aktuellsten Version.
+- Springe nun mit `git checkout master` wieder zur aktuellen Version.
 
 ## Übung 2 - Allein
 
 In Übung 1 hast Du ein lokales Repository erstellt und damit gearbeitet. Wenn Du
 aber mit einem remote repository - also nicht nur lokal - arbeiten möchtest, ist
-es einfacher, diesen "remote" zunächst online zu erstellen, ihn dann auf Deinen Rechner
+es einfacher, diesen "remote" zunächst online zu erstellen, es dann auf Deinen Rechner
 zu klonen und dort dann lokal weiterzuarbeiten. Auf diese Weise hast Du durch das
-klonen gleich den Link zum remote.
+Klonen gleich den korrekten Link zum remote gesetzt.
 
 Diesen Vorgang sollst Du nun einmal selbst üben.
 
@@ -87,7 +87,7 @@ drücken.
 noch das Ursprungsrepo (`upstream`) als remote hinzufügen, damit sie auch Änderungen
 von `person1` in ihren Code einpflegen kann: `git remote add upstream https://gitup.uni-potsdam.de/person1/git-uebung2`.
 Bitte den Erfolg mit `git remote -v` verifizieren. Nun kann `person2` mittels
-`git pull upstream master` ihr lokales Repo mit dem remote `upstream` synchronisieren.
+`git pull upstream master` Du lokales Repo mit dem remote `upstream` synchronisieren.
 - Bitte probiert das gleich mal aus, indem `person1` ihr lokales Repo mittels
 `git pull origin master` mit ihrem remote synchronisiert und nun gleich noch eine
 dritte Zeile einfügt oder etwas in einer anderen Zeile ändert. Dann wieder `add`,

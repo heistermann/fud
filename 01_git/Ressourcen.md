@@ -50,7 +50,7 @@ Nun kannst Du zum betreffenden Commit springen, z.B. zum "First commit":
 
 Wenn Du nach dem Befehl Deine Dateiinhalte überprüfst, sollten sie mit der früheren
 Version ("First commit") übereinstimmen. Der Befehl ist aber nicht dazu angetan, um von hier aus
-dauerhaft weiterzuarbeiten. Zunächst springst Du also bitte zurück zur aktuellsten Version:
+dauerhaft weiterzuarbeiten. Zunächst springst Du also bitte zurück zur aktuellen Version:
 
 `$ git checkout master`
 
@@ -86,8 +86,8 @@ Jeden commit zwischen DA und DORT reverten (mit DA..DORT - schließt DA nicht ei
 $ git revert 58d74a2..25d9b5d
 ```
 
-Allerdings müsst Ihr auf diese Weise für jeden Schritt zurück (also jeden reverteten Commit)
-eine Commit-Message angeben...grmpf. Nun sieht Eure History wie folgt aus:
+Allerdings musst Du auf diese Weise für jeden Schritt zurück (also jeden reverteten Commit)
+eine Commit-Message angeben...grmpf. Nun sieht Deine History wie folgt aus:
 
 ```
 5588a5e (HEAD -> master) Revert "My second commit."
@@ -100,7 +100,7 @@ eine Commit-Message angeben...grmpf. Nun sieht Eure History wie folgt aus:
 
 Gar nicht so einfach, dieses einfache Feature. In 
 [diesem Artikel](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
-werden die unterschiedlichen Möglichkeiten nochmal ausführlich beschrieben.
+werden die unterschiedlichen Möglichkeiten noch mal ausführlich beschrieben.
 
 
 ### Nicht committete Änderungen verwerfen

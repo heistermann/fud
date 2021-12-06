@@ -15,32 +15,32 @@ R-Dateien (für R) und jupyter Notebooks (für Python). Wir halten und entwickel
 all diese Ressourcen in einem zentralen Repository: 
 [https://gitup.uni-potsdam.de/umweltdv/umweltdv](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
 
-Schaut Euch in diesem Repository mal die History an (`Repository --> Commits`).
-Ihr seht: Da ist ganz schön was in Bewegung.
+Schaue Dir in diesem Repository mal die History an (`Repository --> Commits`).
+Du siehst: Da ist ganz schön was in Bewegung.
 
-## Wie kommt Ihr nun an diese Ressourcen?
+## Wie kommst Du nun an diese Ressourcen?
 
 ### Option 1: Runterladen, fertig.
 
-Es gibt die Möglichkeit, ein Repository schlicht und einfach auf Euren Rechner
+Es gibt die Möglichkeit, ein Repository schlicht und einfach auf Deinen Rechner
 zu runterzuladen. Es gibt dazu einen Download-Button:
 
 ![img](img/download.png)
 
-Wenn alle Stricke reißen, könnt Ihr das jederzeit machen. Aber was macht Ihr,
+Wenn alle Stricke reißen, kannst Du das jederzeit machen. Aber was machst Du,
 wenn die Dozierenden etwas an den Ressourcen ändern? In ein neues Verzeichnis
 runterladen (`umweltdv.v2/...`) - klingt nach unserem
 [Einstiegsbild](http://phdcomics.com/comics/archive/phd101212s.gif). 
 
-Schöner wäre es doch, ein Verzeichnis zu haben, das Ihr nach Bedarf aktualisieren
-könnt. Natürlich mit `git`.
+Schöner wäre es doch, ein Verzeichnis zu haben, das Du nach Bedarf aktualisieren
+kannst. Natürlich mit `git`.
 
 ### Option 2: Die Gelegenheit nutzen - `git` anwenden!
 
-Stattdessen möchten wir Euch einen Workflow vorschlagen, mit dem Ihr Eure eigenen
-Änderungen und die Kursmaterialien effizient zusammenhalten könnt. Dies ist 
+Stattdessen möchten wir Dir einen Workflow vorschlagen, mit dem Du Deine eigenen
+Änderungen und die Kursmaterialien effizient zusammenhalten kannst. Dies ist 
 vielleicht noch kein professioneller `git`-Workflow, aber es kommt nahe dran und
-wird Euch Gelegenheit geben, Routine darin zu sammeln.
+wird Dir Gelegenheit geben, Routine darin zu sammeln.
 
 ## Euer `git`-Workflow
 
@@ -54,14 +54,14 @@ Das Setup lässt sich wir folgt zusammenfassen:
 zentralen Kursrepository via `pull`.
 
 Der letzte Schritt - der `pull`-Befehl - ist die eigentliche Neuheit. Bislang hast
-Du nur mit `push` Änderungen auf Deinen Fork geeschoben. Wir schauen uns daher
+Du nur mit `push` Änderungen auf *Deinen* Fork geschoben. Wir schauen uns daher
 den letzten Schritt etwas genauer an. Dafür nutzen wir zunächst wieder unser
 Repository `git-lernen`.
 
 ## Lokales Repository mit einem "remote" synchronisieren
 
-Öffnet ein Terminal oder die Git Bash in Eurem lokalen Respository `git-lernen`.
-Stellt zunächst mit `git status` sicher, dass es keine uncommiteten Änderungen gibt.
+Öffne ein Terminal oder die Git Bash in Deinem lokalen Respository `git-lernen`.
+Stelle zunächst mit `git status` sicher, dass es keine uncommiteten Änderungen gibt.
 Falls noch Änderungen offen sind:
 
 ```
@@ -69,8 +69,8 @@ $ git add .
 $ git commit -m "Schnell irgendwas committen"
 ```
 
-Nun schauen wir uns mal an, woher `git` eigentlich weiß, wohin ge`push`t wird, wenn
-Ihr einen `push`-Befehl ausführt. Wir nutzen dazu:
+Nun schauen wir uns mal an, woher `git` eigentlich weiß, wohin 'gepusht' wird, wenn
+Du einen `push`-Befehl ausführt. Wir nutzen dazu:
 
 ```
 $ git remote -v
@@ -97,7 +97,7 @@ Ich werde nun eine neue Datei namens `deins.md` in mein Repository
 [https://gitup.uni-potsdam.de/umweltdv/git-lernen.git](https://gitup.uni-potsdam.de/umweltdv/git-lernen.git)
  pushen.
 
-*Achtung: Wir sitzen live zusammen...bitte wartet, bis ich `deins.md` gepush habe!*
+*Achtung: Wir sitzen live zusammen...bitte wartet, bis ich `deins.md` gepusht habe!*
 
 Die Datei `deins.md` möchtest Du nun gern in Deinem lokalen Repository haben. Das geht so:
 
@@ -105,7 +105,7 @@ Die Datei `deins.md` möchtest Du nun gern in Deinem lokalen Repository haben. D
 $ git pull upstream master
 ```
 
-Je nach Art der Änderungen, die Ihr Euch über den `pull` reinholt, fragt `git` Euch nach einer
+Je nach Art der Änderungen, die Du Dir über den `pull` reinholst, fragt `git` Dich nach einer
 ausdrücklichen Beschreibung dieses "merge" (im Sinne einer `commit`-Nachricht) oder fügt selbst
 eine entsprechende Nachricht ein ("Merge commit"). 
 
@@ -134,7 +134,7 @@ Dann
 `$ git clone https://gitup.uni-potsdam.de/DEIN-UP-NUTZER/umweltdv`.
 
 Je nach Internetverbindung kann das eine ganze Weile dauern, da sich teils große Datensätze im Repository befinden.
-Navigigiere mit der Bash nun in das Repository:
+Navigiere mit der Bash nun in das Repository:
 
 `$ cd umweltdv`.
 
@@ -155,12 +155,12 @@ remote `upstream` das zentrale Kursrepository ausgeben.
 Arbeite lokal nur auf Kopien der Originaldateien und lasse die Originale unangetastet.
 Wenn Du z.B. den Python-Kurs belegst und beim nächsten Mal mit der Datei
 `umweltdv/02_environment/python/tour-de-python.ipynb` arbeiten möchtest: Lege eine
-Kopie an (z.B. `tour-de-python_Copy.ipynb`) und arbeite mit dieser.
+Kopie an (z.B. `tour-de-python_Copy.ipynb`) und arbeite mit dieser. So vermeidest Du, dass bei der nächsten Aktualisierung vom upstream Deine Änderungen erkannt und mit denen des Originals verschmolzen werden.
 
 ### Dein Repository pflegen!
 
 Praktiziere den erlernten `git` Workflow, um Deine eigenen Änderungen in die
-lokale History einzupflegen und Deinen Fork auf GitLab aktuelle zu halten:
+lokale History einzupflegen und Deinen Fork auf GitLab aktuell zu halten:
 
 ```
 $ git status
@@ -176,13 +176,13 @@ $ git pull upstream master
 $ git push origin master
 ```
 
-Auch hier müsst Ihr nach dem `pull` ggf. eine Merge-Nachricht eingeben (merge commit). 
-Wenn Ihr dabei in einem komischen Terminalfenster landet, schaut bitte Euch bitte
-nochmal [diesen Abschnitt](#bestaetigen-der-merge-nachricht-nach-einem-pull).
+Auch hier musst Du nach dem `pull` ggf. eine Merge-Nachricht eingeben (merge commit). 
+Wenn Du dabei in einem komischen Terminalfenster landet, schaue Dir bitte
+noch mal [diesen Abschnitt](#bestaetigen-der-merge-nachricht-nach-einem-pull) an.
 
-### Nochmal auf einen Blick
+### Noch mal auf einen Blick
 
-Hier nochmal der Ablauf des ganzen auf einen Blick:
+Hier noch mal der Ablauf des Ganzen auf einen Blick:
 
 ![workflow](img/course-git-workflow.png)
 
@@ -192,7 +192,7 @@ Hier nochmal der Ablauf des ganzen auf einen Blick:
 Auch wenn Dir das alles furchtbar vorkommt: Gib nicht auf! Mach weiter! Auch wenn es weh tut!
 
 
-## Bestaetigen der Merge-Nachricht nach einem Pull
+## Bestätigen der Merge-Nachricht nach einem Pull
 
 Ein typisches Szenario: Du führst `git pull upstream master` aus und `git` fordert Dich auf,
 eine Merge-Nachricht einzugeben bzw. die von git vorgeschlagene Merge-Nachricht (so was wie
@@ -203,7 +203,7 @@ Du siehst aber nur ein Terminalfenster, so in der Art wie im folgenden Bild:
 
 ![](img/merge-message.png)
 
-Was nun? Du wollt einfach nur die vorgeschlagene Nachricht bestätigen. Was Du siehst,
+Was nun? Du willst einfach nur die vorgeschlagene Nachricht bestätigen. Was Du siehst,
 ist der Default-Editor, der mit dem git-client unter Windows geliefert wird.
 Er heißt `vim` und ist extrem spröde.
 
@@ -213,9 +213,9 @@ Das `w` steht für "write" (also quasi abspeichern) und `q` steht für "quit".
 
 Also nochmal: `ESC --> :wq`
 
-Anschließend solltet Ihr wieder das bekannte Prompt der Git-Bash sehen.
+Anschließend solltet Du wieder das bekannte Prompt der Git-Bash sehen.
 
-Wenn Dich das auf die Dauer stört, kannst Du zumindest unter Windows Notepad++
+Wenn Dich das auf die Dauer stört, kannst Du zumindest unter Windows auch Notepad++
 als Default-Editor auswählen. Dafür musst zunächst Notepad++ installieren. 
 Suche anschließend den Pfad, unter dem die ausführbare Datei `notepad++.exe` liegt.
 

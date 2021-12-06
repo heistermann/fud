@@ -33,7 +33,7 @@ Ich möchte Dir aber keine Schreibrechte auf meinem Repository `umweltdv/git-ler
 geben. Stattdessen legst Du innerhalb von GitLab eine Kopie des Repositories an. 
 Innerhalb dieser Kopie hast **Du** dann alle Rechte. Eine solche Kopie nennt man auch
 *Fork* (also Gabel), weil sich damit die Entwicklung des Repositories "aufgabelt",
-nämlich in Deinen und meinen Zinken. Erstelle jetzt Deinen Fork, indem Du auf das
+nämlich in Deinen und meinen Zinken. Erstelle jetzt Deinen Fork, indem Du auf den
 `Fork`-Button klickst.
 
 ![img](img/fork.png)
@@ -66,12 +66,12 @@ Git Bash zusammen mit dem Befehl `git clone` einfügen.
 
 ![img](img/clone1.png) 
 
-In der URL in der folgenden Befehlszeile müsste UPNUTZER also durch Deinen
+In der URL in der folgenden Befehlszeile musste UPNUTZER also durch Deinen
 Benutzernamen ersetzt werden:
 
 `$ git clone https://gitup.uni-potsdam.de/UPNUTZER/git-lernen.git`
 
-Anschließend wirst Du nach den Credentials Deines UP-Accounts gefragt und der
+Anschließend wirst Du nach den Credentials, also den Zugangsdaten, Deines UP-Accounts gefragt und der
 Download erfolgt.
 
 ![img](img/clone2.png)
@@ -108,14 +108,14 @@ $ git log
 Bis zum gegenwärtigen Zeitpunkt gibt es nur einen einzigen "Commit". Was ist ein *commit*?
 Ein *commit* ist ein neuer Eintrag in der *history*: Mit einem *commit* teilst Du
 `git` mit, dass es sich Deine Änderungen gegenüber der vorherigen Version offiziell
-merken soll. Wenn Du Änderungen `commit`est, musst Du immer eine kurze Mitteilung
+merken soll. Wenn Du Änderungen 'commitest', musst Du immer eine kurze Mitteilung
 hinzufügen, welche die Änderungen beschreibt. Das ist die *commit message*.
 Diese *commit message* lautet für den ersten Commit in diesem Repository originellerweise "Initial commit".
 
 Nimm nun eine Änderung am Repository vor. Was das für eine Änderung ist, bleibt
-Dir überlassen. Du könntest z.B. eine neue Markdown-Datei erstellen. Nutze einen
+Dir überlassen. Du kannstest z.B. eine neue Markdown-Datei erstellen. Nutze einen
 Texteditor (z.B. Notepad++) und erstelle eine neue Textdatei (z.B. `meins.md`)
-im Verzeichnis `git-lernen`. Ich habe dafür unter Ubuntu den Editor *gedit* genutzt.
+in Deinem lokalen Verzeichnis `git-lernen`. Ich habe dafür unter Ubuntu den Editor *gedit* genutzt.
 
 ![img](img/firstedit.png)
 
@@ -150,12 +150,12 @@ Jetzt schauen wir uns nochmal die History an:
 ## Letzter Schritt: `push` Deine Änderungen in Dein Repository auf GitLab
 
 Du hast jetzt eine laufende lokale Versionskontrolle. Wenn Du es für sinnvoll
-hältst, kannst Du nun Deine Änderungen auf Dein GitLab-Repository schieben (`push`en).
+hältst, kannst Du nun Deine Änderungen auf Dein GitLab-Repository schieben ('pushen').
 
 `$ git push origin master`
 
-Du könntest auch nur `git push` verwenden, aber wenn Du mit mehreren Remote-Repositories
-und branches arbeitest, empfiehlt es sich, remote und branch explizit anzugeben.
+Du kannstest auch nur `git push` verwenden, aber wenn Du mit mehreren Remote-Repositories
+und branches arbeitest, empfiehlt es sich, mittels `remote` und `branch` explizit anzugeben, womit der Abgleich erfolgen soll.
 
 Schaue nun im Browser auf Deinem GitLab-Repository nach, ob Deine Änderungen angekommen sind.
 

@@ -9,7 +9,7 @@ parent: Level 1 - Git together
 
 Wir haben es im Rahmen dieser Veranstaltung noch nicht geschafft zu zeigen, wie
 man `git` in Verbindung mit GitLab nutzt, um gemeinsam an Projekten zu arbeiten.
-Das ist eigentlich nicht so schwer: Irgendwie müsste man die Änderungen, die man
+Das ist eigentlich nicht so schwer: Irgendwie musste man die Änderungen, die man
 in seinem Fork gemacht hat, wieder zurück in das ursprüngliche Respository bekommen.
 Als Eigentümer des ursprünglichen Respositorys möchte man aber nicht unbedingt,
 das x-beliebige Menschen ihren Code in das Repository pushen (hier war das ursprüngliche
@@ -34,4 +34,4 @@ des Python-Pakets `wradlib` an, einer Bibliothek zur Verarbeitung von Niederschl
 
 Für eine ausführliche Behandlung und vor allem Übung des Themas fehlt uns in dieser
 Veranstaltung leider die Zeit. [Hier](https://www.earthdatascience.org/courses/intro-to-earth-data-science/git-github/github-collaboration/)
-findet Ihr eine Einführung in das Thema. Außerdem gibt es dazu eine [Fingerübung](Fingeruebungen).
+findest Du eine Einführung in das Thema. Außerdem gibt es dazu eine [Fingerübung](Fingeruebungen).
