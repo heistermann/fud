@@ -14690,7 +14690,7 @@ array([[1, 2],
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Das Argument <code>precip</code> sei ein 2-D Array ("Gitter") der Niederschlagshöhe. Die Funktion <code>maxort</code> soll die Indizes für Zeile und Spalte von <code>precip</code> zurückgeben, in denen die Niederschlagshöhe maximal ist. <em>Die Rückgabe der beiden Indizes soll als Liste erfolgen!</em></p>
+<p>Das Argument <code>precip</code> sei ein 2-D Array ("Gitter") der Niederschlagshöhe. Die Funktion <code>maxort</code> soll die Indizes für Zeile und Spalte von <code>precip</code> zurückgeben, in denen die Niederschlagshöhe maximal ist.</p>
 <p>Das ist nicht ganz trivial. Schaut Euch genau die Hilfe zur Funktion <code>np.argmax</code> an, um das Problem zu lösen.</p>
 <p><strong>Beispiel</strong>:</p>
 
@@ -14702,8 +14702,8 @@ array([[1, 2],
 # Der Maximalwert ist 31.
 #    Er liegt in der 3. Zeile (Zeilenindex 2)
 #    und der 2. Spalte (Spaltenindex 1)
-# Ergebnis: [2,1]</code></pre>
-<p><strong>Hinweis</strong>: Ihr benötigt die numpy-Funktionen <code>unravel_index</code> und <code>argmax</code>.</p>
+# Ergebnis: (2,1)</code></pre>
+<p><strong>Hinweis</strong>: Ihr benötigt die numpy-Funktionen <code>unravel_index</code> und <code>argmax</code>. Die Rückgabe der beiden Indizes soll als <code>tuple</code> erfolgen, das ist der Datentyp, den <code>unravel_index</code> in so einem Fall zurückgibt. Ein <code>tuple</code> ist sowas ähnliches wie eine Liste, aber im Gegensatz zu einer Liste "unveränderlich". Tuples haben runde Klammern: <code>(2,1)</code>.</p>
 
 </div>
 </div>
@@ -14714,7 +14714,7 @@ array([[1, 2],
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">maxort</span><span class="p">(</span><span class="n">precip</span><span class="p">):</span>
-    <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">precip</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="n">precip</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
     </div>
