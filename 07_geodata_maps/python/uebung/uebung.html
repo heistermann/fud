@@ -14423,7 +14423,9 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 </pre></div>
 
     </div>
@@ -14434,14 +14436,39 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Nur-ein-Beispiel-f&#252;r-Entwickler">Nur ein Beispiel f&#252;r Entwickler<a class="anchor-link" href="#Nur-ein-Beispiel-f&#252;r-Entwickler">&#182;</a></h2>
+<h2 id="Noch-auf-ein-Wort">Noch auf ein Wort<a class="anchor-link" href="#Noch-auf-ein-Wort">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is just an example for developers of exercises. Function <code>just_an_example</code> takes arguments <code>x</code> and <code>y</code> and returns whether they are equal (<code>True</code>) or not (<code>False</code>). The students need to modify the function so it produces the expected results.</p>
+<p>Dies ist unsere letzte Übungsrunde. Wir wollen in dieser Runde einen Rundumschlag über das bereits Gelernte geben. <strong>Es können also Inhalte aus allen Lektionen drankommen - juchuu!</strong></p>
+
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Gitpr&#252;fung">Gitpr&#252;fung<a class="anchor-link" href="#Gitpr&#252;fung">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Habt Ihr geglaubt, dass man in jupyter nicht auch <code>git</code>-Aufgaben stellen kann?</p>
+<p>Die Funktion <code>git_pruefung</code> soll den Befehl zurückgeben, mit dem Ihr Eurer lokales Repository mit einem Remote-Repository namens <code>remote</code>-repository synchronisiert.</p>
+<p><strong>Hinweise</strong></p>
+<ul>
+<li>Als remote-Branch nutzt bitte wie immer <code>master</code></li>
+<li>Trennt jedes Element des gesamten Befehls wie immer mit EINEM Leerzeichen.</li>
+</ul>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; remote = "upstream"
+Ergebnis: "git pull upstream master"</code></pre>
 
 </div>
 </div>
@@ -14451,7 +14478,7 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">just_an_example</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">git_pruefung</span><span class="p">(</span><span class="n">remote</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -14465,7 +14492,435 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">just_an_example</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">git_pruefung</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dicke-Luft">Dicke Luft<a class="anchor-link" href="#Dicke-Luft">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Das 2-D Array <code>x</code> enthalte Werte der $NO_x$-Konzentration an städtischen Hotspot-Messstellen. Die Zeilen stellen die Zeitschritte dar, die Spalten die unterschiedlichen Messstellen.</p>
+<p>Die Funktion <code>alarm</code> gebe für jeden Zeitschritt die Zahl der Stationen zurück, an denen der Schwellenwert <code>schwelle</code> überschritten wird.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; schwelle = 30
+&gt;&gt;&gt; array([[22.5, 57. , 43.9],
+           [35.9,  9.4,  9.4],
+           [ 3.5, 52. , 36.1],
+           [42.5,  1.2, 58.2],
+           [49.9, 12.7, 10.9]])
+Ergebnis:
+   [2, 1, 2, 2, 1]</code></pre>
+<p><strong>Achtung</strong>: Das Ergebnis soll als Liste zurückgeben werden (<code>.tolist()</code>).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">alarm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">schwelle</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">alarm</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Daten-ohne-Fehl-und-Tadel">Daten ohne Fehl und Tadel<a class="anchor-link" href="#Daten-ohne-Fehl-und-Tadel">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Im 2-D Array <code>x</code> sind Fehlwerte durch eine Zahl <code>flag</code> markiert. Die Funktion <code>ohne_fehl</code> soll für jede Zeile den Index jener Spalte zurückgeben, in welcher die Zeile ihren minimalen Wert hat. Fehlwerte sind hierbei aber zu ignorieren!</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; flag = -99
+&gt;&gt;&gt; x = array([[ 14,  15, -99,  18, -99],
+               [  7, -99,   2,   4,   8],
+               [  0,  14, -99,   2,   2],
+               [-99,  19, -99, -99, -99]])
+Ergebnis
+--------
+   [14, 2, 0, 19]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ohne_fehl</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">ohne_fehl</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bello,-hol'-das-CRS!">Bello, hol' das CRS!<a class="anchor-link" href="#Bello,-hol'-das-CRS!">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Funktion <code>get_crs</code> gebe das CRS (Coordinate Reference System) eines Vektordatensatzes zurück, der unter <code>pfad</code> liegt. Die Rückgabe soll als EPSG-Code erfolgen (Datentyp <code>int</code>). Der Datensatz liegt in einer Datei, die mit <code>geopandas</code> gelesen werden kann.</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; pfad = data/landcover1.geojson
+Ergebnis: 4326</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_crs</span><span class="p">(</span><span class="n">pfad</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">get_crs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reaktionszeit">Reaktionszeit<a class="anchor-link" href="#Reaktionszeit">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Als Reaktionszeit (engl. response time) eines Einzugsgebiets bezeichnet man die Verzögerung zwischen dem zeitlichen Schwerpunkt des Niederschlags und dem darauf folgenden Abflusspeak. <code>dtprec</code> sei der Zeitpunkt des Niederschlagsschwerpunkts und <code>dtrunoff</code> der Zeitpunkt des Abflusspeaks. Beide sind als Strings der Art <code>"2021-12-31T20:22:59"</code> gegeben (sog. Isoformat). Die Funktion <code>responsetime</code> gebe die Reaktionszeit des Einzugsgebiets <strong>in Sekunden</strong> zurück.</p>
+<p><strong>Vorgehensweise</strong>:</p>
+<ul>
+<li>Strings in datetime-Objekte umwandeln</li>
+<li>Differenz berechnen</li>
+<li>Differenz als Sekunden zurückgeben (findet selbst raus, wie das geht!)</li>
+</ul>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; dtprec = "2021-12-31T20:22:59"
+&gt;&gt;&gt; dtrunoff = "2022-01-01T12:22:00"
+Ergebnis: 57541.0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">responsetime</span><span class="p">(</span><span class="n">dtprec</span><span class="p">,</span> <span class="n">dtrunoff</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">responsetime</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Eine-endgegnerm&#228;&#223;ige-Aufgabe-zur-Wasserbilanz">Eine endgegnerm&#228;&#223;ige Aufgabe zur Wasserbilanz<a class="anchor-link" href="#Eine-endgegnerm&#228;&#223;ige-Aufgabe-zur-Wasserbilanz">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Eine Datei enthalte zeilenweise Daten eines wägbaren Lysimeters, und zwar für die folgenden Variablen:</p>
+<ul>
+<li><code>start</code>: Beginn des Messzeitraums (im Format <code>%Y-%m-%dT%H:%M:%S</code>)</li>
+<li><code>end</code>: Ende des Messzeitraums (im Format <code>%Y-%m-%dT%H:%M:%S</code>)</li>
+<li><code>deltaS</code>: Massenänderung des Lysimeters im Messzeitraum (in kg)</li>
+<li><code>Q</code>: Masse des Sickerwassers (in kg), welches im Bezugszeitraum aus dem Lysimeter gesickert ist</li>
+<li><code>P</code>: Niederschlagsmenge (in mm).</li>
+</ul>
+<p>Die Oberfläche des Lysimeters sei 1 m².</p>
+<p>Du sollst nun die mittlere Verdunstungs<strong>rate</strong> $\frac{ET}{\Delta(t)}$ im Messzeitraum in der Einheit $mm/h$ zurückgeben: also das verdunstete Volumen (in Litern) pro Fläche (in m²) und Zeit (in $h$). Nimm als Dichte für Wasser 1 kg/l an. Hier nochmal zur Erinnerung die Wasserbilanzgleichung:</p>
+<p>$(P - ET - Q - deltaS - ET) \frac{1}{\Delta(t)} = 0$</p>
+<p>Soweit so gut. Leider ist die Datei sehr merkwürdig formatiert! Hier mal ein Beispiel für zwei Zeilen:</p>
+
+<pre><code>":start=2020-06-01T00:00:00;Hallo Mutti!end=2020-06-15T00:00:00;deltaS=30;Q=10;P=100:"
+":start=2020-06-15T00:00:00;Hi Thorsten!P=90;deltaS=40;Q=10;end=2020-07-01T00:00:00:"</code></pre>
+<p>Bei so einem Datenschrott geht selbst <code>pandas</code> in die Knie.</p>
+<ul>
+<li>Am Anfang und am Ende stehen immer völlig überflüssige Doppelpunkte (<code>:...:</code>)</li>
+<li>Jemand hat die Datei missbraucht, um in jeder Zeile morningshowmäßig jemanden mit <code>gruss</code> zu grüßen (hier: <code>Hallo Mutti!</code> bzw. <code>Hi Thorsten!</code>)</li>
+<li>Und jetzt kommt die größte Gemeinheit: Die Reihenfolge der eigentlichen Variablen ist jedes Mal unterschiedlich. Aber zum Glück sind ja die Variablen in jeder Zeile mit <code>Variablenname=...</code> beschriftet.</li>
+<li>Freundlicherweise hat der oder die Wahnsinnige immer das gleiche Trennzeichen (<code>;</code>) verwendet.</li>
+</ul>
+<p>Wirst Du es schaffen, dem Wahnsinn die Stirn zu bieten?</p>
+<p>Deine Funktion <code>lysimeter</code> erhält immer nur eine Zeile des Datensatzes (Argument <code>zeile</code>) sowie das Argument <code>gruss</code>, welches ein String mit dem überflüssigen Gruß ist. <strong>Zurückgeben soll Deine Funktion die mittlere Verdunstungsrate über den gesamten Zeitraum in der Einheit $mm/h$, gerundet auf eine Nachkommastelle.</strong></p>
+<p><strong>Tipps zur Vorghensweise</strong>:</p>
+<ul>
+<li>Erst <code>zeile</code> bereinigen: Die einschließenden <code>:</code> mit <code>strip</code>, den störenden <code>gruss</code> mit <code>replace</code>.</li>
+<li>Dann Einträge mit <code>split</code> trennen (welches Trennzeichen?). Das Ergebnis ist eine Liste, die Du z.B. <code>items</code> nennen kannst</li>
+<li>Lege nun einen leeren Dictionary namens <code>data</code> an mit <code>data = {}</code></li>
+<li>Über die Liste <code>items</code> legen wir nun eine <code>for</code>-Schleife an:<ul>
+<li>Jeder Eintrag von <code>items</code> wird nochmal mit <code>split</code> behandelt (welches Trennzeichen?), das Ergebnis ist eine Liste mit zwei Einträgen, nennen wir diese Liste mal <code>paar</code>.</li>
+<li>Der erste Eintrag von <code>paar</code> ist der Name der gemessenen Variable (z.B. <code>"deltaS"</code>), der zweite Eintrag ist ein String mit dem Wert (z.B. <code>"10.1"</code>. Lege nun mit jedem Durchlauf der Schleife im Dictionary <code>data</code> einen neuen Eintrag an, also <code>data[paar[0]] = data[paar[1]]</code></li>
+</ul>
+</li>
+<li>Damit hast Du Deine <code>for</code>-Schleife durch und alle Einträge hübsch im Dictionary. Diese Einträge sind aber noch Zeichenketten. Du musst nun die Einträge für <code>"begin"</code> und <code>"end"</code> jeweils in ein <code>datetime</code>-Objekt umwandeln (mit <code>dt.datetime.strptime</code>); die Einträge <code>"P"</code>, <code>"Q"</code> und <code>"deltaS"</code> in einen <code>float</code>.</li>
+<li>Nun kannst Du mit dem Dictionary losrechnen:<ul>
+<li>aus den Messwerten das Verdunstungsvolumen berechnen</li>
+<li>Aus dem Start- und Endzeitpunkt die Zeitdifferenz berechnen, diese in Stunden umrechnen</li>
+<li>Aus Verdunstungsvolumen und Zeitdifferenz die Verdunstungsrate berechnen.</li>
+<li>Ergebnis auf eine Nachkommastelle runden.</li>
+</ul>
+</li>
+<li>Voila.</li>
+</ul>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; gruss = "Hallo Heidi!"
+&gt;&gt;&gt; zeile = ":start=2020-06-01T00:00:00;end=2020-06-15T00:00:00;Hallo Heidi!deltaS=30;Q=10;P=100:"
+
+Zwischenergebnisse:
+Bereinigte Zeile:
+   "start=2020-06-01T00:00:00;end=2020-06-15T00:00:00;deltaS=30;Q=10;P=100"
+Dictionary data vor der for-Schleife:
+   data = {}
+Dictionary data nach der for-Schleife:
+    data = {'start': '2020-06-01T00:00:00',
+            'end': '2020-06-15T00:00:00',
+            'deltaS': '30',
+            'Q': '10',
+            'P': '100'}
+Dictionary data nach Umwwandlung in korrekte Datentypen:          
+    data = {'start': datetime.datetime(2020, 6, 1, 0, 0),
+            'end': datetime.datetime(2020, 6, 15, 0, 0),
+            'deltaS': 30.0,
+            'Q': 10.0,
+            'P': 100.0}
+Verdunstetes Volumen über den Gesamtzeitraum:
+    60 Liter (100-10-30)
+Dauer des Messzeitraums:
+    336 Stunden
+
+ENDERGEBNIS
+60 Liter / (336 h * 1 m²) = 0.17857142857142858 mm/h
+gerundet: 0.2 mm/h</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lysimeter</span><span class="p">(</span><span class="n">zeile</span><span class="p">,</span> <span class="n">gruss</span><span class="p">):</span>
+    <span class="c1"># Erst die Zeile bereinigen</span>
+    <span class="c1"># Nun splitten</span>
+    <span class="c1"># Leeren Dictionary anlegen</span>
+    <span class="c1"># For-Schleife über items</span>
+    <span class="c1"># Type conversion</span>
+    <span class="c1"># Wasserbilanz aufstellen</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">lysimeter</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Das-Ei-ist-hart">Das Ei ist hart<a class="anchor-link" href="#Das-Ei-ist-hart">&#182;</a></h2>
+</div>
+</div>
+</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nach der umweltwissenschaftlichen Monsteraufgabe zum Lysimeter noch was zum Runterkommen - etwas aus der Zeit gefallen und doch ein brandaktueller Beitrag zur Genderdebatte: <a href="https://www.youtube.com/watch?v=YcwAuS3MVmM">Loriots "Frühstücksei"</a>.</p>
+<p><code>er</code> und <code>sie</code> unterhalten sich strikt abwechselnd. Die untenstehenden Listen enthalten in korrekter Reihenfolge die Redebeiträge der beiden. Zum Rauspicken Deiner Lieblingsstellen im Dialog gebe die Funktion <code>das_ei</code> für die Argumente <code>wer</code> und <code>i</code> jeweils eine Dialogzeile der Beiden zurück.</p>
+<p><code>wer</code> spezifiziert, ob <code>er</code> oder <code>sie</code> zuerst das Wort haben sollen (<code>wer</code> kann die Werte <code>"er"</code> und <code>"sie"</code> annehmen). Die Funktion soll nun zwei Strings miteinander verketten: Der Eintrag mit Index <code>i</code> aus der Liste <code>er</code> oder <code>sie</code> - je nach Wert von <code>wer</code>. Und - getrennt durch den String <code>" - "</code> - die entsprechende Antwort auf diese Zeile.</p>
+<p>Ist verwirrend? Am Beispiel hoffentlich klarer:</p>
+<p><strong>Beispiel</strong>:</p>
+
+<pre><code>&gt;&gt;&gt; wer = "sie"
+&gt;&gt;&gt; i = 3
+Ergebnis: "Zu viele Eier sind gar nicht gesund! - Ich meine, wie lange dieses Ei gekocht hat ...?"</code></pre>
+<p>Ihr müsst in dieser Aufgabe also eine <code>if</code>-Abfrage nutzen, Listen korrekt indizieren und Strings verketten. Wenn das nicht integrativ ist...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">er</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Berta!&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Das Ei ist hart!&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Das Ei ist hart!!!&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Wie lange hat das Ei denn gekocht?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Ich meine, wie lange dieses Ei gekocht hat ...?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Das weiß ich ...&quot;</span>
+      <span class="s2">&quot;Ich meine, wie lange dieses Ei gekocht hat ...?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Weil dieses Ei nicht viereinhalb Minuten gekocht haben kann!&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Wieso ist es dann mal zu hart und mal zu weich?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Ach! ... Und woher weißt du, wann das Ei gut ist?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Nach der Uhr oder wie?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Im Gefühl? Was hast du im Gefühl?&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Aber es ist hart ... vielleicht stimmt da mit deinem Gefühl was nicht ...&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Jaja ... jaja ... jaja ... wenn ein Ei nach Gefühl kocht, kocht es eben nur zufällig genau viereinhalb Minuten.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Ich hätte nur gern ein weiches Ei und nicht ein zufällig weiches Ei! Es ist mir egal, wie lange es kocht!&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Nein - nein ...&quot;</span><span class="p">,</span> 
+      <span class="s2">&quot;Das habe ich doch gesagt ...&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Ich hätte nur gern ein weiches Ei ...&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Ich bringe sie um ... morgen bringe ich sie um!&quot;</span>
+     <span class="p">]</span>
+
+<span class="n">sie</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ja ...&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;(schweigt)&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Ich habe es gehört ...&quot;</span><span class="p">,</span> 
+       <span class="s2">&quot;Zu viele Eier sind gar nicht gesund!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Du willst es doch immer viereinhalb Minuten haben ...&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Was fragst du denn dann?&quot;</span>
+       <span class="s2">&quot;Ich koche es aber jeden Morgen viereinhalb Minuten.&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Ich weiß es nicht ... ich bin kein Huhn!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Ich nehme es nach viereinhalb Minuten heraus, mein Gott!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Nach Gefühl ... eine Hausfrau hat das im Gefühl ...&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Ich habe es im Gefühl, wann das Ei weich ist ...&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Mit meinem Gefühl stimmt was nicht? Ich stehe den ganzen Tag in der Küche, mache die Wäsche, bring deine Sachen in Ordnung, mache die Wohnung gemütlich, ärgere mich mit den Kindern rum und du sagst, mit meinem Gefühl stimmt was nicht?&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Es kann dir doch ganz egal sein, ob das Ei zufällig viereinhalb Minuten kocht ... Hauptsache, es kocht viereinhalb Minuten!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Aha! Das ist dir egal ... es ist dir also egal, ob ich viereinhalb Minuten in der Küche schufte!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Aber es ist nicht egal ... das Ei muss nämlich viereinhalb Minuten kochen ...&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Aber eben hast du doch gesagt, es ist dir egal!&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Gott, was sind Männer primitiv!&quot;</span>
+      <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">das_ei</span><span class="p">(</span><span class="n">er</span><span class="p">,</span> <span class="n">sie</span><span class="p">,</span> <span class="n">wer</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">pass</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testme</span><span class="p">(</span><span class="n">das_ei</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14485,7 +14940,9 @@ $(document).ready(function () {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">just_an_example</span><span class="p">],</span> <span class="n">lesson</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_certificate</span><span class="p">(</span><span class="n">testmysolutions</span><span class="o">=</span><span class="p">[</span><span class="n">git_pruefung</span><span class="p">,</span> <span class="n">alarm</span><span class="p">,</span> <span class="n">ohne_fehl</span><span class="p">,</span> 
+                                  <span class="n">get_crs</span><span class="p">,</span> <span class="n">responsetime</span><span class="p">,</span> <span class="n">lysimeter</span><span class="p">,</span> <span class="n">das_ei</span><span class="p">],</span>
+                                 <span class="n">lesson</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
