@@ -14564,7 +14564,7 @@ Ergebnis:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Im 2-D Array <code>x</code> sind Fehlwerte durch eine Zahl <code>flag</code> markiert. Die Funktion <code>ohne_fehl</code> soll für jede Zeile den Index jener Spalte zurückgeben, in welcher die Zeile ihren minimalen Wert hat. Fehlwerte sind hierbei aber zu ignorieren!</p>
+<p>Im 2-D Array <code>x</code> sind Fehlwerte durch eine Zahl <code>flag</code> markiert. Die Funktion <code>ohne_fehl</code> soll für jede Zeile das Minimum zurückgeben, Fehlwerte sind hierbei aber zu ignorieren! <strong>Das Ergebnis soll als Liste zurückgegeben werden!</strong> (mit <code>.tolist()</code>).</p>
 <p><strong>Beispiel</strong>:</p>
 
 <pre><code>&gt;&gt;&gt; flag = -99
@@ -14575,6 +14575,12 @@ Ergebnis:
 Ergebnis
 --------
    [14, 2, 0, 19]</code></pre>
+<p><strong>Hinweise</strong>:</p>
+<ul>
+<li>Es gibt viele Möglichkeit, die Aufgabe zu lösen.</li>
+<li>Ein eleganter Weg ist es, zunächst alle Werte, die <code>flag</code> entsprechen, in <code>np.nan</code> umzuwandeln</li>
+<li>Anschließend könnt Ihr die Funktion <code>np.nanmin</code> nutzen...</li>
+</ul>
 
 </div>
 </div>
@@ -14746,7 +14752,7 @@ Ergebnis: 57541.0</code></pre>
 <li>Lege nun einen leeren Dictionary namens <code>data</code> an mit <code>data = {}</code></li>
 <li>Über die Liste <code>items</code> legen wir nun eine <code>for</code>-Schleife an:<ul>
 <li>Jeder Eintrag von <code>items</code> wird nochmal mit <code>split</code> behandelt (welches Trennzeichen?), das Ergebnis ist eine Liste mit zwei Einträgen, nennen wir diese Liste mal <code>paar</code>.</li>
-<li>Der erste Eintrag von <code>paar</code> ist der Name der gemessenen Variable (z.B. <code>"deltaS"</code>), der zweite Eintrag ist ein String mit dem Wert (z.B. <code>"10.1"</code>. Lege nun mit jedem Durchlauf der Schleife im Dictionary <code>data</code> einen neuen Eintrag an, also <code>data[paar[0]] = data[paar[1]]</code></li>
+<li>Der erste Eintrag von <code>paar</code> ist der Name der gemessenen Variable (z.B. <code>"deltaS"</code>), der zweite Eintrag ist ein String mit dem Wert (z.B. <code>"10.1"</code>. Lege nun mit jedem Durchlauf der Schleife im Dictionary <code>data</code> einen neuen Eintrag an, also <code>data[paar[0]] = paar[1]</code></li>
 </ul>
 </li>
 <li>Damit hast Du Deine <code>for</code>-Schleife durch und alle Einträge hübsch im Dictionary. Diese Einträge sind aber noch Zeichenketten. Du musst nun die Einträge für <code>"begin"</code> und <code>"end"</code> jeweils in ein <code>datetime</code>-Objekt umwandeln (mit <code>dt.datetime.strptime</code>); die Einträge <code>"P"</code>, <code>"Q"</code> und <code>"deltaS"</code> in einen <code>float</code>.</li>
@@ -14788,7 +14794,8 @@ Dauer des Messzeitraums:
 
 ENDERGEBNIS
 60 Liter / (336 h * 1 m²) = 0.17857142857142858 mm/h
-gerundet: 0.2 mm/h</code></pre>
+also: 0.2</code></pre>
+<p>Versucht die Lösung Stück für Stück zur entwickeln, bis Ihr sie letztlich zur FUnktion zusammensetzt.</p>
 
 </div>
 </div>
@@ -14837,15 +14844,19 @@ gerundet: 0.2 mm/h</code></pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nach der umweltwissenschaftlichen Monsteraufgabe zum Lysimeter noch was zum Runterkommen - etwas aus der Zeit gefallen und doch ein brandaktueller Beitrag zur Genderdebatte: <a href="https://www.youtube.com/watch?v=YcwAuS3MVmM">Loriots "Frühstücksei"</a>.</p>
-<p><code>er</code> und <code>sie</code> unterhalten sich strikt abwechselnd. Die untenstehenden Listen enthalten in korrekter Reihenfolge die Redebeiträge der beiden. Zum Rauspicken Deiner Lieblingsstellen im Dialog gebe die Funktion <code>das_ei</code> für die Argumente <code>wer</code> und <code>i</code> jeweils eine Dialogzeile der Beiden zurück.</p>
-<p><code>wer</code> spezifiziert, ob <code>er</code> oder <code>sie</code> zuerst das Wort haben sollen (<code>wer</code> kann die Werte <code>"er"</code> und <code>"sie"</code> annehmen). Die Funktion soll nun zwei Strings miteinander verketten: Der Eintrag mit Index <code>i</code> aus der Liste <code>er</code> oder <code>sie</code> - je nach Wert von <code>wer</code>. Und - getrennt durch den String <code>" - "</code> - die entsprechende Antwort auf diese Zeile.</p>
+<p><code>er</code> und <code>sie</code> unterhalten sich strikt abwechselnd, <code>er</code> beginnt. Die untenstehenden Listen enthalten in korrekter Reihenfolge die Redebeiträge der beiden.</p>
+<p>Die Funktion <code>das_ei</code> soll Dir Deine Lieblingsstellen im Dialog als String zurückgeben.</p>
+<p>Das Argument <code>wer</code> ist ein String und gibt an, wer als erstes spricht: <code>"er"</code> oder <code>"sie"</code>. Das Argument <code>i</code> gibt den Index in der zugehörigen Liste <code>er</code> bzw. <code>sie</code>. An die entsprechende Dialogzeile <code>er[i]</code> bzw. <code>sie[i]</code> soll dann noch die passende Replik des Partners angehängt werden, getrennt durch den String <code>" - "</code>.</p>
 <p>Ist verwirrend? Am Beispiel hoffentlich klarer:</p>
 <p><strong>Beispiel</strong>:</p>
 
-<pre><code>&gt;&gt;&gt; wer = "sie"
+<pre><code>&gt;&gt;&gt; wer = "er"
+&gt;&gt;&gt; i = 2
+Ergebnis: "Das Ei ist hart!!! - Ich habe es gehört ..."
+&gt;&gt;&gt; wer = "sie"
 &gt;&gt;&gt; i = 3
-Ergebnis: "Zu viele Eier sind gar nicht gesund! - Ich meine, wie lange dieses Ei gekocht hat ...?"</code></pre>
-<p>Ihr müsst in dieser Aufgabe also eine <code>if</code>-Abfrage nutzen, Listen korrekt indizieren und Strings verketten. Wenn das nicht integrativ ist...</p>
+Ergebnis = "Zu viele Eier sind gar nicht gesund! - Ich meine, wie lange dieses Ei gekocht hat ...?"</code></pre>
+<p>Du musst in dieser Aufgabe eine <code>if</code>-Abfrage nutzen, Listen korrekt indizieren und Strings verketten. <strong>Beachte:</strong> Die Antwort auf <code>er[i]</code> ist <code>sie[i]</code>, aber die Antwort auf <code>sie[i]</code> ist <code>er[i+1]</code>.</p>
 
 </div>
 </div>
