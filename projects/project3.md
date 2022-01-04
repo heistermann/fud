@@ -25,18 +25,67 @@ Passwort: Umweltdatenverarbeitung
 	temp_precip_height.txt : Aufzeichnungen des Ultraschall-Schneepegels
 
 ## Ergebnisse
+- examplarische Darstellung von Bildern (kein Schnee, viel Schnee)
 - grafischer Vergleich<sup>1</sup> der Schneehöhe an einem Messstab mit der Zeitreihe aus der Ultraschallmessung<sup>2</sup>
+- kurze Beurteilung der Ergebnisse
 
 ## Hinweise
 - Die Auswertung soll halbautomatisch erfolgen. Dafür sollen alle Fotos automatisch eingeladen werden <sup>3</sup> und die Lage der Spitze (einmalig, konstant) und des Fußpunkts des Stabs (variabel mit der Schneehöhe) durch Klicken<sup>4</sup> des Nutzers bestimmt werden. 
 - Die Zeitpunkte der Fotoaufnahmen lassen sich aus dem Dateidatum oder (sicherer) deren EXIF-Informationen<sup>5</sup> bestimmen.
 - Die installierten Stäbe ragten 50 cm aus dem Boden. 10 cm vor der Spitze befindet sich eine weitere Referenzmarkierung, die ebenso genutzt werden kann.
-- Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden.
+- Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden (muss aber nicht).
+- Es ist evtl. sinnvoll, die Plots der Fotos auf den auszuwertenden Stab zu zoomen, um die Genauigkeit zu erhöhen.
 
-## Detailtipps für die Umsetzung
-- <sup>1</sup> Lektion 2, Darstellung mit ´plot()´
-- <sup>2</sup> Lektion 2, ´read.table()´
-- <sup>3</sup> Lektion 3, ´file.list()´, Lektion 4, ´for()´
+## Detailtipps für die Umsetzung in R
+- <sup>1</sup> Lektion 3, Darstellung mit ´plot()´
+- <sup>2</sup> Lektion 3, ´read.table()´
+- <sup>3</sup> Lektion 5, ´file.list()´, Lektion 4, ´for()´
 - <sup>4</sup> Funktion ´locator()´
 - <sup>5</sup> Package ´exif´
 - <sup>6</sup> Funktion ´approx()´
+
+## Detailtipps für die Umsetzung in Python
+- <sup>1</sup> Bilder lesen mit `matplotlib.image.imread(...)`, plotten mit `plt.imshow(...)`
+- <sup>2</sup> Lektion 3, ´pandas.read_csv()´
+- <sup>3</sup> Lektion 5, ´glob.glob()´, Lektion 4, ´for´
+- <sup>4</sup> Das ist in Python leider ein bisschen komplizierter...siehe unten.
+- <sup>5</sup> In Python kannst Du den Zeitstempel einer Datei mittels `os.path.getmtime()` ermitteln. Der Zeitstempel kann dann mittels `pd.to_datetime(..., unit="s")` in ein `datetime`-Objekt umgewandelt werden.
+- <sup>6</sup> Funktion ´scipy.interpolate.interp1d()´
+
+### Aufnahme von Abbildungskoordinaten in Python
+
+Hier ist ein Beispiel, wie Du Punktkoordinaten aufnehmen kannst.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+plt.ioff()
+fig, ax = plt.subplots(1,1, figsize=(5,5))
+myobj = plt.plot([2], [3], "k+", ms=15)
+plt.xlim(0,10)
+plt.ylim(0,10)
+plt.title("Klicke auf den Punkt!")
+
+coords = []
+
+def onclick(event):
+    ix, iy = event.xdata, event.ydata
+    print("x = %d, y = %d" % (ix, iy) )
+
+    global coords
+    coords.append((ix, iy))
+
+    return coords
+
+for i in range(2,5):
+    myobj[0].set_data((np.array([i]), np.array([i+1])))
+    plt.draw()
+    cid = fig.canvas.mpl_connect('button_press_event', onclick)
+    # Du hast 5 Sekunden
+    plt.pause(5)
+    fig.canvas.mpl_disconnect(cid)
+plt.close()
+print(coords)
+```
+
+
