@@ -44,17 +44,14 @@ sowie Hauptgewässern ergänzt werden.
 - Kartendarstellung der täglichen Niederschlagshöhen vom 12. bis 16. Juli 2021
 - Die Kartendarstellungen sollen jeweils die Grenzen der Bundesländer, die
   Hauptfließgewässer (osm_rivers_nrw_rlp.shp), das Einzugsgebiet der Ahr bis Pegel
-  Altenahr sowie die Lage der Städte Hagen, Erftstadt, Schuld und Bad Neuenahr-Ahrweiler
+  Altenahr sowie die Lage der Städte Hagen, Erftstadt und Bad Neuenahr-Ahrweiler
   enthalten. Die Kartendarstellung soll auf das Kernereignis in NRW und RLP zoomen.
-- Zeitreihen der kumulativen Niederschlagshöhe für sollen für folgende Lagen 
-  dargestellt werden:
-   - Mittelwert für den Ausschnitt `[401:418,340:363]` (Indizes, nicht Koordinaten)
-   aus dem Niederschlagsgitter. Dies ist ein Ausschnitt bei Hagen mit besonders
-   hohen Niederschlagssummen
-   - für zwei Gitterzellen Deiner Wahl (bitte begründen)
-   - *optional*: für das Einzugsgebiet der Ahr (mittlerer Gebietsniederschlag)
+- stündliche Zeitreihen der kumulativen Niederschlagshöhe für sollen für die Städte Hagen, 
+  Erftstadt und Bad Neuenahr-Ahrweiler dargestellt werden. *Optional* soll für das
+  Einzugsgebiet der Ahr bis Pegel Altenahr der mittlere Gebietsniederschlag als 
+  stündliche Zeitreihe dargestellt werden.
 
-## Vorschläge zur Vorgehensweise
+## Vorschläge zur Vorgehensweise in Python
 
 ### Einlesen der Niederschlagsdaten
 
@@ -64,7 +61,8 @@ sowie Hauptgewässern ergänzt werden.
   `shape` hat, um Deine Niederschlagsdaten aufzunehmen (`(Zahl der Zeitschritte, 900, 900)`)
 - Probiere zunächste, ein einzelnes Niederschlagsgitter einzulesen (mit `rasterio`, Lektion 7)
 - Achtung: Die Gitter enthalten den Niederschlag in der Einheit Zehntelmillimeter
-  (1/10 mm) - bitte in mm umrechnen!
+  (1/10 mm) - bitte in mm umrechnen! Vorher aber Fehlwerte maskieren - der Wert
+  `-1` ist ein Fehlwertflag.
 - Erstelle nun ein Schleife über alle Dateipfade, lies jede einzelne Datei ein
   und übertrage das eingelesene Gitter (2D) in den 3D-Array.
 - Das Wichtigste ist nun geschafft: Du hast die Daten in einem `ndarray`. Eine
@@ -112,29 +110,29 @@ sowie Hauptgewässern ergänzt werden.
   zusammen mit dem Extent-Argument und plotte dann die Vektordaten darüber.
 - Für die Darstellung der Niederschlagssummen der einzelenen Tage musst Du aus dem
   Gesamtarray die passenden Zeitscheiben auswählen. Dafür gibt es unterschiedliche
-  Lösungen - das schaffst Du bestimmt. Zum Beispiel könntest Du erstmal einen
-  Array mit `datetime`-Objekten für jeden Zeitschritt erstellen (nennen wir diesen
-  mal `dtimes`). Dafür kannst Du z.B. `pandas.date_range` nehmen. Nachdem Du die
-  passenden Zeitscheiben aus `x` ausgewählt hast, kannst Du wieder die Summe bilden.
-- Die Koordinaten für die Städte musst Du selbst rausfinden.
+  Lösungen - das schaffst Du bestimmt.
+- Die Koordinaten für die Städte musst Du selbst rausfinden und dann in das RADOLAN-CRS
+  umprojizieren.
 
 ### Zeitreihen
 
 - Für die Zeitreihendarstellung musst Du nur die entsprechenden Werte für jeden
   Zeitschritt aus dem 3D-Gitter extrahieren. Für das einfache Beispiel der Zeitreihe
   für eine bestimmte Gitterzelle `i,j` plottest Du also einfach `plt.plot(dtimes, x[:,i,j], ...)`.
-- Beachte die Aufgabenstellung oben: Du sollst auch die Mittelwerte für den
-  Raumaussschnitt `401:418,340:363` plotten (bei Hagen).
-- Eine kumulative Summe berechnest Du mit `ǹumpy.cumsum`
+- Zum Glück bietet `rasterio` eine sehr einfach Möglichkeit, die Zeilen- und Spaltenindizes
+  aus den Raumkoordinaten zu ermitteln: Nutze für ein beliebiges `rasterio`-Objekt `rio`
+  die Methode `rio.index(...)`.  
+- Eine kumulative Summe berechnest Du mit `numpy.cumsum`
 - Für die Ermittlung des Gebietsniederschlags bis zum Pegel Altenahr wird es etwas
   komplizierter (beachte: *Diese Aufgabe ist optional.*). Du musst zunächst eine
   Maske erstellen, mit der Du die Gitterzellen auswählen kannst, die innerhalb
-  des Einzugsgebiets liegen. Dafür gehst Du wie folgt vor:
+  des Einzugsgebiets liegen. Dafür gehst Du z.B. wie folgt vor:
   
   ```
   rasterio.mask as riom
   tmp = rasterio.open("data/RW/RW-20210714/RW_20210714-2350.asc", crs=radolancrs)
   mask, transform = riom.mask(tmp, [cat.geometry[0]])
+  mask = ~mask.astype("bool")
   ``` 
   
   `cat` ist hier der in `radolancrs` umprojizierte GeoDataFrame des Einzugsgebiets.
