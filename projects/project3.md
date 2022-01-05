@@ -35,22 +35,26 @@ Passwort: Umweltdatenverarbeitung
 - Die installierten Stäbe ragten 50 cm aus dem Boden. 10 cm vor der Spitze befindet sich eine weitere Referenzmarkierung, die ebenso genutzt werden kann.
 - Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden (muss aber nicht).
 - Es ist evtl. sinnvoll, die Plots der Fotos auf den auszuwertenden Stab zu zoomen, um die Genauigkeit zu erhöhen.
+- Tipp: Die Koordinaten aufzunehmen ist natürlich etwas mühsam. Tipp: Speichere die aufgezeichneten Koordinaten als csv-Datei ab<sup>7</sup> . Dann kannst Du sie immer wieder
+  laden, wenn Du weiterarbeitest.
 
 ## Detailtipps für die Umsetzung in R
-- <sup>1</sup> Lektion 3, Darstellung mit ´plot()´
-- <sup>2</sup> Lektion 3, ´read.table()´
-- <sup>3</sup> Lektion 5, ´file.list()´, Lektion 4, ´for()´
-- <sup>4</sup> Funktion ´locator()´
-- <sup>5</sup> Package ´exif´
-- <sup>6</sup> Funktion ´approx()´
+- <sup>1</sup> Lektion 3, Darstellung mit `plot()`
+- <sup>2</sup> Lektion 3, `read.table()`
+- <sup>3</sup> Lektion 5, `file.list()`, Lektion 4, `for()`
+- <sup>4</sup> Funktion `locator()`
+- <sup>5</sup> Package `exif`
+- <sup>6</sup> Funktion `approx()` 
+- <sup>7</sup> Funktion `write_table(...)`
 
 ## Detailtipps für die Umsetzung in Python
 - <sup>1</sup> Bilder lesen mit `matplotlib.image.imread(...)`, plotten mit `plt.imshow(...)`
-- <sup>2</sup> Lektion 3, ´pandas.read_csv()´
-- <sup>3</sup> Lektion 5, ´glob.glob()´, Lektion 4, ´for´
+- <sup>2</sup> Lektion 3, `pandas.read_csv()`
+- <sup>3</sup> Lektion 5, `glob.glob()`, Lektion 4, `for`
 - <sup>4</sup> Das ist in Python leider ein bisschen komplizierter...siehe unten.
 - <sup>5</sup> In Python kannst Du den Zeitstempel einer Datei mittels `os.path.getmtime()` ermitteln. Der Zeitstempel kann dann mittels `pd.to_datetime(..., unit="s")` in ein `datetime`-Objekt umgewandelt werden.
-- <sup>6</sup> Funktion ´scipy.interpolate.interp1d()´
+- <sup>6</sup> Funktion `scipy.interpolate.interp1d()`
+- <sup>7</sup> Funktion `pandas.to_csv(...)`
 
 ### Aufnahme von Abbildungskoordinaten in Python
 
