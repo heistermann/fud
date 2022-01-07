@@ -40,7 +40,7 @@ sowie Hauptgewässern ergänzt werden.
 
 ## Ergebnisse
 
-- Kartendarstellung der gesamten Niederschlagshöhe vom 12. bis 16. Juli 2021
+- Kartendarstellung der gesamten Niederschlagssumme vom 12. bis 16. Juli 2021
 - Kartendarstellung der täglichen Niederschlagshöhen vom 12. bis 16. Juli 2021
 - Die Kartendarstellungen sollen jeweils die Grenzen der Bundesländer, die
   Hauptfließgewässer (osm_rivers_nrw_rlp.shp), das Einzugsgebiet der Ahr bis Pegel
@@ -51,13 +51,65 @@ sowie Hauptgewässern ergänzt werden.
   Einzugsgebiet der Ahr bis Pegel Altenahr der mittlere Gebietsniederschlag als 
   stündliche Zeitreihe dargestellt werden.
 
-## Vorschläge zur Vorgehensweise in Python
 
+## Vorschläge zur Vorgehensweise in R
+### Einlesen der Niederschlagsdaten
+
+- Mit `list.files()` eine List aller Dateipfade zu den Niederschlagsgittern erstellen (Lektion 5)
+- Sortiere diese Liste, um sicherzustellen, dass die zeitliche Reihenfolge stimmt (`sort()`)
+
+- Probiere zunächst, ein einzelnes Niederschlagsgitter einzulesen (mit `raster()`, Lektion 7)
+- Die Gitter enthalten den Niederschlag in der Einheit Zehntelmillimeter
+  (1/10 mm) - bitte in mm umrechnen! 
+
+- Mit `stack()` kannst Du deckungsgleiche Gitter übereinanderstapeln, um sie später gemeinsam zu behandeln.
+  
+- Erstelle nun ein Schleife über alle Dateipfade, lies jede einzelne Datei ein. 
+
+- Das Wichtigste ist nun geschafft: Du hast die Daten in einem `stack`. 
+
+- Die erforderlichen Vektordaten liest Du ein, wie es in Lektion 7 gelernt hast.
+
+### Räumliche Bezugssysteme, übrige Geodaten
+
+- Um eine Karte zu erstellen, musst Du alle darzustellenden Datensätze in ein
+  räumliches Bezugssystem (CRS) bringen. Du solltest die Niederschlagsdaten in 
+  ihrem CRS belassen und die übrigen Geodaten (Bundesländer, ...) in diese CRS
+  umprojizieren. Leider ist das CRS der RADOLAN-Daten sehr ungewöhnlich. Darum geben
+  wir Dir hier an, wie Du die korrekte Projektion setzt:
+
+   ```
+		radolanproj ="+proj=stere +lat_0=90 +lat_ts=90 +lon_0=10 +k=0.93301270189 +x_0=0 +y_0=0 +a=6370040 +b=6370040 +to_meter=1000 +no_defs"
+		crs(ein_geobjekt) = radolanproj #Festlegen einer Projektion für ein Geoobjekt
+   ```
+	Geodaten, die in einer anderen Projektion vorliegen, musst Du umprojizieren (siehe Lektion 7).
+
+	Punktdaten (z.B. aus Koordinaten der Städte) lassen sich mittels `st_as_sf()` erzeugen.
+
+### Karten erstellen
+
+- Für die Kartendarstellung des Niederschlags kannst Du Dich daran orientieren,
+  was wir in Lektion 7 für die Geländehöhe gemacht haben: Nutze entweder einfach `plot()` (folgendene Layer mit (`plot(..., add=TRUE)` oder die fortgeschrittenen Funktionen von `tmap`.
+  Falls Du die Plots nebeneinander ausrichten willst, brauchst Du im ersten Fall ` par(mfrow=...) `, im zweiten `tmap_arrange()`, 
+- Für die Darstellung der Niederschlagssummen der einzelnen Tage musst Du aus dem
+  Gesamtarray die passenden Zeitscheiben auswählen. Die Funktion `subset()` könnte für den Rasterstack behilflich sein.
+- Die Koordinaten für die Städte musst Du selbst rausfinden und dann in das RADOLAN-CRS
+  umprojizieren.
+
+### Zeitreihen
+
+- Für die Zeitreihendarstellung musst Du nur die entsprechenden Werte für jeden
+  Zeitschritt aus dem 3D-Gitter extrahieren. Das geht mit `extract()`. Es kann mit Punkten und Polygonen extrahiert werden. Für letzteres ist das Argument `fun` hilfreich.
+- Eine kumulative Summe berechnest Du mit `cumsum`.
+- Die Zeitstempel kannst Du mittels `names(DeinRasterstack)` extrahieren, wenn Du danach diese Zeichenketten umwandeltst, wie in Lektion 3 geschehen.
+
+
+## Vorschläge zur Vorgehensweise in Python
 ### Einlesen der Niederschlagsdaten
 
 - Mit `glob.glob` eine List aller Dateipfade zu den Niederschlagsgittern erstellen (Lektion 5)
 - Sortiere diese Liste, um sicherzustellen, dass die zeitliche Reihenfolge stimmt (`sorted`)
-- Erstelle zunächst eineen 3-D `ndarray` (sagen wir mal ), der aus Nullen besteht, aber genau den
+- Erstelle zunächst einen 3-D `ndarray` (sagen wir mal ), der aus Nullen besteht, aber genau den
   `shape` hat, um Deine Niederschlagsdaten aufzunehmen (`(Zahl der Zeitschritte, 900, 900)`)
 - Probiere zunächste, ein einzelnes Niederschlagsgitter einzulesen (mit `rasterio`, Lektion 7)
 - Achtung: Die Gitter enthalten den Niederschlag in der Einheit Zehntelmillimeter
@@ -108,7 +160,7 @@ sowie Hauptgewässern ergänzt werden.
 - Für die Kartendarstellung des Niederschlags kannst Du Dich daran orientieren,
   was wir in Lektion 7 für die Geländehöhe gemacht haben: Nutze `plt.imshow`
   zusammen mit dem Extent-Argument und plotte dann die Vektordaten darüber.
-- Für die Darstellung der Niederschlagssummen der einzelenen Tage musst Du aus dem
+- Für die Darstellung der Niederschlagssummen der einzelnen Tage musst Du aus dem
   Gesamtarray die passenden Zeitscheiben auswählen. Dafür gibt es unterschiedliche
   Lösungen - das schaffst Du bestimmt.
 - Die Koordinaten für die Städte musst Du selbst rausfinden und dann in das RADOLAN-CRS
