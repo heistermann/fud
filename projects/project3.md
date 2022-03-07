@@ -32,7 +32,7 @@ Passwort: Umweltdatenverarbeitung
 ## Hinweise
 - Die Auswertung soll halbautomatisch erfolgen. Dafür sollen alle Fotos des Verzeichnisses automatisch eingeladen <sup>3</sup> und dargestellt<sup>7</sup> werden und die Lage der Spitze (einmalig, konstant) und des Fußpunkts des Stabs (variabel mit der Schneehöhe) durch Klicken<sup>4</sup> des Nutzers bestimmt werden. 
 - Die Zeitpunkte der Fotoaufnahmen lassen sich aus dem Dateidatum oder (sicherer) deren EXIF-Informationen<sup>5</sup> bestimmen.
-- Die installierten Stäbe ragten 50 cm aus dem Boden. 10 cm vor der Spitze befindet sich eine weitere Referenzmarkierung, die ebenso genutzt werden kann.
+- Die installierten Stäbe ragten 50 cm aus dem Boden. 5 cm vor der Spitze befindet sich eine weitere (rote) Referenzmarkierung, die ebenso genutzt werden kann.
 - Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden (muss aber nicht).
 - Es ist evtl. sinnvoll, die Plots der Fotos auf den auszuwertenden Stab zu zoomen, um die Genauigkeit zu erhöhen.
 - Tipp: Die Koordinaten aufzunehmen ist natürlich etwas mühsam. Tipp: Speichere die aufgezeichneten Koordinaten als csv-Datei ab<sup>7</sup> . Dann kannst Du sie immer wieder

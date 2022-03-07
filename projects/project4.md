@@ -51,7 +51,7 @@ heruntergeladen.
 
 **zu b)**
 
-- Klimaänderungssignal (in mm/d) im mittleren monatlichen Niederschlag
+- Klimaänderungssignal (in %) im mittleren monatlichen Niederschlag
 - Änderung der mittleren jährlichen Häufigkeit von Tagen mit Niederschlägen >= 30 mm
 - Probiere es gerne auch mit größeren Schwellenwerten als 30 mm / Jahr 
 

@@ -344,9 +344,9 @@ class(d)
 <p>Einige Datentypen kann man durch Operationen sinnvoll verknüpfen, andere nicht.</p>
 <blockquote>
 <p>Aufgabe 5</p>
-<p>Verknüpfe die Variablen <code>a</code>, <code>b</code>, <code>c</code> und <code>d</code> jeweils paarweise mit dem <code>+</code>-Operator. Erläutert Deine Beobachtungen.</p>
+<p>Verknüpfe die Variablen <code>a</code>, <code>b</code>, <code>c</code> und <code>d</code> jeweils paarweise mit dem <code>+</code>-Operator. Erläutere Deine Beobachtungen.</p>
 <button class="btn btn-block" data-toggle="collapse" data-target="#l_verknuepfen">
-Lösung &gt;
+Lösung
 </button>
 <div id="l_verknuepfen" class="collapse">
 <pre class="r"><code>a+b</code></pre>
@@ -383,7 +383,7 @@ library(sessioninfo)</code></pre>
 ##  collate  German_Germany.1252         
 ##  ctype    German_Germany.1252         
 ##  tz       Europe/Berlin               
-##  date     2021-12-02</code></pre>
+##  date     2022-02-25</code></pre>
 <p>Die Angaben unter <em>value</em> sehen bei Dir möglicherweise etwas anders aus. Falls Du mit einigen Angaben unter <em>setting</em> nichts anfangen kannst (Wofür steht zum Beispiel <em>ui</em>?), kann man in der Dokumentation des Paketes nachschauen, welche Werte einem die Funktion eigentlich ausspuckt. Darauf werden wir später in der Lektion noch eingehen, wenn wir uns mit dem Suchen und Finden von Hilfe beschäftigen. Wichtig für Dich ist jetzt vor allem: Die Funktionen eines importierten Paketes kann man mit <code>paketname::funktionsname</code> ansprechen. Wenn man wie oben das Paket mit <code>library</code> geladen hat, recht auch der Funktionsname allein - solange es keine Namensvettern in gleichzeitig geladenen Paketen gibt. Mehr zu Funktionen dann später!</p>
 </div>
 <div id="auf-dateien-zugreifen" class="section level1" number="7">
@@ -405,10 +405,10 @@ setwd(&quot;D:/emac/Documents/Lehre/UmweltDV/02_environment&quot;)</code></pre>
 <button type="button" class="btn btn-warning">
 Wichtig!
 </button>
-<p>Bei Pfadangaben in R ist es wichtig, <em>forward slashes</em> (“/”) und keine <em>backslashes</em> (“\” was die typische Windows-Schreibweise bei Pfadangaben ist) zu nutzen.</p>
+<p>Bei Pfadangaben in R ist es wichtig, <em>forward slashes</em> (“/”) und keine <em>backslashes</em> (“\”, was die typische Windows-Schreibweise bei Pfadangaben ist) zu nutzen.</p>
 <blockquote>
 <p>Aufgabe 6</p>
-<p>Lege als Arbeitsverzeichnis den Ordner fest, in dem Dein R-Skript gespeichert ist. Das kannst Du entweder über <code>setwd()</code> machen oder über den <code>Session</code>-Button in der Funktionsleiste oben: <code>Session</code> &gt; <code>Set Working Directy</code> &gt; <code>To Source File Location</code>.</p>
+<p>Lege als Arbeitsverzeichnis den Ordner fest, in dem Dein R-Skript gespeichert ist. Das kannst Du entweder über <code>setwd()</code> machen oder über das <code>Session</code>-Menü in der Funktionsleiste oben: <code>Session</code> &gt; <code>Set Working Directy</code> &gt; <code>To Source File Location</code>.</p>
 </blockquote>
 <div id="relative-pfadangaben" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Relative Pfadangaben</h3>
@@ -442,7 +442,7 @@ Wichtig!
 <h2><span class="header-section-number">7.2</span> Wie ich die Datei öffne, hängt vom Inhalt ab, den ich erwarte!</h2>
 <p>Wir haben eben bereits Textdateien eingelesen. Dabei haben wir einfach den gesamten Inhalt komplett ausgegeben. Meist wollen wir den Dateiinhalt jedoch interpretieren. Oft wird in Textdateien eine Tabelle abgelegt, deren Spalten mit Zeichen wie <code>;</code> oder <code>,</code> getrennt sind.</p>
 <p>Lesen wir statt einer txt-Datei doch mal eine csv-Datei ein.</p>
-<pre class="r"><code>df &lt;- read.csv(&quot;../data/example-table.csv&quot;, sep=&quot;;&quot;)
+<pre class="r"><code>df &lt;- read.table(&quot;../data/example-table.csv&quot;, sep=&quot;;&quot;, header=TRUE)
 df</code></pre>
 <pre><code>##    temperature saturation
 ## 1          -30       0.51
@@ -457,6 +457,7 @@ df</code></pre>
 ## 10          25      31.60
 ## 11          30      42.34
 ## 12          35      56.13</code></pre>
+<p>Die zusätzliche Angabe <code>header=TRUE</code> bedeutet lediglich, dass die Einträge der ersten Zeile als Spaltennamen interpretiert werden sollen.</p>
 <p>Im nächsten Termin wirst Du mehr über das Einlesen und Arbeiten mit solchen <em>Dataframes</em> lernen.</p>
 </div>
 </div>
@@ -578,6 +579,15 @@ for (i in 1:length(nottodolist)){
 <pre><code>## [1] &quot;Frühzeitig an die eigene Rente denken.&quot;
 ## [1] &quot;Glastüren übersehen.&quot;
 ## [1] &quot;Etwas kaufen, weil es »Aloe Vera« enthält.&quot;</code></pre>
+<hr />
+<button class="btn btn-info btn-block" data-toggle="collapse" data-target="#zusatz_1">
+Vektor, Array, Matrix, …
+</button>
+<div id="zusatz_1" class="collapse">
+<p>Die drei Begriffe “Vektor”, “Array” und “Matrix” werden in R teilweise synonym verwendet. Sie bezeichnen in jedem Fall eine Variable, in der mehr als nur ein Wert steckt (eine Varaible mit nur einem Wert heißt übrigens “skalar”).</p>
+<p>Vektoren sind dabei eindimensional, Array und Matrizen können auch mehr Dimensionen beinhalten.</p>
+</div>
+<hr />
 <div id="benannte-vektoren" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Benannte Vektoren</h2>
 <p>In dieser Vertiefung lernen wir benannte Vektoren (<code>named vectors</code>) kennen. Wie der Begriff vermuten lässt, enthalten diese neben den eigentlichen Werten im Vektor auch noch für jeden Wert einen Namen.</p>

@@ -64,7 +64,7 @@ sowie Hauptgewässern ergänzt werden.
 
 - Mit `stack()` kannst Du deckungsgleiche Gitter übereinanderstapeln, um sie später gemeinsam zu behandeln.
   
-- Erstelle nun ein Schleife über alle Dateipfade, lies jede einzelne Datei ein. 
+- Erstelle nun ein Schleife über alle Dateipfade, lies jede einzelne Datei ein. (`stack()` akzeptiert auch die gesamte Dateiliste und stapelt diese. Seltsamerweise läuft dies aber deutlich langsamer als in der Schleife.)
 
 - Das Wichtigste ist nun geschafft: Du hast die Daten in einem `stack`. 
 
@@ -79,12 +79,14 @@ sowie Hauptgewässern ergänzt werden.
   wir Dir hier an, wie Du die korrekte Projektion setzt:
 
    ```
-		radolanproj ="+proj=stere +lat_0=90 +lat_ts=90 +lon_0=10 +k=0.93301270189 +x_0=0 +y_0=0 +a=6370040 +b=6370040 +to_meter=1000 +no_defs"
+		radolanproj ="+proj=stere +lat_0=90 +lat_ts=90 +lon_0=10 +k=0.93301270189 +x_0=0 +y_0=0 +a=6370040 +b=6370040 +to_meter=1 +no_defs"
 		crs(ein_geobjekt) = radolanproj #Festlegen einer Projektion für ein Geoobjekt
    ```
 	Geodaten, die in einer anderen Projektion vorliegen, musst Du umprojizieren (siehe Lektion 7).
 
-	Punktdaten (z.B. aus Koordinaten der Städte) lassen sich mittels `st_as_sf()` erzeugen.
+- Die Koordinaten für die Städte musst Du selbst rausfinden. Derartige Punkt-Geodaten lassen sich mittels `st_as_sf()` in R erzeugen. Auch diese müssen dann in das RADOLAN-CRS umprojiziert werden.
+	
+	Ob die Projektionen stimmen, kannst Du im nächsten Schritt visuell überprüfen.
 
 ### Karten erstellen
 
@@ -93,15 +95,13 @@ sowie Hauptgewässern ergänzt werden.
   Falls Du die Plots nebeneinander ausrichten willst, brauchst Du im ersten Fall ` par(mfrow=...) `, im zweiten `tmap_arrange()`, 
 - Für die Darstellung der Niederschlagssummen der einzelnen Tage musst Du aus dem
   Gesamtarray die passenden Zeitscheiben auswählen. Die Funktion `subset()` könnte für den Rasterstack behilflich sein.
-- Die Koordinaten für die Städte musst Du selbst rausfinden und dann in das RADOLAN-CRS
-  umprojizieren.
 
 ### Zeitreihen
 
 - Für die Zeitreihendarstellung musst Du nur die entsprechenden Werte für jeden
   Zeitschritt aus dem 3D-Gitter extrahieren. Das geht mit `extract()`. Es kann mit Punkten und Polygonen extrahiert werden. Für letzteres ist das Argument `fun` hilfreich.
 - Eine kumulative Summe berechnest Du mit `cumsum`.
-- Die Zeitstempel kannst Du mittels `names(DeinRasterstack)` extrahieren, wenn Du danach diese Zeichenketten umwandeltst, wie in Lektion 3 geschehen.
+- Die Zeitstempel kannst Du mittels `names(DeinRasterstack)` extrahieren, wenn Du danach diese Zeichenketten umwandelst, wie in Lektion 3 geschehen.
 
 
 ## Vorschläge zur Vorgehensweise in Python
