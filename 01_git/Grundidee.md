@@ -23,7 +23,7 @@ natürlich Änderungen unterschiedlicher Nutzer sein:
 (Quelle: [Software Carpentry](https://swcarpentry.github.io/git-novice/01-basics/index.html))
 
 Wenn unterschiedliche Nutzer nicht gerade an exakt der gleichen Stelle im Dokumment
-editieren, kan man aus den Änderungen der Nutzer eine neue Dokumentversion erstellen. 
+editieren, kann man aus den Änderungen der Nutzer eine neue Dokumentversion erstellen. 
 
 ![img](https://swcarpentry.github.io/git-novice/fig/merge.svg)
 

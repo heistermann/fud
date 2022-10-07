@@ -21,7 +21,7 @@ und bleibt das Fundament für Internetseiten bzw. für Inhalte, die in Browsern 
 
 Das tolle ist: Hosting-Plattformen wie GitHub und GitLab, aber auch Software wie
 `jupyter` und `R` verfügen über eine eingebaute Markdownunterstützung. Wenn Du
-eine Markdown-Date (`.md`) in GitLab anschaust, wird diese direkt gerendert. Auch
+eine Markdown-Datei (`.md`) in GitLab anschaust, wird diese direkt gerendert. Auch
 diese Seite hier wurde in Markdown geschrieben und dann von GitHub in html umgewandelt.
 Schaue Dir mal den Quelltext dieser Seite an (in Mozilla Firefox z.B. über `Strg + U`). Brrh.
 

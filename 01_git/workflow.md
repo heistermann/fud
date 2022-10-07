@@ -23,7 +23,7 @@ im Browser öffnen.
 
 Schau Dich ruhig mal um - evtl. sieht das Repository mittlerweile ein bisschen
 anders aus als auf dem Bild. Jetzt gerade enthält das Repository nur eine Datei
-namens `READM.md`. Das `md` steht für Markdown. Markdown ist eine sogenannte 
+namens `README.md`. Das `md` steht für Markdown. Markdown ist eine sogenannte 
 Auszeichnungssprache, die wir später noch besser kennenlernen werden. Diese
 Webseite habe ich übrigens auch in Markdown geschrieben.
 
@@ -66,8 +66,8 @@ Git Bash zusammen mit dem Befehl `git clone` einfügen.
 
 ![img](img/clone1.png) 
 
-In der URL in der folgenden Befehlszeile musste UPNUTZER also durch Deinen
-Benutzernamen ersetzt werden:
+In der URL in der folgenden Befehlszeile muss `UPNUTZER` durch *Deinen
+Benutzernamen* ersetzt werden:
 
 `$ git clone https://gitup.uni-potsdam.de/UPNUTZER/git-lernen.git`
 
@@ -113,7 +113,7 @@ hinzufügen, welche die Änderungen beschreibt. Das ist die *commit message*.
 Diese *commit message* lautet für den ersten Commit in diesem Repository originellerweise "Initial commit".
 
 Nimm nun eine Änderung am Repository vor. Was das für eine Änderung ist, bleibt
-Dir überlassen. Du kannstest z.B. eine neue Markdown-Datei erstellen. Nutze einen
+Dir überlassen. Du könntest z.B. eine neue Markdown-Datei erstellen. Nutze einen
 Texteditor (z.B. Notepad++) und erstelle eine neue Textdatei (z.B. `meins.md`)
 in Deinem lokalen Verzeichnis `git-lernen`. Ich habe dafür unter Ubuntu den Editor *gedit* genutzt.
 
@@ -130,7 +130,7 @@ $ git status
 
 `git` hat also gemerkt, dass es eine neuen Datei namens `meins.md` gibt. Diese
 Datei ist aber noch "untracked", ist also noch nicht Teil des `git` Repositories,
-obowhl sie im gleichen Verzeichnis liegt. Das Hinzufügen zum Repository erfolgt
+obwohl sie im gleichen Verzeichnis liegt. Das Hinzufügen zum Repository erfolgt
 in zwei Schritten: `add` fügt die Datei der sog. "Staging Area" hinzu, `commit`
 fügt dann alle Dateien, die sich in der Staging Area befinden, der git history hinzu.
 Das Flag `-m` markiert die *commit message*. 
@@ -154,7 +154,7 @@ hältst, kannst Du nun Deine Änderungen auf Dein GitLab-Repository schieben ('p
 
 `$ git push origin master`
 
-Du kannstest auch nur `git push` verwenden, aber wenn Du mit mehreren Remote-Repositories
+Du kannst auch nur `git push` verwenden, aber wenn Du mit mehreren Remote-Repositories
 und branches arbeitest, empfiehlt es sich, mittels `remote` und `branch` explizit anzugeben, womit der Abgleich erfolgen soll.
 
 Schaue nun im Browser auf Deinem GitLab-Repository nach, ob Deine Änderungen angekommen sind.

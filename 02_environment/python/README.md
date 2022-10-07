@@ -14,7 +14,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html). 
 
-   Windows-Nutzer/innen: Bitte wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
+   **Achtung Windows-Nutzer/innen:** Wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
    
    ![miniconda_path](img/miniconda_path.png)
 
@@ -31,7 +31,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    dass die Installation eines Pakets die Funktionalität anderer Pakete beeinträchtigt. Aber genug jetzt, wir erstellen einfach
    eine neue Umgebung names `umweltdv`:
    
-   `$ conda create --name umweltdv python=3.9`
+   `$ conda create --name umweltdv python=3.10`
 
 5. Immer, wenn Ihr mit dieser neuen Umgebung etwas anstellen wollt, müsst Ihr sie über das Terminal aktivieren. 
    Vielleicht wird dies der häufigste Befehl, den Ihr in diesem Kurs ausführen werdet...
@@ -48,7 +48,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    
    Das kann je nach Internetverbindung eine Weile dauern... 
    
-   Was das alle für Pakete sind, werden wir Stück für Stück ergründen. 
+   Was das alles für Pakete sind, werden wir Stück für Stück ergründen. 
    Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
    
 7. Noch eine Kleinigkeit...
@@ -59,7 +59,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
 Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt. Dies könntet Ihr jetzt auch runterladen, 
-aber wir wissen seid unserem letzten Termin etwas besseres. 
+aber wir wissen seid unserem letzten Termin etwas Besseres. 
 
 Ihr könnt in GitLab einen Fork des Repositories [https://gitup.uni-potsdam.de/umweltdv/umweltdv.git](https://gitup.uni-potsdam.de/umweltdv/umweltdv.git)
 anlegen und dann mittels `git clone https://gitup.uni-potsdam.de/MeinUPNutzer/umweltdv.git`

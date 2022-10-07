@@ -20,7 +20,7 @@ Linux, Mac und Windows:
 Unter [diesem Link](https://phoenixnap.com/kb/how-to-install-git-windows) gibt es noch einen Windows-spezifischen Walk-through durch die 
 Installationsprozedur.
 
-Öffne nach der Installation bitte die Git Bash und definier Nutzernamen
+Öffne nach der Installation bitte die Git Bash und definiere Nutzernamen
 und E-Mail-Adresse.
 
 ```
@@ -34,9 +34,9 @@ $ git config --global user.name "Your Name"
 Öffne in Deinem Browser die Adresse [https://gitup.uni-potsdam.de](https://gitup.uni-potsdam.de).
 
 Git.UP ist eine von der Uni Potsdam betriebene Instanz von GitLab. GitLab wiederum ist
-eine Plattform für Softwareentwicklung, die unter anderen die Speicherung und
-das Management von "Repositories" erlaubt. Lösungen wir GitLab oder das noch
-bekanntere [GitHub](https://github.com) sind heutzutage Dreh- und Angelpunkt kollaborativer 
+eine Plattform für Softwareentwicklung, die unter anderem die Speicherung und
+das Management von "Repositories" erlaubt. Lösungen wie GitLab oder das noch
+bekanntere [GitHub](https://github.com) sind heutzutage Dreh- und Angelpunkte kollaborativer 
 (also gemeinschaftlicher) Softwareentwicklung.
 
 Damit Du in diesem Kurs GitLab bzw. Git.UP nutzen kannst, musst Du Dich einmalig
