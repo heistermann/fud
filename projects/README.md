@@ -15,10 +15,12 @@ ist dies aus der jeweiligen Projektbeschreibung ersichtlich.
 ## Abgabe der Projekte
 
 Die Abgabe der Projekte erfolgt in Form eines git-Repositories, welches ein 
-Verzeichnis `data` mit den verwendeten Daten sowie eine R-Markdown-Datei bzw.
+Verzeichnis `data` mit den verwendeten Daten* sowie eine R-Markdown-Datei bzw.
 ein jupyter notebook mit Eurem Projekt enthalten sollte. Außerdem sollte eine
 html-Datei enthalten sein, die Ihr aus dem R-Markdown bzw. jupyter notebook
 generiert.
+
+*Bitte in den datenintensiven Projekten (z.B. "Starkniederschlag", "Schneehöhe") die Daten selbst nicht in das Repository übernehmen, um dieses nicht unnötig aufzublähen.
 
 ## Struktur
 
