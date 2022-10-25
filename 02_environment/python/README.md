@@ -99,6 +99,19 @@ Inhaltsverzeichnis als Sidebar einblenden zu können.
 
 ![nbextensions](img/nbextensions.png)
 
+Bei einigen Nutzer:innen wird der Reiter mit den `Nbextensions` leider nicht angezeigt.
+Diese müssen in ihrem conda environment über das Terminal die benötigen Extensions
+aktivieren (einmalig). Dafür jupyter beenden und dann:
+
+```
+$ conda activate umweltdv
+(umweltdv)$ jupyter nbextension enable toc2/main 
+(umweltdv)$ jupyter nbextension enable collapsible_headings/main
+(umweltdv)$ jupyter nbextension enable nbextensions_configurator/tree_tab/main
+```
+Die letzte Zeile sorgt vielleicht auch dafür, dass beim Neustart von `jupyter`
+nun auch der `Nbextension`-Reiter angezeigt wird.
+
 Wechsle nun zurück auf den Reiter `Files` und öffne das Verzeichnis
 `02_environment`. Lege eine Kopie der Datei `tour-de-python.ipynb` an, indem Du
 die Checkbox vor der Datei aktivierst und dann oben auf den Button `Duplicate`
