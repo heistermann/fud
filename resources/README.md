@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Weitere Ressourcen
-nav_order: 9
 ---
 
 # Weitere Ressourcen

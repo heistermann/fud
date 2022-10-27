@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Projekte
-nav_order: z
 has_children: true
 ---
 
