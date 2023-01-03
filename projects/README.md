@@ -45,4 +45,5 @@ sollen.
 - Klarheit/Zweckmäßigkeit des Codes
 - Klarheit/Zweckmäßigkeit der Dokumentation (markdown, Kommentare)
 - Lesbarkeit und Ästhetik der Abbildungen
+- Selbstständigkeit in der Bearbeitung
 - Vollständigkeit der Quellen 
