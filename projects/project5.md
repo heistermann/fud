@@ -24,7 +24,7 @@ Grundwassserdynamik in Potsdam und Umgebung im Laufe der letzten 20 Jahre.
 - Beobachtungen von Niederschlag, Lufttemperatur und Luftfeuchtigkeit am Standort Potsdam-Telegrafenberg (DWD)
 
 Die Daten stehen auf der [Auskunftplattform Wasser](https://apw.brandenburg.de) zur Verfügung, wurden jedoch bereits
-zur Nutzung in diesem Kurs heruntergeladen und unter Box.UP bereitgestellt ([Link](https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS),Passwort: Umweltdatenverarbeitung).
+zur Nutzung in diesem Kurs heruntergeladen und unter Box.UP bereitgestellt ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung).
 
 ## Ergebnisse
 

@@ -17,8 +17,8 @@ Aufgabe ist es, Anhand der Länge der aus dem Schnee ragenden Stäbe auf den Fot
 Gegeben sind die Fotodaten der Wildtierkamera an Standort 02. An diesem Standort wurden 9 Stäbe beobachtet. Die Auswertung soll nur exemplarisch nur für *einen* Stab an diesem Standort erfolgen.
 
 Die Daten liegen hier:
-https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS
-Passwort: Umweltdatenverarbeitung
+https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj
+Passwort: umweltdatenverarbeitung
 
 	fotos.zip: Archiv der Fotos
 	temp_precip_height.json: Beschreibung der Aufzeichnungen des Ultraschall-Schneepegels

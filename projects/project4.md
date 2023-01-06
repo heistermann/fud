@@ -28,7 +28,7 @@ b) die Änderungen des Niederschlags wie sie von 'REMO2009' unter Berücksichtig
 - Niederschlagsprojektion für 2071-2100 (RCP4.5), MPI-REMO2015 0.11° räumliche Auflösung (Griddaten, NetCDF)
 
 Die Stationsdaten (.txt-Datei) sowie die Griddaten der Klimasimulationen (.nc-Dateien) 
-stehen auf Box.UP zu Verfügung ([Link](https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS),Passwort: Umweltdatenverarbeitung).
+stehen auf Box.UP zu Verfügung ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung).
 
 **Beachte:** Die RCM Daten werden immer in Blöcken für fünf Jahre bereitgestellt. 
 Pro Klimaperiode (30 Jahre) müsstest du also auf sechs nc-Dateiein zugreifen...

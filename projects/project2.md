@@ -13,7 +13,7 @@ Hurricanes gehören zu den Naturereignissen mit dem größten Schadenspotenzial.
 
 ## Daten
 
-- Die Daten für die Bearbeitung dieses Projekts sind auf Box.UP verfügbar ([Link](https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS), Kennwort: Umweltdatenverarbeitung)
+- Die Daten für die Bearbeitung dieses Projekts sind auf Box.UP verfügbar ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung)
 - HURDAT2: Die neuesten Best Track Daten (HURDAT2) für den Atlantik gibt es auf der Seite [https://www.nhc.noaa.gov/data/](https://www.nhc.noaa.gov/data/). Wir haben in dem Datensatz auf Box.UP unter `hurdat2/hurdat2-1851-2020-052921` bereits eine Datei für Euch bereitgestellt. Zusätzlich zu der Datei gibt es eine Formatbeschreibung als pdf (`hurdat2/hurdat2-format-nov2019.pdf`). Das Dokument beschreibt das Format der Datei ausführlich und hilft Euch so, das Textformat zu interpretieren. Euer Ziel ist es zunächst, die Trackdaten in ein Geodatenformat zu überführen (in R mithilfe der Pakete `sf` oder `sp`, in Python mit Hilfe von `geopandas`).
 
 - Grenzen der US-Counties als Shapefile (`census/counties.shp`) und Zensusdaten (`census/DataSet.xlsx`): Die Attributtabelle von `counties.shp` beihaltet die Spalte FIPS (eine ID für die Counties). Diese benötigt ihr, um die räumlichen Daten mit den Zensusdaten in der Datei `DataSet.xlsx` zu verknüpfen. Aus dieser Exceldatei benötigt Ihr eigentlich nur die Spalte `HSG495212`: der "Median value of owner-occupied housing units, 2008-2012", vereinfacht gesagt der Median der Werte von Immobilienobjekten im jeweiligen County. 

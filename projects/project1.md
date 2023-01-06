@@ -22,8 +22,8 @@ sowie Hauptgewässern ergänzt werden.
 
 - Die erforderlichen Daten sind allesamt frei verfügbar. Wir haben sie jedoch der
   Einfachheit halber für Euch als Paket zusammengestellt. Das Datenpaket ist unter
-  Box.UP als zip-Datei verfügbar ([Link](https://boxup.uni-potsdam.de/s/pbSK8DLTBsNLJqS),
-  Kennwort: Umweltdatenverarbeitung). Die Strukur der zip-Datei ist folgende:
+  Box.UP als zip-Datei verfügbar ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj),
+  Passwort: umweltdatenverarbeitung). Die Strukur der zip-Datei ist folgende:
   - `rw/...`: stündliche Niederschlagsraster als ESRI ASCII Grids (Quelle: 
      DWD Opendata Server, [Link](https://opendata.dwd.de/climate_environment/CDC/grids_germany/hourly/radolan/recent/asc/))
   - `shapefiles/ahr/`: Einzugsgebiet der Ahr bis Pegel Altenahr (freundlicherweise
