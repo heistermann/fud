@@ -53,6 +53,12 @@ Nutze als Kartenhintergrund folgende Layer:
 
 ## Hinweise
 
+### R
+
+- Die Daten liegen in einer zip-Datei. Anstatt dieses manuell auszupacken, könnt Ihr die Daten auch direkt aus der zip-Datei lesen. Nehmen wir an, in der zip-Datei `the.zip` liegt eine Datei `the.csv`, dann geht das so:
+`read.table(unz("the.zip", "the.csv"), header=TRUE)`
+
+
 ### Python
 
 - Die eigentlichen Pegeldaten liegen in zip-Dateien verpackt. Anstatt diese alle auszupacken, könnt Ihr die Daten direkt aus der zip-Datei lesen. Dazu gibt es das Paket `zipfile`. Nehmen wir an in der zip-Datei `the.zip` liege eine Datei `the.csv`, dann:
@@ -104,3 +110,24 @@ plt.contour(demx, demy, dem, colors="brown", linewidths=0.75)
 ...
 ```
 
+### R
+
+- Wie ihr seht sind die Pegeldaten als zip-Dateien verpackt. Ihr müsst diese nicht alle manuell entpacken, damit ihr die Aufgabe bearbeiten könnt. R bietet Funktionen, um auch nur einzelne Dateien in einem zip-Ordner zu lesen. Angenommen im zip-Order `zipo.zip` liegt die Datei `filo.csv`, dann:
+
+```
+zipf <- read.csv(unzip("zipo.zip", "filo.csv"))
+````
+
+- Ich hatte beim Einlesen der Metadaten und beim Zusammenführen zu einem Dataframe Probleme mit den Datentypen. Schaut euch in der Hilfe zu `read.table()` das Argument `colClasses` an. Tipp: Datentypen lassen sich nach dem Einlesen auch umformatieren, z.B. `xy` seien Zahlen als Zeichenkette, dann `as.numeric(xy)` zum Umwandeln.
+
+- Zum Plotten der vielen Subplots: Schaut euch für sog. Multipannel-Plots (also eine Abbildungen mit vielen Subplots) einmal den Parameter `par(mfrow = c(,))` an. Der Parameter `par(mar = c(,))` ist auch nützlich bei der kosmetischen Gestaltung der Abbildung. Besipiel:
+
+```
+% 49 Plots angeordnet in 7 x 7:
+par(mfrow = c(7,7))
+
+% Ränder der Subplots (testet gerne auch andere Kombinationen, um zu verstehen, was passiert):
+par(mar = c(2,2,1,.1))
+```
+ 
+- @Wolfgang sind weitere Hinweise zum Plotten der Karte notwendig?

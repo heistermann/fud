@@ -27,8 +27,8 @@ Diese Struktur ist ein Vorschlag. Für alle Elemente gilt, dass sie so knapp
 wie möglich zu halten sind und sich wirklich auf das Wesentliche konzentrieren
 sollen.
 
-- Einführung: Motivation, Hintergrund und Zielstellung
-- Verwendete Daten
+- Einführung: Motivation, Hintergrund und Zielstellung (max. 1/2 Seite)
+- Verwendete Daten (max. 1/2 Seite)
 - ggf. verwendete Pakete und besondere Methoden
 - Code:
    - Importieren ggf. verwendeter Pakete

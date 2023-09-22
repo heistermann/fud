@@ -1,1 +1,0 @@
-This directory contains the data for both Python and R.

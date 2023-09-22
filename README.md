@@ -9,15 +9,15 @@ permalink: /
 
 ![img](http://www.freeimageslive.co.uk/files/images010/environmental_data_log.preview.jpg)
 
-Quelle: <a href="http://www.freeimageslive.co.uk/free_stock_image/environmental-data-log-jpg" target="_blank"> freeimageslive.co.uk gratuit </a> , Creative Commons Attribution 3.0 Unported License. 
+Quelle: <a href="http://www.freeimageslive.co.uk/free_stock_image/environmental-data-log-jpg" target="_blank"> freeimageslive.co.uk gratuit </a> , [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/). 
 
 Auf diesen Seiten findet Ihr die Inhalte des Moduls "Fundamente der Umweltdatenverarbeitung"
 im Studium MSc. Geoökologie der Universität Potsdam. Hier könnt Ihr Euch einen
 Überblick über die Struktur des Moduls verschaffen und die Inhalte zu git, Markdown,
 R und Python anschauen, ohne dazu eine Arbeitsumgebung öffnen zu müssen.
 
-Ergänzend dazu gibt es folgende Ressourcen (Stand: Wintersemester 2021/22, die Links
-dazu findet Ihr auf der Moodleseite dieses Kurses):
+Ergänzend dazu gibt es folgende Ressourcen (die Links
+dazu findet Ihr auf der nicht-öffentlichen Moodleseite dieses Kurses):
 
 - Moodlekurs: Terminübersicht, kursinterne Kommunikation, 
 Abgabe der Übungsaufgaben, ergänzende Inhalte

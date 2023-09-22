@@ -1,1 +1,0 @@
-This directory contains the exercise data for R.
