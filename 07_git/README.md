@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Level 7 - Git together
-nav_order: 8
 has_children: true
 permalink: /07_git
 ---
