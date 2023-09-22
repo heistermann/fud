@@ -40,9 +40,9 @@ Passwort: umweltdatenverarbeitung
 - Die Aufzeichnungen des automatischen Schneepegels sind als Vergleich einzuladen<sup>2</sup> und Zeitstempel umwandeln<sup>9</sup> 
 
 ## Detailtipps für die Umsetzung in R
-- <sup>1</sup> Lektion 3, Darstellung mit `plot()`
-- <sup>2</sup> Lektion 3, `read.table()`
-- <sup>3</sup> Lektion 5, `list.files()`, Lektion 4, `for()`
+- <sup>1</sup> Lektion 2, Darstellung mit `plot()`
+- <sup>2</sup> Lektion 2, `read.table()`
+- <sup>3</sup> Lektion 5, `list.files()`, Lektion 3, `for()`
 - <sup>4</sup> Funktion `locator()`
 - <sup>5</sup> `file.info()` oder package `exiftool`
 - <sup>6</sup> Funktion `approx()` 
@@ -52,8 +52,8 @@ Passwort: umweltdatenverarbeitung
 
 ## Detailtipps für die Umsetzung in Python
 - <sup>1</sup> Bilder lesen mit `matplotlib.image.imread(...)`, plotten mit `plt.imshow(...)`
-- <sup>2</sup> Lektion 3, `pandas.read_csv()`
-- <sup>3</sup> Lektion 5, `glob.glob()`, Lektion 4, `for`
+- <sup>2</sup> Lektion 2, `pandas.read_csv()`
+- <sup>3</sup> Lektion 5, `glob.glob()`, Lektion 3, `for`
 - <sup>4</sup> Das ist in Python leider ein bisschen komplizierter...siehe unten.
 - <sup>5</sup> In Python kannst Du den Zeitstempel einer Datei mittels `os.path.getmtime()` ermitteln. Der Zeitstempel kann dann mittels `pd.to_datetime(..., unit="s")` in ein `datetime`-Objekt umgewandelt werden.
 - <sup>6</sup> Funktion `scipy.interpolate.interp1d()`

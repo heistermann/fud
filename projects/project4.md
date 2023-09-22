@@ -58,12 +58,12 @@ heruntergeladen.
 
 ## Hinweise für R
 
-- Einlesen der Stationsdaten (siehe Lektion 3)
-- Einlesen und Zugreifen auf die Klimasimulationsdaten für die jeweils ersten fünf Jahre (NetCDF, siehe Lektion 6)
+- Einlesen der Stationsdaten (siehe Lektion 2)
+- Einlesen und Zugreifen auf die Klimasimulationsdaten für die jeweils ersten fünf Jahre (NetCDF, siehe Lektion 5)
 - Erstellen von Dataframes für die Klimasimulationen (Lektion3)
-- Anbinden der Tabellen aus den csv-Dateien (Daten für die übrigen je 25 Jahre) an die erstellten Dataframes (Lektion 3).
-- Berechnung der Monatsmittel (Funktion aggregate(); Lektion 3)
-- Berechnung der Anzahl an Tagen mit Niederschlägen größergleich Schwellenwert (z.B. über regelbasierte Teilmengen; Lektion 3)
+- Anbinden der Tabellen aus den csv-Dateien (Daten für die übrigen je 25 Jahre) an die erstellten Dataframes (Lektion 2).
+- Berechnung der Monatsmittel (Funktion aggregate(); Lektion 2)
+- Berechnung der Anzahl an Tagen mit Niederschlägen größergleich Schwellenwert (z.B. über regelbasierte Teilmengen; Lektion 2)
 - Berechnung der Abweichungen und Änderungen
 - Visualiersung der Ergebnisse (Lektionen 2 und 3)
 
@@ -125,13 +125,13 @@ heruntergeladen.
 
 ### Tabellendaten laden
 
-Alle Tabellendaten können wir gehabt mit `pandas.read_csv` geladen werden (Lektion 3).
+Alle Tabellendaten können wir gehabt mit `pandas.read_csv` geladen werden (Lektion 2).
 Denk dran, einen Index aus Datetimeobjeken zu erstellen.
 
 ### Simulationsdaten für Potsdam aus den NetCDF-Dateien extrahieren
 
 Öffne zunächst die NetCDF-Datei für die Referenzperiode und schau Dir die Datenstruktur
-an (siehe Lektion 6). Die Herausforderung ist hier, die Indizes der Gitterzelle
+an (siehe Lektion 5). Die Herausforderung ist hier, die Indizes der Gitterzelle
 zu identifizieren, in der die Station Potsdam liegt. Dafür nutzt Du die Nearest Neighbour
 Methode, welche durch `scipy.spatial.KDTree` bereitgestellt wird. Dafür benötigst Du
 die lat/lon-Koordinaten jedes Gitterpunktes. Hierzu müssen wir noch etwas erklären:
@@ -175,7 +175,7 @@ Die täglichen Niederschläge sind in der Einheit `g/m2/s` angegeben (SI-Einheit
 Das musst Du noch in `mm/d` umrechnen.
 
 Nun musst Du nur noch die Datetime-Objekte für Deine Zeitreihe basteln. Schau
-Dir dafür die Vertiefung der Lektion 6 nochmal an und untersuche die nc-Variable `time` genau.
+Dir dafür die Vertiefung der Lektion 5 nochmal an und untersuche die nc-Variable `time` genau.
 
 Nun kannst Du Dir aus dem entstandenen Datetime-Array und dem Niederschlags-Array
 Deinen DataFrame für die ersten fünf Jahr der Referenzperiode basteln.
@@ -186,7 +186,7 @@ Für die NetCDF-Datei mit der Klimaprojektion machst Du es genau so.
 
 Um visuell zu bestätigen, dass Du die richtige Gitterzelle ausgewählt hast, gibt
 es viele Wege. Wie wäre es, wenn Du einfach das Shapefile mit den Bundesländergrenzen
-verwendest (Lektion 7)?
+verwendest (Lektion 6)?
 
 ```
 import geopandas
@@ -209,4 +209,4 @@ mit den DataFrames aus den Tabellendaten verknüpfen (Stichwort: `append`).
 
 Nun hast Du drei DataFrames mit täglichen Niederschlägen: Beobachtungen (1971-2000),
 Simulation der Referenzperiode (1971-2000) und Klimaprojektion (2071-2100). Den Rest schaffst
-Du spielend - lass Dich dafür von Lektion 3 inspirieren.
+Du spielend - lass Dich dafür von Lektion 2 inspirieren.

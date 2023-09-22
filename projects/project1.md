@@ -58,7 +58,7 @@ sowie Hauptgewässern ergänzt werden.
 - Mit `list.files()` eine List aller Dateipfade zu den Niederschlagsgittern erstellen (Lektion 5)
 - Sortiere diese Liste, um sicherzustellen, dass die zeitliche Reihenfolge stimmt (`sort()`)
 
-- Probiere zunächst, ein einzelnes Niederschlagsgitter einzulesen (mit `raster()`, Lektion 7)
+- Probiere zunächst, ein einzelnes Niederschlagsgitter einzulesen (mit `raster()`, Lektion 6)
 - Die Gitter enthalten den Niederschlag in der Einheit Zehntelmillimeter
   (1/10 mm) - bitte in mm umrechnen! 
 
@@ -68,7 +68,7 @@ sowie Hauptgewässern ergänzt werden.
 
 - Das Wichtigste ist nun geschafft: Du hast die Daten in einem `stack`. 
 
-- Die erforderlichen Vektordaten liest Du ein, wie es in Lektion 7 gelernt hast.
+- Die erforderlichen Vektordaten liest Du ein, wie es in Lektion 6 gelernt hast.
 
 ### Räumliche Bezugssysteme, übrige Geodaten
 
@@ -82,7 +82,7 @@ sowie Hauptgewässern ergänzt werden.
 		radolanproj ="+proj=stere +lat_0=90 +lat_ts=90 +lon_0=10 +k=0.93301270189 +x_0=0 +y_0=0 +a=6370040 +b=6370040 +to_meter=1 +no_defs"
 		crs(ein_geobjekt) = radolanproj #Festlegen einer Projektion für ein Geoobjekt
    ```
-	Geodaten, die in einer anderen Projektion vorliegen, musst Du umprojizieren (siehe Lektion 7).
+	Geodaten, die in einer anderen Projektion vorliegen, musst Du umprojizieren (siehe Lektion 6).
 
 - Die Koordinaten für die Städte musst Du selbst rausfinden. Derartige Punkt-Geodaten lassen sich mittels `st_as_sf()` in R erzeugen. Auch diese müssen dann in das RADOLAN-CRS umprojiziert werden.
 	
@@ -91,7 +91,7 @@ sowie Hauptgewässern ergänzt werden.
 ### Karten erstellen
 
 - Für die Kartendarstellung des Niederschlags kannst Du Dich daran orientieren,
-  was wir in Lektion 7 für die Geländehöhe gemacht haben: Nutze entweder einfach `plot()` (folgendene Layer mit (`plot(..., add=TRUE)` oder die fortgeschrittenen Funktionen von `tmap`.
+  was wir in Lektion 6 für die Geländehöhe gemacht haben: Nutze entweder einfach `plot()` (folgendene Layer mit (`plot(..., add=TRUE)` oder die fortgeschrittenen Funktionen von `tmap`.
   Falls Du die Plots nebeneinander ausrichten willst, brauchst Du im ersten Fall ` par(mfrow=...) `, im zweiten `tmap_arrange()`, 
 - Für die Darstellung der Niederschlagssummen der einzelnen Tage musst Du aus dem
   Gesamtarray die passenden Zeitscheiben auswählen. Die Funktion `subset()` könnte für den Rasterstack behilflich sein.
@@ -101,7 +101,7 @@ sowie Hauptgewässern ergänzt werden.
 - Für die Zeitreihendarstellung musst Du nur die entsprechenden Werte für jeden
   Zeitschritt aus dem 3D-Gitter extrahieren. Das geht mit `extract()`. Es kann mit Punkten und Polygonen extrahiert werden. Für letzteres ist das Argument `fun` hilfreich.
 - Eine kumulative Summe berechnest Du mit `cumsum`.
-- Die Zeitstempel kannst Du mittels `names(DeinRasterstack)` extrahieren, wenn Du danach diese Zeichenketten umwandelst, wie in Lektion 3 geschehen.
+- Die Zeitstempel kannst Du mittels `names(DeinRasterstack)` extrahieren, wenn Du danach diese Zeichenketten umwandelst, wie in Lektion 2 geschehen.
 
 
 ## Vorschläge zur Vorgehensweise in Python
@@ -111,7 +111,7 @@ sowie Hauptgewässern ergänzt werden.
 - Sortiere diese Liste, um sicherzustellen, dass die zeitliche Reihenfolge stimmt (`sorted`)
 - Erstelle zunächst einen 3-D `ndarray` (sagen wir mal ), der aus Nullen besteht, aber genau den
   `shape` hat, um Deine Niederschlagsdaten aufzunehmen (`(Zahl der Zeitschritte, 900, 900)`)
-- Probiere zunächste, ein einzelnes Niederschlagsgitter einzulesen (mit `rasterio`, Lektion 7)
+- Probiere zunächste, ein einzelnes Niederschlagsgitter einzulesen (mit `rasterio`, Lektion 6)
 - Achtung: Die Gitter enthalten den Niederschlag in der Einheit Zehntelmillimeter
   (1/10 mm) - bitte in mm umrechnen! Vorher aber Fehlwerte maskieren - der Wert
   `-1` ist ein Fehlwertflag.
@@ -153,12 +153,12 @@ sowie Hauptgewässern ergänzt werden.
    radolancrs = pyproj.CRS.from_wkt(radolanwkt)
    ```
 - Du kannst nun wie gewohnt die Shapefiles mit `geopandas` einlesen und umprojizieren
-  (Lektion 7).
+  (Lektion 6).
 
 ### Karten erstellen
 
 - Für die Kartendarstellung des Niederschlags kannst Du Dich daran orientieren,
-  was wir in Lektion 7 für die Geländehöhe gemacht haben: Nutze `plt.imshow`
+  was wir in Lektion 6 für die Geländehöhe gemacht haben: Nutze `plt.imshow`
   zusammen mit dem Extent-Argument und plotte dann die Vektordaten darüber.
 - Für die Darstellung der Niederschlagssummen der einzelnen Tage musst Du aus dem
   Gesamtarray die passenden Zeitscheiben auswählen. Dafür gibt es unterschiedliche
