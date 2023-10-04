@@ -31,7 +31,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    dass die Installation eines Pakets die Funktionalität anderer Pakete beeinträchtigt. Aber genug jetzt, wir erstellen einfach
    eine neue Umgebung names `umweltdv`:
    
-   `$ conda create --name umweltdv python=3.10`
+   `$ conda create --name umweltdv python=3.11`
 
 5. Immer, wenn Ihr mit dieser neuen Umgebung etwas anstellen wollt, müsst Ihr sie über das Terminal aktivieren. 
    Vielleicht wird dies der häufigste Befehl, den Ihr in diesem Kurs ausführen werdet...
@@ -42,11 +42,9 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
    dass `conda activate` nicht zur Verfügung steht. Führe in diesem Fall den Befehl
    `conda init bash` aus, schließe das Terminal und versuche es nochmal.
 
-6. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch:
+6. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch. **Achtung:** Dieser Schritt kann seeeeeeeehr lange dauern - 15 bis 30 Minuten sind nicht ungewöhnlich. Das liegt daran, dass `conda` all die Abhängigkeiten zwischen den Paketen verstehen und auflösen muss.
 
-   `(umweltdv) $ conda install numpy scipy pandas matplotlib notebook h5py netCDF4 geopandas jupyter_contrib_nbextensions rasterio`
-   
-   Das kann je nach Internetverbindung eine Weile dauern... 
+   `(umweltdv) $ conda install numpy scipy pandas matplotlib notebook h5py netCDF4 geopandas jupyter_contrib_nbextensions rasterio` 
    
    Was das alles für Pakete sind, werden wir Stück für Stück ergründen. 
    Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
@@ -58,10 +56,12 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
-Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt: https://gitup.uni-potsdam.de/umweltdv/umweltdv.
+Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt: https://gitup.uni-potsdam.de/umweltdv/umweltdv
 
 Den Inhalt könnt Ihr Euch einfach über den Download-Button als `zip`-Archiv runterladen. 
-Speichert und entpackt das Archiv an einem geeigneten Speicherort auf Eurem Rechner.
+Speichert und entpackt das Archiv an einem geeigneten Speicherort auf Eurem Rechner. Nennt die Verzeichnisebene oberhalb
+der eigentlichen Inhalte (also oberhalb der Verzeichnisse `01_environment`, `02_dataframe_basic_vis`, ...) der
+Konsistenz wegen am Besten `umweltdv`.
 
 ![1stjupyter](img/downloadrepo.png)
 
@@ -71,10 +71,13 @@ In der [letzten Lektion](../../07_git/Beschaffen.md) lernen wir auch noch einen 
 
 Wir gelangen nun in die heiße Vorbereitungsphase. In Kürze werden wir Eure Arbeitsumgebung starten...
 
-Wenn nicht schon geschehen, öffnet im geklonten Arbeitverzeichnis `umweltdv` ein Terminalfester.
+Wenn nicht schon geschehen, öffnet im Verzeichnis `umweltdv`, welches die Kursinhalte enthält, ein Terminalfester. 
+Unter Windows geht das einfach, indem Ihr im Windows Explorer in das Verzeichnis navigiert, dann in der Adresszeile oben `cmd` eingaben und `Enter` drücken.
+[Hier](https://www.maketecheasier.com/launch-terminal-current-folder-mac/) gibt es Hinweise für Mac-User.
+
 Nun aktiviert Eure `conda`-Umgebung `umweltdv` und startet `jupyter`. `jupyter`?? Das ist das Werkzeug, in dem wir 
 Python-Code schreiben und ausführen werden. Ein sehr mächtiges Werkzeug, das Ihr in den kommenden Wochen ausführlich
-kennenlernen werdet. Nun also:
+kennenlernen werdet. Also:
 
 ```
 $ conda activate umweltdv
