@@ -58,16 +58,14 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
-Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt. Dies könntet Ihr jetzt auch runterladen, 
-aber wir wissen seid unserem letzten Termin etwas Besseres. 
+Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt: https://gitup.uni-potsdam.de/umweltdv/umweltdv.
 
-Ihr könnt in GitLab einen Fork des Repositories [https://gitup.uni-potsdam.de/umweltdv/umweltdv.git](https://gitup.uni-potsdam.de/umweltdv/umweltdv.git)
-anlegen und dann mittels `git clone https://gitup.uni-potsdam.de/MeinUPNutzer/umweltdv.git`
-in ein lokales Verzeichnis klonen. Ihr werdet beim Klonen nach Nutzernamen und Kennwort gefragt. Benutzt Euren UP-Account (Nutzername ohne `@uni-potsdam.de`) 
+Den Inhalt könnt Ihr Euch einfach über den Download-Button als `zip`-Archiv runterladen. 
+Speichert und entpackt das Archiv an einem geeigneten Speicherort auf Eurem Rechner.
 
-Falls Ihr das noch nicht im Rahmen der `git`-Lektion gemacht habt: [Hier](../../07_git/Beschaffen.md)
-findet Ihr eine ausführliche Anleitung.
+![1stjupyter](img/downloadrepo.png)
 
+In der [letzten Lektion](../../07_git/Beschaffen.md) lernen wir auch noch einen anderen Weg kennen, wie Ihr ein `git`-Repository einschließlich seiner "History" auf Euren Rechner "klonen" könnt - aber dazu mehr in ein paar Wochen.
 
 ## Starte `jupyter` und los geht's...
 
@@ -122,15 +120,11 @@ drückst.
 **Warum solltest Du in diesem Kurs immer eine Kopie eines Notebooks anlegen, bevor
 Du darin arbeitest?**
 
-Der Grund ist, dass die Dozierenden im zentralen Upstream-Repository
-manchmal Inhalte ändern/anpassen/korrigieren. Wenn Du diese Änderungen in Dein
-Repository `merge`st/`pull`st, kommt es evtl. zu Konflikten mit Deinen eigenen Änderungen. Das
-ist zwar nicht weiter schlimm, kann aber etwas mühsam werden. Die Alternative für
-`git`-Profis wäre, einen neuen `git`-Branch (z.B. mit `git checkout -b nur-fuer-mich`
-anzulegen, in dem Du arbeitest. Dann könntest Du parallel dazu Deinen `master`-Branch
-mit dem zentralen Repository synchronisieren und bei Bedarf in Deine eigenen Änderungen
-auf `nur-fuer-mich` reinmergen. Aber...das lassen wir erstmal. Lege stattdessen 
-immer eine Kopie der Notebooks an, bevor Du sie öffnest und damit arbeitest.
+Der Grund ist, dass die Dozierenden im Repository `umweltdv/umweltdv`
+manchmal Inhalte ändern/anpassen/korrigieren. Darum kann es erforderlich sein, dass Du Dir 
+diese aktualisierten Inhalte nochmal runterlädst. Damit diese Dateien nicht in Konflikt 
+mit den von Dir bereits bearbeiteten jupyter-Notebooks geraten, ist es besser, vor der
+Bearbeitung eine Kopie anzulegen.
 
 Klicke nun also auf die neue Datei `tour-de-python-Copy1.ipynb` und weiter geht's
 [im Notebook](tour-de-python.html).
@@ -144,7 +138,7 @@ das Notebook wieder öffnen und weiter dran arbeiten. Um das Notebook ausdrückl
 zu deaktivieren, könnt Ihr es markieren und dann den "Shutdown"-Button drücken.
 
 Es bleibt jedoch noch das Terminalfenster, über welches Ihr die jupyter-Session
-mit dem Befehl `jupter notebook` gestartet habt. Ihr könnt das Fenster einfach
+mit dem Befehl `jupyter notebook` gestartet habt. Ihr könnt das Fenster einfach
 schließen, um die Session zu beenden. Der saubere Weg (auch wenn Ihr im Terminal
 weiterarbeiten möchtet) ist jedoch, die Session im Terminal mit der Tastenkombination
 `Strg + C` zu beenden.
