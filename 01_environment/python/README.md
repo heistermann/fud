@@ -56,7 +56,7 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 ## Hole Dir die Kursmaterialien auf Deinen Rechner
 
-Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt: https://gitup.uni-potsdam.de/umweltdv/umweltdv
+Wir haben alles, was Ihr für diesen Kurs an Material braucht, in einem zentralen Repository abgelegt: [https://gitup.uni-potsdam.de/umweltdv/umweltdv](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
 
 Den Inhalt könnt Ihr Euch einfach über den Download-Button als `zip`-Archiv runterladen. 
 Speichert und entpackt das Archiv an einem geeigneten Speicherort auf Eurem Rechner. Nennt die Verzeichnisebene oberhalb
