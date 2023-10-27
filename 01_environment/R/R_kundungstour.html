@@ -1409,23 +1409,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1542,15 +1536,19 @@ ausführen kannst) wird so dargestellt:</p>
 <pre class="r"><code>R_Code() # Raute (&quot;Hashtag&quot;) kennzeichnet einen Kommentar; wird von R ignoriert = nicht ausgeführt</code></pre>
 <p>Die Ausgabe von Befehlen in R wird hier so dargestellt:</p>
 <pre><code>## [1] &quot;Die Ausgabe eines R-Befehls&quot;</code></pre>
-<p>Aufgaben zu den einzelnen Kaptiteln werden eingerückt
-dargestellt:</p>
+<p>Aufgaben zu den einzelnen Kapiteln werden eingerückt dargestellt:</p>
 <blockquote>
-<p>Aufgabe</p>
+<p>Simple Aufgabe</p>
+<p>Klicke den Button, um die Lösung aufzuklappen!</p>
+<button class="btn btn-block" data-toggle="collapse" data-target="#aufgabe_beispiel">
+Lösung
+</button>
+<div id="aufgabe_beispiel" class="collapse">
+<p>Hier steht dann die Lösung.</p>
+</div>
 </blockquote>
-<p>Lösungen, Zusatzaufgaben sowie wichtige Hinweise und Tipps haben
-folgende Buttons: <button type="button" class="btn">Lösungen zu
-Aufgaben</button>
-<button type="button" class="btn btn-info">Zusatzaufgaben oder
+<p>Zusatzaufgaben sowie wichtige Hinweise und Tipps haben folgende
+Buttons: <button type="button" class="btn btn-info">Zusatzaufgaben oder
 -informationen</button>
 <button type="button" class="btn btn-warning">Wichtig!</button>
 <button type="button" class="btn btn-success">Tipp</button></p>
@@ -1598,40 +1596,66 @@ Lösung
 </div>
 </blockquote>
 </div>
-<div id="markdown-in-r" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Markdown in R</h1>
-<p>Markdown kennst Du ja schon. Ein schlanke Sprache, um übersichtlich
-formatierten Text zu erstellen. In R kannst Du Markdown-Dateien
-erstellen und dann “rendern” (also hübsch formatiert darstellen). Dafür
-gehst Du in RStudio unter <code>File</code> auf <code>New File</code>
-und klickst dort auf <code>R Markdown...</code>. Ein Fenster öffnet
-sich, in dem Du Titel, Autor und das standardmäßige Output-Format
-angeben kannst. Nachdem Du auf <code>OK</code> klickst, wird eine
-Rmd-Datei erstellt, die schon einige grundlegende Infos und
-Beispiel-Befehle für R-Markdown enthält. Wenn Du nun auf den
-<code>Knit</code>-Button klickst, wird eine HTML-Datei erzeugt, die
-sowohl formatierten Text als auch Code-Blöcke enthält.</p>
+<div id="arbeitsschritte-speichern" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Arbeitsschritte
+speichern</h1>
+<p>Du kannst alles, was Du in einer R-Sitzung an Befehlen benutzt, auch
+speichern, um später daran weiterzuarbeiten oder eine Analyse zu
+wiederholen. Dies betrifft nur die Befehle; etwaige Daten oder
+Zwischenergebnisse werden dann wieder neu erzeugt.</p>
+<div id="speichern-als-r-skript" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Speichern als
+R-Skript</h2>
+<p>Die einfachere Art, wenn es primär darum geht, Deinen Quelltext zu
+sichern: Einfach unter “Datei”-&gt; “Speichern unter…” speichern. Mit
+dem erneuten Öffnen von RStudio werden die letzten Dateien meist gleich
+mitgeöffnet.</p>
+</div>
+<div id="markdown-in-r" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Markdown in R</h2>
+<p>Markdown kennst Du vielleicht schon aus der Lektion “git-together”.
+Ein schlanke Sprache, um übersichtlich formatierten Text zu erstellen.
+Mit der <a href="https://www.markdownguide.org/basic-syntax/">Markdown-Synthax</a>
+lassen sich eine vielzahl von Formatierungen umsetzen.</p>
+<p>Auch in R kannst Du Markdown-Dateien erstellen und dann “rendern”
+(also hübsch formatiert darstellen). Dafür gehst Du in RStudio unter
+<code>File</code> auf <code>New File</code> und klickst dort auf
+<code>R Markdown...</code>. Ein Fenster öffnet sich, in dem Du Titel,
+Autor und das standardmäßige Output-Format angeben kannst. Nachdem Du
+auf <code>OK</code> klickst, wird eine Rmd-Datei erstellt, die schon
+einige grundlegende Infos und Beispiel-Befehle für R-Markdown enthält.
+Wenn Du nun auf den <code>Knit</code>-Button klickst, wird eine
+HTML-Datei erzeugt, die sowohl formatierten Text als auch Code-Blöcke
+enthält. Das geht dann so:</p>
+<p><code>```{r, include=TRUE, eval=TRUE}  (22/11 * (1+5))^2 ```</code></p>
+<p>Je nach Optionen in den geschweiften Klammern werden diese Blöcke
+dann mit Quellcode dargestellt und/oder ausgeführt und in das Dokument
+eingebunden.</p>
 <blockquote>
 <p>Aufgabe 3</p>
-Füge der Markdown-Datei folgende Elemente hinzu: (i) eine weitere
-Überschrift, (ii) eine Liste mit drei Elementen, (iii) eine weitere
-Codeblockzeile, (iv) einen weiteren funktionierenden Hyperlink.
+Füge der Markdown-Datei folgende Elemente hinzu:<br> (i) eine weitere
+Überschrift,<br> (ii) eine Liste mit drei Elementen,<br> (iii) eine
+weitere Codeblockzeile, die “Hallo” ausgibt, <br> (iv) einen weiteren
+funktionierenden Hyperlink.
 <button class="btn btn-block" data-toggle="collapse" data-target="#l_md">
 Lösung </button>
 <div id="l_md" class="collapse">
 <p><code># Eine weitere Überschrift</code></p>
 <h1 id="eine-weitere-überschrift">Eine weitere Überschrift</h1>
-<p><code>* ein Element</code> <code>* noch eines</code></p>
+<p><code>* ein Element    * noch eines     * und Nummer Drei</code></p>
 <ul>
 <li>ein Element</li>
 <li>noch eines</li>
+<li>und Nummer Drei</li>
 </ul>
-<p><code>``` Codezeile ```</code></p>
-<p><code>Codezeile</code></p>
+<p><code>```{r, include=TRUE, eval=TRUE}     print(&quot;Hello again!&quot;) ```</code></p>
+<pre class="r"><code>print(&quot;Hello again!&quot;)</code></pre>
+<pre><code>## [1] &quot;Hello again!&quot;</code></pre>
 <p><code>[Link zu nerdigen Cartoons](https://xkcd.com/)</code></p>
 <p><a href="https://xkcd.com/">Link zu nerdigen Cartoons</a></p>
 </div>
 </blockquote>
+</div>
 </div>
 <div id="mit-variablen-arbeiten" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Mit Variablen
@@ -1731,16 +1755,17 @@ library(sessioninfo)</code></pre>
 <code>sessioninfo</code> zur Verfügung stellt und lassen uns
 Informationen über die verwendete Plattform ausgeben:</p>
 <pre class="r"><code>sessioninfo::platform_info()</code></pre>
-<pre><code>##  setting  value                       
-##  version  R version 4.1.1 (2021-08-10)
-##  os       Windows 10 x64              
-##  system   x86_64, mingw32             
-##  ui       RTerm                       
-##  language (EN)                        
-##  collate  German_Germany.1252         
-##  ctype    German_Germany.1252         
-##  tz       Europe/Berlin               
-##  date     2022-11-11</code></pre>
+<pre><code>##  setting  value
+##  version  R version 4.2.2 (2022-10-31 ucrt)
+##  os       Windows 10 x64 (build 19045)
+##  system   x86_64, mingw32
+##  ui       RTerm
+##  language (EN)
+##  collate  German_Germany.utf8
+##  ctype    German_Germany.utf8
+##  tz       Europe/Berlin
+##  date     2023-10-27
+##  pandoc   2.19.2 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)</code></pre>
 <p>Die Angaben unter <em>value</em> sehen bei Dir möglicherweise etwas
 anders aus. Falls Du mit einigen Angaben unter <em>setting</em> nichts
 anfangen kannst (Wofür steht zum Beispiel <em>ui</em>?), kann man in der
@@ -1826,9 +1851,9 @@ sondern in dem <code>data</code>-Verzeichnis, welches eine Ebene darüber
 liegt. Übergeordnete Verzeichnisebenen spricht man mit dem
 <code>..</code>-Element an.</p>
 <pre class="r"><code>read.table(&quot;../data/example-file-3.txt&quot;, sep=&quot;\n&quot;)</code></pre>
-<pre><code>##                                                              V1
-## 1                                    Hallo untergeordnete Welt!
-## 2 (in einer Datei in einer Verzeichnisebene darÃ¼ber versteckt)</code></pre>
+<pre><code>##                                                             V1
+## 1                                   Hallo untergeordnete Welt!
+## 2 (in einer Datei in einer Verzeichnisebene darüber versteckt)</code></pre>
 </div>
 <div id="absolute-pfadangaben" class="section level3" number="7.1.2">
 <h3><span class="header-section-number">7.1.2</span> Absolute
