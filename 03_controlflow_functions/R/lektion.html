@@ -1541,7 +1541,7 @@ Zwischentöne”</em></p>
 <li>Schmeckt Lakritze?</li>
 </ul>
 <p>Dafür gibt es in R und anderen Programmiersprachen einen eigenen
-Datentyp, die boole’sche (nach <a href="https://de.wikipedia.org/wiki/George_Boole">G. Boole</a> oder
+Datentyp, die boole’sche (nach <a href="https://de.wikipedia.org/wiki/George_Boole">G. Boole</a>) oder
 logische Variablen genannt werden. Diese können nur die beiden Werte
 <code>TRUE</code> (wahr) und <code>FALSE</code> (falsch) annehmen:</p>
 <pre class="r"><code>mir_gehts_gut &lt;- TRUE
@@ -1666,8 +1666,8 @@ A: Bedingungen mit <code>if</code></h1>
 Fallunterscheidungen, wie in wenn-dann-Beziehungen:</p>
 <ul>
 <li>Wenn es regnet, dann nimm den Regenschirm mit.</li>
-<li>Wenn der Dataframe eine Spalte namens “temp” hat, dann erzeuge einen
-Plot davon.</li>
+<li>Wenn der Dataframe eine Spalte namens <code>temp</code> hat, dann
+erzeuge ein Diagramm daraus davon.</li>
 <li>Wenn Dich die bösen Buben locken, dann bleib zu Haus und stopfe
 Socken.</li>
 </ul>
@@ -2103,22 +2103,23 @@ for (zaehler in 1:length(tage_mit_schnee)) #die Variable zaehler bekommt nachein
     print(paste(&quot;Tag&quot;, zaehler,&quot;: Schneefegen!&quot;)) else 
     print(paste(&quot;Tag&quot;, zaehler,&quot;: Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 : Schneefegen!&quot;
-## [1] &quot;Tag 2 : Schneefegen!&quot;
-## [1] &quot;Tag 3 : Ausschlafen!&quot;
-## [1] &quot;Tag 4 : Ausschlafen!&quot;
-## [1] &quot;Tag 5 : Ausschlafen!&quot;
-## [1] &quot;Tag 6 : Schneefegen!&quot;
-## [1] &quot;Tag 7 : Schneefegen!&quot;
-## [1] &quot;Tag 8 : Ausschlafen!&quot;
-## [1] &quot;Tag 9 : Ausschlafen!&quot;
+<pre><code>## [1] &quot;Tag 1 : Ausschlafen!&quot;
+## [1] &quot;Tag 2 : Ausschlafen!&quot;
+## [1] &quot;Tag 3 : Schneefegen!&quot;
+## [1] &quot;Tag 4 : Schneefegen!&quot;
+## [1] &quot;Tag 5 : Schneefegen!&quot;
+## [1] &quot;Tag 6 : Ausschlafen!&quot;
+## [1] &quot;Tag 7 : Ausschlafen!&quot;
+## [1] &quot;Tag 8 : Schneefegen!&quot;
+## [1] &quot;Tag 9 : Schneefegen!&quot;
 ## [1] &quot;Tag 10 : Ausschlafen!&quot;
 ## [1] &quot;Tag 11 : Schneefegen!&quot;
-## [1] &quot;Tag 12 : Ausschlafen!&quot;
+## [1] &quot;Tag 12 : Schneefegen!&quot;
 ## [1] &quot;Tag 13 : Schneefegen!&quot;
 ## [1] &quot;Tag 14 : Ausschlafen!&quot;
 ## [1] &quot;Tag 15 : Schneefegen!&quot;
-## [1] &quot;Tag 16 : Schneefegen!&quot;</code></pre>
+## [1] &quot;Tag 16 : Ausschlafen!&quot;
+## [1] &quot;Tag 17 : Ausschlafen!&quot;</code></pre>
 </div>
 Wir bekommen einen neuen Mitbewohner in unserem Haus und sind nur noch
 an ungeraden Tagen verantwortlich. Passe die Schleife durch a)
@@ -2142,20 +2143,19 @@ for (zaehler in seq(from=1, to=length(tage_mit_schnee), by=2)) #die Variable zae
    print(paste(&quot;Tag&quot;, zaehler,&quot;: Schneefegen!&quot;)) else 
    print(paste(&quot;Tag&quot;, zaehler,&quot;: Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 : Ausschlafen!&quot;
+<pre><code>## [1] &quot;Tag 1 : Schneefegen!&quot;
 ## [1] &quot;Tag 3 : Schneefegen!&quot;
 ## [1] &quot;Tag 5 : Schneefegen!&quot;
 ## [1] &quot;Tag 7 : Schneefegen!&quot;
-## [1] &quot;Tag 9 : Ausschlafen!&quot;
-## [1] &quot;Tag 11 : Ausschlafen!&quot;
-## [1] &quot;Tag 13 : Schneefegen!&quot;
+## [1] &quot;Tag 9 : Schneefegen!&quot;
+## [1] &quot;Tag 11 : Schneefegen!&quot;
+## [1] &quot;Tag 13 : Ausschlafen!&quot;
 ## [1] &quot;Tag 15 : Schneefegen!&quot;
-## [1] &quot;Tag 17 : Schneefegen!&quot;
+## [1] &quot;Tag 17 : Ausschlafen!&quot;
 ## [1] &quot;Tag 19 : Ausschlafen!&quot;
-## [1] &quot;Tag 21 : Ausschlafen!&quot;
+## [1] &quot;Tag 21 : Schneefegen!&quot;
 ## [1] &quot;Tag 23 : Schneefegen!&quot;
-## [1] &quot;Tag 25 : Schneefegen!&quot;
-## [1] &quot;Tag 27 : Schneefegen!&quot;</code></pre>
+## [1] &quot;Tag 25 : Schneefegen!&quot;</code></pre>
 </div>
 <a name="h_schneefegen_l"> </a>
 <button class="btn btn-block" data-toggle="collapse" data-target="#h_schneefegenb">
@@ -2178,10 +2178,18 @@ for (zaehler in 1:length(tage_mit_schnee)) #die Variable zaehler bekommt nachein
      print(paste(&quot;Tag&quot;, zaehler,&quot;: Schneefegen!&quot;)) else 
      print(paste(&quot;Tag&quot;, zaehler,&quot;: Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 : Schneefegen!&quot;
-## [1] &quot;Tag 3 : Ausschlafen!&quot;
+<pre><code>## [1] &quot;Tag 1 : Ausschlafen!&quot;
+## [1] &quot;Tag 3 : Schneefegen!&quot;
 ## [1] &quot;Tag 5 : Ausschlafen!&quot;
-## [1] &quot;Tag 7 : Schneefegen!&quot;</code></pre>
+## [1] &quot;Tag 7 : Schneefegen!&quot;
+## [1] &quot;Tag 9 : Schneefegen!&quot;
+## [1] &quot;Tag 11 : Schneefegen!&quot;
+## [1] &quot;Tag 13 : Ausschlafen!&quot;
+## [1] &quot;Tag 15 : Ausschlafen!&quot;
+## [1] &quot;Tag 17 : Schneefegen!&quot;
+## [1] &quot;Tag 19 : Ausschlafen!&quot;
+## [1] &quot;Tag 21 : Ausschlafen!&quot;
+## [1] &quot;Tag 23 : Schneefegen!&quot;</code></pre>
 </div>
 <hr />
 <button class="btn btn-info btn-block" data-toggle="collapse" data-target="#zusatz_wochentag">
@@ -2212,9 +2220,21 @@ for (zaehler in seq(from=1, to=length(tage_mit_schnee), by=2)) #die Variable zae
    print(paste(&quot;Tag&quot;, zaehler,&quot;(&quot;, wochentage[index_wochentag],&quot;): Schneefegen!&quot;)) else 
    print(paste(&quot;Tag&quot;, zaehler,&quot;(&quot;, wochentage[index_wochentag],&quot;): Ausschlafen!&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Tag 1 ( Mo ): Ausschlafen!&quot;
+<pre><code>## [1] &quot;Tag 1 ( Mo ): Schneefegen!&quot;
 ## [1] &quot;Tag 3 ( Mi ): Ausschlafen!&quot;
-## [1] &quot;Tag 5 ( Fr ): Ausschlafen!&quot;</code></pre>
+## [1] &quot;Tag 5 ( Fr ): Ausschlafen!&quot;
+## [1] &quot;Tag 7 ( So ): Schneefegen!&quot;
+## [1] &quot;Tag 9 ( Di ): Ausschlafen!&quot;
+## [1] &quot;Tag 11 ( Do ): Schneefegen!&quot;
+## [1] &quot;Tag 13 ( Sa ): Ausschlafen!&quot;
+## [1] &quot;Tag 15 ( Mo ): Schneefegen!&quot;
+## [1] &quot;Tag 17 ( Mi ): Ausschlafen!&quot;
+## [1] &quot;Tag 19 ( Fr ): Ausschlafen!&quot;
+## [1] &quot;Tag 21 ( So ): Schneefegen!&quot;
+## [1] &quot;Tag 23 ( Di ): Schneefegen!&quot;
+## [1] &quot;Tag 25 ( Do ): Schneefegen!&quot;
+## [1] &quot;Tag 27 ( Sa ): Ausschlafen!&quot;
+## [1] &quot;Tag 29 ( Mo ): Schneefegen!&quot;</code></pre>
 </div>
 </div>
 </blockquote>
@@ -2395,18 +2415,23 @@ while (v_wind &lt; 20)
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
 <pre><code>## [1] &quot;Wind: 5 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 8.9413885868853 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 7.77880560444798 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 9.86208427280161 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 10.6150775718734 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 15.6909804874525 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 13.3685333479651 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 14.0356821447567 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 11.1142687908785 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 14.6483934073298 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 12.9587974565905 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 17.3867012703533 ; Anlage läuft.&quot;
-## [1] &quot;Wind: 20.4592145535452 ; Anlage gestoppt.&quot;</code></pre>
+## [1] &quot;Wind: 6.21450547303539 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 12.2718238282284 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.4638606436758 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.3091576177223 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.276002868134 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 12.4026238669841 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 10.1362899298002 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 12.0474104854316 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.5552747949707 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 11.415620769948 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 14.8778039635258 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 11.5012744548978 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 9.82370054864539 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 15.4643926076405 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 17.7628197887068 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 19.1490692159564 ; Anlage läuft.&quot;
+## [1] &quot;Wind: 20.9096009860442 ; Anlage gestoppt.&quot;</code></pre>
 <p>Wie auch bei der <code>for()</code>-Schleife wird der zu
 wiederholende Code-Block mit <code>{...}</code> eingeklammert. Der
 Unterschied besteht darin, dass <code>while()</code> den logischen
@@ -2442,16 +2467,10 @@ while (v_wind &lt; 20 &amp;&amp; zaehler &lt; 10)
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
 <pre><code>## [1] &quot;Wind: 5 ; Zähler: 0 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.5332206825842 ; Zähler: 1 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.849580320393 ; Zähler: 2 : Anlage läuft.&quot;
-## [1] &quot;Wind: 16.7589341967703 ; Zähler: 3 : Anlage läuft.&quot;
-## [1] &quot;Wind: 16.3672993153441 ; Zähler: 4 : Anlage läuft.&quot;
-## [1] &quot;Wind: 15.7360804855533 ; Zähler: 5 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.7485685388583 ; Zähler: 6 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.6670588051082 ; Zähler: 7 : Anlage läuft.&quot;
-## [1] &quot;Wind: 14.1471917968825 ; Zähler: 8 : Anlage läuft.&quot;
-## [1] &quot;Wind: 16.9994288951749 ; Zähler: 9 : Anlage läuft.&quot;
-## [1] &quot;Wind: 14.1349786916912 ; Anlage gestoppt.&quot;</code></pre>
+## [1] &quot;Wind: 12.7039446635172 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.0054312455017 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 17.905979155596 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 20.7435188274759 ; Anlage gestoppt.&quot;</code></pre>
 </div>
 </blockquote>
 </div>
@@ -2545,17 +2564,17 @@ for (zaehler in 0:9)
  print(paste(&quot;Wind:&quot;, v_wind,&quot;; Zähler:&quot;, zaehler, &quot;: Anlage läuft.&quot;))
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
-<pre><code>## [1] &quot;Wind: 13.0903956092661 ; Zähler: 0 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.1883229594271 ; Zähler: 1 : Anlage läuft.&quot;
-## [1] &quot;Wind: 19.6797804537076 ; Zähler: 2 : Anlage läuft.&quot;
-## [1] &quot;Wind: 16.5745028696217 ; Zähler: 3 : Anlage läuft.&quot;
-## [1] &quot;Wind: 19.9905279486685 ; Zähler: 4 : Anlage läuft.&quot;
-## [1] &quot;Wind: 15.0417443554541 ; Zähler: 5 : Anlage läuft.&quot;
-## [1] &quot;Wind: 18.8216936914389 ; Zähler: 6 : Anlage läuft.&quot;
-## [1] &quot;Wind: 17.8856921038129 ; Zähler: 7 : Anlage läuft.&quot;
-## [1] &quot;Wind: 14.1691450476913 ; Zähler: 8 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.4910764813232 ; Zähler: 9 : Anlage läuft.&quot;
-## [1] &quot;Wind: 13.4910764813232 ; Anlage gestoppt.&quot;</code></pre>
+<pre><code>## [1] &quot;Wind: 8.14595934946556 ; Zähler: 0 : Anlage läuft.&quot;
+## [1] &quot;Wind: 14.9474601181421 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 11.3368781789637 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.7893646954062 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.8899862624926 ; Zähler: 4 : Anlage läuft.&quot;
+## [1] &quot;Wind: 18.2131786135994 ; Zähler: 5 : Anlage läuft.&quot;
+## [1] &quot;Wind: 18.8931503128297 ; Zähler: 6 : Anlage läuft.&quot;
+## [1] &quot;Wind: 16.1269696989267 ; Zähler: 7 : Anlage läuft.&quot;
+## [1] &quot;Wind: 18.2306197364126 ; Zähler: 8 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.1852347631812 ; Zähler: 9 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.1852347631812 ; Anlage gestoppt.&quot;</code></pre>
 </div>
 Bei Geschwindigkeiten von 12 bis 20 soll die Anlage nun außerdem
 gedrosselt werden. Setze dies unter der Verwendung von
@@ -2582,16 +2601,17 @@ for (zaehler in 0:9)
   print(paste(&quot;Wind:&quot;, v_wind,&quot;; Zähler:&quot;, zaehler, &quot;: Anlage läuft.&quot;))
 }
 print(paste(&quot;Wind:&quot;, v_wind,&quot;; Anlage gestoppt.&quot;))</code></pre>
-<pre><code>## [1] &quot;Wind: 13.0851185455103 ; Zähler: 0 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 15.2052658872051 ; Zähler: 1 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 16.0710019566801 ; Zähler: 2 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 17.283832973478 ; Zähler: 3 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 18.8861656409182 ; Zähler: 4 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 19.7580798886587 ; Zähler: 5 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 17.1210550739548 ; Zähler: 6 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 12.9346496966084 ; Zähler: 7 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 17.2857982599923 ; Zähler: 8 : Anlage gedrosselt.&quot;
-## [1] &quot;Wind: 20.0815678364239 ; Anlage gestoppt.&quot;</code></pre>
+<pre><code>## [1] &quot;Wind: 5.04402711702278 ; Zähler: 0 : Anlage läuft.&quot;
+## [1] &quot;Wind: 4.9840637277905 ; Zähler: 1 : Anlage läuft.&quot;
+## [1] &quot;Wind: 4.26085177710375 ; Zähler: 2 : Anlage läuft.&quot;
+## [1] &quot;Wind: 4.49258012548305 ; Zähler: 3 : Anlage läuft.&quot;
+## [1] &quot;Wind: 9.92196590176918 ; Zähler: 4 : Anlage läuft.&quot;
+## [1] &quot;Wind: 11.7581138293752 ; Zähler: 5 : Anlage läuft.&quot;
+## [1] &quot;Wind: 15.8397717255414 ; Zähler: 6 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 16.1720125040164 ; Zähler: 7 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 12.1556739129378 ; Zähler: 8 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 16.1555189957697 ; Zähler: 9 : Anlage gedrosselt.&quot;
+## [1] &quot;Wind: 16.1555189957697 ; Anlage gestoppt.&quot;</code></pre>
 </blockquote>
 <hr />
 <blockquote>
