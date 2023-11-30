@@ -14745,7 +14745,7 @@ array([[1, 2, 3],
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Das 3-D Array <code>precip</code> stelle die Niederschlagshöhe <strong>(in mm)</strong> für <code>p</code> aufeinanderfolgende Zeitschritte auf einem Gitter mit <code>m</code> Zeilen und <code>n</code> Spalten dar. Das 2-D Array <code>psi</code> stelle für alle Zeilen und Spalten (<code>m</code> x <code>n</code>) den mittleren Abflussbeiwert des Ereignisses dar (in Prozent). <strong>Die Fläche einer jeden Gitterzelle sei 1 km$^2$</strong>.</p>
-<p>Die Funktion <code>direktabflussvolumen</code> soll nun das gesamte Direktabflussvolumen des Ereignisses <strong>in der Einheit $m^3$</strong> zurückgeben.</p>
+<p>Die Funktion <code>direktabflussvolumen</code> soll nun das gesamte Direktabflussvolumen des Ereignisses <strong>in der Einheit $m^3$</strong> zurückgeben. <strong>Runde dabei auf eine Nachkommastelle!</strong></p>
 <p><strong>Beispiel</strong>:</p>
 
 <pre><code># Beispielargumente
@@ -14817,7 +14817,7 @@ array([[[ 0.,  1.],
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wiederum stelle das 3-D Array <code>precip</code> die Niederschlagshöhe (in mm) für <code>p</code> aufeinanderfolgende Zeitschritte auf einem Gitter mit <code>m</code> Zeilen und <code>n</code> Spalten dar. Das 2-D Array <code>ist_gebiet</code> zeige für alle Elemente des Gebiets (<code>m</code>x<code>n</code>) an, ob sie zum Einzugsgebiet gehören.</p>
-<p>Die Funktion <code>gebietsniederschlag</code> soll nun die mittlere Niederschlaghöhe im Einzugsgebiet für das gesamte Ereignis zurückgeben (Gebietsniederschlag in mm, gerundet auf eine Nachkommastelle).</p>
+<p>Die Funktion <code>gebietsniederschlag</code> soll nun die mittlere Niederschlaghöhe im Einzugsgebiet für das gesamte Ereignis zurückgeben (Gebietsniederschlag in mm, <strong>gerundet auf eine Nachkommastelle</strong>).</p>
 <p><strong>Beispiel</strong>:</p>
 
 <pre><code># Beispielargumente
