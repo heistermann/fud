@@ -29,14 +29,10 @@ werden wir in diesem Kurs arbeiten.
 
 Warum also tun wir uns das an?
 
-- Wir Dozent*innen in diesem Kurs haben das Marterial gemeinsam mit `git` entwickelt
-und wir stellen Dir dieses Material in Form eine `git`-Repositories zur Verfügung.
-Allein dafür benötigst Du minimale Kenntnisse in `git`.
-- Wir möchten Dich ermuntern, von Beginn an Deine Arbeit in diesem Kurs mit `git`
-zu begleiten. Versionskontrolle ist kein Hexenwerk, aber wie so vieles nutzt man
+- Wir möchten Dich ermuntern, in der Projektphase dieses Kurses `git`
+zu nutzen. Versionskontrolle ist kein Hexenwerk, aber wie so vieles nutzt man
 es nur, wenn man eine gewisse Routine darin entwickelt hat. Und diese Routine 
-erzielt man nur durch regelmäßige Anwendung. Wir wollen dies
-im positiven Sinne nutzen und starten darum gleich zu Beginn mit `git`.
+erzielt man nur durch regelmäßige Anwendung.
 - Im Sinne der Berufsvorbereitung ist der Umgang mit `git` eine Schlüsselqualifikation.
 Sobald Du in einem professionellen Kontext Code schreibst, kommt Du um `git` nicht herum.
 Dabei geht es für Geoökolog*innen gar nicht unbedingt um Softwareentwicklung, sondern
@@ -49,6 +45,9 @@ komfortable Methode des Backups verstehen...
 Dort kannst Du nicht nur Deine Projekte veröffentlichen und teilen, sondern auch auf einfache Art und
 Weise statische Webseiten entwickeln und hosten. Die Webseite, auf der Du Dich
 gerade befindet, ist ein Beispiel dafür.
+- Die Kursmaterialien im Repository `umweltdv/umweltdv` wurden natürlich auch
+mit Hilfe von `git` entwickeln. Schau Dir doch mal die History an...
+
 
 ## Nutzen Deine Dozent:innen das denn auch?
 

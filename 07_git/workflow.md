@@ -24,8 +24,8 @@ im Browser öffnen.
 Schau Dich ruhig mal um - evtl. sieht das Repository mittlerweile ein bisschen
 anders aus als auf dem Bild. Jetzt gerade enthält das Repository nur eine Datei
 namens `README.md`. Das `md` steht für Markdown. Markdown ist eine sogenannte 
-Auszeichnungssprache, die wir später noch besser kennenlernen werden. Diese
-Webseite habe ich übrigens auch in Markdown geschrieben.
+Auszeichnungssprache, die Ihr ja bereits kennengelernt habt. Diese
+Webseite ist übrigens auch in weiten Teilen in Markdown geschrieben...
 
 ## Fork
 

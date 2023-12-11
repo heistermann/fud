@@ -10,7 +10,7 @@ parent: Level 7 - Git together
 Was hat es eigentlich mit diesem *Markdown* auf sich? Markdown ist eine Auszeichnungssprache
 (markup language). Auszeichnungssprachen nutzt man, um Text zu strukturieren und
 formatieren. Im Gegensatz zu anderen Auszeichnungssprachen wie `html` (hypertext
-markup langauge) ist Markdown aber sehr einfach zu lesen und zu schreiben. Man kann
+markup language) ist Markdown aber sehr einfach zu lesen und zu schreiben. Man kann
 auf diese Weise aus reinem Text sehr hübsche Dokumente rendern. So wie diese Webseite.
 
 Auf [dieser Seite](https://codingnconcepts.com/markdown/markdown-vs-html/) siehst Du

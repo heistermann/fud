@@ -5,12 +5,9 @@ nav_order: 7
 parent: Level 7 - Git together
 ---
 
-# Der Workflow für diesen Kurs: Ressouren beschaffen und aktuell halten
+# Kursmaterialien beschaffen und aktuell halten
 
-Wir haben uns ja eingangs schon gerechtfertigt, warum wir Dir ein Technikmonster
-wie `git` bereits zu Beginn des Kurses überhelfen.
-
-Die Ressourcen, mit denen Du in diesem Kurs arbeiten wirst, sind v.a. Daten,
+Die Ressourcen, mit denen Du in diesem Kurs arbeitest, sind v.a. Daten,
 R-Dateien (für R) und jupyter Notebooks (für Python). Wir halten und entwickeln
 all diese Ressourcen in einem zentralen Repository: 
 [https://gitup.uni-potsdam.de/umweltdv/umweltdv](https://gitup.uni-potsdam.de/umweltdv/umweltdv).
@@ -37,10 +34,10 @@ kannst. Natürlich mit `git`.
 
 ### Option 2: Die Gelegenheit nutzen - `git` anwenden!
 
-Stattdessen möchten wir Dir einen Workflow vorschlagen, mit dem Du Deine eigenen
+Stattdessen zeigen wir Dir einen Workflow, mit dem Du Deine eigenen
 Änderungen und die Kursmaterialien effizient zusammenhalten kannst. Dies ist 
 vielleicht noch kein professioneller `git`-Workflow, aber es kommt nahe dran und
-wird Dir Gelegenheit geben, Routine darin zu sammeln.
+gibt Dir die Gelegenheit zur Übung.
 
 ## Euer `git`-Workflow
 
