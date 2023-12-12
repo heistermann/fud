@@ -14458,7 +14458,7 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Diese Aufgabe hat einen Bezug zum Thema <code>git</code>, welches eigentlich erst in der nächsten Lektion behandelt wird. Aber keine Sorge...eigentlich geht es nur um eine einfache String-Verkettung. Ihr könnte die Aufgabe lösen, ohne irgendwas von <code>git</code> zu verstehen. Haltet Euch einfach an das Beispiel...</p>
+<p>Habt Ihr geglaubt, dass man in jupyter nicht auch <code>git</code>-Aufgaben stellen kann?</p>
 <p>Die Funktion <code>git_pruefung</code> soll den Befehl zurückgeben, mit dem Ihr Eurer lokales Repository mit einem Remote-Repository namens <code>remote</code>-repository synchronisiert.</p>
 <p><strong>Hinweise</strong></p>
 <ul>
@@ -14625,7 +14625,7 @@ Ergebnis
 <p>Die Funktion <code>get_crs</code> gebe das CRS (Coordinate Reference System) eines Vektordatensatzes zurück, der unter <code>pfad</code> liegt. Die Rückgabe soll als EPSG-Code erfolgen (Datentyp <code>int</code>). Der Datensatz liegt in einer Datei, die mit <code>geopandas</code> gelesen werden kann.</p>
 <p><strong>Beispiel</strong>:</p>
 
-<pre><code>&gt;&gt;&gt; pfad = data/landcover1.geojson
+<pre><code>&gt;&gt;&gt; pfad = data/landuse1.shp
 Ergebnis: 4326</code></pre>
 
 </div>
@@ -14731,7 +14731,7 @@ Ergebnis: 57541.0</code></pre>
 </ul>
 <p>Die Oberfläche des Lysimeters sei 1 m².</p>
 <p>Du sollst nun die mittlere Verdunstungs<strong>rate</strong> $\frac{ET}{\Delta(t)}$ im Messzeitraum in der Einheit $mm/h$ zurückgeben: also das verdunstete Volumen (in Litern) pro Fläche (in m²) und Zeit (in $h$). Nimm als Dichte für Wasser 1 kg/l an. Hier nochmal zur Erinnerung die Wasserbilanzgleichung:</p>
-<p>$(P - ET - Q - deltaS - ET) \frac{1}{\Delta(t)} = 0$</p>
+<p>$(P - ET - Q - deltaS) \frac{1}{\Delta(t)} = 0$</p>
 <p>Soweit so gut. Leider ist die Datei sehr merkwürdig formatiert! Hier mal ein Beispiel für zwei Zeilen:</p>
 
 <pre><code>":start=2020-06-01T00:00:00;Hallo Mutti!end=2020-06-15T00:00:00;deltaS=30;Q=10;P=100:"
@@ -14745,7 +14745,7 @@ Ergebnis: 57541.0</code></pre>
 </ul>
 <p>Wirst Du es schaffen, dem Wahnsinn die Stirn zu bieten?</p>
 <p>Deine Funktion <code>lysimeter</code> erhält immer nur eine Zeile des Datensatzes (Argument <code>zeile</code>) sowie das Argument <code>gruss</code>, welches ein String mit dem überflüssigen Gruß ist. <strong>Zurückgeben soll Deine Funktion die mittlere Verdunstungsrate über den gesamten Zeitraum in der Einheit $mm/h$, gerundet auf eine Nachkommastelle.</strong></p>
-<p><strong>Tipps zur Vorgehensweise</strong>:</p>
+<p><strong>Tipps zur Vorghensweise</strong>:</p>
 <ul>
 <li>Erst <code>zeile</code> bereinigen: Die einschließenden <code>:</code> mit <code>strip</code>, den störenden <code>gruss</code> mit <code>replace</code>.</li>
 <li>Dann Einträge mit <code>split</code> trennen (welches Trennzeichen?). Das Ergebnis ist eine Liste, die Du z.B. <code>items</code> nennen kannst</li>
@@ -14795,7 +14795,7 @@ Dauer des Messzeitraums:
 ENDERGEBNIS
 60 Liter / (336 h * 1 m²) = 0.17857142857142858 mm/h
 also: 0.2</code></pre>
-<p>Versucht die Lösung Stück für Stück zur entwickeln, bis Ihr sie letztlich zur Funktion zusammensetzt.</p>
+<p>Versucht die Lösung Stück für Stück zur entwickeln, bis Ihr sie letztlich zur FUnktion zusammensetzt.</p>
 
 </div>
 </div>
