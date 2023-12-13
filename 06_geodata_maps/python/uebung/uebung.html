@@ -14451,24 +14451,23 @@ $(document).ready(function () {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Gitpr&#252;fung">Gitpr&#252;fung<a class="anchor-link" href="#Gitpr&#252;fung">&#182;</a></h2>
+<h2 id="Kleine-Vorbereitung-auf-git">Kleine Vorbereitung auf git<a class="anchor-link" href="#Kleine-Vorbereitung-auf-git">&#182;</a></h2>
 </div>
 </div>
 </div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Habt Ihr geglaubt, dass man in jupyter nicht auch <code>git</code>-Aufgaben stellen kann?</p>
-<p>Die Funktion <code>git_pruefung</code> soll den Befehl zurückgeben, mit dem Ihr Eurer lokales Repository mit einem Remote-Repository namens <code>remote</code>-repository synchronisiert.</p>
-<p><strong>Hinweise</strong></p>
-<ul>
-<li>Als remote-Branch nutzt bitte wie immer <code>master</code></li>
-<li>Trennt jedes Element des gesamten Befehls wie immer mit EINEM Leerzeichen.</li>
-</ul>
-<p><strong>Beispiel</strong>:</p>
+<p>Das Arbeiten mit der Versionsverwaltungssoftware <code>git</code> lernen wir eigentlich erst in der nächsten Lektion. Hier aber schonmal ein kleiner Vorgeschmack. Keine Sorge, es geht in dieser Aufgabe nur um Stringverkettung und Ihr braucht eigentlich gar keine <code>git</code> Kenntnisse...</p>
+<p>Trotzdem kurz der Hintergrund: Beim Arbeiten mit <code>git</code> liegt Euer Code (Python, R oder was auch immer) in einem lokalen "Repository". Ihr könnt in dieses Repository Eure eigenen Änderungen am Code einpflegen. Ihr könnt aber auch Änderungen anderer Personen aus sogenannten "remote repositories" (also z.B. auf Git.UP unser <a href="https://gitup.uni-potsdam.de/umweltdv/umweltdv">Kursrepository</a>) in Euer lokales Repository "reinziehen" (pull). Der Befehl dazu lautet: <code>git pull {REMOTENAME} {BRANCHNAME}</code>. Ein Branch ist sowas wie ein "Entwicklungszweig". Wir benutzen hier als <code>{BRANCHNAME}</code> immer <code>master</code>.</p>
+<p>Eure Funktion <code>git_pruefung</code> erhält nun als Argument <code>remote</code> den Namen des Remote Repository, also <code>{REMOTENAME}</code>. Die Funktion soll nun den vollständigen Befehl zurückgeben, mit dem Ihr Änderungen aus dem Remote Repository <code>{REMOTENAME}</code> in Euer lokales Repository zieht.</p>
+<p>Alles sehr verwirrend? Am Beispiel aber sehr einfach:</p>
 
-<pre><code>&gt;&gt;&gt; remote = "upstream"
-Ergebnis: "git pull upstream master"</code></pre>
+<pre><code>&gt;&gt;&gt; git_pruefung("erich")
+'git pull erich master'
+&gt;&gt;&gt; git_pruefung("Leonid")
+'git pull Leonid master'</code></pre>
+<p><strong>Hinweis</strong>: Trennt jedes Element des gesamten Befehls mit EINEM Leerzeichen.</p>
 
 </div>
 </div>
@@ -14755,7 +14754,7 @@ Ergebnis: 57541.0</code></pre>
 <li>Der erste Eintrag von <code>paar</code> ist der Name der gemessenen Variable (z.B. <code>"deltaS"</code>), der zweite Eintrag ist ein String mit dem Wert (z.B. <code>"10.1"</code>. Lege nun mit jedem Durchlauf der Schleife im Dictionary <code>data</code> einen neuen Eintrag an, also <code>data[paar[0]] = paar[1]</code></li>
 </ul>
 </li>
-<li>Damit hast Du Deine <code>for</code>-Schleife durch und alle Einträge hübsch im Dictionary. Diese Einträge sind aber noch Zeichenketten. Du musst nun die Einträge für <code>"begin"</code> und <code>"end"</code> jeweils in ein <code>datetime</code>-Objekt umwandeln (mit <code>dt.datetime.strptime</code>); die Einträge <code>"P"</code>, <code>"Q"</code> und <code>"deltaS"</code> in einen <code>float</code>.</li>
+<li>Damit hast Du Deine <code>for</code>-Schleife durch und alle Einträge hübsch im Dictionary. Diese Einträge sind aber noch Zeichenketten. Du musst nun die Einträge für <code>"start"</code> und <code>"end"</code> jeweils in ein <code>datetime</code>-Objekt umwandeln (mit <code>dt.datetime.strptime</code>); die Einträge <code>"P"</code>, <code>"Q"</code> und <code>"deltaS"</code> in einen <code>float</code>.</li>
 <li>Nun kannst Du mit dem Dictionary losrechnen:<ul>
 <li>aus den Messwerten das Verdunstungsvolumen berechnen</li>
 <li>Aus dem Start- und Endzeitpunkt die Zeitdifferenz berechnen, diese in Stunden umrechnen</li>
