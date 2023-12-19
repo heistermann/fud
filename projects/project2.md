@@ -103,6 +103,8 @@ eine neue Spalte an (z.B. `noverlaps`). Lege nun eine Schleife über alle tracks
 
 `{Mittlere Zahl der Überlappungen pro Jahr} * {Median des Gebäudewerts} * 0.05`
 
+Dieser Berechnung liegt die Annahme zugrunde, dass ein Hurricane an einem Gebäude im Mittel einen Schaden in Höhe von 5 Prozent des Gebäudewerts verursacht. 
+
 Jetzt noch ein paar schöne Karten dazu - fertig.
 
  
