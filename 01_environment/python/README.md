@@ -44,14 +44,11 @@ Dies ist, einfach gesagt, ein Paketmanager für Python.
 
 6. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch. **Achtung:** Dieser Schritt kann seeeeeeeehr lange dauern - 15 bis 30 Minuten sind nicht ungewöhnlich. Das liegt daran, dass `conda` all die Abhängigkeiten zwischen den Paketen verstehen und auflösen muss.
 
-   `(umweltdv) $ conda install numpy scipy pandas matplotlib notebook h5py netCDF4 geopandas jupyter_contrib_nbextensions rasterio` 
+   `(umweltdv) $ conda install numpy scipy pandas matplotlib jupyterlab h5py netCDF4 geopandas rasterio` 
    
    Was das alles für Pakete sind, werden wir Stück für Stück ergründen. 
    Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
    
-7. Noch eine Kleinigkeit...
-
-   `(umweltdv) jupyter contrib nbextension install --user`
    
 
 ## Hole Dir die Kursmaterialien auf Deinen Rechner

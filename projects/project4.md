@@ -10,15 +10,15 @@ parent: Projekte
 ## Übersicht
 
 Dynamische Regionale Klimamodelle (RCMs) simulieren die physikalischen Prozesse der 
-Atmosphäre für einen begrenzten räumlichen Ausschnitt. Dabei werden sie zum einen dafür genutzt, 
+Atmosphäre für einen begrenzten räumlichen Ausschnitt. Sie werden zum einen dafür genutzt, 
 um das Klima (nicht das Wetter!) der jüngeren Vergangenheit nachzubilden.
 Zum anderen kann man mit ihnen, basierend auf Emissionszenarien, das Klima der Zukunft simulieren. 
  
-In diesem Projekt sollen für den Standort Potsdam (Telegrafenberg) folgendes analysiert werden:
+In diesem Projekt soll für den Standort Potsdam (Telegrafenberg) folgendes analysiert werden:
  
 a) die Güte der Niederschlagssimulationen des vom Max-Planck Institut betriebenen RCM 'REMO2009' im Vergleich zu den Messdaten (1971-2000)
 
-b) die Änderungen des Niederschlags wie sie von 'REMO2009' unter Berücksichtigung des RCP4.5 Szenarios (moderate Emissionsentwicklung) für 2071-2100 projiziert werden
+b) die Änderungen des Niederschlags, wie sie von 'REMO2009' unter Berücksichtigung des RCP4.5 Szenarios (moderate Emissionsentwicklung) für 2071-2100 projiziert werden
 
 
 ## Daten
@@ -31,12 +31,12 @@ Die Stationsdaten (.txt-Datei) sowie die Griddaten der Klimasimulationen (.nc-Da
 stehen auf Box.UP zu Verfügung ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung).
 
 **Beachte:** Die RCM Daten werden immer in Blöcken für fünf Jahre bereitgestellt. 
-Pro Klimaperiode (30 Jahre) müsstest du also auf sechs nc-Dateiein zugreifen...
+Pro Klimaperiode (30 Jahre) müsstest du also auf sechs nc-Dateien zugreifen...
 Aufgrund der Größe der nc-Dateien (1GB pro Datei) haben wir diese aber nur für die
 jeweils ersten fünf Jahre der beiden Zeiträume (also 1971-1975 und 2071-2075)
 auf Box.UP bereitgestellt. Die Daten für die übrigen Jahre (1976-2000 und 2076-2100)
 haben wir bereits in Tabellenform gegossen. Du findest die Tabellen (csv) für diejenige
-Gridzelle, in der sich die Messstation Potsdam-Telegrafenberg befindet ebenfalls unter dem o.g. Link.
+Gridzelle, in der sich die Messstation Potsdam-Telegrafenberg befindet, ebenfalls unter dem o.g. Link.
 
 Die Originaldaten (nc-Dateien) der RCMs wurden bei [Copernicus](https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cordex-domains-single-levels)
 heruntergeladen. 
@@ -47,13 +47,13 @@ heruntergeladen.
 
 - grafische Darstellung der mittleren Monatsniederschläge (gemessen und simuliert)
 - grafische Darstellung der Abweichung der simulierten mittleren Monatsniederschläge im Vergleich zu den Messdaten
-- Mittlere jährliche Häufigkeit von Tagen mit Niederschlägen >= 30 mm (gemessen vs. simuliert)
+- Mittlere jährliche Häufigkeit von Tagen mit Niederschlagshöhen >= 30 mm (gemessen vs. simuliert)
 
 **zu b)**
 
 - Klimaänderungssignal (in %) im mittleren monatlichen Niederschlag
-- Änderung der mittleren jährlichen Häufigkeit von Tagen mit Niederschlägen >= 30 mm
-- Probiere es gerne auch mit größeren Schwellenwerten als 30 mm / Jahr 
+- Änderung der mittleren jährlichen Häufigkeit von Tagen mit Niederschlagshöhen >= 30 mm
+- Probiere es gerne auch mit größeren Schwellenwerten als 30 mm/d 
 
 
 ## Hinweise für R
@@ -141,7 +141,7 @@ Koordinaten in einem sog. rotierten Bezugssystem...das ist etwas unangenehm zu
 behandeln. Zum Glück enthalten die Dateien aber auch die Eckpunkte für jede
 Gitterzelle (Variablen `lon_vertices` und `lat_vertices`). Diese haben die Shapes
 `(412, 424, 4)`. Wir erzeugen uns die Mittelpunkte einer jeden Gitterzelle, indem
-wür über die Koordinaten der Eckpunkte mitteln (letzte Dimension der Vertizes).
+wir über die Koordinaten der Eckpunkte mitteln (letzte Dimension der Vertizes).
 Verwirrend? Nee, ganz einfach:
 
 ```

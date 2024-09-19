@@ -42,6 +42,7 @@ sollen.
 
 - Angemessenheit der Struktur
 - Inhaltliche Richtigkeit
+- Reproduzierbarkeit / Portabilität des Codes
 - Klarheit/Zweckmäßigkeit des Codes
 - Klarheit/Zweckmäßigkeit der Dokumentation (markdown, Kommentare)
 - Lesbarkeit und Ästhetik der Abbildungen
