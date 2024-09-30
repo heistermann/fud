@@ -69,7 +69,7 @@ In der [letzten Lektion](../../07_git/Beschaffen.md) lernen wir auch noch einen 
 Wir gelangen nun in die heiße Vorbereitungsphase. In Kürze werden wir Eure Arbeitsumgebung starten...
 
 Wenn nicht schon geschehen, öffnet im Verzeichnis `umweltdv`, welches die Kursinhalte enthält, ein Terminalfester. 
-Unter Windows geht das einfach, indem Ihr im Windows Explorer in das Verzeichnis navigiert, dann in der Adresszeile oben `cmd` eingaben und `Enter` drücken.
+Unter Windows geht das einfach: im Windows Explorer in das Verzeichnis navigieren, dann in der Adresszeile oben `cmd` eingeben und `Enter` drücken.
 [Hier](https://www.maketecheasier.com/launch-terminal-current-folder-mac/) gibt es Hinweise für Mac-User.
 
 Nun aktiviert Eure `conda`-Umgebung `umweltdv` und startet `jupyter`. `jupyter`?? Das ist das Werkzeug, in dem wir 
@@ -78,44 +78,18 @@ kennenlernen werdet. Also:
 
 ```
 $ conda activate umweltdv
-(umweltdv)$ jupyter notebook
+(umweltdv)$ jupyter lab
 ```
 Der letzte Befehl sollte ein Browserfenster öffnen, in welchem Ihr die Verzeichnisstruktur im Verzeichnis `umweltdv` abgebildet seht.
 
-![1stjupyter](img/1stjupyter.png)
+![1stjupyter](img/jupyterlab-1st.png)
 
  
-Wir wollen noch einige Einstellungen in `jupyter` vornehmen. Auf Deinem Bildschirm 
-siehst Du in der oberen Zeile einen Reiter namens `Nbextensions`. Bitte draufklicken.
-Diese `Nbextensions` bieten jede Menge kleine Helferlein. Wir wollen nun vor allem
- zwei davon aktivieren (indem wir die Checkboxen anklicken):
+Wechsle nun in den `File Browser` (Ordner-Symbol ganz links) und öffne das Verzeichnis
+`01_environment`. Lege eine Kopie der Datei `tour-de-python.ipynb` an: 
+Mit rechter Maustaste (Kontextmenü) auf die Datei, dann `Duplicate` wählen.
 
-- "Collapsible Headings" brauchen wir, um die Lösungen zu kleinen Aufgaben während 
-des Seminar aus- und einklappen zu könnnen.
-- "Table of Contents(2)" brauchen wir, um im Notebook ein navigierbares 
-Inhaltsverzeichnis als Sidebar einblenden zu können.
-
-![nbextensions](img/nbextensions.png)
-
-Bei einigen Nutzer:innen wird der Reiter mit den `Nbextensions` leider nicht angezeigt.
-Diese müssen in ihrem conda environment über das Terminal die benötigen Extensions
-aktivieren (einmalig). Dafür jupyter beenden und dann:
-
-```
-$ conda activate umweltdv
-(umweltdv)$ jupyter nbextension enable toc2/main 
-(umweltdv)$ jupyter nbextension enable collapsible_headings/main
-(umweltdv)$ jupyter nbextension enable nbextensions_configurator/tree_tab/main
-```
-Die letzte Zeile sorgt vielleicht auch dafür, dass beim Neustart von `jupyter`
-nun auch der `Nbextension`-Reiter angezeigt wird.
-
-Wechsle nun zurück auf den Reiter `Files` und öffne das Verzeichnis
-`01_environment`. Lege eine Kopie der Datei `tour-de-python.ipynb` an, indem Du
-die Checkbox vor der Datei aktivierst und dann oben auf den Button `Duplicate`
-drückst.
-
-![duplicate](img/duplicate.png)
+![duplicate](img/duplicate-jupyterlab.png)
 
 **Warum solltest Du in diesem Kurs immer eine Kopie eines Notebooks anlegen, bevor
 Du darin arbeitest?**
@@ -132,13 +106,55 @@ Klicke nun also auf die neue Datei `tour-de-python-Copy1.ipynb` und weiter geht'
 ## Schluss machen!
 
 Wenn Ihr jupyter schließen möchtet, speichert zunächst Euer Notebook ab und
-schließt das Browserfenster. In der jupyter-Übersicht seht Ihr allerdings das
-eben noch geöffnete Notebook noch "grün" - also aktiv. Ihr könntet jetzt also
-das Notebook wieder öffnen und weiter dran arbeiten. Um das Notebook ausdrücklich
-zu deaktivieren, könnt Ihr es markieren und dann den "Shutdown"-Button drücken.
+schließt das Browserfenster. Im jupyterlab-Filebrowser seht Ihr allerdings das
+eben noch geöffnete Notebook noch mit einem grünen Punkt. Das bedeutet: 
+Es ist noch aktiv. Ihr könntet jetzt also das Notebook wieder öffnen und 
+weiter dran arbeiten. Um das Notebook ausdrücklich zu deaktivieren: 
+rechte Maustaste --> "Shut Down Kernel".
 
 Es bleibt jedoch noch das Terminalfenster, über welches Ihr die jupyter-Session
 mit dem Befehl `jupyter notebook` gestartet habt. Ihr könnt das Fenster einfach
 schließen, um die Session zu beenden. Der saubere Weg (auch wenn Ihr im Terminal
 weiterarbeiten möchtet) ist jedoch, die Session im Terminal mit der Tastenkombination
 `Strg + C` zu beenden.
+
+
+## Legacy: Hinweise für Nutzer:innen von `notebook` anstatt `jupyterlab`
+
+`jupyterlab` ist die aktuell verbreitete `jupyter`-Implementierung und wird
+in diesem Kurs erstmalig ab 2024/25 als Standard empfohlen. Diejenigen, die jupyter 
+noch über das Paket `notebook` installiert haben, müssen einige zusätzliche Schritte
+unternehmen, um in den Genuss von "Collapsible Headings" und TOCs zu kommen. Bitte
+zunächst jupyter beenden, dann:
+
+```
+$ conda activate umweltdv
+(umweltdv)$ conda install -c conda-forge jupyter_contrib_nbextensions
+(umweltdv)$ jupyter notebook
+```
+
+Auf Deinem Bildschirm solltest Du nun in der oberen Zeile einen Reiter namens 
+`Nbextensions` sehen. Bitte draufklicken. Diese `Nbextensions` bieten jede Menge
+kleiner Helferlein. Wir wollen zwei davon aktivieren (indem wir die Checkboxen anklicken):
+
+- "Collapsible Headings" brauchen wir, um die Lösungen zu kleinen Aufgaben während 
+des Seminar aus- und einklappen zu könnnen.
+- "Table of Contents(2)" brauchen wir, um im Notebook ein navigierbares 
+Inhaltsverzeichnis als Sidebar einblenden zu können.
+
+![nbextensions](img/nbextensions.png)
+
+Bei einigen Nutzer:innen wird der Reiter mit den `Nbextensions` leider nicht angezeigt.
+Diese müssen in ihrem conda environment über das Terminal die benötigen Extensions
+aktivieren (einmalig). Dafür jupyter beenden und dann:
+
+```
+$ conda activate umweltdv
+(umweltdv)$ conda install -c conda-forge jupyter_contrib_nbextensions
+(umweltdv)$ jupyter nbextension enable toc2/main 
+(umweltdv)$ jupyter nbextension enable collapsible_headings/main
+(umweltdv)$ jupyter nbextension enable nbextensions_configurator/tree_tab/main
+```
+Die letzte Zeile sorgt hoffentlich auch dafür, dass beim Neustart von `jupyter`
+nun auch der `Nbextension`-Reiter angezeigt wird.
+
