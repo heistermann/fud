@@ -14350,7 +14350,7 @@ organisiert sein (Tabelle): Jede Spalte hat dann einen Datentyp, der sich aber n
 <li><code>.csv</code>: Die Endung <code>csv</code> zeigt eine <em>Tabelle</em> an, die als <em>Text</em> kodiert ist. Wie die Spalten getrennt sind und was für Datentypen die Spalten enthalten, sagt uns die Endung nicht.</li>
 <li><code>.xlsx</code>: Diese Endung ("Excel-Datei") zeigt eine <em>Tabelle</em> an, die in einem binären Spezialformat kodiert ist.</li>
 </ul>
-<h4 id="Spr&#246;de?">Spr&#246;de?<a class="anchor-link" href="#Spr&#246;de?">&#182;</a></h4><p>Ja! Diese einführende Textbatzen signalisiert bereits, dass wir es mit einer sehr spröden Materie zu tun haben. Aber wer mit Umweltdaten arbeitet, muss sich tagtäglich mit genau solchen Fragen beschäftigen...also los!</p>
+<h4 id="Spr&#246;de?">Spr&#246;de?<a class="anchor-link" href="#Spr&#246;de?">&#182;</a></h4><p>Ja! Dieser einführende Textbatzen signalisiert bereits, dass wir es mit einer sehr spröden Materie zu tun haben. Aber wer mit Umweltdaten arbeitet, muss sich tagtäglich mit genau solchen Fragen beschäftigen...also los!</p>
 
 </div>
 </div>
@@ -16035,7 +16035,20 @@ Habsburggelb
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dateipfad</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.dwd.de/weather/webcam/Hohenpeissenberg-S/Hohenpeissenberg-S_latest.txt&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dateipfad</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.dwd.de/weather/webcam/Hamburg-SW/Hamburg-SW_latest.txt&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
     </div>
@@ -16171,19 +16184,6 @@ Habsburggelb
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17029,7 +17029,7 @@ Corg
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Yay.</p>
+<p>Naja, geht bestimmt auch eleganter...aber es funktioniert. Alternativ können wir auch <code>read_csv</code> zweckentfremden.</p>
 
 </div>
 </div>
@@ -17203,7 +17203,7 @@ Corg
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Datei <code>../data/biowetter.json</code> kommt vom Open Data Server des DWD und fasst die Gefahreneinschätzung des DWD für Wetterfühlige zu einem bestimmten Zeitpunkt zusammen.</p>
+<p>Die Datei <code>../data/biowetter.json</code> kommt vom <a href="https://opendata.dwd.de/climate_environment/health/alerts/">Open Data Server des DWD</a> und fasst die Gefahreneinschätzung des DWD für Wetterfühlige zu einem bestimmten Zeitpunkt zusammen.</p>
 <p>Findet heraus, wie Ihr die Datei <code>../data/biowetter.json</code> in Python einlesen könnt.</p>
 
 </div>
