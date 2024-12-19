@@ -87,7 +87,7 @@ drücken.
 noch das Ursprungsrepo (`upstream`) als remote hinzufügen, damit sie auch Änderungen
 von `person1` in ihren Code einpflegen kann: `git remote add upstream https://gitup.uni-potsdam.de/person1/git-uebung2`.
 Bitte den Erfolg mit `git remote -v` verifizieren. Nun kann `person2` mittels
-`git pull upstream master` Du lokales Repo mit dem remote `upstream` synchronisieren.
+`git pull upstream master` ihr lokales Repo mit dem remote `upstream` synchronisieren.
 - Bitte probiert das gleich mal aus, indem `person1` ihr lokales Repo mittels
 `git pull origin master` mit ihrem remote synchronisiert und nun gleich noch eine
 dritte Zeile einfügt oder etwas in einer anderen Zeile ändert. Dann wieder `add`,

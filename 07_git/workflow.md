@@ -74,6 +74,8 @@ Benutzernamen* ersetzt werden:
 Anschließend wirst Du nach den Credentials, also den Zugangsdaten, Deines UP-Accounts gefragt und der
 Download erfolgt.
 
+(Falls Du Probleme mit der Authentifizierung hast, versuche den [Passwortspeicher auszuschalten](Vorbereitung.html) .)
+
 ![img](img/clone2.png)
 
 Wirf nun einen Blick in Dein Verzeichnis - dort sollte nun das Unterverzeichnis

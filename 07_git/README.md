@@ -46,7 +46,7 @@ Dort kannst Du nicht nur Deine Projekte veröffentlichen und teilen, sondern auc
 Weise statische Webseiten entwickeln und hosten. Die Webseite, auf der Du Dich
 gerade befindet, ist ein Beispiel dafür.
 - Die Kursmaterialien im Repository `umweltdv/umweltdv` wurden natürlich auch
-mit Hilfe von `git` entwickeln. Schau Dir doch mal die History an...
+mit Hilfe von `git` entwickelt. Schau Dir doch mal die History an...
 
 
 ## Nutzen Deine Dozent:innen das denn auch?

@@ -44,3 +44,29 @@ dort registrieren. Das Tolle: Du brauchst dafür keinen Extra-Account, sondern k
 Dich direkt mit Deinem UP-Account registrieren und anmelden.
 
 ![img](img/gitup_register1.png)
+
+## Authentifizierung
+
+Bei Bedarf wird Dich GIT nach Deinen Zugangsdaten Deines UP-Accounts fragen. Diese werden standardmäßig vom System  (sogenannter "credential helper") zwischengespeichert, so dass man sie nicht mehrfach eingeben muss. Normalerweise ist diese Funktion aktiviert, ansonsten kannst Du sie folgendermaßen (re)aktivieren:
+Windows:
+```
+$ git config crendential.helper manager-core
+```
+Linux:
+```
+$ git config crendential.helper libsecret
+```
+MacOS
+```
+$ git config crendential.helper osxkeychain
+```
+
+
+Wenn Du das nicht möchtest, kannst Du die Passwortspeicherung ausschalten:
+```
+$ git config crendential.helper ''
+```
+Etwaige schon gespeicherte Zugangsdaten löschst Du in der Anmelde- oder Passwortverwaltung Deines Systems (in Windows
+"Anmeldeinformationsverwaltung" -> "Windows-Anmeldeinformationen").
+
+

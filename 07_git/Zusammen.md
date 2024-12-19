@@ -16,7 +16,7 @@ das ursprüngliche Respository.
 
 Als Eigentümer:in des ursprünglichen Respositorys möchte man aber nicht unbedingt,
 das x-beliebige Menschen ihren Code in das Repository pushen. Um dies zu verhindern
-gibt es zwei Modelle für eine Zusammenarbeit: einen gemeinsames "remote repository", 
+gibt es zwei Modelle für eine Zusammenarbeit: ein gemeinsames "remote repository", 
 auf dem alle Teammitglieder Schreibrechte haben, oder das sog. "fork-and-pull"-Modell.
 
 ## Modell 1: Ein gemeinsames Remote Repository für alle

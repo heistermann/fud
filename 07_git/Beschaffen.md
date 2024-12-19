@@ -20,7 +20,7 @@ Du siehst: Da ist ganz schön was in Bewegung.
 ### Option 1: Runterladen, fertig.
 
 Es gibt die Möglichkeit, ein Repository schlicht und einfach auf Deinen Rechner
-zu runterzuladen. Es gibt dazu einen Download-Button:
+runterzuladen. Es gibt dazu einen Download-Button:
 
 ![img](img/download.png)
 
@@ -116,6 +116,8 @@ $ git push origin master
 ```
 
 Voila - alles synchron?!
+Diese Art der Synchronisierung mit einem Upstream-Repository wird im Folgenden noch mal mit dem Repository der Kursmaterialien durchgeführt. 
+Dort ist die Sache auch noch mal illustriert: [Bild](#upstream)
 
 
 ## Jetzt wirklich... workflow für den Kurs aufsetzen!
@@ -179,7 +181,7 @@ noch mal [diesen Abschnitt](#bestaetigen-der-merge-nachricht-nach-einem-pull) an
 
 ### Noch mal auf einen Blick
 
-Hier noch mal der Ablauf des Ganzen auf einen Blick:
+Hier noch mal der Ablauf des Ganzen auf einen <a name="upstream">Blick</a>:
 
 ![workflow](img/course-git-workflow.png)
 
