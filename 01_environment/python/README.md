@@ -18,7 +18,9 @@ Dies ist, einfach gesagt, ein Paketmanager für Python, hinter dem sich die Soft
    
    ![miniconda_path](img/miniforge-screenshot.png)
    
-   Hinweise für Apple-User: https://kirenz.github.io/codelabs/codelabs/miniforge-setup/
+   Außerdem wollte man üblicherweise nur für den eigenen Nutzer installieren (erfordert keine ausgedehnten Admin-Rechte)
+   
+   **Hinweise für Apple-User:** [https://kirenz.github.io/codelabs/codelabs/miniforge-setup/](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/)
 
 2. Nun lernen wir ein geniales Feature von Miniforge kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
