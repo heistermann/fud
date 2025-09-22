@@ -7,44 +7,39 @@ nav_order: 1
 
 # Meine Python-Arbeitsumgebung
 
-## Installiere Miniconda und Python-Pakete
+## Installiere Miniforge und Python-Pakete
 
-Die Installation führt uns gleich an die Kommandozeile heran. Zunächst installieren wir Miniconda.
-Dies ist, einfach gesagt, ein Paketmanager für Python. 
+Die Installation führt uns gleich an die Kommandozeile heran. Zunächst installieren wir Miniforge.
+Dies ist, einfach gesagt, ein Paketmanager für Python, hinter dem sich die Software `conda` verbirgt. 
 
-1. Installiere Miniconda. Folge dazu den Anleitungen unter [diesem Link](https://conda.io/miniconda.html). 
+1. Installiere Miniforge. Lade dazu den passenden Installer für Dein Betriebssystem unter [diesem Link](https://conda-forge.org/download/) herunter, führe diesen aus (auf MS Windows z.B. durch Doppelklick) und folge den Anweisungen.
 
-   **Achtung Windows-Nutzer/innen:** Wählt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. So wie im folgende Bild angedeutet:
+   **Achtung Windows-Nutzer/innen:** Wähle unbedingt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. Auch die anderen Optionen sollten angewählt werden, so wie im folgende Bild:
    
-   ![miniconda_path](img/miniconda_path.png)
-
-2. Öffne nun ein Terminalfenster (siehe [hier](https://www.digitalcitizen.life/open-windows-terminal/), wie das für Windows-Nutzer*innen geht).
-   Nun sind zwei Befehle auszuführen, die `miniconda` sagen, woher es bevorzugt Pakete beziehen soll.
+   ![miniconda_path](img/miniforge-screenshot.png)
    
-   `$ conda config --add channels conda-forge`
-   
-   `$ conda config --set channel_priority strict`
+   Hinweise für Apple-User: https://kirenz.github.io/codelabs/codelabs/miniforge-setup/
 
-3. Nun lernen wir ein geniales Feature von Miniconda kennen: die sog. "`conda` environments".
+2. Nun lernen wir ein geniales Feature von Miniforge kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
    die bisherige Umgebung dadurch beschädigt wird. Dies mag jetzt erstmal abstrakt klingen...aber es ist durchaus nicht ungewöhnlich,
    dass die Installation eines Pakets die Funktionalität anderer Pakete beeinträchtigt. Aber genug jetzt, wir erstellen einfach
-   eine neue Umgebung names `umweltdv`:
+   eine neue Umgebung names `umweltdv`. Öffne dazu ein Terminalfenster (siehe [hier](https://tutorial.djangogirls.org/en/intro_to_command_line/), wie das für Windows-Nutzer*innen geht) und führe den folgenden Befehl aus:
    
    `$ conda create --name umweltdv python=3.11`
 
-5. Immer, wenn Ihr mit dieser neuen Umgebung etwas anstellen wollt, müsst Ihr sie über das Terminal aktivieren. 
+3. Immer, wenn Ihr mit dieser neuen Umgebung etwas anstellen wollt, müsst Ihr sie über das Terminal aktivieren. 
    Vielleicht wird dies der häufigste Befehl, den Ihr in diesem Kurs ausführen werdet...
    
    `$ conda activate umweltdv`
    
-   (Falls Ihr unter Windows in der Git Bash unterwegs seid, gibt es evtl. einen Fehler,
-   dass `conda activate` nicht zur Verfügung steht. Führe in diesem Fall den Befehl
+   (Falls Ihr unter Windows in der Git Bash unterwegs seid, gibt es evtl. den Fehler,
+   dass `conda activate` nicht zur Verfügung stehe. Führe in diesem Fall den Befehl
    `conda init bash` aus, schließe das Terminal und versuche es nochmal.
 
-6. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch. **Achtung:** Dieser Schritt kann seeeeeeeehr lange dauern - 15 bis 30 Minuten sind nicht ungewöhnlich. Das liegt daran, dass `conda` all die Abhängigkeiten zwischen den Paketen verstehen und auflösen muss.
+4. Jetzt installieren wir all die Pakete, die wir (voraussichtlich) in diesem Kurs brauchen werden... in einem Rutsch. **Achtung:** Dieser Schritt kann u.U. etwas länger dauern. Das liegt daran, dass der Paketmanager all die Abhängigkeiten zwischen den Paketen verstehen und auflösen muss. Air nutzen dafür den Befehl `mamba` (anstatt `conda` --> IT-Humor). Der Befehl `mamba` ist wie `conda`, aber viel schneller.
 
-   `(umweltdv) $ conda install numpy scipy pandas matplotlib jupyterlab h5py netCDF4 geopandas rasterio` 
+   `(umweltdv) $ mamba install numpy scipy pandas matplotlib jupyterlab h5py netCDF4 geopandas rasterio xarray` 
    
    Was das alles für Pakete sind, werden wir Stück für Stück ergründen. 
    Für den Augenblick freuen wir uns, was wir schon alles geleistet haben.
