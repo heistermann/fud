@@ -14,19 +14,19 @@ Dies ist, einfach gesagt, ein Paketmanager für Python, hinter dem sich die Soft
 
 1. Installiere Miniforge. Lade dazu den passenden Installer für Dein Betriebssystem unter [diesem Link](https://conda-forge.org/download/) herunter, führe diesen aus (auf MS Windows z.B. durch Doppelklick) und folge den Anweisungen.
 
-   **Achtung Windows-Nutzer/innen:** Wähle unbedingt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. Auch die anderen Optionen sollten angewählt werden, so wie im folgende Bild:
+   **Achtung Windows-User:** Wähle unbedingt die Option "Add Anaconda to my PATH environment variable" aus, auch wenn diese nicht empfohlen wird. Auch die anderen Optionen sollten angewählt werden, so wie im folgende Bild:
    
    ![miniconda_path](img/miniforge-screenshot.png)
    
-   Außerdem wollte man üblicherweise nur für den eigenen Nutzer installieren (erfordert keine ausgedehnten Admin-Rechte)
+   Außerdem sollte man üblicherweise nur für den eigenen Nutzer installieren (erfordert keine ausgedehnten Admin-Rechte)
    
-   **Hinweise für Apple-User:** [https://kirenz.github.io/codelabs/codelabs/miniforge-setup/](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/)
+   **Hinweise für Mac-User:** [https://kirenz.github.io/codelabs/codelabs/miniforge-setup/](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/)
 
 2. Nun lernen wir ein geniales Feature von Miniforge kennen: die sog. "`conda` environments".
    Mit einem Befehl kann man eine neue "Umgebung" (environment) erstellen, ohne dabei befürchten zu müssen, dass
    die bisherige Umgebung dadurch beschädigt wird. Dies mag jetzt erstmal abstrakt klingen...aber es ist durchaus nicht ungewöhnlich,
    dass die Installation eines Pakets die Funktionalität anderer Pakete beeinträchtigt. Aber genug jetzt, wir erstellen einfach
-   eine neue Umgebung names `umweltdv`. Öffne dazu ein Terminalfenster (siehe [hier](https://tutorial.djangogirls.org/en/intro_to_command_line/), wie das für Windows-Nutzer*innen geht) und führe den folgenden Befehl aus:
+   eine neue Umgebung names `umweltdv`. Öffne dazu ein Terminalfenster (siehe [hier](https://tutorial.djangogirls.org/en/intro_to_command_line/) für Hinweise unter Windows, MacOS und Linux) und führe den folgenden Befehl aus:
    
    `$ conda create --name umweltdv python=3.11`
 
