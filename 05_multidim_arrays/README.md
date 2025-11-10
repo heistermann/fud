@@ -18,6 +18,7 @@ permalink: /05_multidim_arrays
 
 ## R
 - Seminarinhalte für R ([Link](R/Multidimensionales.html))
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/05_multidim_arrays/R/uebung?ref_type=heads)).
 
 ## Lernziele
 

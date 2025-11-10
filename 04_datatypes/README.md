@@ -21,6 +21,8 @@ permalink: /04_datatypes
 ## R
 
 - Seminarinhalte in R ([Link](R/Datatypes.html))
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/04_datatypes/R/uebung?ref_type=heads)).
+
 
 
 ## Lernziele

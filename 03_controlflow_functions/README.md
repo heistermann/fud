@@ -22,6 +22,7 @@ permalink: /03_controlflow_functions
 
 - Seminarinhalte für R: Control Flow ([Link](R/lektion.html))
 - Seminarinhalte für R: Funktionen ([Link](R/funktionen.html))
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/03_controlflow_functions/R/uebung?ref_type=heads)).
 
 ## Lernziele
 

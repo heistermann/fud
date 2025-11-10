@@ -19,6 +19,7 @@ permalink: /06_geodata_maps
 ## R
 
 - Seminarinhalte für R ([Link](R/mastering-geodata-in-r.html))
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/06_geodata_maps/R/uebung?ref_type=heads)).
 
 
 ## Lernziele

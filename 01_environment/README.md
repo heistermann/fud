@@ -19,6 +19,7 @@ permalink: /01_environment
 
 - Anleitung zum Einrichten Eurer Arbeitsumgebung ([Link](R/R_Arbeitsumgebung.html))
 - Tour durch Eure neue R-Umgebung ([Link](R/R_kundungstour.html)).
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/01_environment/R/uebung?ref_type=heads)).
 
 ## Lernziele
 

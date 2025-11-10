@@ -18,6 +18,7 @@ permalink: /02_dataframe_basic_vis
 
 - Einführende Inhalte zum Arbeiten mit "Dataframes" ([Link](R/Dataframes.html)). Arbeitet diese zunächst selbständig durch.
 - Im Seminar: Analyse der Säkularstation in Potsdam ([Link](R/Dataframes2.html)).
+- R-Übungsaufgaben für diese Lektion ([Link](https://gitup.uni-potsdam.de/umweltdv/umweltdv/-/tree/master/02_dataframe_basic_vis/R/uebung?ref_type=heads)).
 
 ## Lernziele
 
