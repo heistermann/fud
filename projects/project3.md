@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Schneehöhen
+title: Schneemessung (nur R)
 nav_order: 3
 parent: Projekte
 ---
 
-# NUR FÜR R: Rekonstruktion einer Zeitreihe von Schneehöhen aus Fotos einer Wildtierkamera
+# **NUR FÜR R** Rekonstruktion einer Zeitreihe von Schneehöhen aus Fotos einer Wildtierkamera
 
 ## Übersicht
 

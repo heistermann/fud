@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hurricane-Zugbahnen
+title: Hurricanetracks (R+Python)
 nav_order: 2
 parent: Projekte
 ---

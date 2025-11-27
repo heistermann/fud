@@ -1,11 +1,11 @@
 ---
 layout: default
-title: CO2-Bilanz
+title: CO2-Bilanz (nur Python)
 nav_order: 9
 parent: Projekte
 ---
 
-# NUR IN PYTHON: Kohlenstoffbilanzierung an Standorten des ICOS-Netzwerks
+# **NUR FÜR PYTHON** Kohlenstoffbilanzierung an Standorten des ICOS-Netzwerks
 
 ## Übersicht
 

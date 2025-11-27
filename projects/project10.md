@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Niederschlagstrend
+title: Niederschlagstrends (nur Python)
 nav_order: 10
 parent: Projekte
 ---
 
-# NUR FÜR PYTHON: Niederschlag von 1950 bis heute - Vergleich von ERA5-Land und Beobachtungen des DWD
+# **NUR FÜR PYTHON** Niederschlag von 1950 bis heute - Vergleich von ERA5-Land und Beobachtungen des DWD
 
 ## Übersicht
 

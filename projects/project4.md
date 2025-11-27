@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Klimaprojektionen
+title: Klimaprojektion (nur R)
 nav_order: 4
 parent: Projekte
 ---
 
-# NUR FÜR R: Analyse und Darstellung von Klimaprojektionen (Niederschlag) für Potsdam
+# **NUR FÜR R** Analyse und Darstellung von Klimaprojektionen (Niederschlag) für Potsdam
 
 ## Übersicht
 

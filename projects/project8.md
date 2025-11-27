@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Energiebilanz
+title: Energiebilanz (nur Python)
 nav_order: 8
 parent: Projekte
 ---
 
-# NUR IN PYTHON: Energiebilanzierung an Standorten des ICOS-Netzwerks
+# **NUR FÜR PYTHON** Energiebilanzierung an Standorten des ICOS-Netzwerks
 
 ## Übersicht
 

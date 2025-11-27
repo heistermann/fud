@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bodenfeuchte
+title: Bodenfeuchte (R+Python)
 nav_order: 6
 parent: Projekte
 ---

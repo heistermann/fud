@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Schnee
+title: Schneetrends (nur Python)
 nav_order: 7
 parent: Projekte
 ---
 
-# NUR FÜR PYTHON: Wasseräquivalent in der Schneedecke von 1950 bis heute - Vergleich von ERA5-Land und Beobachtungen des DWD
+# **NUR FÜR PYTHON** Wasseräquivalent in der Schneedecke von 1950 bis heute - Vergleich von ERA5-Land und Beobachtungen des DWD
 
 ## Übersicht
 
