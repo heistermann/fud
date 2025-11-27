@@ -5,7 +5,7 @@ nav_order: 3
 parent: Projekte
 ---
 
-# Rekonstruktion einer Zeitreihe von Schneehöhen aus Fotos einer Wildtierkamera
+# NUR FÜR R: Rekonstruktion einer Zeitreihe von Schneehöhen aus Fotos einer Wildtierkamera
 
 ## Übersicht
 
@@ -35,8 +35,7 @@ Passwort: umweltdatenverarbeitung
 - Die installierten Stäbe ragten 50 cm aus dem Boden. 5 cm vor der Spitze befindet sich eine weitere (rote) Referenzmarkierung, die ebenso genutzt werden kann.
 - Die Erfassung soll vor allem für Phasen starker Änderung erfolgen; in Phasen gleicher Schneehöhe kann zwischen weiter auseinanderliegenden Aufnahmen interpoliert<sup>6</sup> werden (muss aber nicht).
 - Es ist evtl. sinnvoll, die Plots der Fotos auf den auszuwertenden Stab zu zoomen, um die Genauigkeit zu erhöhen.
-- Die Koordinaten aufzunehmen ist natürlich etwas mühsam. **Tipp:** Speichere die aufgezeichneten Koordinaten als csv-Datei ab<sup>7</sup> . Dann kannst Du sie immer wieder
-  laden, wenn Du weiterarbeitest.
+- Die Koordinaten aufzunehmen ist natürlich etwas mühsam. **Tipp:** Speichere die aufgezeichneten Koordinaten als csv-Datei ab<sup>7</sup> . Dann kannst Du sie immer wieder laden, wenn Du weiterarbeitest.
 - Die Aufzeichnungen des automatischen Schneepegels sind als Vergleich einzuladen<sup>2</sup> und Zeitstempel umwandeln<sup>9</sup> 
 - **Achtung:** Die Kameraperspektive driftet über den Messzeitraum hinweg nicht unerheblich (Kamera war evtl. nicht hinreichend stabil befestigt). Ihr dürft den daraus resultierenden Fehler aber im Kontext dieser Aufgabe einfach ignorieren: also ruhig mit einem konstantem Koordinatenpaar für die Spitze arbeiten, dann für jedes Bild den Fußpunkt registrieren und aus der Distanz zwischen beiden Punkten die freiliegende Pegellänge und somit die Schneehöhe approximieren.
 
