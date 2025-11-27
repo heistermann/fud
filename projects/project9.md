@@ -1,6 +1,6 @@
 ---
 layout: default
-title: carbonfluxes
+title: CO2-Bilanz
 nav_order: 9
 parent: Projekte
 ---

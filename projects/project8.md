@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Energy
+title: Energiebilanz
 nav_order: 8
 parent: Projekte
 ---
