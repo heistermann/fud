@@ -33,13 +33,12 @@ Die Zeitreihendaten stehen auf dem [TERENO-Datenportal](https://ddp.tereno.net/d
 wurden aber zur Nutzung in diesem Kurs bereits heruntergeladen, vorprozessiert und unter Box.UP
 bereitgestellt ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung).
 
-## Ergebnisse
+## Zu erzielende Ergebnisse / Arbeitsschritte
 
-- Ermittle für jeden Monat und jede Messtiefe von 2009 bis 2021 den prozentualen  Anteil verfügbarer und plausibler Daten. Stelle dies als Zeitreihendiagramm dar.
-- Ermittle für jeden Messknoten und für jede Tiefe den Anteil verfügbarer und plausibler Daten über den *gesamten Messzeitraum*. Ermittle auch den Mittelwert dieses Anteils über alle drei Messtiefen. Sortiere die Knoten absteigend nach diesem Mittelwert. Wieviele der 150 Knoten haben eine mittlere Verfügbarkeit von über 75 Prozent?
-- Stelle nun den monatlichen Mittelwert für die Knoten mit über 75 % Verfügbarkeit als Zeitreihe von 2009 bis 2021 dar (5, 20 und 50 cm Tiefe). Füge darunter einen zusätzlichen Subplot mit dem prozentualen Anteil verfügbarer Daten über die Zeit dar. Erörtere kurz die Bodenfeuchtedynamik in den drei Tiefen, auch unter Berücksichtigung der Datenverfügbarkeit.
-- Berechne nun die mittlere Bodenfeuchte für jeden Knoten und jede Tiefe für einen selbst gewählten Zeitraum (analog zum vorherigen Schritt nur für Knoten mit min. 75% Verfügbarkeit im gewählten Zeitraum). Stelle diese berechnete mittlere Bodenfeuchte für alle Knoten als Karte für jede Tiefe
-  dar, in der an der Position jedes Knotens die entsprechende Bodenfeuchte farbkodiert ist. Nutze als Kartenhintergrund die Einzugsgebietsgrenzen und den Verlauf des Wüstebachs, optional auch die Höhenlinien aus dem DEM. Achte darauf, für jede der drei Karten die gleiche Farbskalierung zu nutzen. Erörtere kurz die räumliche Verteilung.
+- Ermittle für jeden Monat und jede Messtiefe von 2009 bis 2021 den prozentualen  Anteil verfügbarer *und* plausibler Daten (verfügbar: nicht NaN, plausibel: nicht negativ). Stelle dies als Zeitreihendiagramm dar.
+- Ermittle für jeden Messknoten und für jede Tiefe den Anteil verfügbarer und plausibler Daten über den *gesamten Messzeitraum*. Ermittle auch den Mittelwert dieses Anteils über alle drei Messtiefen hinweg. Sortiere die Knoten absteigend nach diesem Mittelwert. Wieviele der 150 Knoten haben eine mittlere Verfügbarkeit von über 75 Prozent?
+- Stelle nun den monatlichen Mittelwert der Bodenfeuchte für die Knoten mit über 75 % verfügbaren und plausiblen Daten als Zeitreihe von 2009 bis 2021 dar (5, 20 und 50 cm Tiefe). Füge darunter einen zusätzlichen Subplot mit der gleichen Zeitachse dar, der pro Monat den prozentualen Anteil verfügbarer und plausibler Daten darstellt (nur für ebenjene Knoten, die insgesamt mehr als 75 % verfügbaren und plausiblen Daten haben). Was kann die Dynamik der Datenverfügbarkeit für die Berechnung des Gebietsmittelwertes über die Zeit für Folgen haben?
+- Berechne nun die mittlere Bodenfeuchte für jeden Knoten und jede Tiefe für einen selbst gewählten Zeitraum (analog zum vorherigen Schritt nur für Knoten mit mind. 75% verfügbarer und plausibler Daten). Stelle diese berechnete mittlere Bodenfeuchte für alle Knoten als Karte für jede Tiefe dar, in der an der Position jedes Knotens die entsprechende Bodenfeuchte farbkodiert ist. Nutze als Kartenhintergrund die Einzugsgebietsgrenzen und den Verlauf des Wüstebachs sowie die Höhenlinien aus dem DEM. Achte darauf, für jede der drei Karten die gleiche Farbskalierung zu nutzen. Erörtere kurz die räumliche Verteilung.
 
 ## Hinweise
 
@@ -103,3 +102,21 @@ plt.plot(...)
 ```
 
 - Mit Hilfe der Funktion `plt.scatter` könnt Ihr Punkte entsprechend eines Wertes einfärben. Beispiel: Ihr habt eine DataFrame df mit den Spalten `x`, `y` und `wert` (`x` und `y` seien kartesische Koordinaten). Dann färbt Ihr die Punkte wie folgt ein: `plt.scatter(df.x, df.y, c=df.wert)`. Mit dem Schlüsselwort `cmap` könnt Ihr noch eine Colormap auswählen. Mit den Schlüsselwörtern `vmin` und `vmax` könnt Ihr eine einheitliche Farbskalierung erzwingen - das ist wichtig für die Vergleichbarkeit von Teilabbildungen, die die gleiche Variable ,mit unterschiedlichen Wertebereichen zeigen.
+
+- Den Code für die Darstellung der Höhenlinien bekommt Ihr geschenkt:
+
+```
+import rasterio
+with rasterio.open('data/dem/dem.tif') as src:
+    # Lesen
+    dem = src.read(1)
+    # Koordinaten der Pixel ermitteln
+    height = dem.shape[0]
+    width = dem.shape[1]
+    cols, rows = np.meshgrid(np.arange(width), np.arange(height))
+    demx, demy = rasterio.transform.xy(src.transform, rows, cols)
+...
+...
+# Plotten
+conts = plt.contour(demx, demy, dem, colors="grey", linewidths=0.5)
+```

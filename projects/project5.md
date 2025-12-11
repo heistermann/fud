@@ -33,17 +33,18 @@ findest Du unter `gw/obs` als zip-Dateien. Du arbeitest aber mit den GW-Daten un
 
 
 
-## Ergebnisse
+## Zu erzielende Ergebnisse / Arbeitsschritte
 
 - Erstelle eine Tabelle bzw. einen DataFrame, der folgende Informationen enthält: Pegel-ID, Länge, Breite, Geländehöhe, Startdatum der Zeitreihe, Enddatum der Zeitreihe. Welches sind die zehn Pegel mit den längsten Messreihen?
 
 - Ermittle für jeden Pegel (soweit möglich) den Mittelwert von 2001-2010, den Mittelwert von 2020-2021 (einschließlich) sowie die Differenz beider Werte (im Folgenden `delta` genannt).
   
 - Erstelle einen Multipanelplot mit einem Subplot pro Pegel (Empfehlung: 9x6). Jeder Subplot soll folgende Elemente und Informationen enthalten:
-   - Zeitreihe des Pegelstandes relativ zum Mittelwert 2001-2010
+   - Zeitreihe (von 2001 bis 2021) bis des Pegelstandes relativ zum Mittelwert 2001-2010
    - Wie zuvor, aber geglättet mit Moving Window der Länge 1000 Tage
    - `delta` als Text
    - Name des Pegels (ggf. gekürzt) als Text
+   - einheitlich Skalierung für x- und y-Achse
 
 - Erstelle eine Karte des Gebiets, in welcher die Position jedes Pegels dargestellt und der Wert für `delta`
 farblich codiert ist. Stelle dazu folgende Klassen dar: `delta` < -75 cm, -75 <= `delta` < -50, -50 <= `delta` < -25, -25 <= `delta`.

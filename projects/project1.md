@@ -38,8 +38,9 @@ sowie Hauptgewässern ergänzt werden.
     [Link](https://download.geofabrik.de/europe/germany.html))
 
 
-## Ergebnisse
+## Zu erzielende Ergebnisse / Arbeitsschritte
 
+- Einlesen der Niederschlagsdaten
 - Kartendarstellung der gesamten Niederschlagssumme vom 12. bis 16. Juli 2021
 - Kartendarstellung der täglichen Niederschlagshöhen vom 12. bis 16. Juli 2021
 - Die Kartendarstellungen sollen jeweils die Grenzen der Bundesländer, die
@@ -47,8 +48,8 @@ sowie Hauptgewässern ergänzt werden.
   Altenahr sowie die Lage der Städte Hagen, Erftstadt und Bad Neuenahr-Ahrweiler
   enthalten. Die Kartendarstellung soll auf das Kernereignis in NRW und RLP zoomen.
 - stündliche Zeitreihen der kumulativen Niederschlagshöhe für sollen für die Städte Hagen, 
-  Erftstadt und Bad Neuenahr-Ahrweiler dargestellt werden. *Optional* soll für das
-  Einzugsgebiet der Ahr bis Pegel Altenahr der mittlere Gebietsniederschlag als 
+  Erftstadt und Bad Neuenahr-Ahrweiler dargestellt werden. 
+- Außerdem soll für das Einzugsgebiet der Ahr bis Pegel Altenahr der mittlere Gebietsniederschlag als 
   stündliche Zeitreihe dargestellt werden.
 
 

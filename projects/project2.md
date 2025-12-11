@@ -18,7 +18,7 @@ Hurricanes gehören zu den Naturereignissen mit dem größten Schadenspotenzial.
 
 - Grenzen der US-Counties als Shapefile (`census/counties.shp`) und Zensusdaten (`census/DataSet.xlsx`): Die Attributtabelle von `counties.shp` beihaltet die Spalte FIPS (eine ID für die Counties). Diese benötigt ihr, um die räumlichen Daten mit den Zensusdaten in der Datei `DataSet.xlsx` zu verknüpfen. Aus dieser Exceldatei benötigt Ihr eigentlich nur die Spalte `HSG495212`: der "Median value of owner-occupied housing units, 2008-2012", vereinfacht gesagt der Median der Werte von Immobilienobjekten im jeweiligen County. 
 
-## Ergebnisse
+## Zu erzielende Ergebnisse / Arbeitsschritte
 
 - eine Funktion, welche die HURDAT2-Daten einliest, und die mit zukünftig aktualisierten Daten ebenso funktionieren würde.
 - Kartendarstellung der Hurricane-Zugbahnen
