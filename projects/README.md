@@ -11,6 +11,10 @@ Belegarbeit zur Verfügung stehen. Alle Projekte sollten prinzipiell in R
 und Python umsetzbar sein. Falls es diesbezüglich Einschränkungen geben sollte,
 ist dies aus der jeweiligen Projektbeschreibung ersichtlich.
 
+## Datenbereitstellung
+
+Die Daten werden Euch projektweise in einem Box.UP-Verzeichnis bereitgestellt ([Link](https://boxup.uni-potsdam.de/s/WgoamrJjWBt6KAj), Passwort: umweltdatenverarbeitung). Von dort bitte die zip-Datei für Eurer Projekt runterladen und lokal bei Euch entpacken.
+
 ## Abgabe der Projekte
 
 Die Abgabe der Projekte erfolgt in Form eines git-Repositories, welches ein 
