@@ -20,12 +20,12 @@ Im vorliegenden Projekt setzt Du Dich mit der ERA5-Land Rekonstruktion der jähr
 - `era5-prec.nc`: NetCDF-Datei mit monatlichen Mittelwerten der täglichen Niederschlagssumme für Europa (1951 bis heute) auf Basis von ERA5-Land
 - `dwd/rr/RR_Monatswerte_Beschreibung_Stationen.txt`: Stationsübersicht des DWD für Messstationen aus dem RR-Kollektiv (Niederschlag). Enthält u.a. die Stations-ID sowie Standortkoordinaten und Stationshöhe.
 - `dwd/rr/BESCHREIBUNG_RR.pdf`: Beschreibung der eigentlichen Daten 
-- `dwd/rr/`: In diesem Verzeichnis liegen die tägliche Messungen des DWD aus dem "RR"-Kollektiv (>1000 Stationen). Jede zip-Datei entspricht einem Stationsdatensatz (Namenschema: `tageswerte_RR_{ID}_{Startdatum}_{Enddatum}_hist.zip`). 
+- `dwd/rr/`: In diesem Verzeichnis liegen die monatlichen Messwerte des DWD aus dem "RR"-Kollektiv (>1000 Stationen). Jede zip-Datei entspricht einem Stationsdatensatz (Namenschema: `monatswerte_RR_{ID}_{Startdatum}_{Enddatum}_hist.zip`). 
 - `shapefiles/VG250_LAN.shp`: Shapefile mit Bundesländergrenzen (zur Visualisierung).
 
 ## Arbeitsschritte und zu erzielende Ergebnisse
 
-- Lies die Datei `dwd/rr/RR_Tageswerte_Beschreibung_Stationen.txt` ein und erzeuge daraus eine GeoDataFrame namens `locs`. Nutze die Stations-ID als Zeilenindex.
+- Lies die Datei `dwd/rr/RR_Monatswerte_Beschreibung_Stationen.txt` ein und erzeuge daraus eine GeoDataFrame namens `locs`. Nutze die Stations-ID als Zeilenindex.
 - Entferne alle Stationen (Zeilen) aus `locs`, für die das Attribut `bis` vor dem Jahr 2010 und das Attribut `von` nach 1960 liegt. 
 - Schreibe eine Funktion, die für eine beliebige Station mit `ID` die entsprechenden Beobachtungen aus `dwd/rr/` in einen DataFrame einliest und diesen zurückgibt.  
 - Wende nun die Funktion auf alle IDs in `locs` an. Speichere die resultierenden DataFrames in einem `dict` namens `rrdata` ab, in welchem Du die Stations-ID als `key` nutzt. So kannst Du jederzeit darauf zugreifen. *Achtung*: Nicht für jede ID liegen Daten vor. Damit musst Du umgehen. Füge `locs` eine Spalte namens `hasdata` hinzu und setze den Wert auf `False`, wenn entweder keine entsprechende Datei in `dwd/rr/` gefunden wird **oder** wenn die Station nach 1950 für die Variable `MO_RR` ausschließlich Fehlwerte enthält (sonst `True`).
@@ -36,12 +36,10 @@ Im vorliegenden Projekt setzt Du Dich mit der ERA5-Land Rekonstruktion der jähr
 - Ermittle nun für jede Station aus `locs` die folgenden Maße und füge diese in einer entsprechenden Spalte in `locs` hinzu:
    - mittlerer Jahresniederschlag gemäß `rry` (`meanprec`, in mm)
    - mittlerer prozentualer Fehler (`MPE`, in %) des Jahresniederschlags von ERA5-Land. Achtung: Für jede Station kannst Du nur diejenigen Jahre für die Berechnung des MPE heranziehen, für die sowohl `rry` als auch `era5y` einen gültigen Wert haben (also nicht NaN).
-   - Zeitlicher Trend des Jahresniederschlags zwischen 1950 und 2024 azs `rry`. Der Trend `trendrr` soll in % Änderung pro Dekade ggb. 1950 angegeben werden. Wenn Deine Regression also einen slope (Änderung in mm/Jahr) und einen intercept (bei 1950) ergibt, dann ergibt sich der Trend in %/Dekade als 100*slope*10/intercept.
+   - Zeitlicher Trend des Jahresniederschlags zwischen 1950 und 2024 azs `rry`. Der Trend `trendrr` soll in % Änderung pro Dekade ggb. 1950 angegeben werden. Wenn Deine Regression also einen slope (Änderung in mm/Jahr) und einen intercept (bei 1950) ergibt, dann ergibt sich der Trend in %/Dekade als 100`*`slope`*`10/intercept.
    - Berechne den gleichen Trend nun für die ERA5-Reihen an den Stationen (`trendera5`)
-- Stelle `meanprec`, `mpe`, `trendrr` und `trendera5` als Histogramme (in einer Abbildung) und als Karten (in einer Abbildung) dar. Nutze für die Kartenabbildung das Shapefile mit den Bundesländergrenzen.  
- Gütemaße aus einem Vergleich mit den ERA5-Land-Daten: den mittleren prozentualen Fehler (mean percentage error, MPE) und den mittleren absoluten prozentualen Fehler (mean absolute percentage error, MAPE). Stelle die Fehler aller Stationen als Histogramm dar. Füge die Werte als Spalte in `walocs2` hinzu.
-- Ermittle für jede Station den SWE-Trend der ERA5-Land-Daten von 1980 bis 2024 - einmal den Trend für den Monat Februar und einmal den Trend des Mittelwerts der Monate Dezember bis Februar. Nutze als Einheit für den Trend bitte mm/Dekade. Füge beide Trendwerte als Spalte in `walocs2` hinzu und stelle sie für jede Station auf einer Karte dar.
-- Warum ist es sinnvoller, den Trend aus ERA5-Land zu berechnen als aus den Stationsmessungen? 
+- Stelle `meanprec`, `mpe`, `trendrr` und `trendera5` als Histogramme (in einer Abbildung) und als Karten (in einer Abbildung) dar. Nutze für die Kartenabbildung das Shapefile mit den Bundesländergrenzen. 
+- Warum ist es ggf. sinnvoller, den Trend aus ERA5-Land zu berechnen als aus den Stationsmessungen? 
 
 ## Hinweise
 
