@@ -34,7 +34,7 @@ ICOS steht für "Integrated Carbon Observation System" und umfasst mehr als 170 
    - linke Spalte: mittlere Tagesgänge (stündliche Mittelwerte) von `NEEip` sowie der kurzwelligen Einstrahlung `SW_IN` für Januar und Juli
    - mittlere Spalte: mittlere Jahresgänge (monatliche Mittelwerte) der gleichen Variablen
    - rechte Spalte: Zeitreihe der CO2-Konzentration (Tagesmittelwerte)
-- Erweitere Deine Funktion so, dass für eine Liste von `n` Stations-IDs eine Abbildung mit zwei Spalten und `n` Zeilen erstellt wird (eine Zeile pro Station). Erstelle auf dieser Grundlage eine Abbildung mit fünf Stationen aus unterschiedlichen Klimazonen und/oder Ökosystemtypen. Nutze möglichst lange Zeitreihen. Verzeichne in den Zeilen jeweils auch die Standortattribute `Site type` sowie die Klimazone nach Köppen.
+- Erweitere Deine Funktion so, dass für eine Liste von `n` Stations-IDs eine Abbildung mit drei Spalten und `n` Zeilen erstellt wird (eine Zeile pro Station). Erstelle auf dieser Grundlage eine Abbildung mit fünf Stationen aus unterschiedlichen Klimazonen und/oder Ökosystemtypen. Nutze möglichst lange Zeitreihen. Verzeichne in den Zeilen jeweils auch die Standortattribute `Site type` sowie die Klimazone nach Köppen.
    
 
 ## Hinweise
