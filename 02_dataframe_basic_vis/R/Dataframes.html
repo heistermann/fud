@@ -1547,25 +1547,26 @@ Aufgaben</button>
 Dataframes?</h1>
 <p>Ein Dataframe ist vermutlich <em>die</em> typische Datenstruktur für
 Datensätze in R. Am besten vergleichbar ist ein Dataframe mit der
-Datentabellenstruktur, die Du aus gängigen Statistikprogrammen (z.B.
-Excel) kennst. Dataframes sind also zweidimensionale Tabellen, deren
-Spalten Überschriften haben (können) und immer gleich lang sind (also
-dieselbe Anzahl an Dateneinträgen haben). Dabei darf eine Spalte immer
-nur den gleichen Datentyp (z.B. numerische oder logische Werte)
-beinhalten; ein Dataframe kann aber spaltenweise unterschiedliche
-Datentypen darstellen.</p>
+Datentabellenstruktur, die Du aus gängigen
+Tabellenkalkulationsprogrammen (z.B. Excel, Calc) kennst. Dataframes
+sind also zweidimensionale Tabellen, deren Spalten Überschriften haben
+(können) und immer gleich lang sind (also dieselbe Anzahl an
+Dateneinträgen haben). Dabei darf eine Spalte immer nur den gleichen
+Datentyp (z.B. numerische oder logische Werte) beinhalten; ein Dataframe
+kann aber spaltenweise unterschiedliche Datentypen darstellen.</p>
 <p>In dieser Lerneinheit wirst Du lernen (a) wie man Dataframes in R
 erstellt oder einliest, (b) wie man Elemente/Werte in Dataframes
 anspricht, (c) wie Du diese Elemente oder ganze Dataframes modifizierst
-und (d) wie Du Dataframes als .txt-Dateien ausschreiben uns speichern
+und (d) wie Du Dataframes als .txt-Dateien ausgeben und speichern
 kannst.</p>
 </div>
 <div id="bevor-es-losgeht---ein-paar-grundlagen" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Bevor es losgeht - ein
 paar Grundlagen</h1>
-<p>Anhand des folgenden Skriptbeispiels erlernen wir kurz wie
-Objektzuweisungen (<code>&lt;-</code>) in R funktionieren, was Vektoren
-sind, und dass sie unterschiedliche Datentypen beinhalten können.</p>
+<p>Anhand des folgenden Skriptbeispiels wiederholen wir kurz wie
+Objektzuweisungen (<code>&lt;-</code>) in R funktionieren, erlernen was
+Vektoren sind, und dass sie unterschiedliche Datentypen beinhalten
+können.</p>
 <pre class="r"><code># Wir erstellen einen Vektor, der Zeichenkettern (&#39;characters&#39;) beinhaltet
 Dichter &lt;- c(&quot;Goethe&quot;, &quot;Schiller&quot;, &quot;Brecht&quot;)
 
@@ -1575,7 +1576,8 @@ Sterbealter &lt;- c(83, 46, 57)
 # Wir erstellen einen Vektor, der logische Werte (wahr oder falsch) beinhaltet
 Brillentraeger &lt;- c(FALSE, FALSE, TRUE)
 
-# In den vorigen Beispiele wurde jeweils ein Datentyp einem Vektor zugewiesen. Ein Vektor sollte auch immer nur einen Datentyp speichern, da das Mischen von Datentypen schnell zu Problemen führt sobald man mit ihnen arbeitet (sehen wir später):
+# In den vorigen Beispiele wurde jeweils derselbe Datentyp innerhalb eines Vektors zugewiesen.
+# Ein Vektor sollte auch immer nur einen Datentyp speichern, da das Mischen von Datentypen schnell zu Problemen führt sobald man mit ihnen arbeitet (sehen wir später):
 NotrufNr &lt;- c(110, 112)         # gut!         
 NotrufNr &lt;- c(110, 112, &quot;Mama&quot;) # nicht gut!</code></pre>
 <p><button type="button" class="btn btn-warning">Hinweis!</button>
@@ -1589,7 +1591,8 @@ Dataframes in R</h1>
 <p>Aus den drei erstellten Vektoren ‘Dichter’, ‘Sterbealter’ und
 ‘Brillentraeger’ erstellen wir nun mit der Funktion
 <code>data.frame()</code> unseren ersten Dataframe</p>
-<pre class="r"><code># Wir nennen unseren Datafame (ein Objekt) hier &#39;df&#39; und nutzen die Funktion &#39;data.frame()&#39;. Wir geben jeder Spalte einen Namen und weisen ihr die Werte der jeweiligen Vektoren zu. 
+<pre class="r"><code># Wir nennen unseren Datafame (ein Objekt) hier &#39;df&#39; und nutzen die Funktion &#39;data.frame()&#39;. 
+# Wir geben jeder Spalte einen Namen und weisen ihr die Werte der jeweiligen Vektoren zu. 
 df &lt;- data.frame(&quot;Dichter&quot;= Dichter, &quot;Sterbealter&quot; = Sterbealter, &quot;Brillentraeger&quot; = Brillentraeger)
 
 # So sieht unser Dataframe nun aus
@@ -1606,7 +1609,9 @@ Dataframes</h1>
 Dataframe zu verschaffen. Das ist insbesondere für größere Dataframes
 mit vielen Zeilen und/oder Spalten sinnvoll. Wir werden diese Funktionen
 dennoch an unserem sehr übersichtlichen Beispiel testen</p>
-<pre class="r"><code># Die Funktion &#39;dim()&#39; gibt die Anzahl der Zeilen (erster Wert) und Spalten (zweiter Wert) aus; alternativ kannst Du Dir mit &#39;ncol(df)&#39; oder &#39;nrow(df)&#39; die Anzahl der Spalten bzw. Zeilen einzeln anzeigen lassen.
+<pre class="r"><code># Die Funktion &#39;dim()&#39; gibt die Anzahl der Zeilen (erster Wert) und Spalten (zweiter Wert) aus; 
+# alternativ kannst Du Dir mit &#39;ncol(df)&#39; oder &#39;nrow(df)&#39; die Anzahl der Spalten bzw. Zeilen 
+# einzeln anzeigen lassen.
 dim(df)
 ncol(df)
 nrow(df)
@@ -1630,70 +1635,88 @@ str(df)
 ##  $ Sterbealter   : num  83 46 57
 ##  $ Brillentraeger: logi  FALSE FALSE TRUE</code></pre>
 </div>
-<div id="wie-greifen-wir-nun-auf-elemente-in-unserem-dataframe-zu" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Wie greifen wir nun auf
-Elemente in unserem Dataframe zu?</h1>
-<p>Dafür gibt es verschiedene Methoden. Einerseits kann man mittels
-Indizierungen auf Zeilen und Spalten zugreifen (wie bei einer Matrix).
-Man gibt also einen Index für die Zeile und/oder Spalte an, die man
-auswählen möchte. Andererseits gibt es auch Zugriffmöglichkeiten, die
-typischerweise für Dataframes entwickelt wurden
-(Dollarzeichen-Indizierung).</p>
-<pre class="r"><code># Matrixartige Indizierung: Im erste Beispiel wollen wir die beiden letzten Einträge der Tabelle auslesen. Diese speichern wir in einem neuen Dataframe (&#39;df_ohnegoethe&#39;, der dann nur noch aus zwei Zeilen besteht). 
+<div id="zugriff-auf-elemente-im-dataframe" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Zugriff auf Elemente im
+Dataframe</h1>
+<p>Wie greifen wir nun auf Elemente in unserem Dataframe zu? Dafür gibt
+es verschiedene Methoden. Einerseits kann man mittels Indizierungen auf
+Zeilen und Spalten zugreifen (wie bei einer Matrix). Man gibt also einen
+Index für die Zeile und/oder Spalte an, die man auswählen möchte.
+Andererseits gibt es auch Zugriffmöglichkeiten, die typischerweise für
+Dataframes entwickelt wurden (Indizierung über Spaltennamen).</p>
+<pre class="r"><code># Matrixartige Indizierung: Im erste Beispiel wollen wir die beiden letzten Einträge der 
+# Tabelle auslesen. Diese speichern wir in einem neuen Dataframe (&#39;df_ohnegoethe&#39;, der 
+# dann nur noch aus zwei Zeilen besteht). 
 df_ohnegoethe &lt;- df[2:3,]  # Indizierung [,]: vor dem Komma indiziert man die Zeilen, nach dem Komma die Spalten. Wir wollen also nur Zeilen 2-3 und alle Spalten, d.h. Goethe fliegt raus
 df_ohnegoethe
 # Matrixartige Indizierung: Im zweiten Beispiel wollen wir uns nur die Sterbealter aller Dichter anzeigen lassen:
-df[,2]    # Wir wollen alle Zeilen (keine Wertabgabe, aber nur die Sterbealter, also die zweite Spalte)
-
-# Dollarzeichen-Indizierung: Mit $-Zeichen können wir über die Spaltenüberschriften (&#39;header&#39;) auf einzelne Spalten zugreifen. Das zweite Beispiel der Matrixartigen Indizierung erreichen wir also auch über das folgende Beispiel. Wir können so bspw. dann auch das mittlere Sterbealter unserer drei Dichter berechnen (mittels der Funktion &#39;mean()&#39;).
-df$Sterbealter
-mean(df$Sterbealter)</code></pre>
+df[,2]    # Wir wollen alle Zeilen (keine Angabe vor dem Komma), aber nur die Sterbealter (also die zweite Spalte als Zahl nach dem Komma)</code></pre>
 <pre><code>##    Dichter Sterbealter Brillentraeger
 ## 2 Schiller          46          FALSE
 ## 3   Brecht          57           TRUE
-## [1] 83 46 57
+## [1] 83 46 57</code></pre>
+</div>
+<div id="indizierung-über-spaltennamen-mittels-der-spaltennamen-lassen-sich-die-spalten-auch-ansprechen." class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Indizierung Über
+Spaltennamen: mittels der Spaltennamen lassen sich die Spalten auch
+ansprechen.</h1>
+<p>Das zweite Beispiel der vorherigen Spaltenauswahl erreichen wir über
+deren Splatennamen. Wir können so bspw. dann auch das mittlere
+Sterbealter unserer drei Dichter berechnen (mittels der Funktion
+‘mean()’).</p>
+<pre class="r"><code>df[, &quot;Sterbealter&quot;] # Achtung: Spaltenname steht in Anführungszeichen
+mean(df [,&quot;Sterbealter&quot;])
+# eine dritte Variante der Indizierung nutzt das Dollarzeichen:
+df$Sterbealter
+mean(df$Sterbealter)</code></pre>
+<pre><code>## [1] 83 46 57
+## [1] 62
 ## [1] 83 46 57
 ## [1] 62</code></pre>
 </div>
-<div id="modifizierungen-von-dataframes" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Modifizierungen von
+<div id="modifizierungen-von-dataframes" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Modifizierungen von
 Dataframes</h1>
 <p>In diesem Abschnitt sehen wir, wie wir (1) bestehende Daten in einem
 Dataframe ändern, (2) Einträge hinzufügen oder löschen, (3) Daten in
 unserem Dataframe sortieren und (4) regelbasiert Teilmengen filtern
 können.</p>
-<div id="bestehende-daten-ändern" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Bestehende Daten
+<div id="bestehende-daten-ändern" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Bestehende Daten
 ändern</h2>
 <p>Eine kurze Recherche hat ergeben, dass Brecht nicht 57 sondern 58
 Jahre alt wurde. Das wollen wir korrigieren. Dafür müssen wir zuerst den
 Wert, den wir ändern wollen, indizieren, um ihn dann ändern zu können.
-Welche Möglichkeiten stehen dafür zur Verfügung?</p>
+Welche Möglichkeiten stehen zur Verfügung, den Wert anzusprechen?</p>
 <pre class="r"><code>df[3,2]
+df[3, &quot;Sterbealter&quot;]
 df$Sterbealter[3]
-df$Sterbealter[which(df$Dichter == &quot;Brecht&quot;)]  # die dritte Möglichkeit ist neu, wird später aber noch interessant...
-
-# so können wir den Eintrag in unserem &#39;df&#39; mit dem richtigen Sterbealter ersetzen; anhand von Beispiel 2 oben
-df$Sterbealter[3] &lt;- 58
-df</code></pre>
+df$Sterbealter[which(df$Dichter == &quot;Brecht&quot;)]  # die dritte Möglichkeit ist neu, wird später aber noch interessant...</code></pre>
 <pre><code>## [1] 57
 ## [1] 57
 ## [1] 57
-##    Dichter Sterbealter Brillentraeger
+## [1] 57</code></pre>
+<p>Und so können wir den Eintrag in unserem ‘df’ mit dem richtigen
+Sterbealter ersetzen; hier anhand von Variante 3 oben (die anderen
+gingen aber auch):</p>
+<pre class="r"><code>df$Sterbealter[3] &lt;- 58
+df</code></pre>
+<pre><code>##    Dichter Sterbealter Brillentraeger
 ## 1   Goethe          83          FALSE
 ## 2 Schiller          46          FALSE
 ## 3   Brecht          58           TRUE</code></pre>
 </div>
-<div id="einträge-hinzufügen" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Einträge
+<div id="einträge-hinzufügen" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Einträge
 hinzufügen</h2>
 <p>Das Land der Dichter hat ja wohl noch mehr vorzuweisen als nur
 Goethe, Schiller und Brecht. Wir wollen unseren Dataframe also mit
-weiteren Einträgen (Zeilen) ergänzen (<code>rbind()</code>). Außerdem
-wollen wir für alle Dichter noch weitere Informationen (Spalten), z.B.
-Anzahl der verfassten Dramen, hinzufügen (<code>cbind()</code>).</p>
+weiteren Einträgen (Zeilen) ergänzen (<code>rbind()</code>, steht für
+row-bind). Außerdem wollen wir für alle Dichter noch weitere
+Informationen (Spalten), z.B. Anzahl der verfassten Dramen, hinzufügen
+(<code>cbind()</code> für column-bind).</p>
 <pre class="r"><code># Hinzufügen von weiteren Zeilen
-grass &lt;- c(&quot;Grass&quot;, 88, TRUE)  # die Elemente des Vektors entsprechen den Spalteüberschriften unseres &#39;df&#39;
+grass &lt;- c(&quot;Grass&quot;, 88, TRUE)  # die Elemente des Vektors entsprechen den Spaltenüberschriften unseres &#39;df&#39;
 heine &lt;- c(&quot;Heine&quot;, 59, FALSE)
 df &lt;- rbind(df, grass, heine)  # &#39;rbind&#39; hängt die Vektoren &#39;grass&#39; und &#39;heine&#39; als weitere Zeilen an &#39;df&#39; an.
 df</code></pre>
@@ -1714,21 +1737,26 @@ df</code></pre>
 ## 4    Grass          88           TRUE      5
 ## 5    Heine          59          FALSE      2</code></pre>
 <p>Nun ist es leider so, dass die Spalte ‘Sterbealter’ nicht mehr
-numerische Werte beinhaltet (siehe <code>str(df)</code>). Das liegt
-daran, dass wir in den Vektoren <code>grass</code> und
+numerische Werte beinhaltet:</p>
+<pre class="r"><code>str(df)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    5 obs. of  4 variables:
+##  $ Dichter       : chr  &quot;Goethe&quot; &quot;Schiller&quot; &quot;Brecht&quot; &quot;Grass&quot; ...
+##  $ Sterbealter   : chr  &quot;83&quot; &quot;46&quot; &quot;58&quot; &quot;88&quot; ...
+##  $ Brillentraeger: chr  &quot;FALSE&quot; &quot;FALSE&quot; &quot;TRUE&quot; &quot;TRUE&quot; ...
+##  $ dramen        : num  28 13 48 5 2</code></pre>
+<p>Das liegt daran, dass wir in den Vektoren <code>grass</code> und
 <code>heine</code> unterschiedliche Datentypen nutzen (wir erinnern uns:
 unterschiedliche Datentypen in einem Vektor = nicht gut!). R legt diese
 nun alle als Zeichenketten aus. Da wir mit diesen Werten allerdings
 weiterrechnen wollen, müssen wir die Einträge dieser Spalte wieder in
 numerische Werte umwandeln:</p>
 <pre class="r"><code>df$Sterbealter &lt;- as.numeric(df$Sterbealter)</code></pre>
-<p>Jetzt ist es möglich, weitere Berechnungen vorzunehmen. Die
-Ergebnisse dieser Rechnung (wir berechnen ein Ergebnis mit den Vektoren
-aus zwei Spalten) können wir gleich in einer neuen Spalte sichern. Wir
-berechnen hier ‘höchst wissenschaftlich’ den Effizienzindex der
-jeweiligen Dichter, also die Anzahl der Dramenveröffentlichungen pro
-erreichtes Lebensalter. Da sehen wir, dass Brecht ein echter Malocher
-und Heine eher ein fauler Feingeist war…</p>
+<p>Jetzt ist es möglich, weitere Berechnungen vorzunehmen. Wir berechnen
+ein Ergebnis mit den Vektoren aus zwei Spalten. Wir berechnen hier
+‘höchst wissenschaftlich’ den Effizienzindex der jeweiligen Dichter,
+also die Anzahl der Dramenveröffentlichungen pro erreichtes Lebensalter.
+Das können wir gleich in einer neuen Spalte sichern. Da sehen wir, dass
+Brecht ein echter Malocher und Heine eher ein fauler Feingeist war…</p>
 <pre class="r"><code>df$Effizienzindex &lt;- df$dramen / df$Sterbealter
 df</code></pre>
 <pre><code>##    Dichter Sterbealter Brillentraeger dramen Effizienzindex
@@ -1754,15 +1782,16 @@ Beispiel unserer Dichter und ihres Effizenzindexes.</p>
 <p>Bei kann <code>order()</code> auch noch weitere Sortierkriterien
 bekommen.</p>
 </div>
-<div id="einträge-löschen" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Einträge löschen</h2>
+<div id="einträge-löschen" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Einträge löschen</h2>
 <p>Zufrieden mit dem Ergebnis? Eher nicht! Wir müssen uns eingestehen,
 dass der Effizienzindex Quatsch ist, schließlich haben die Dichter ja
 nicht nur Dramen veröffentlicht, sondern auch sonst viel Kram gemacht.
 Wir wollen diese Spalte also wieder löschen. Vielleicht denken wir aber
 auch, dass Grass gar kein echter Dichter war. In diesem Fall wollen wir
 eine Zeile löschen.</p>
-<pre class="r"><code>df.copy &lt;- df # hiermit erstellen wir eine Kopie von &#39;df&#39;. Empfiehlt sich immer, um Fehler rückgängig machen zu können
+<pre class="r"><code>df.copy &lt;- df # hiermit erstellen wir eine Kopie von &#39;df&#39;. 
+# Empfiehlt sich immer, um Fehler rückgängig machen zu können
 
 # Löschen wir zuerst Grass aus der Liste. Dafür löschen wie Zeile 4
 df &lt;- df[-4,]  # einfach mit Minuszeichen vor der Indizierung
@@ -1772,7 +1801,8 @@ df</code></pre>
 ## 2 Schiller          46          FALSE     13     0.28260870
 ## 3   Brecht          58           TRUE     48     0.82758621
 ## 5    Heine          59          FALSE      2     0.03389831</code></pre>
-<pre class="r"><code># Löschen wir nun die Spalte &#39;Effizienzindex&#39; (Spalte 5). Das funktioniert entweder auch über die Indizierung, also &#39;df &lt;- df[,-5]&#39;, oder indem wir der Spalte &#39;NULL&#39; zuweisen:
+<pre class="r"><code># Löschen wir nun die Spalte &#39;Effizienzindex&#39; (Spalte 5). Das funktioniert entweder auch über
+# die Indizierung, also &#39;df &lt;- df[,-5]&#39;, oder indem wir der Spalte &#39;NULL&#39; zuweisen:
 df$Effizienzindex &lt;- NULL
 df</code></pre>
 <pre><code>##    Dichter Sterbealter Brillentraeger dramen
@@ -1781,8 +1811,8 @@ df</code></pre>
 ## 3   Brecht          58           TRUE     48
 ## 5    Heine          59          FALSE      2</code></pre>
 </div>
-<div id="regelbasierte-teilmengen" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Regelbasierte
+<div id="regelbasierte-teilmengen" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Regelbasierte
 Teilmengen</h2>
 <p>Oftmals wirst Du mit Daten(tabellen) arbeiten, die Du nicht selbst
 erstellst, sondern von Behörden, aus dem Netz o.Ä. bezieht. In diesem
@@ -1830,8 +1860,8 @@ davon nichts):</li>
 ## NA    &lt;NA&gt;           &lt;NA&gt;</code></pre>
 </div>
 </div>
-<div id="wie-geht-es-weiter" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Wie geht es
+<div id="wie-geht-es-weiter" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Wie geht es
 weiter?</h1>
 <p>Damit haben haben wir nun eine Übersicht über das Wesen von
 Dataframes im Allgemeinen und einige grundsätzliche Operationen
