@@ -1,1 +1,1 @@
-No content yet.
+This directory contains the content for R.
